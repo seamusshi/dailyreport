@@ -1,0 +1,77 @@
+---
+import PostLayout from '../../layouts/PostLayout.astro';
+
+export async function getStaticPaths() {
+    // 这里会从内容集合中读取所有文章
+    // 目前返回示例文章
+    return [
+        {
+            params: { slug: '2026-03-16' },
+            props: {
+                title: 'OpenClaw Daily - 2026年3月16日',
+                description: '今日 AI Agent 行业动态概览',
+                pubDate: '2026-03-16',
+                category: '日报'
+            }
+        }
+    ];
+}
+
+const { title, description, pubDate, category } = Astro.props;
+---
+
+<PostLayout frontmatter={{ title, description, pubDate, category }}>
+
+## 📌 今日概览
+
+欢迎来到 OpenClaw Daily！这是项目初始化后的第一篇示例日报。
+
+---
+
+## 🔥 OpenClaw 官方动态
+
+- 项目正在进行初始化配置
+- 自动日报系统正在搭建中
+
+---
+
+## 📊 竞品动态
+
+### 腾讯 WorkBuddy
+- 暂无更新
+
+### Kimi Claw
+- 暂无更新
+
+### MaxClaw
+- 暂无更新
+
+### 阿里 CoPaw
+- 暂无更新
+
+### EasyClaw（猎豹移动）
+- 暂无更新
+
+### ArkClaw（字节跳动）
+- 暂无更新
+
+---
+
+## 💼 企业落地案例
+
+- 待收集...
+
+---
+
+## 🔗 延伸阅读
+
+- [OpenClaw GitHub](https://github.com/openclaw/openclaw)
+- [OpenClaw 文档](https://docs.openclaw.ai)
+
+---
+
+<blockquote>
+💡 <strong>说明</strong>：从明天（2026年3月17日）起，本日报将由 OpenClaw 自动采集并生成。
+</blockquote>
+
+</PostLayout>

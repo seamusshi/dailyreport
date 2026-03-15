@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const posts = [
+  { title: '示例日报 - 2026年3月16日', pubDate: '2026-03-16', slug: '2026-03-16' }
+];
+
+const groupedPosts = posts.reduce((acc, post) => {
+    const year = post.pubDate.slice(0, 4);
+    const month = post.pubDate.slice(5, 7);
+    const key = `${year}年${month}月`;
+    if (!acc[key]) acc[key] = [];
+    acc[key].push(post);
+    return acc;
+}, {});
+---
+
+<Layout title="归档" description="OpenClaw Daily 历史归档">
+    <div class="container page-content">
+        <h1>📚 历史归档</h1>
+        
+        {Object.entries(groupedPosts).map(([month, monthPosts]) => (
+            <section class="archive-section">
+                <h2>{month}</h2>
+                <ul class="archive-list">
+                    {monthPosts.map(post => (
+                        <li>
+                            <time>{post.pubDate}</time>
+                            <a href={`/dailyreport/posts/${post.slug}`}>{post.title}</a>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+        ))}
+    </div>
+</Layout>

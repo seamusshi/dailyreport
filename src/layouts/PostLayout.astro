@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout 
+    title={frontmatter.title} 
+    description={frontmatter.description}
+    pubDate={frontmatter.pubDate}
+>
+    <article class="post-article">
+        <div class="container">
+            <header class="post-header">
+                <div class="post-meta">
+                    <span class="post-category">{frontmatter.category}</span>
+                    <time datetime={frontmatter.pubDate}>{frontmatter.pubDate}</time>
+                </div>
+                <h1>{frontmatter.title}</h1>
+                <p class="post-description">{frontmatter.description}</p>
+            </header>
+            
+            <div class="post-content">
+                <slot />
+            </div>
+            
+            <footer class="post-footer">
+                <p>🤖 本报告由 OpenClaw 自动生成</p>
+            </footer>
+        </div>
+    </article>
+</Layout>
