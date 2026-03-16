@@ -31,171 +31,72 @@
                         <time datetime="2026-03-16">2026-03-16 09:40</time>
                     </div>
                     <h1>OpenClaw Daily - 2026年3月16日</h1>
-                    <p class="post-description">OpenClaw 创始人加入 OpenAI，腾讯 WorkBuddy 正式上线，阿里 CoPaw 开源引关注</p>
+                    <p class="post-description">OpenClaw v2026.3.7-beta.1 发布，GPT-5.4 原生支持</p>
                 </header>
                 
                 <div class="post-content">
                     <h2>📌 今日概览</h2>
                     <ul>
-                        <li>🦞 <strong>OpenClaw 创始人</strong>：Peter Steinberger 正式加入 OpenAI，引发行业热议</li>
-                        <li>🔥 <strong>OpenClaw 安全</strong>：CVE-2026-25253 漏洞披露，建议升级至 2026.1.29+</li>
-                        <li>💼 <strong>腾讯 WorkBuddy</strong>：3月9日正式上线，开箱即用，下载即送 5000 积分</li>
-                        <li>🚀 <strong>阿里 CoPaw</strong>：2月28日正式开源，支持钉钉/飞书/QQ 多平台接入</li>
-                        <li>🌟 <strong>MaxClaw</strong>：2月25日发布，MiniMax 云端 Agent 服务</li>
-                        <li>📊 <strong>企业落地</strong>：AI Agent 从概念走向价值创造，工程化能力成核心竞争力</li>
+                        <li>🚀 <strong>OpenClaw v2026.3.7-beta.1</strong>：89项提交，200+ Bug修复，GPT-5.4原生支持</li>
+                        <li>🦞 <strong>腾讯"养龙虾"</strong>：深圳总部免费安装活动，近千人排队</li>
+                        <li>📱 <strong>小米跟进</strong>：Xiaomi miclaw 系统级智能体小范围内测</li>
+                        <li>🏛️ <strong>政策支持</strong>：深圳龙岗区拟出台支持OpenClaw发展措施</li>
                     </ul>
 
                     <hr>
 
-                    <h2>🔥 OpenClaw 动态</h2>
+                    <h2>🔥 OpenClaw 官方动态</h2>
                     
-                    <h3>创始人 Peter Steinberger 加入 OpenAI</h3>
-                    <p>据多个消息源确认，OpenClaw 创始人 Peter Steinberger（原 PSPDFKit iOS 开发者）已正式加入 OpenAI。这一消息与 Kimi Claw 的发布时间恰好重合，显示出 AI Agent 领域激烈的人才竞争。</p>
-                    <p>Steinberger 在推文中表示，OpenClaw 项目将继续由社区维护，他本人将作为 OpenAI 的顾问参与 AI Agent 相关产品的开发。</p>
-                    <p><a href="https://www.nxcode.io/resources/news/openclaw-complete-guide-2026" target="_blank">查看详情 →</a></p>
-
-                    <h3>OpenClaw 安全危机与应对</h3>
-                    <p>近期 OpenClaw 披露了多项安全漏洞，项目方已迅速响应并发布补丁：</p>
+                    <h3>OpenClaw v2026.3.7-beta.1 发布</h3>
+                    <p>3月9日，OpenClaw 创始人 Peter Steinberger 发布 v2026.3.7-beta.1 版本，这是一次大规模更新：</p>
                     <ul>
-                        <li><strong>CVE-2026-25253</strong>（高危，CVSS 8.8）：允许一键远程代码执行，已在 2026.1.29 修复</li>
-                        <li><strong>CVE-2025-59466</strong>（高危）：影响版本 &lt; 1.2.3，已在 1.2.3+ 修复</li>
-                        <li><strong>CVE-2026-21636</strong>（中危）：影响版本 &lt; 1.3.0，已在 1.3.0+ 修复</li>
+                        <li><strong>89项代码提交</strong>，200+ Bug修复</li>
+                        <li><strong>GPT-5.4 原生支持</strong>：全面支持 OpenAI 最新模型</li>
+                        <li><strong>Gemini 3.1 Flash</strong>：新增 Google 模型支持</li>
+                        <li><strong>模型降级与重试机制</strong>：自动切换备选模型，避免服务中断</li>
+                        <li><strong>ACP 持久化频道绑定</strong>：Discord/Telegram绑定持久存储，重启自动恢复</li>
+                        <li><strong>Telegram 话题级路由隔离</strong>：同一群组不同话题可运行不同智能体</li>
+                        <li><strong>Web搜索升级</strong>：Perplexity切换至Search API，支持语音/区域/时间过滤</li>
                     </ul>
-                    <p>安全建议：</p>
-                    <ol>
-                        <li>立即升级：<code>npm install -g openclaw@latest</code></li>
-                        <li>移除 auth: "none" 配置，启用 token 或 password 认证</li>
-                        <li>运行 <code>openclaw security audit --include-cve-checks</code> 检查配置</li>
-                    </ol>
-                    <p><a href="https://www.reco.ai/blog/openclaw-the-ai-agent-security-crisis-unfolding-right-now" target="_blank">查看安全公告 →</a></p>
+                    <p><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.3.7-beta.1" target="_blank">查看 Release →</a></p>
 
-                    <h3>OpenClaw 2.26 重大更新</h3>
-                    <p>2月27日发布的 OpenClaw 2.26 版本是一次稳定性与可靠性的重大升级：</p>
+                    <h3>OpenClaw 2026.3.2 更新</h3>
                     <ul>
-                        <li><strong>Cron 任务修复</strong>：解决重复执行、并行阻塞、手动触发挂起等问题</li>
-                        <li><strong>外部密钥管理</strong>：新增 <code>openclaw secrets</code> 命令，支持密钥审计和热重载</li>
-                        <li><strong>ACP 线程绑定</strong>：改进 Discord/Telegram 的 Agent 生命周期管理</li>
-                        <li><strong>11 项安全加固</strong>：配置脱敏、会话导出脱敏、路径验证增强</li>
-                        <li><strong>多语言记忆</strong>：支持 Mistral provider，改进西班牙语、日语、阿拉伯语等语义搜索</li>
+                        <li>多语言紧急停止指令优化</li>
+                        <li>心跳、路由和多用户防护机制改进</li>
+                        <li>Android 五标签页引导界面</li>
+                        <li>40+ 安全加固修复</li>
                     </ul>
-                    <p><a href="https://ucstrategies.com/news/openclaw-2-26-update-major-stability-security-and-automation-fixes-explained/" target="_blank">查看更新详情 →</a></p>
-
-                    <h3>"养龙虾"热潮席卷中国</h3>
-                    <p>据 Fortune 报道，OpenClaw 正在中国掀起一股"养龙虾"（Raise a lobster）热潮。腾讯云在深圳总部推出免费部署活动，吸引超千人参与。马化腾在朋友圈预告"还有一批龙虾系产品陆续赶来"。</p>
-                    <p>MiniMax 股价自上周以来上涨 27.4%，较 IPO 时涨幅超过 600%，反映出市场对 AI Agent 赛道的热情。</p>
-                    <p><a href="https://fortune.com/2026/03/14/openclaw-china-ai-agent-boom-open-source-lobster-craze-minimax-qwen/" target="_blank">阅读报道 →</a></p>
 
                     <hr>
 
                     <h2>📊 竞品动态</h2>
 
-                    <h3>腾讯 WorkBuddy 正式上线</h3>
-                    <p>2026年3月9日，腾讯正式发布旗下全场景 AI 智能体产品 WorkBuddy，标志着腾讯成为首家正式推出桌面级 AI 智能体产品的国内互联网大厂。</p>
+                    <h3>腾讯 WorkBuddy / OpenClaw 生态</h3>
                     <ul>
-                        <li><strong>产品定位</strong>：全场景职场 AI 智能体桌面工作台，被业界称为"腾讯版小龙虾"</li>
-                        <li><strong>核心优势</strong>：开箱即用，完全兼容 OpenClaw 技能生态，无需手动部署</li>
-                        <li><strong>限时福利</strong>：下载即送 5000 积分体验额度（截至 2026年3月31日）</li>
-                        <li><strong>安全设计</strong>：仅读取经授权的文件夹，相比 OpenClaw"全盘可读"更安全</li>
-                        <li><strong>内部验证</strong>：已在腾讯内部服务超 2000 名员工</li>
-                    </ul>
-                    <p>值得注意的是，WorkBuddy 上线初期因用户热情超出预期，服务器一度承压。官方连夜道歉并紧急扩容 10 倍。部分用户反馈存在语言切换 bug、问答不一致等问题。</p>
-                    <p>官网入口：<a href="https://www.codebuddy.cn/work/" target="_blank">codebuddy.cn/work</a></p>
-                    <p><a href="https://xzhibot.com/1378.html" target="_blank">查看详情 →</a></p>
-
-                    <h3>阿里 CoPaw 正式开源</h3>
-                    <p>2026年2月28日，阿里巴巴宣布开源桌面 Agent 工具 CoPaw（Co Personal Agent Workstation），由阿里云 AgentScope 团队推出。</p>
-                    <ul>
-                        <li><strong>部署方式</strong>：本地 + 云端双部署，3条 pip 命令即可完成本地安装</li>
-                        <li><strong>平台支持</strong>：原生兼容钉钉、飞书、QQ、Discord、iMessage</li>
-                        <li><strong>主动心跳机制</strong>：可自主执行定时任务（如早8点推送行业简报）</li>
-                        <li><strong>长期记忆</strong>：混合语义向量 + BM25 检索，越用越懂你</li>
-                        <li><strong>模块化架构</strong>：Prompt、Hooks、Tools、Memory 组件解耦，支持按需组装</li>
-                        <li><strong>模型兼容</strong>：支持通义千问、DeepSeek 等云端模型，以及 Ollama、MLX 等本地模型</li>
-                    </ul>
-                    <p>CoPaw 被定位为"OpenClaw 的国产友好平替"，特别适合深度使用钉钉/飞书的中国职场用户。</p>
-                    <p><a href="https://juejin.cn/post/7611737838308753458" target="_blank">查看部署教程 →</a></p>
-
-                    <h3>MaxClaw 云端 Agent 服务</h3>
-                    <p>2026年2月25日，MiniMax 正式发布 MaxClaw 云端 AI Agent 平台。</p>
-                    <ul>
-                        <li><strong>部署速度</strong>：10秒内完成部署，零服务器、零 Docker、零 API Key</li>
-                        <li><strong>底层模型</strong>：MiniMax M2.5（2290亿参数 MoE，每 token 仅激活约100亿参数）</li>
-                        <li><strong>成本优势</strong>：推理成本仅为 Claude 3.5 Sonnet 的 1/7 至 1/20</li>
-                        <li><strong>长期记忆</strong>：20万+ token 持久记忆，跨会话保持上下文</li>
-                        <li><strong>平台集成</strong>：Telegram、Discord、Slack、WhatsApp、飞书、钉钉</li>
-                    </ul>
-                    <p>MaxClaw 定位为"零技术债务"的托管服务，适合不想管理基础设施的用户。</p>
-                    <p>官网：<a href="https://agent.minimaxi.com/activity/max-claw" target="_blank">agent.minimaxi.com</a></p>
-
-                    <h3>Kimi Claw 云端部署服务</h3>
-                    <p>2026年2月15日，Moonshot AI 推出 Kimi Claw，将 OpenClaw 从"极客玩具"转变为托管云服务。</p>
-                    <ul>
-                        <li><strong>一键部署</strong>：60秒内在浏览器中创建云原生 Agent</li>
-                        <li><strong>模型支持</strong>：Kimi K2.5（1万亿参数 MoE）</li>
-                        <li><strong>技能生态</strong>：5000+ ClawHub 社区技能</li>
-                        <li><strong>云存储</strong>：40GB 空间用于长期记忆和文件存储</li>
-                        <li><strong>定价</strong>：Allegretto 计划及以上（$39/月）</li>
-                    </ul>
-                    <p>值得注意的是，有安全研究人员对 Kimi Claw 的数据安全提出担忧，指出中国托管的"始终在线"Agent 可能带来国家安全风险。</p>
-                    <p>入口：<a href="https://www.kimi.com/bot" target="_blank">kimi.com/bot</a></p>
-
-                    <hr>
-
-                    <h2>💼 AI Agent 企业落地</h2>
-                    
-                    <h3>企业落地四大关键判断点</h3>
-                    <p>根据行业实践，企业评估 AI Agent 落地可行性时应关注四个维度：</p>
-                    <ul>
-                        <li><strong>数据边界</strong>：知识库的结构化程度是否足以支撑 RAG</li>
-                        <li><strong>决策路径</strong>：业务逻辑是"强线性"还是"发散型"</li>
-                        <li><strong>工具链完备性</strong>：CRM/ERP 等核心系统是否支持标准 API 或 MCP 协议</li>
-                        <li><strong>容错代价</strong>：Agent 错误操作的后果是否可控</li>
+                        <li>腾讯在深圳总部推出 OpenClaw 免费安装活动，近千人排队</li>
+                        <li>预约号40分钟抢完，马化腾发朋友圈称"没想到会这么火"</li>
+                        <li>企业微信、QQ已宣布支持 OpenClaw</li>
                     </ul>
 
-                    <h3>典型应用场景</h3>
+                    <h3>小米</h3>
                     <ul>
-                        <li><strong>智能客服</strong>：某汽车厂商实现 84% 问答准确率，多模态响应率 70%</li>
-                        <li><strong>酒店运营</strong>：某酒店集团部署 3 个专业 Agent，响应准确率 95%+，FAQ 维护减少 90%</li>
-                        <li><strong>医药零售</strong>：某连锁药店响应时间减少 80%+，药品信息可用率 90%</li>
-                        <li><strong>物流客服</strong>：某物流企业日均 token 消耗 1000 万，支持 40+ 种任务类型</li>
+                        <li>Xiaomi miclaw 系统级智能体小范围内测</li>
                     </ul>
 
-                    <h3>2026年展望</h3>
-                    <p>行业共识认为，2026年企业 AI 竞争的焦点将从"谁的模型更强"转向"谁的工程化能力更扎实"。具备以下能力的企业将在 AI 落地浪潮中占据优势：</p>
+                    <h3>政策支持</h3>
                     <ul>
-                        <li>多模型评估与调度能力</li>
-                        <li>Agent 工程化能力（从原型到生产级应用）</li>
-                        <li>垂直场景理解能力</li>
-                        <li>完整的可观测性（89% 企业已实施）</li>
-                    </ul>
-
-                    <hr>
-
-                    <h2>📈 数据与融资</h2>
-                    <ul>
-                        <li><strong>OpenClaw GitHub</strong>：19万+ Stars，首周访客超 200 万</li>
-                        <li><strong>MiniMax</strong>：2026年1月港股上市，估值 25 亿美元</li>
-                        <li><strong>腾讯云</strong>：WorkBuddy 发布后股价单日上涨 7%</li>
+                        <li>深圳龙岗区人工智能署就《支持OpenClaw&OPC发展的若干措施》征求意见</li>
+                        <li>拟鼓励推出"龙虾服务区"等市场化平台载体</li>
                     </ul>
 
                     <hr>
 
                     <h2>🔗 延伸阅读</h2>
                     <ul>
-                        <li><a href="https://openclaw.ai/blog/introducing-openclaw" target="_blank">OpenClaw 官方博客：Introducing OpenClaw</a></li>
-                        <li><a href="https://fortune.com/2026/03/14/openclaw-china-ai-agent-boom-open-source-lobster-craze-minimax-qwen/" target="_blank">Fortune：'Raise a lobster': How OpenClaw is transforming China's AI sector</a></li>
-                        <li><a href="https://www.codebuddy.cn/work/" target="_blank">腾讯 WorkBuddy 官网</a></li>
-                        <li><a href="https://copaw.agentscope.io/" target="_blank">阿里 CoPaw 官网</a></li>
-                        <li><a href="https://agent.minimaxi.com/activity/max-claw" target="_blank">MaxClaw 官网</a></li>
-                        <li><a href="https://www.kimi.com/bot" target="_blank">Kimi Claw 入口</a></li>
-                        <li><a href="https://juejin.cn/post/7611761768109867060" target="_blank">2026年企业AI落地的关键挑战</a></li>
+                        <li><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.3.7-beta.1" target="_blank">OpenClaw v2026.3.7-beta.1 Release</a></li>
+                        <li><a href="https://arxiv.org/pdf/2602.14364" target="_blank">AI Agent 安全研究论文</a></li>
                     </ul>
-
-                    <hr>
-
-                    <blockquote>
-                    <strong>说明</strong>：本报告由 OpenClaw 自动采集生成。如有遗漏或错误，欢迎反馈。
-                    </blockquote>
                 </div>
                 
                 <footer class="post-footer">
