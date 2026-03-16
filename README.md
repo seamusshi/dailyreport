@@ -20,44 +20,30 @@
 
 ## 🛠️ 技术栈
 
-- **生成器**: [Astro](https://astro.build)
+- **网站**: 纯静态 HTML + CSS
 - **部署**: GitHub Pages
-- **自动化**: OpenClaw + GitHub Actions
-
-## 🚀 本地开发
-
-```bash
-# 安装依赖
-npm install
-
-# 开发服务器
-npm run dev
-
-# 构建
-npm run build
-```
+- **自动化**: OpenClaw Cron
 
 ## 📁 目录结构
 
 ```
 dailyreport/
 ├── .github/workflows/    # GitHub Actions 配置
-├── src/
-│   ├── layouts/          # 页面布局
-│   ├── pages/            # 路由页面
-│   └── content/posts/    # 日报内容
-├── public/styles/        # 静态样式
-├── scripts/              # 数据采集脚本
-└── dist/                 # 构建输出
+├── css/                  # 样式文件
+├── posts/                # 日报内容
+├── index.html            # 首页
+├── archive.html          # 归档页
+├── about.html            # 关于页
+└── README.md
 ```
 
 ## 🤖 自动化流程
 
 1. **触发**: OpenClaw Cron 每天 8:17 触发
 2. **采集**: AI 搜索行业资讯
-3. **生成**: 自动创建 Markdown 日报
+3. **生成**: 自动创建 HTML 日报
 4. **推送**: 提交到 GitHub 仓库
-5. **部署**: GitHub Actions 自动构建发布
+5. **部署**: GitHub Actions 自动部署
 
 ## 📝 License
 
