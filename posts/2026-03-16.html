@@ -31,65 +31,134 @@
                         <time datetime="2026-03-16">2026-03-16</time>
                     </div>
                     <h1>OpenClaw Daily - 2026年3月16日</h1>
-                    <p class="post-description">今日 AI Agent 行业动态概览</p>
+                    <p class="post-description">腾讯 WorkBuddy 全量开放内测，Kimi Claw、MaxClaw 云端 Agent 竞争激烈</p>
                 </header>
                 
                 <div class="post-content">
                     <h2>📌 今日概览</h2>
-                    <p>欢迎来到 OpenClaw Daily！这是项目初始化后的第一篇示例日报。</p>
+                    <ul>
+                        <li>🚀 <strong>腾讯 WorkBuddy</strong>：2月6日正式启动内测，面向全角色职场人群，已服务超2000名腾讯员工</li>
+                        <li>🌟 <strong>Kimi Claw</strong>：月之暗面春节上线云端 OpenClaw 服务，获阿里腾讯超7亿美元联合领投</li>
+                        <li>⚡ <strong>MaxClaw</strong>：MiniMax 2月25日发布，基于 M2.5 模型，10秒极速部署</li>
+                        <li>🔒 <strong>OpenClaw 安全</strong>：CVE-2025-59466 和 CVE-2026-21636 漏洞披露，建议升级至 1.3.0+</li>
+                        <li>📈 <strong>OpenClaw 2.26</strong>：重大稳定性更新，修复 Cron 任务可靠性问题</li>
+                    </ul>
 
                     <hr>
 
                     <h2>🔥 OpenClaw 官方动态</h2>
+                    
+                    <h3>OpenClaw 2.26 版本发布</h3>
+                    <p>2月27日，OpenClaw 发布 2.26 版本，这是一次重要的稳定性和可靠性更新：</p>
                     <ul>
-                        <li>项目正在进行初始化配置</li>
-                        <li>自动日报系统正在搭建中</li>
+                        <li><strong>Cron 任务可靠性修复</strong>：解决重复执行、并行任务阻塞、手动触发挂起等问题</li>
+                        <li><strong>外部密钥管理</strong>：新增 <code>openclaw secrets</code> 命令，支持 audit、configure、apply、reload 四个子命令</li>
+                        <li><strong>ACP 线程绑定 Agent</strong>：改进 Discord 和 Telegram 的 Agent 生命周期管理</li>
+                        <li><strong>安全加固</strong>：11 项安全修复，包括配置脱敏、会话导出脱敏等</li>
+                        <li><strong>多语言记忆增强</strong>：支持 Mistral provider，改进非英语环境下的语义搜索</li>
                     </ul>
+                    <p><a href="https://ucstrategies.com/news/openclaw-2-26-update-major-stability-security-and-automation-fixes-explained/" target="_blank">查看详情 →</a></p>
+
+                    <h3>安全漏洞披露与修复</h3>
+                    <p>1月28日，OpenClaw 披露两项 CVE 漏洞：</p>
+                    <ul>
+                        <li><strong>CVE-2025-59466</strong>（高危）：影响版本 &lt; 1.2.3，已在 1.2.3+ 修复</li>
+                        <li><strong>CVE-2026-21636</strong>（中危）：影响版本 &lt; 1.3.0，已在 1.3.0+ 修复</li>
+                    </ul>
+                    <p>建议所有用户立即升级：<code>npm install -g openclaw@latest</code></p>
+                    <p><a href="https://securemolt.com/blog/cve-moltbot-vulnerabilities" target="_blank">查看安全公告 →</a></p>
+
+                    <h3>OpenClaw 在中国爆火</h3>
+                    <p>据 Fortune 报道，OpenClaw 正在中国掀起一股"养龙虾"热潮。3月6日腾讯在深圳总部推出免费部署活动，吸引超千人参与。马化腾在朋友圈表示"没有想到会这么火"。腾讯生态动作积极：QQ 已支持 OpenClaw，企业微信支持"三步接入"。</p>
+                    <p><a href="https://fortune.com/2026/03/14/openclaw-china-ai-agent-boom-open-source-lobster-craze-minimax-qwen/" target="_blank">阅读报道 →</a></p>
 
                     <hr>
 
                     <h2>📊 竞品动态</h2>
 
                     <h3>腾讯 WorkBuddy</h3>
-                    <p>暂无更新</p>
+                    <p><strong>2月6日正式启动内测</strong>，这是腾讯正式入局桌面 Agent 市场的标志性产品。</p>
+                    <ul>
+                        <li><strong>产品定位</strong>：全场景职场 AI 智能体桌面工作台，面向非技术背景用户</li>
+                        <li><strong>核心能力</strong>：自动批量处理文件、生成文档/表格/PPT、多模态内容创作、数据深度分析</li>
+                        <li><strong>内部验证</strong>：1月19日在腾讯内部开放体验，已服务超2000名员工</li>
+                        <li><strong>生态兼容</strong>：完全兼容 OpenClaw 任务技能（skills），号称"国产小龙虾"</li>
+                        <li><strong>快速部署</strong>：从下载安装到连接企业微信最快1分钟</li>
+                    </ul>
+                    <p>内测申请入口：<a href="https://www.codebuddy.cn/work" target="_blank">codebuddy.cn/work</a></p>
+                    <p><a href="https://news.qq.com/rain/a/20260206A02VXB00" target="_blank">查看详情 →</a></p>
 
                     <h3>Kimi Claw</h3>
-                    <p>暂无更新</p>
+                    <p><strong>春节期间（2月15-16日）正式上线</strong>，月之暗面推出的云端 OpenClaw 一键部署服务。</p>
+                    <ul>
+                        <li><strong>核心卖点</strong>：零代码、零硬件、零部署，30秒即可启动 AI 代理</li>
+                        <li><strong>模型支持</strong>：内置 Kimi K2.5 万亿参数模型</li>
+                        <li><strong>存储空间</strong>：40GB 云端存储</li>
+                        <li><strong>技能生态</strong>：5000+ ClawHub 技能库</li>
+                        <li><strong>定价</strong>：Allegretto 计划及以上（199元/月起）</li>
+                    </ul>
+                    <p><strong>融资动态</strong>：3月9日消息，月之暗面再获超7亿美元注资，阿里腾讯联合领投。</p>
+                    <p>官方入口：<a href="https://www.kimi.com/bot" target="_blank">kimi.com/bot</a></p>
+                    <p><a href="https://api3.cls.cn/share/article/2291229" target="_blank">查看融资报道 →</a></p>
 
                     <h3>MaxClaw</h3>
-                    <p>暂无更新</p>
+                    <p><strong>2月25日正式发布</strong>，MiniMax 推出的云端 AI Agent 平台。</p>
+                    <ul>
+                        <li><strong>部署速度</strong>：10秒内完成部署，无需服务器、Docker 或 API Key</li>
+                        <li><strong>底层模型</strong>：MiniMax M2.5（2290亿参数 MoE 架构）</li>
+                        <li><strong>记忆能力</strong>：20万+ token 长期记忆</li>
+                        <li><strong>平台集成</strong>：Telegram、Discord、Slack、WhatsApp、飞书、钉钉</li>
+                        <li><strong>成本优势</strong>：成本仅为 Claude 3.5 Sonnet 的 1/7 至 1/20</li>
+                    </ul>
+                    <p><a href="https://www.analyticsvidhya.com/blog/2026/03/maxclaw-cloud-ai-agent-for-autonomous-workflows/" target="_blank">查看详情 →</a></p>
 
-                    <h3>阿里 CoPaw</h3>
-                    <p>暂无更新</p>
-
-                    <h3>EasyClaw（猎豹移动）</h3>
-                    <p>暂无更新</p>
-
-                    <h3>ArkClaw（字节跳动）</h3>
-                    <p>暂无更新</p>
+                    <h3>阿里 CoPaw / 字节 ArkClaw / 猎豹 EasyClaw</h3>
+                    <p>今日暂无重大公开动态更新。</p>
 
                     <hr>
 
                     <h2>💼 企业落地案例</h2>
-                    <p>待收集...</p>
+                    
+                    <h3>腾讯内部 WorkBuddy 应用实践</h3>
+                    <p>腾讯内部已有超2000名非技术背景员工使用 WorkBuddy，覆盖 HR、行政、秘书、运营、销售等角色，主要应用场景包括：</p>
+                    <ul>
+                        <li>数据处理与分析</li>
+                        <li>构建本地知识库</li>
+                        <li>内容文案创作</li>
+                        <li>海报生成</li>
+                        <li>自动化办公</li>
+                    </ul>
+                    <p>据财新报道，WorkBuddy 在正式发布前已在腾讯内部深度使用，极大提升了非技术背景用户的 AI 办公效率。</p>
+
+                    <hr>
+
+                    <h2>📈 数据与融资</h2>
+                    <ul>
+                        <li><strong>月之暗面</strong>：再获超7亿美元注资，阿里腾讯联合领投（3月9日）</li>
+                        <li><strong>MiniMax</strong>：2026年1月港股上市，估值25亿美元</li>
+                        <li><strong>OpenClaw GitHub</strong>：19万+ Stars，访客超200万（首周）</li>
+                    </ul>
 
                     <hr>
 
                     <h2>🔗 延伸阅读</h2>
                     <ul>
-                        <li><a href="https://github.com/openclaw/openclaw">OpenClaw GitHub</a></li>
-                        <li><a href="https://docs.openclaw.ai">OpenClaw 文档</a></li>
+                        <li><a href="https://openclaw.ai/blog/introducing-openclaw" target="_blank">OpenClaw 官方博客：Introducing OpenClaw</a></li>
+                        <li><a href="https://www.nxcode.io/resources/news/openclaw-complete-guide-2026" target="_blank">OpenClaw 完整指南 2026</a></li>
+                        <li><a href="https://www.caixin.com/2026-03-09/102421307.html" target="_blank">财新：腾讯拟内测个人微信接入"龙虾"</a></li>
+                        <li><a href="https://ai-bio.cn/kimi-claw/" target="_blank">Kimi Claw 详细介绍</a></li>
+                        <li><a href="https://maxclaw.ai/" target="_blank">MaxClaw 官网</a></li>
                     </ul>
 
                     <hr>
 
                     <blockquote>
-                    <strong>说明</strong>：从明天（2026年3月17日）起，本日报将由 OpenClaw 自动采集并生成。
+                    <strong>说明</strong>：本报告由 OpenClaw 自动采集生成。如有遗漏或错误，欢迎反馈。
                     </blockquote>
                 </div>
                 
                 <footer class="post-footer">
-                    <p>🤖 本报告由 OpenClaw 自动生成</p>
+                    <p>🤖 本报告由 OpenClaw 自动生成于 2026-03-16</p>
                 </footer>
             </div>
         </article>
