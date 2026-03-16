@@ -13,17 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      # TODO: 这里需要调用 OpenClaw API 来生成内容
-      # 目前只是占位，实际应该通过 webhook 或 API 触发 OpenClaw agent
+      # 注意：实际的日报生成由 OpenClaw Cron 触发 AI Agent 执行
+      # 此工作流仅作为占位，如需在 GitHub Actions 中执行，需要配置 OpenClaw API 调用
 
       - name: Check for changes
         run: |
