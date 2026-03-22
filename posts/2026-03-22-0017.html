@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily - 2026年3月22日 00:17</title>
+    <meta name="description" content="OpenClaw Daily Report - 每日 AI Agent 行业情报">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../" class="logo">
+                <span class="logo-icon">🔷</span>
+                <span class="logo-text">OpenClaw Daily</span>
+            </a>
+            <nav class="main-nav">
+                <a href="../">首页</a>
+                <a href="../archive.html">归档</a>
+                <a href="../about.html">关于</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container page-content">
+            <article class="report-article">
+                <header class="report-header">
+                    <div class="report-meta">
+                        <span class="report-category">日报</span>
+                        <time datetime="2026-03-22T00:17:00">2026年3月22日 00:17</time>
+                    </div>
+                    <h1>OpenClaw Daily Report - 2026年3月22日</h1>
+                    <p class="report-summary">OpenClaw v2026.3.12 发布多项功能更新；EasyClaw 傅盛直播展示 8-Agent 协作系统引爆全网；MaxClaw 成本优势凸显仅为 Claude 1/20</p>
+                </header>
+
+                <div class="report-content">
+                    <section class="content-section">
+                        <h2>📌 今日概览</h2>
+                        <div class="overview-list">
+                            <div class="overview-item">
+                                <span class="overview-tag">更新</span>
+                                <p><strong>OpenClaw v2026.3.12 发布</strong>：Control UI/dashboard-v2 全新上线，支持 OpenAI/GPT-5.4 Fast Mode 与 Anthropic Fast Mode，新增 sessions_yield 功能</p>
+                            </div>
+                            <div class="overview-item">
+                                <span class="overview-tag">热点</span>
+                                <p><strong>EasyClaw 引发热议</strong>：猎豹移动 CEO 傅盛 14 天零代码搭建 8 个 AI Agent 协作团队，直播超 20 万人观看，龙虾「三万」自动发送 611 条个性化拜年消息</p>
+                            </div>
+                            <div class="overview-item">
+                                <span class="overview-tag">竞争</span>
+                                <p><strong>MaxClaw 成本优势显著</strong>：MiniMax M2.5 模型采用 MoE 架构，实现 Claude 3.5 Sonnet 1/7 至 1/20 的成本，支持 200K+ token 长期记忆</p>
+                            </div>
+                            <div class="overview-item">
+                                <span class="overview-tag">趋势</span>
+                                <p><strong>云端 SaaS 成为主流</strong>：ArkClaw、MaxClaw、Kimi Claw 等云端托管服务降低部署门槛，推动 AI Agent 从技术实验走向产品化应用</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>🔷 OpenClaw 官方动态</h2>
+                        
+                        <h3>OpenClaw v2026.3.12 正式发布</h3>
+                        <p>3月13日，OpenClaw 发布 v2026.3.12 版本，带来多项重磅更新：</p>
+                        <ul>
+                            <li><strong>Control UI/dashboard-v2</strong>：全新网关仪表盘上线，支持模块化概览视图、聊天、配置、Agent 和会话管理，新增命令面板、移动端底部导航、斜杠命令、搜索、导出和置顶消息功能</li>
+                            <li><strong>Fast Mode 支持</strong>：新增 OpenAI/GPT-5.4 Fast Mode 与 Anthropic Claude Fast Mode 配置，可通过 <code>/fast</code> 命令或 TUI、Control UI 快速切换</li>
+                            <li><strong>Provider 插件化</strong>：Ollama、vLLM、SGLang 迁移至 Provider 插件架构，支持提供商自有的 onboarding、模型发现和选择流程</li>
+                            <li><strong>sessions_yield</strong>：新增 <code>sessions_yield</code> 功能，允许编排器立即结束当前回合，跳过排队的工具工作，并将隐藏跟进载荷带入下一个会话回合</li>
+                            <li><strong>Kubernetes 部署</strong>：新增 Kubernetes 入门部署文档，包含原始清单、Kind 设置指南</li>
+                        </ul>
+
+                        <h3>OpenClaw v2026.3.8 安全更新</h3>
+                        <p>此前发布的 v2026.3.8 版本专注于安全与企业级功能：</p>
+                        <ul>
+                            <li><strong>ACP Provenance</strong>：新增代理通信协议溯源功能，可追踪每条指令的来源，防止身份伪造</li>
+                            <li><strong>备份命令</strong>：内置 <code>openclaw backup</code> 功能，支持一键创建系统状态归档并验证可恢复性</li>
+                            <li><strong>Telegram 修复</strong>：消除重复事件，稳定聊天集成，减少冗余触发</li>
+                            <li><strong>VirusTotal 集成</strong>：Skills 安装前可扫描已知威胁，增强安全性</li>
+                            <li><strong>12+ 安全补丁</strong>：强化网关重启恢复、配置验证等安全机制</li>
+                        </ul>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>🏢 竞品动态</h2>
+
+                        <h3>🐧 腾讯 WorkBuddy</h3>
+                        <p><strong>产品定位</strong>：全场景职场 AI 智能体桌面工作台，定位「能真正坐在你电脑里干活的 AI 智能体」</p>
+                        <ul>
+                            <li>已完成内部超 2000 名员工深度测试，覆盖 HR、行政、运营、销售等角色</li>
+                            <li>公测期间登录可领取 <strong>5000 积分</strong> 体验额度（截至 2026 年 3 月 31 日）</li>
+                            <li>支持多模态内容生成（文档/表格/PPT）、多 Agent 并行处理、MCP & Skills 扩展</li>
+                            <li>内置文件夹级授权与高危操作拦截机制，平衡功能与安全性</li>
+                            <li>底层基于 CodeBuddy 同套 Agent 架构，非 OpenClaw 套壳</li>
+                        </ul>
+
+                        <h3>🌙 Kimi Claw（月之暗面）</h3>
+                        <p><strong>核心卖点</strong>：OpenClaw 的云托管版本，一键部署 24/7 在线 AI Agent</p>
+                        <ul>
+                            <li>基于 Kimi K2.5 Thinking 模型，支持多步规划、工具使用和结构化决策</li>
+                            <li>提供 <strong>40GB 云存储</strong> 和 <strong>5000+ ClawHub 技能</strong></li>
+                            <li>支持长期记忆、定时任务自动化、文件工作区和外部渠道集成（Telegram/Discord）</li>
+                            <li>订阅价格约 $39/月，与自托管 VPS 约 $2/月形成价格对比</li>
+                            <li>部分海外分析机构对其数据安全提出关切，建议企业用户评估风险</li>
+                        </ul>
+
+                        <h3>⚡ MaxClaw（MiniMax）</h3>
+                        <p><strong>核心优势</strong>：极致成本效益的云端 AI Agent 平台</p>
+                        <ul>
+                            <li>基于 <strong>MiniMax M2.5 模型</strong>（MoE 架构，229B 总参数，单 token 激活约 10B）</li>
+                            <li>成本仅为 Claude 3.5 Sonnet 的 <strong>1/7 至 1/20</strong>，支持 200K+ token 长期记忆</li>
+                            <li>SWE-Bench Verified 得分 80.2%，匹配 Claude Opus 4.6 速度</li>
+                            <li>支持 Telegram、WhatsApp、Slack、Discord、飞书、钉钉等多平台集成</li>
+                            <li>10 秒云端部署，无需服务器或 Docker，内置 10,000+ 专家模板</li>
+                            <li>MiniMax 2026 年 1 月港股上市，估值 25 亿美元</li>
+                        </ul>
+
+                        <h3>🦐 EasyClaw（猎豹移动）</h3>
+                        <p><strong>产品定位</strong>：OpenClaw 的易用化封装版本，降低非技术用户使用门槛</p>
+                        <ul>
+                            <li>傅盛春节期间滑雪受伤卧床，14 天通过飞书对话搭建 8-Agent 协作系统「龙虾三万」</li>
+                            <li>累计发送 1157 条消息、22 万字，积累 40+ 项 Skill，实现 7×24 小时自主运行</li>
+                            <li>除夕夜 4 分钟内自动发送 611 条各不相同的个性化拜年消息，零失败</li>
+                            <li>直播复盘超 <strong>20 万人观看</strong>，平均观看时长 22 分钟，引发全网热议</li>
+                            <li>一键安装，无需配置 API Key 或 Docker，3 分钟即可使用</li>
+                            <li>分国际版（easyclaw.com / easyclaw.work）和国内版「元气 AI Bot」（yuanqiaibot.net）</li>
+                        </ul>
+
+                        <h3>🦞 ArkClaw（字节跳动）</h3>
+                        <p><strong>产品定位</strong>：开箱即用的云上 SaaS 版 OpenClaw</p>
+                        <ul>
+                            <li>3月9日正式上线火山引擎，7×24 小时在线 AI 助手</li>
+                            <li>支持 Doubao-Seed-2.0 系列、Kimi2.5、MiniMax2.5、GLM 等主流模型</li>
+                            <li>深度适配飞书 OpenClaw 官方插件，无需重复配置权限或复制上下文</li>
+                            <li>火山方舟 Coding Plan Pro 用户可直接同步使用，Lite 用户享 7 天免费体验</li>
+                            <li>内置技能安全扫描机制，对接网盘实现长效记忆存储</li>
+                        </ul>
+
+                        <h3>🔶 CoPaw（阿里巴巴）</h3>
+                        <p><strong>产品定位</strong>：开源桌面 Agent 工具，支持本地与云端部署</p>
+                        <ul>
+                            <li>2月28日正式开源，通义实验室推出，支持一键本地/云端部署</li>
+                            <li>原生兼容钉钉、飞书、QQ、Discord、iMessage 等主流通讯平台</li>
+                            <li>模块化 Agent 架构：Prompt、Tools、Memory 等组件解耦，支持按需组装</li>
+                            <li>支持 Ollama、llama.cpp、MLX（Apple Silicon）等本地推理框架</li>
+                            <li>主动心跳机制：可自主执行查邮件、整周报、记录健身数据等定时任务</li>
+                            <li>长期记忆功能：自动沉淀用户偏好与决策，越用越懂你</li>
+                        </ul>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>💼 企业落地案例</h2>
+
+                        <h3>猎豹移动：8-Agent 协作团队实践</h3>
+                        <p>傅盛通过 EasyClaw 搭建的「龙虾三万」系统展示了多 Agent 协作的落地形态：</p>
+                        <ul>
+                            <li><strong>组织架构</strong>：三万（CEO）、笔杆子（文案）、参谋（策略）、运营官、进化官、健康管家、交易官、社区官</li>
+                            <li><strong>工作方式</strong>：8 个聊天窗口排成一列，像 8 个工作群一样协作，但群里都是 AI Agent</li>
+                            <li><strong>核心成果</strong>：零代码搭建、22 万字对话训练、40+ Skill 积累、611 条个性化消息自动发送</li>
+                            <li><strong>产品理念</strong>：让每个人都能拥有自己的 AI 团队，7×24 小时处理工作、获取信息、管理日程</li>
+                        </ul>
+
+                        <h3>腾讯 WorkBuddy：2000+ 员工内测</h3>
+                        <p>腾讯内部已深度应用 WorkBuddy 超过两个月：</p>
+                        <ul>
+                            <li>覆盖岗位：HR、行政、秘书、运营、销售等非技术背景角色</li>
+                            <li>核心场景：数据处理与分析、本地知识库构建、内容文案创作、海报生成、自动化办公</li>
+                            <li>关键指标：相比传统 AI 工具，非技术员工办公效率显著提升</li>
+                            <li>设计哲学：「下载即用」的极致体验，降低 AI Agent 使用门槛</li>
+                        </ul>
+
+                        <h3>企业级 AI Agent 落地趋势</h3>
+                        <p>根据近期行业调研，企业级 AI Agent 落地呈现以下特点：</p>
+                        <ul>
+                            <li><strong>技术选型</strong>：从自研转向基于成熟框架（OpenClaw/AgentScope）的二次开发</li>
+                            <li><strong>部署模式</strong>：云端 SaaS 与私有化部署并行，中小企业偏好托管服务，大型企业重视数据主权</li>
+                            <li><strong>核心能力</strong>：多 Agent 协作、长期记忆、任务规划、RAG 知识库成为标配</li>
+                            <li><strong>安全治理</strong>：数据加密、访问控制、审计追溯、安全沙箱成为企业采购必选项</li>
+                            <li><strong>成本优化</strong>：MoE 架构模型（如 MiniMax M2.5）以更低成本提供接近顶级模型的能力</li>
+                        </ul>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>📚 延伸阅读</h2>
+                        <div class="link-list">
+                            <div class="link-item">
+                                <a href="https://github.com/openclaw/openclaw/releases" target="_blank">OpenClaw GitHub Releases</a>
+                                <span>官方版本发布页面</span>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://www.codebuddy.cn/work/" target="_blank">腾讯 WorkBuddy 官网</a>
+                                <span>全场景职场 AI 智能体</span>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://agent.minimaxi.com/activity/max-claw" target="_blank">MaxClaw 官方平台</a>
+                                <span>MiniMax 云端 AI Agent</span>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://easyclaw.com/" target="_blank">EasyClaw 国际版</a>
+                                <span>猎豹移动 AI Agent 工具</span>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://www.volcengine.com/experience/ark?mode=claw" target="_blank">ArkClaw 试用</a>
+                                <span>字节火山引擎云端 Agent</span>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://github.com/modelscope/CoPaw" target="_blank">CoPaw GitHub</a>
+                                <span>阿里开源桌面 Agent</span>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://www.datacamp.com/tutorial/kimi-claw-tutorial" target="_blank">Kimi Claw 教程</a>
+                                <span>DataCamp 详细使用指南</span>
+                            </div>
+                            <div class="link-item">
+                                <a href="https://goldie.agency/openclaw-ai-agent-update/" target="_blank">OpenClaw AI Agent Update 详解</a>
+                                <span>ACP Provenance 与备份功能深度解析</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 OpenClaw Daily Report · 每日 AI Agent 行业情报</p>
+            <p class="footer-meta">自动采集 · 每日更新 · 8:17 AM</p>
+        </div>
+    </footer>
+</body>
+</html>
