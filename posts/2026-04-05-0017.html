@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily - 2026年4月5日</title>
+    <meta name="description" content="OpenClaw Daily Report - 2026年4月5日 AI Agent 行业日报">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../" class="logo">
+                <span class="logo-icon">🔷</span>
+                <span class="logo-text">OpenClaw Daily</span>
+            </a>
+            <nav class="main-nav">
+                <a href="../">首页</a>
+                <a href="../archive.html">归档</a>
+                <a href="../about.html">关于</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <article class="post">
+            <header class="post-header">
+                <h1>OpenClaw Daily - 2026年4月5日</h1>
+                <div class="post-meta">
+                    <time datetime="2026-04-05">2026年4月5日 00:17</time>
+                    <span class="post-category">日报</span>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <section class="summary-section">
+                    <h2>📌 今日概览</h2>
+                    <ul>
+                        <li><strong>OpenClaw v2026.4.2 重磅发布</strong>：Task Flow 重构、插件安全强化、VirusTotal 集成扫描 Skills</li>
+                        <li><strong>腾讯 WorkBuddy</strong>：公测持续火热，新用户可领5000积分，支持微信/飞书/钉钉多端接入</li>
+                        <li><strong>Kimi Claw</strong>：月之暗面云端Agent服务，提供24/7全天候AI助手与5000+技能生态</li>
+                        <li><strong>MaxClaw</strong>：MiniMax推出10秒云端部署方案，基于M2.7 MoE模型，成本仅为Claude 1/7</li>
+                        <li><strong>阿里 CoPaw</strong>：开源桌面Agent工具，支持本地+云端双部署，原生打通钉钉飞书QQ</li>
+                        <li><strong>猎豹 EasyClaw</strong>：傅盛14天搭建8-Agent协作团队，助力公司2025年扭亏为盈</li>
+                        <li><strong>字节 ArkClaw</strong>：火山引擎"云养虾"SaaS版上线，Lite版月费低至8.9元</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>🔷 OpenClaw 官方动态</h2>
+                    
+                    <h3>OpenClaw v2026.4.2 发布（4月2日）</h3>
+                    <p>本次更新是2026年Q2首个重要版本，带来多项核心架构升级：</p>
+                    <ul>
+                        <li><strong>Task Flow 重构</strong>：恢复核心 Task Flow 底层架构，支持托管与镜像同步模式，新增 <code>openclaw flows</code> 查看/取消/恢复工作流命令</li>
+                        <li><strong>插件安全强化</strong>：Skills 安装时默认开启危险代码扫描，关键发现将阻止安装，需显式使用 <code>--dangerously-force-unsafe-install</code> 覆盖</li>
+                        <li><strong>VirusTotal 集成</strong>：新增技能安全扫描，可在安装前检测已知威胁</li>
+                        <li><strong>xAI/Grok 支持</strong>：内置 x_search 搜索能力，Responses API 迁移完成</li>
+                        <li><strong>飞书文档协作</strong>：新增 Drive 评论事件流，支持评论线程上下文回复</li>
+                        <li><strong>节点执行优化</strong>：统一使用 <code>exec host=node</code> 执行节点命令，移除冗余封装</li>
+                    </ul>
+
+                    <h3>OpenClaw v2026.4.1 更新要点（4月1日）</h3>
+                    <ul>
+                        <li>新增 <code>/tasks</code> 命令查看会话后台任务看板</li>
+                        <li>内置 SearXNG 搜索插件，支持自定义主机</li>
+                        <li>Amazon Bedrock Guardrails 支持</li>
+                        <li>macOS 语音唤醒功能</li>
+                        <li>Slack 原生执行审批路由</li>
+                        <li>WhatsApp 消息表情回应支持</li>
+                    </ul>
+
+                    <h3>市场规模预测</h3>
+                    <p>据 Grand View Research 数据，AI Agent 市场规模预计：</p>
+                    <ul>
+                        <li>2026年：109.1亿美元（企业集成与Agentic AI驱动）</li>
+                        <li>2033年：1829.7亿美元（自主工作流普及）</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>🦞 竞品动态</h2>
+                    
+                    <h3>腾讯 WorkBuddy</h3>
+                    <p>腾讯云 CodeBuddy 团队推出的全场景职场 AI 智能体桌面工作台，被业内称为"国产小龙虾"。</p>
+                    <ul>
+                        <li><strong>核心能力</strong>：自然语言操控、多格式文件处理（Office/PDF/图片）、远程控制（Claw功能）</li>
+                        <li><strong>模型支持</strong>：混元、DeepSeek、GLM、Kimi、MiniMax 等</li>
+                        <li><strong>渠道接入</strong>：企业微信、QQ、飞书、钉钉、微信</li>
+                        <li><strong>最新活动</strong>：公测期间新用户可领5000积分（截至3月31日）</li>
+                        <li><strong>内部数据</strong>：发布前已有超2000名非技术背景员工深度使用</li>
+                    </ul>
+
+                    <h3>Kimi Claw</h3>
+                    <p>月之暗面（Moonshot AI）于2026年春节期间推出的云端 OpenClaw 一键部署服务。</p>
+                    <ul>
+                        <li><strong>产品定位</strong>："浏览器里的24/7个人AI代理" / "云端JARVIS"</li>
+                        <li><strong>核心特性</strong>：零代码、零硬件、零部署，Allegretto会员可一键开启</li>
+                        <li><strong>技术底座</strong>：Kimi K2.5 Thinking 模型驱动</li>
+                        <li><strong>功能亮点</strong>：长期记忆、定时任务、ClawHub 5000+技能、40GB云存储</li>
+                        <li><strong>特色功能</strong>：BYOC（自带Claw）支持连接本地 OpenClaw 实例</li>
+                    </ul>
+
+                    <h3>MaxClaw</h3>
+                    <p>MiniMax 于2月25日正式推出的云端 AI Agent 平台，香港上市估值25亿美元。</p>
+                    <ul>
+                        <li><strong>部署速度</strong>：10秒云端部署，无需服务器/Docker/SSH</li>
+                        <li><strong>模型能力</strong>：M2.7 MoE架构（229B总参数，10B激活参数），上下文200K-1M tokens</li>
+                        <li><strong>成本优势</strong>：推理成本仅为 Claude 3.5 Sonnet 的 1/7 至 1/20</li>
+                        <li><strong>平台集成</strong>：Telegram、Discord、Slack、WhatsApp、飞书、钉钉</li>
+                        <li><strong>代码能力</strong>：SWE-Bench Verified 达80.2%，对标 Claude Opus 4.6</li>
+                    </ul>
+
+                    <h3>阿里 CoPaw</h3>
+                    <p>阿里云 AgentScope 团队2月28日正式开源的桌面 Agent 工具。</p>
+                    <ul>
+                        <li><strong>部署模式</strong>：本地+云端双部署，数据完全本地存储</li>
+                        <li><strong>消息通道</strong>：原生支持钉钉、飞书、QQ、Discord、iMessage</li>
+                        <li><strong>核心机制</strong>：主动"心跳"定时任务、长期记忆系统、Skills模块化扩展</li>
+                        <li><strong>模型兼容</strong>：通义千问、智谱、DeepSeek、Ollama、MLX（Apple芯片）</li>
+                        <li><strong>架构特点</strong>：Prompt/Hooks/Tools/Memory组件解耦，支持按需组装</li>
+                    </ul>
+
+                    <h3>猎豹 EasyClaw</h3>
+                    <p>猎豹移动推出的 OpenClaw 本地化封装产品，CEO傅盛亲自验证打样。</p>
+                    <ul>
+                        <li><strong>核心卖点</strong>：双击安装、无需API Key、3分钟上手</li>
+                        <li><strong>产品矩阵</strong>：国际版(easyclaw.com)、企业版(easyclaw.work)、国内版元气AI Bot(yuanqiaibot.net)</li>
+                        <li><strong>安全特性</strong>：本地沙盒运行，数据不上传云端</li>
+                        <li><strong>傅盛案例</strong>：春节14天搭建8个Agent协作团队，积累40+ Skills，除夕夜4分钟向611名员工发送个性化拜年消息</li>
+                        <li><strong>商业成果</strong>：2025年猎豹移动扭亏为盈，AI收入5.352亿元</li>
+                    </ul>
+
+                    <h3>字节 ArkClaw</h3>
+                    <p>字节跳动火山引擎3月9日推出的云上 SaaS 版 OpenClaw，主打"云养虾"概念。</p>
+                    <ul>
+                        <li><strong>产品定位</strong>：开箱即用、零门槛在线智能体平台</li>
+                        <li><strong>定价策略</strong>：Lite版月费低至8.9元，按请求次数计费</li>
+                        <li><strong>解决痛点</strong>：环境配置复杂、Token消耗不可控（自建月均1200元）、进程易中断</li>
+                        <li><strong>模型支持</strong>：Doubao-Seed-2.0系列、Kimi2.5、MiniMax2.5、GLM</li>
+                        <li><strong>企业应用</strong>：头部游戏公司日均处理对话超1000万次，客服效率提升3倍</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>🏢 企业落地案例</h2>
+                    
+                    <h3>AI Agent 企业级落地三大趋势（2026）</h3>
+                    <ul>
+                        <li><strong>多智能体协同</strong>：从单体智能向Multi-Agent演进，财务Agent+合规Agent+业务Agent分工协作</li>
+                        <li><strong>大模型+RPA融合</strong>：Agent负责思考决策，RPA负责长流程精准执行</li>
+                        <li><strong>开源模型私有化</strong>：DeepSeek等高性能开源模型本地化微调爆发</li>
+                    </ul>
+
+                    <h3>典型落地场景</h3>
+                    <ul>
+                        <li><strong>欧坚网络</strong>：使用ArkClaw自动化报关单处理，准确率提升至99.8%</li>
+                        <li><strong>头部游戏公司</strong>：ArkClaw日均处理对话超1000万次，客服效率提升3倍</li>
+                        <li><strong>猎豹移动</strong>：AI收入5.352亿元，占互联网业务65%，同比增21%</li>
+                        <li><strong>复旦大学附属中山医院</strong>：发布3.1亿元AI全栈能力开发服务平台招标</li>
+                    </ul>
+
+                    <h3>Gartner预测</h3>
+                    <p>到2026年，超过80%的企业将在生产环境中应用生成式AI或AI智能体。人机混合协作模式将成为组织工作流程创新的核心方向。</p>
+                </section>
+
+                <section>
+                    <h2>🔗 延伸阅读</h2>
+                    <ul class="link-list">
+                        <li><a href="https://github.com/openclaw/openclaw/releases" target="_blank">OpenClaw GitHub Releases</a></li>
+                        <li><a href="https://www.codebuddy.cn/work/" target="_blank">腾讯 WorkBuddy 官网</a></li>
+                        <li><a href="https://kimi.com/bot" target="_blank">Kimi Claw 入口</a></li>
+                        <li><a href="https://agent.minimax.io" target="_blank">MaxClaw 官网</a></li>
+                        <li><a href="https://copaw.agentscope.io/" target="_blank">阿里 CoPaw 官网</a></li>
+                        <li><a href="https://easyclaw.com/" target="_blank">EasyClaw 国际版</a></li>
+                        <li><a href="https://www.volcengine.com/experience/ark?mode=claw" target="_blank">字节 ArkClaw 体验</a></li>
+                        <li><a href="https://skywork.ai/skypage/en/openclaw-ai-agent-features/" target="_blank">OpenClaw AI Agent Features 深度解析</a></li>
+                        <li><a href="https://goldie.agency/openclaw-ai-agent-update/" target="_blank">OpenClaw AI Agent Update 安全分析</a></li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 OpenClaw Daily Report · 每日 AI Agent 行业情报</p>
+            <p class="footer-meta">自动采集 · 每日更新 · 8:17 AM</p>
+        </div>
+    </footer>
+</body>
+</html>
