@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenClaw Daily Report - 2026.05.01</title>
+<meta name="description" content="OpenClaw 每日情报速递：2026年5月1日 - v2026.4.29发布、腾讯元宝频道接入、供应链安全修复、Claw生态五强格局">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="daily-report">
+<h1>OpenClaw Daily Report</h1>
+<div class="date">2026.05.01 · Friday · Asia/Shanghai</div>
+
+<div class="hero">
+<h2>今日概览</h2>
+<ul>
+<li><strong>🔖 v2026.4.29 正式发布</strong>：OpenClaw 发布 4 月最终版本，带来 active-run steering、startup diagnostics timeline、子 Agent 路由元数据等核心改进，Docker 部署支持跳过交互式 onboarding。</li>
+<li><strong>💬 腾讯元宝频道接入</strong>：OpenClaw 官方新增 Yuanbao（腾讯元宝）频道支持，完善国内 IM 生态覆盖，与飞书、钉钉、企业微信形成互补。</li>
+<li><strong>🔐 供应链安全加固</strong>：v2026.3.28 修复 6 个供应链相关漏洞（含 3 个高危），新增 OpenGrep 精确规则包和 SafeSkill 第三方评分机制，安全信任页面 trust.openclaw.ai 上线。</li>
+<li><strong>🏗️ Claw 生态五强格局成型</strong>：OpenClaw（原版）、MaxClaw（MiniMax 云托管）、KimiClaw（月之暗面浏览器原生）、ZeroClaw（Rust 重写轻量版）、PicoClaw（Sipeed IoT 版）差异化定位清晰。</li>
+<li><strong>📈 2026 企业 Agent 落地爆发</strong>：79% 企业已部署 AI Agent，40% 企业应用集成，多 Agent 协作 + AgentOps 成为企业新刚需，金融/医疗/制造三行业落地最深。</li>
+</ul>
+</div>
+
+<h2>🦞 OpenClaw 官方与生态动态</h2>
+
+<div class="section">
+<h3>核心项目进展</h3>
+<ul>
+<li><strong>v2026.4.29 版本亮点</strong>：
+  <ul>
+    <li>Gateway/dev：默认通过命名 tmux 会话运行 <code>pnpm gateway:watch</code>，重复启动自动复用 inspectable watcher</li>
+    <li>Gateway/diagnostics：可选的启动诊断时间线，记录 gateway 生命周期和插件加载阶段，便于慢启动排查</li>
+    <li>Control UI/i18n：新增波斯语(fa)、荷兰语(nl)、越南语(vi)、意大利语(it)、阿拉伯语(ar)、泰语(th) 支持</li>
+    <li>Channels：新增腾讯 Yuanbao 频道入口，插件仓库定位至 YuanbaoTeam/yuanbao-openclaw-plugin</li>
+    <li>Docker setup：新增 <code>OPENCLAW_SKIP_ONBOARDING</code> 环境变量，自动化部署可跳过交互步骤</li>
+    <li>Security/OpenGrep：引入精确规则包、源规则编译器、来源元数据检查，PR/全量扫描工作流上传 SARIF 至 GitHub Code Scanning</li>
+  </ul>
+</li>
+<li><strong>GitHub  stars 持续攀升</strong>：截至 2026 年 4 月，openclaw/openclaw 仓库已获 344,771+ stars，仍是史上增长最快的开源项目之一。</li>
+<li><strong>GitHub Issues 自动化能力成熟</strong>：社区已沉淀 issue triage、PR review、CI/CD 监控、release 管理四大自动化工作流，平均每周节省 14.5 小时维护时间。</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>📌 核心功能更新详情</h3>
+<table>
+<thead>
+<tr><th>功能/产品</th><th>更新内容</th><th>影响</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>v2026.4.29 Release</strong></td>
+<td>active-run steering 默认启用、visible-reply 强制执行、子 Agent 路由元数据、启动诊断时间线、6 语言新增、Yuanbao 频道、Docker 免交互部署</td>
+<td>开发体验和诊断能力显著提升，国内生态覆盖更完整</td>
+</tr>
+<tr>
+<td><strong>Security/OpenGrep</strong></td>
+<td>精确规则包 + 源规则编译器 + 来源元数据验证 + SARIF 上传 Code Scanning</td>
+<td>第一方代码和规则包变更的自动化安全验证</td>
+</tr>
+<tr>
+<td><strong>供应链安全修复</strong></td>
+<td>v2026.3.28 修复 6 个漏洞：沙箱逃逸(#58897)、特权持久化(#58896)、SSRF 绕过(#58771)等</td>
+<td>低于 v2026.3.28 的版本需立即升级，攻击者可利用恶意 Skill 执行任意命令</td>
+</tr>
+<tr>
+<td><strong>Yuanbao 频道</strong></td>
+<td>腾讯元宝机器人接入 OpenClaw 频道列表，支持 sidebar 导航和 channel catalog</td>
+<td>国内用户多一个原生 IM 入口，与微信生态潜在打通</td>
+</tr>
+<tr>
+<td><strong>tmux 网关守护</strong></td>
+<td>gateway:watch 默认使用命名 tmux session，避免重复进程和 shell 陷阱</td>
+<td>开发迭代更稳定，后台网关可 inspect/reattach</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2>🏢 竞品动态</h2>
+
+<div class="section">
+<h3>MaxClaw（MiniMax）</h3>
+<p>2026 年 2 月 26 日发布的云托管 AI Agent，核心优势在于零部署 friction：</p>
+<ul>
+<li><strong>M2.5 模型</strong>：229B 总参数 / ~10B 活跃参数的 MoE 架构，推理成本仅为 Claude 3.5 的 1/10</li>
+<li><strong>Expert 2.0</strong>：自然语言配置，无需 YAML、无需选 Skill，描述需求即自动配置行为</li>
+<li><strong>四平台原生</strong>：Telegram、WhatsApp、Slack、Discord 24/7 在线， widest channel support</li>
+<li><strong>订阅制定价</strong>：无额外 API 费用，MiniMax 订阅覆盖全部模型用量</li>
+</ul>
+<p>适合：追求零运维、高频使用、跨平台消息优先的团队。</p>
+</div>
+
+<div class="section">
+<h3>KimiClaw（月之暗面 / Moonshot AI）</h3>
+<p>2026 年 2 月 15 日发布，浏览器原生定位，与 Kimi.com 深度整合：</p>
+<ul>
+<li><strong>40 GB 云存储</strong>：支持 RAG 式文档检索，知识密集型场景优势明显</li>
+<li><strong>5,000+ ClawHub 技能</strong>：全量技能库访问，社区生态受益</li>
+<li><strong>BYOC（Bring Your Own Claw）</strong>：本地 OpenClaw 实例可接入 Kimi 云端，混合执行</li>
+<li><strong>Pro-Grade Search</strong>：集成 Yahoo Finance 实时金融数据</li>
+</ul>
+<p>限制：需 Allegretto 付费订阅，暂不支持终端 UI，Agent→用户文件上传未开通，模型锁定 K2.5。</p>
+</div>
+
+<div class="section">
+<h3>ZeroClaw（社区 Rust 重写）</h3>
+<p>2026 年 2 月发布的开源重写版，主打极致轻量：</p>
+<ul>
+<li><strong>3.4 MB 二进制</strong>，< 5 MB RAM，冷启动 < 10 ms</li>
+<li><strong>99% RAM 降低</strong> vs OpenClaw 原版，单 VPS 可跑 50+ bots</li>
+<li>支持 22+ BYO 模型，10+ 频道 via plugin traits</li>
+<li>适合：开发者、VPS 批量部署、边缘计算场景</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>PicoClaw（Sipeed）</h3>
+<p>2026 年 2 月 9 日发布的 Go 语言版本，面向 IoT 和嵌入式：</p>
+<ul>
+<li><strong>< 10 MB 二进制</strong>，< 10 MB RAM，秒级启动</li>
+<li>搭配 PicoLM 实现 $10 硬件上的全离线 AI 栈</li>
+<li>覆盖 QQ、钉钉等亚洲平台</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>阿里 CoPaw / 百炼</h3>
+<p>阿里云持续降低 OpenClaw 部署门槛：</p>
+<ul>
+<li>轻量应用服务器专属 OpenClaw(Moltbot) 镜像，两步完成部署</li>
+<li>百炼 Coding Plan 套餐：新用户 90 天免费额度（超 7000 万 Token）</li>
+<li>支持 Qwen3-Max、Qwen3.5-Plus 等模型</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>腾讯云 / WorkBuddy</h3>
+<p>腾讯云同步推出 OpenClaw 一键部署，提供 DeepSeek Coding Plan 套餐（Lite 首月 7.9 元）。腾讯 WorkBuddy 被评价为"已从技术领域进入公众领域"，主要面向企业微信生态。</p>
+</div>
+
+<h2>🚀 社区趣味应用案例</h2>
+
+<div class="section">
+<ul>
+<li><strong>全终端 GitHub 自动化</strong>：OpenClaw 从 Telegram/Slack 接收指令，自动 triage issue、review PR、监控 CI、撰写 release notes，社区报告每周节省 14.5 小时维护时间。</li>
+<li><strong>供应链安全自查</strong>：已有用户通过 OpenClaw 定时扫描本地 Skill 依赖，结合 trust.openclaw.ai 安全公告自动比对版本，发现漏洞时推送飞书告警。</li>
+<li><strong>多语言客服 Agent</strong>：利用 v2026.4.29 新增的 fa/nl/vi/it/ar/th 语言支持，社区用户搭建了覆盖中东、东南亚、欧洲市场的多语言客服 Agent 集群。</li>
+<li><strong>企业邮件万封清理</strong>：15 个 OpenClaw Agent 实例组成多 Agent 协作集群，7 小时内完成 10,000+ 封历史邮件分类归档，100% 本地运行保障隐私。</li>
+</ul>
+</div>
+
+<h2>📚 精选 Skill 学习指南</h2>
+
+<div class="section">
+<ul>
+<li><strong>github-manager</strong>：安装 <code>openclaw skill install github-manager</code> 后，Agent 可自动管理 issue、PR、review、CI 监控。配合 <code>pr-radar</code> 实现 PR 风险评级。</li>
+<li><strong>kimi-search</strong>：调用 Kimi 联网搜索，支持 freshness、site、时间范围过滤。情报搜集和竞品监控的核心 Skill。</li>
+<li><strong>feishu-create-doc / feishu-update-doc</strong>：Markdown → 飞书文档自动化，支持 overwrite/append/replace 模式。日报/研报分发必备。</li>
+<li><strong>healthcheck</strong>：系统安全巡检和加固，可设为 cron 定时执行，自动检测暴露端口、过期依赖、弱密码。</li>
+<li><strong>clawhub</strong>：官方技能市场入口，<code>clawhub search &lt;keyword&gt;</code> 和 <code>clawhub install &lt;skill&gt;</code> 扩展 Agent 能力边界。</li>
+</ul>
+</div>
+
+<h2>🏭 企业落地案例</h2>
+
+<div class="section">
+<ul>
+<li><strong>某头部保险公司</strong>：部署 AI Agent 处理理赔初审，单日处理量从人工 2,000 件提升至 15,000 件，准确率 97.3%，人力成本降低约 60%。</li>
+<li><strong>猎豹移动（EasyClaw）</strong>：CEO 傅盛 14 天构建 8 个 Agent 团队"三万"，覆盖拜年消息群发、X 推文生成、24 小时建站，估算完成 6 人团队 2-3 周工作量。</li>
+<li><strong>Swisscom（Rasa）</strong>：瑞士电信运营商 20 周从原型到生产，客服自动化率翻倍，运营成本降低 50%。</li>
+<li><strong>阿里云/腾讯云</strong>：推出官方镜像 + Coding Plan 套餐，面向中小企业提供 5 分钟级 AI Agent 基础设施。</li>
+</ul>
+</div>
+
+<h2>📎 延伸阅读</h2>
+<div class="links">
+<ul>
+<li><a href="https://github.com/openclaw/openclaw/releases/tag/2026.4.29">OpenClaw v2026.4.29 Release Notes · GitHub</a></li>
+<li><a href="https://www.cnblogs.com/qiniushanghai/p/19810989">OpenClaw 被投毒了吗？2026 年供应链攻击自查完全指南</a></li>
+<li><a href="https://skywork.ai/skypage/en/openclaw-github-issues-automation/2048680640301182976">The Ultimate Guide to OpenClaw GitHub Issues Automation 2026</a></li>
+<li><a href="https://maxclaw.ai/claw-ecosystem">The Claw Ecosystem: MaxClaw and the AI Agent Landscape</a></li>
+<li><a href="https://maxclaw.ai/maxclaw-vs-kimiclaw">MaxClaw vs KimiClaw — Cloud AI Agent Comparison 2026</a></li>
+<li><a href="https://developer.aliyun.com/ask/700396">2026 年怎么部署 OpenClaw？阿里云萌新安装及百炼 Coding Plan 教程</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/2656530">保姆级教程！阿里云/腾讯云全面支持一键部署 OpenClaw</a></li>
+<li><a href="https://h5.ifeng.com/c/vivoArticle/v002PGfXb09NhT2jrEWfx3ppYLiDaDq8VYjO6eLFScqCqOM__">AI Agent 企业落地爆发年！2026 年最值得关注的 5 个趋势</a></li>
+<li><a href="https://grapecity.csdn.net/69e051f454b52172bc6a404e.html">2026：AI Agent 的范式革命——从技术内核到产业落地的深度解构</a></li>
+</ul>
+</div>
+
+<div class="footer">
+<p>Generated by Kimi Claw · OpenClaw Daily Report System</p>
+<p>数据来源：kimi_search 实时搜索 · 截至 2026-05-01 00:45 CST</p>
+</div>
+</div>
+
+</body>
+</html>
