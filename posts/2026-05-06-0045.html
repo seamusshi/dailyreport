@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年5月6日（第26期·合并研报版）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年5月6日（第26期）| 合并研报版</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📰 今日概览</h2>
+                <ul class="highlights">
+                    <li><strong>OpenClaw v2026.5.4 重磅发布：</strong>Git 插件一等公民支持（带 ref checkout 和自动更新）、Google Meet Twilio 语音桥接、SDK tools.invoke RPC、Slack App Home Tab 与线程持久化</li>
+                    <li><strong>Anthropic 限制争议升温：</strong>Theo 热帖曝光 "Claude Code 拒绝含 OpenClaw 关键词的提交"，levelsio 直言 "Anthropic 成功扼杀了 OpenClaw"，平台依赖风险引发社区大规模讨论</li>
+                    <li><strong>Hermes Agent 被视为 "从工具到伙伴"：</strong>Nous Research 自进化框架 17,000+ Stars，GEPA 机制支持跨会话技能自提取，社区称其为 "OpenClaw 之后最令人兴奋的 Agent 框架"</li>
+                    <li><strong>云厂商 Agent 竞赛白热化：</strong>腾讯云 KiKi 一句话部署 OpenClaw 上线首日破 2000 用户；阿里云 RDSClaw（数据库原生 AI Agent）正式公测；火山引擎 ArkClaw 持续推广 "云养虾"</li>
+                    <li><strong>国产 "百虾大战" 格局微调：</strong>ArkClaw 强调与 Coze 差异化（执行型 vs 搭建型），WorkBuddy 深耕企业微信场景，CoPaw 借 Coding Plan 降低 Token 焦虑</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🦞 OpenClaw 官方动态</h2>
+                <h3>GitHub 最新 Release：v2026.5.4 / v2026.5.2</h3>
+                <p>OpenClaw 保持高频迭代节奏，近一周连发两个版本，核心改进聚焦开发者体验、企业集成与平台稳定性：</p>
+                
+                <h4>🔧 v2026.5.4 核心更新</h4>
+                <ul class="highlights">
+                    <li><strong>Git 插件一等公民化：</strong><code>git:</code> 协议安装插件成为原生支持，支持 ref checkout、commit metadata 记录、normal scanner/staging，以及 <code>plugins update</code> 自动追踪 Git 源更新。由 @badlogic 贡献。</li>
+                    <li><strong>Google Meet 语音桥接升级：</strong>Twilio dial-in 入会现在通过 realtime Gemini voice bridge 传输音频，并新增 pre-connect DTMF、stream setup 和 greeting handoff 的完整调试日志。</li>
+                    <li><strong>SDK tools.invoke RPC：</strong>面向 SDK 的 tools.invoke 远程调用接口，支持共享 HTTP 策略、类型化的 approval/refusal 结果。Refs #74705。</li>
+                    <li><strong>Slack 体验大幅提升：</strong>安全默认 App Home Tab 视图、<code>app_home_opened</code> 事件支持、bot 参与的线程跨 Gateway 重启后仍可自动回复。</li>
+                    <li><strong>Discord 交互持久化：</strong>Gateway 重启后，活跃的 buttons、selects 和 forms 在过期前保持可用，多步交互不再因升级中断。</li>
+                    <li><strong>macOS 菜单栏优化：</strong>将最近 session context rows 移入 Context 子菜单，保持顶部菜单紧凑。</li>
+                </ul>
+
+                <h4>🔧 v2026.5.2 补充更新</h4>
+                <ul class="highlights">
+                    <li>Google Meet 实时字幕健康监测（Chrome transcribe mode），包含 caption observer 状态、transcript 计数器</li>
+                    <li>Messages/docs 明确 <code>BodyForAgent</code> 为主流入站模型文本路径，Signal 渠道纳入安全加固范围</li>
+                    <li>Control UI/Usage 新增 UTC quarter-hour token buckets，提升用量统计精度</li>
+                </ul>
+
+                <h3>社区与治理动态</h3>
+                <p><strong>星标与生态：</strong>截至 2026 年 5 月初，OpenClaw 主仓库累计 <strong>355,000+ Stars</strong>，已成为 GitHub 历史上增速最快的仓库之一，超越 React 的历史星标增速。1,280+ 活跃贡献者持续推动框架进化。</p>
+                <p><strong>平台依赖风险争议：</strong>近期社区热点并非技术本身，而是外部平台对 OpenClaw 的限制——X/Twitter 热帖显示 Claude Code 会对包含 "OpenClaw" 关键词的提交请求拒绝服务或额外收费；levelsio 更发文称 "Anthropic successfully killed OpenClaw"。短视频平台随之出现 "The Rise and Fall of OpenClaw" 等叙事，将技术争议包装成兴衰故事。这一风波反而强化了社区对 "本地优先、多模型备份、去平台化" 路线的心理认同。</p>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                
+                <h3>Git 插件原生支持：Skill 生态里程碑</h3>
+                <p>v2026.5.4 将 <code>git:</code> 协议插件安装提升为一等公民，意味着开发者可以直接从任意 Git 仓库安装、更新和管理 Skill，无需经过 ClawHub 或其他中心化集市：</p>
+                <ul class="highlights">
+                    <li><strong>Ref checkout 支持：</strong>可指定分支、tag 或 commit 安装特定版本</li>
+                    <li><strong>Commit metadata 记录：</strong>安装的插件会记录来源 commit，便于追溯和审计</li>
+                    <li><strong>Normal scanner/staging：</strong>与本地插件一致的扫描和 staging 流程</li>
+                    <li><strong>plugins update 支持：</strong><code>openclaw plugins update</code> 会自动检测并更新所有通过 Git 源安装的插件</li>
+                </ul>
+                <p>这一更新对企业和闭源 Skill 开发者意义重大：不再依赖 ClawHub 发布流程，私有仓库即可作为 Skill 源，CI/CD  pipeline 可直接推送更新。</p>
+
+                <h3>Google Meet + Twilio：会议 Agent 场景补全</h3>
+                <p>此前 OpenClaw 已支持通过 Chrome DevTools Protocol 控制浏览器加入 Google Meet 并获取实时字幕。v2026.5.4 进一步打通 Twilio dial-in 入会通道：</p>
+                <ul class="highlights">
+                    <li>通过 Twilio 电话号码拨号入会，无需浏览器参与</li>
+                    <li>音频流通过 realtime Gemini voice bridge 处理，支持 paced audio（节奏化音频）</li>
+                    <li>完整的 pre-connect DTMF 和初始问候交接日志，便于生产环境排障</li>
+                </ul>
+                <p>这意味着 OpenClaw 现在可以以 "电话参会者" 身份 7×24 小时驻留会议，适用于会议纪要自动生成、合规录音、待办提取等场景。</p>
+
+                <h3>SDK tools.invoke：从 Gateway 到应用的双向桥接</h3>
+                <p>新增的 SDK-facing <code>tools.invoke</code> RPC 接口允许外部应用通过标准 HTTP 调用触发 Agent 工具执行，返回类型化的 approval/refusal 结果。这为 "OpenClaw 作为企业后端服务" 的架构模式提供了官方支持——前端应用可以像调用普通 API 一样触发 Agent 能力，同时保留人工审批的插槽。</p>
+            </section>
+
+            <section class="section">
+                <h2>🏢 竞品动态</h2>
+                
+                <h3>Hermes Agent — "能成长的 Agent"</h3>
+                <p>由 Nous Research 开发的开源自进化 Agent 框架，MIT 许可证，GitHub <strong>17,000+ Stars</strong>。核心卖点是 GEPA（Generative Evolutionary Preference Alignment）闭环学习系统：</p>
+                <ul class="highlights">
+                    <li><strong>跨会话持久记忆：</strong>智能筛选和压缩关键信息，积累用户偏好与项目知识</li>
+                    <li><strong>自主技能提取：</strong>解决难题后自动创建可复用 Skill，相似任务自动加载</li>
+                    <li><strong>轻量架构：</strong>核心 API 不超过 10 个，一键安装，生产级错误处理和重试机制内置</li>
+                    <li><strong>统一消息网关：</strong>单进程同时接入 Telegram、Discord、Slack、WhatsApp、飞书等 8 个平台</li>
+                    <li><strong>400+ 模型支持：</strong>任何兼容 OpenAI API 格式的模型均可接入，包括本地部署</li>
+                </ul>
+                <p>社区评价："如果 OpenClaw 是 2026 年初点燃 AI Agent 领域的现象级产品，那么 Hermes Agent 已经把竞争带到了全新维度——从一个 '能干活儿的工具' 变成了 '和你一起成长的伙伴'。"</p>
+
+                <h3>ArkClaw（字节跳动 / 火山引擎）</h3>
+                <p>字节旗下火山引擎的云端托管版 OpenClaw，2026 年 3 月 9 日正式推出，核心定位 <strong>"云养虾"</strong>——零门槛、免运维、7×24 小时在线：</p>
+                <ul class="highlights">
+                    <li><strong>与 Coze 的差异化：</strong>ArkClaw 是 "执行型" 智能体（自动完成任务），Coze 是 "搭建型" 低代码平台（用户自己搭智能体）</li>
+                    <li><strong>适配字节生态：</strong>原生集成飞书机器人，可创建飞书文档、预约日程、生成周报</li>
+                    <li><strong>Coding Plan 套餐：</strong>订阅 Pro 套餐可畅享 ArkClaw，告别 Token 按量计费焦虑</li>
+                    <li><strong>Lite 套餐政策调整：</strong>2026.03.24 起新购 Lite 用户不再赠送 7 日免费体验</li>
+                    <li><strong>数据安全：</strong>专属 ECS 资源、不暴露公网端口、火山引擎合规 Skill Hub</li>
+                </ul>
+
+                <h3>WorkBuddy / KiKi（腾讯）</h3>
+                <p>腾讯云于 2026 年 3 月 21 日发布行业首个官网内置 Agent 助手 <strong>KiKi</strong>，一句话完成 OpenClaw 部署：</p>
+                <ul class="highlights">
+                    <li>用户输入 "帮我部署 OpenClaw"，KiKi 自动完成资源购买、环境初始化、部署配置全过程</li>
+                    <li>上线首日超 <strong>2000 名用户</strong>通过一句话完成 "零操作" 部署</li>
+                    <li>支持跨页面自动跳转、任务拆解、最优路径选择</li>
+                    <li>所有步骤可视、可追溯，关键操作主动暂停请求确认</li>
+                </ul>
+                <p>腾讯云同步提供轻量服务器 99 元/年方案，CSDN 涌现大量 "3 分钟搭建"、"8 分钟保姆级" 教程。</p>
+
+                <h3>CoPaw / 阿里云百炼</h3>
+                <p>阿里云持续深化 OpenClaw 生态绑定，核心策略是 <strong>"卖铲子"</strong>——通过 OpenClaw 引流，带动云服务器、模型 API、存储等基础设施消费：</p>
+                <ul class="highlights">
+                    <li><strong>Coding Plan 套餐：</strong>固定月费模式，提供月度请求额度，超出时段限额的调用报错且不计费，消除 Token 焦虑</li>
+                    <li><strong>RDSClaw 数据库 Agent：</strong>基于 OpenClaw 构建的数据库原生 AI Agent，支持自然语言查询 SQL、性能诊断、安全事件响应</li>
+                    <li><strong>一键部署镜像：</strong>轻量应用服务器预置 OpenClaw 稳定版镜像，秒级启动</li>
+                    <li><strong>新用户福利：</strong>百炼新用户自动发放 90 天 7000 万 Token 免费额度</li>
+                </ul>
+
+                <h3>EasyClaw（猎豹移动）</h3>
+                <p>傅盛主导的 EasyClaw 继续推进出海企业版，财报中 AI 业务占比已接近 50%。"14 天 8 Agent" 实战案例在社区持续发酵，定位为 "中国百虾大战中独特的商业化路线"。</p>
+
+                <h3>MaxClaw（MiniMax）</h3>
+                <p>MiniMax 旗下 MaxClaw 持续迭代，M2.7 版本强调成本控制与移动端深度集成，已全面覆盖微信生态。全球化扩张步伐稳健。</p>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                
+                <h3>案例 A：腾讯云 KiKi — 一句话部署的数字员工</h3>
+                <p>2026 年 3 月 21 日 KiKi 上线首日，超过 2000 名用户在腾讯云官网输入自然语言指令完成 OpenClaw 部署。典型流程：</p>
+                <ol>
+                    <li>用户在腾讯云控制台输入 "帮我部署 OpenClaw"</li>
+                    <li>KiKi 自动识别意图，跳转购买页选择轻量服务器（99 元/年）</li>
+                    <li>自动完成环境初始化、Node.js 安装、API Key 配置</li>
+                    <li>部署完成后返回访问链接，全程约 3 分钟</li>
+                </ol>
+                <p>关键价值：将原本需要阅读文档、配置环境的 2 小时流程压缩到 3 分钟，且对新手完全零门槛。</p>
+
+                <h3>案例 B：RDSClaw — 数据库运维的 "口语化" 革命</h3>
+                <p>阿里云 RDSClaw 让企业运营人员用自然语言操作数据库：</p>
+                <ul class="highlights">
+                    <li><strong>日常查询：</strong>输入 "昨天各渠道的销售额是多少"，自动生成并执行 SQL</li>
+                    <li><strong>性能诊断：</strong>"数据库晚上 8 点特别慢" → 自动分析连接数、锁等待、慢查询日志</li>
+                    <li><strong>安全响应：</strong>自动检测疑似密钥泄露并告警，支持吊销 API Key、清理日志</li>
+                    <li><strong>免费试用：</strong>2 核 4GB 规格，首月免费</li>
+                </ul>
+
+                <h3>案例 C：Hermes Agent 竞品分析自动化流水线</h3>
+                <p>社区开发者使用 Hermes Agent 的 multi-agent 协作能力构建自动化竞品分析系统：</p>
+                <ul class="highlights">
+                    <li>研究员 Agent：搜索竞品信息、收集业务指标，写入共享记忆</li>
+                    <li>分析师 Agent：读取共享记忆，进行 SWOT 分析、生成图表描述</li>
+                    <li>报告写手 Agent：整合数据和洞察，输出 Markdown 竞品分析报告</li>
+                    <li>Router 动态编排：根据任务状态自动决定下一步交给哪个 Agent</li>
+                </ul>
+                <p>开发者反馈："以前写一个竞品分析要花 4 小时，现在 10 分钟出初稿，我只需要审核和润色。"</p>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <ul class="highlights">
+                    <li><strong>Hermes Agent 飞书接入指南：</strong>通过飞书 Bot 与飞书 CLI 让 AI Agent 直接在飞书中执行任务，支持 400+ 模型，7×24 小时驻留服务器。参考 <a href="https://www.feishu.cn/content/article/7628541877674953666" target="_blank">飞书官方内容</a></li>
+                    <li><strong>阿里云 OpenClaw 一键部署专题：</strong>两步完成 OpenClaw + Hermes Agent 部署，支持百炼 API 接入。阿里云开发者社区（2026-05-03 更新）</li>
+                    <li><strong>Coding Plan 选购指南：</strong>腾讯云仍有 7.9 元 Lite 套餐（供应紧张），百炼 Pro 200 元/月适合重度连续开发，Kimi Moderato 99 元/月唯一支持截图多模态输入。参考腾讯云开发者社区深度对比</li>
+                    <li><strong>Hermes Agent 入门实战（CSDN）：</strong>从 AutoGPT 迁移到 Hermes Agent 的完整经验，包含工具注册、动态编排、记忆管理、Token 压缩技巧。葡萄城开发者空间</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🏢 企业落地案例</h2>
+                
+                <h3>阿里云 RDSClaw 数据库 Agent 企业试用</h3>
+                <p>阿里云推出基于 OpenClaw 的数据库原生 AI Agent 服务 RDSClaw，面向企业数据运维场景：</p>
+                <ul class="highlights">
+                    <li><strong>场景 1：</strong>运营人员零 SQL 基础查询业务数据，管理员预设只读连接保障安全</li>
+                    <li><strong>场景 2：</strong>DBA 通过自然语言描述症状，AI 自动分析慢查询、连接数、锁等待</li>
+                    <li><strong>场景 3：</strong>安全事件自动检测与响应，支持事件详情查看、关联会话追溯、处置措施执行</li>
+                </ul>
+                <p>计费模式：应用实例费用（按规格）+ 模型调用费用（Coding Plan 套餐或按 Token 计费）。新用户可享 90 天免费额度。</p>
+
+                <h3>ArkClaw 金融行业实践</h3>
+                <p>字节跳动 ArkClaw 持续发酵金融行业案例，核心落地场景：</p>
+                <ul class="highlights">
+                    <li>周报自动生成与文档整理</li>
+                    <li>定时提醒与日程管理</li>
+                    <li>飞书生态深度集成（文档创建、日程预约、会议总结）</li>
+                    <li>火山引擎 TOS 对象存储文件快传，AI 直接调用云端文件</li>
+                </ul>
+                <p>Multi-Agent 协作能力已正式发布，支持多个 Agent 共用 Coding Plan 套餐，减少额度闲置。</p>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读链接</h2>
+                <ul class="highlights">
+                    <li><a href="https://github.com/openclaw/openclaw/releases" target="_blank">OpenClaw GitHub Releases（v2026.5.4 / v2026.5.2）</a></li>
+                    <li><a href="https://nousresearch.com/hermes-agent/" target="_blank">Hermes Agent 官网 — An agent that grows with you</a></li>
+                    <li><a href="https://www.volcengine.com/article/36245" target="_blank">字节跳动火山引擎 ArkClaw 全解析</a></li>
+                    <li><a href="https://www.ithome.com/0/931/349.htm" target="_blank">腾讯云 KiKi Agent 助手上线报道（IT之家）</a></li>
+                    <li><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/quick-start-for-rds-agent-compatible-with-openclaw" target="_blank">阿里云 RDSClaw 快速入门文档</a></li>
+                    <li><a href="https://cloud.tencent.com/developer/article/2654022" target="_blank">OpenClaw Coding Plan 选购指南（腾讯云开发者社区）</a></li>
+                    <li><a href="https://www.cocoloop.cn/t/topic/1900" target="_blank">ArkClaw 社区讨论（CocoLoop AI 社区）</a></li>
+                    <li><a href="https://openclawlaunch.com/blog/openclaw-release-strategy-how-to-stay-updated-2026" target="_blank">OpenClaw Release 策略指南（OpenClaw Launch）</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>🦞 OpenClaw Daily Report | 由 Agent 自动生成 | <a href="https://github.com/shixin/dailyreport" target="_blank">GitHub</a></p>
+            <p class="small">情报来源：kimi_search 实时搜索 | 飞书文档研报同步生成</p>
+        </footer>
+    </div>
+</body>
+</html>
