@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年05月09日</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0d1117] text-[#c9d1d9] min-h-screen">
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <header class="mb-10">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">🦞</span>
+                <h1 class="text-3xl font-bold text-white tracking-tight">OpenClaw Daily Report</h1>
+            </div>
+            <p class="text-[#8b949e] text-lg">Agent 进化研报 · 每日情报速递</p>
+            <div class="mt-4 flex items-center gap-4 text-sm text-[#8b949e]">
+                <span>📅 2026年05月09日</span>
+                <span>🕐 00:45 CST</span>
+                <span>🔄 第36期</span>
+            </div>
+        </header>
+
+        <!-- 今日概览 -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <span>🔥</span> 今日概览
+            </h2>
+            <div class="space-y-3">
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+                    <p class="text-[#58a6ff] font-semibold mb-1">1. WorkBuddy 公测即将结束，5月15日起执行新阶梯定价</p>
+                    <p class="text-sm text-[#8b949e]">腾讯云桌面Agent WorkBuddy 发布计费调整公告，公测免费阶段即将结束，新用户需关注定价策略变化。WorkBuddy 已支持企业微信、QQ、飞书、钉钉及微信接入。</p>
+                </div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+                    <p class="text-[#58a6ff] font-semibold mb-1">2. 2026年成 AI Agent 企业落地爆发年</p>
+                    <p class="text-sm text-[#8b949e]">据 Capgemini 调研，82% 的组织计划在 2026 年集成 AI Agent；88% 已部署企业获得正向 ROI。金融、医疗、制造三大行业率先规模化部署，AgentOps 成为企业新刚需。</p>
+                </div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+                    <p class="text-[#58a6ff] font-semibold mb-1">3. 阿里 HiClaw 1.0.4 接入 CoPaw，内存占用大幅降低</p>
+                    <p class="text-sm text-[#8b949e]">阿里开源 HiClaw 通过 Matrix Channel 和配置桥接层接入 CoPaw，Worker 内存占用降至 OpenClaw Worker 的 1/5，Manager-Worker 架构让新 Agent 运行时接入成本趋近于零。</p>
+                </div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+                    <p class="text-[#58a6ff] font-semibold mb-1">4. 国产 "龙虾全家桶" 生态持续繁荣</p>
+                    <p class="text-sm text-[#8b949e]">OpenClaw 衍生生态已形成完整矩阵：腾讯 WorkBuddy/QClaw、阿里 CoPaw/HiClaw、字节 ArkClaw、猎豹 EasyClaw、MiniMax MaxClaw、月之暗面 KimiClaw、智谱 AutoClaw 等，覆盖从极客到普通用户的全场景。</p>
+                </div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+                    <p class="text-[#58a6ff] font-semibold mb-1">5. 阿里云/腾讯云全面支持 OpenClaw 一键部署镜像</p>
+                    <p class="text-sm text-[#8b949e]">阿里云轻量应用服务器已上架 OpenClaw 专属预置镜像，9.9元/月起，内置 Node.js 环境与百炼 API 配置向导。腾讯云同步提供 Coding Plan 套餐，真正实现 "有手就行" 的云上养虾。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OpenClaw 官方动态 -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <span>🦞</span> OpenClaw 官方动态
+            </h2>
+            <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-5">
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-[#58a6ff] font-semibold mb-2">📌 核心功能更新详情</h3>
+                        <ul class="space-y-2 text-sm text-[#c9d1d9]">
+                            <li><strong>v1.8.0 预览版：</strong>Skills 系统即将重大升级，支持技能热更新与版本管理；Canvas 画布交互进入测试阶段，用户可通过可视化界面与 Agent 协作。</li>
+                            <li><strong>v1.7.7 稳定版：</strong>修复消息队列竞态条件问题，提升高并发场景下的稳定性；优化内存占用，长时间运行场景更加可靠。</li>
+                            <li><strong>GitHub 社区动态：</strong>社区 PR #847 引入自定义模型 Provider 接入规范，#892 优化飞书渠道的消息卡片渲染。Issues 讨论热点集中在 MCP Server 自定义配置与多 Agent 协作调度。</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-[#58a6ff] font-semibold mb-2">🌐 生态与文档</h3>
+                        <ul class="space-y-2 text-sm text-[#c9d1d9]">
+                            <li>阿里云百炼官方文档已更新 OpenClaw 接入指南，支持 Qwen3-Max / Qwen3.5-Plus 等模型一键配置，Base URL 兼容 OpenAI 格式。</li>
+                            <li>腾讯云 Coding Plan 套餐上线，Lite / Pro 两档定价，绑定 OpenClaw 专属镜像后可实现 7×24 小时云端托管。</li>
+                            <li>ClawHub 技能市场活跃，社区贡献 Skills 数量持续增长，覆盖金融数据、社交媒体、开发工具等垂直领域。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 竞品动态 -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <span>⚔️</span> 竞品动态
+            </h2>
+            <div class="grid gap-4">
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+                    <h3 class="text-[#f0883e] font-bold mb-2">🐧 腾讯 WorkBuddy / QClaw</h3>
+                    <p class="text-sm text-[#c9d1d9] mb-2">腾讯云 CodeBuddy 团队推出的 "国产小龙虾"，定位全场景职场 AI 智能体。核心卖点：开箱即用、文件夹级授权、高危操作拦截。已支持通过 QQ、微信、飞书、钉钉远程遥控。</p>
+                    <p class="text-xs text-[#8b949e]"><strong>最新：</strong>5月15日起执行新阶梯定价，公测免费阶段即将结束。花旗将其视为中国 AI Agent 发展转折点，腾讯股价曾因此上涨 7%。</p>
+                </div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+                    <h3 class="text-[#f0883e] font-bold mb-2">🌋 字节 ArkClaw</h3>
+                    <p class="text-sm text-[#c9d1d9] mb-2">火山引擎推出的云端托管版 OpenClaw，零安装、5分钟上手。基于豆包 Doubao-Seed-2.0 模型，支持多模型切换（Kimi、GLM 等）。飞书生态深度集成是独家优势。</p>
+                    <p class="text-xs text-[#8b949e]"><strong>最新：</strong>Lite 套餐月费低至 9.9 元，绑定火山引擎 TOS 网盘实现无限容量文件存储。已开放 Terminal 终端模式。</p>
+                </div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+                    <h3 class="text-[#f0883e] font-bold mb-2">🐒 阿里 CoPaw / HiClaw</h3>
+                    <p class="text-sm text-[#c9d1d9] mb-2">CoPaw 是阿里通义实验室推出的 Python 轻量级 Agent，内存占用仅为 OpenClaw Worker 的 1/5。HiClaw 则是面向团队的多 Agent 协作平台，Manager-Worker 架构实现一次接入、处处可用。</p>
+                    <p class="text-xs text-[#8b949e]"><strong>最新：</strong>HiClaw 1.0.4 接入 CoPaw，核心代码仅两个文件（~680 行），解锁浏览器操作等新场景。</p>
+                </div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+                    <h3 class="text-[#f0883e] font-bold mb-2">🐆 猎豹 EasyClaw</h3>
+                    <p class="text-sm text-[#c9d1d9] mb-2">猎豹移动 CEO 傅盛参与验证的 OpenClaw 本地化封装版。一键安装、无需配置 API Key，3 分钟上手。支持 WhatsApp / Telegram / 飞书远程控制。数据本地沙盒运行，不上传云端。</p>
+                    <p class="text-xs text-[#8b949e]"><strong>最新：</strong>国内版 "元气 AI Bot"（yuanqiai.net）针对国内生态单独适配，企业版 easyclaw.work 独立部署。</p>
+                </div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+                    <h3 class="text-[#f0883e] font-bold mb-2">🌙 MiniMax MaxClaw / 月之暗面 KimiClaw</h3>
+                    <p class="text-sm text-[#c9d1d9] mb-2">MaxClaw 主打零配置自然语言部署（Expert 2.0），支持 Telegram / WhatsApp / Slack / Discord 四平台，成本仅为 Claude 3.5 的 1/10。KimiClaw 深度集成 kimi.com 浏览器生态，40GB 云存储 + 5000+ ClawHub 技能。</p>
+                    <p class="text-xs text-[#8b949e]"><strong>最新：</strong>两款产品均处于快速迭代期，KimiClaw 近期新增 BYOC（Bring Your Own Claw）混合模式，本地 OpenClaw 可接入云端 Kimi K2.5。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社区趣味应用 -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <span>🚀</span> 社区趣味应用案例分享
+            </h2>
+            <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-5">
+                <div class="space-y-4">
+                    <div class="border-l-2 border-[#58a6ff] pl-4">
+                        <h4 class="text-white font-semibold">🦐 场景一："7×24 小时数字员工" — 阿里云轻量服务器 + OpenClaw</h4>
+                        <p class="text-sm text-[#8b949e] mt-1">社区用户 @yunfuuwqi 分享：使用阿里云 2核4G 轻量服务器（9.9元/月）+ OpenClaw 预置镜像，10 分钟完成部署。绑定百炼 API 后，Agent 每天自动抓取行业新闻、生成摘要并推送到飞书群。月耗 Token 约 200 万，百炼免费额度完全覆盖。</p>
+                    </div>
+                    <div class="border-l-2 border-[#3fb950] pl-4">
+                        <h4 class="text-white font-semibold">🦐 场景二：WorkBuddy "一句话生成 PPT" 实测</h4>
+                        <p class="text-sm text-[#8b949e] mt-1">职场博主测试 WorkBuddy 的「一句话生成 PPT」能力：输入 "帮我整理 Q1 销售数据并生成汇报 PPT"，Agent 自动读取授权文件夹中的 Excel → 数据分析 → 生成图表 → 输出完整 PPT，全程约 8 分钟。非技术用户首次使用即可完成。</p>
+                    </div>
+                    <div class="border-l-2 border-[#f0883e] pl-4">
+                        <h4 class="text-white font-semibold">🦐 场景三：ArkClaw + 飞书多维表格自动化</h4>
+                        <p class="text-sm text-[#8b949e] mt-1">开发者使用 ArkClaw 定时任务功能，每天早上 8 点自动抓取竞品价格数据，写入飞书多维表格，并在企业微信群推送摘要。Lite 套餐 9.9 元/月，已稳定运行 3 个月。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill 学习指南 -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <span>📚</span> 精选 Skill 学习指南
+            </h2>
+            <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-5">
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-[#58a6ff] font-semibold">🔧 Skill: daily-report</h4>
+                        <p class="text-sm text-[#c9d1d9]">自动生成专业日报/研报。支持 geopolitics、macro policy、supply chain、tech trends 四大板块。配置简单，只需在 workspace/skills/daily-report/ 目录下执行标准流程即可。</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[#58a6ff] font-semibold">🔧 Skill: multi-search-engine</h4>
+                        <p class="text-sm text-[#c9d1d9]">集成 17 个搜索引擎（8 个中文 + 9 个国际），支持高级搜索运算符、时间过滤、站点搜索。无需 API Key，适合情报搜集与竞品监控场景。</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[#58a6ff] font-semibold">🔧 Skill: feishu-doc / feishu-drive / feishu-wiki</h4>
+                        <p class="text-sm text-[#c9d1d9]">飞书生态三件套：文档读写、云盘文件管理、知识库导航。支持从 Markdown 创建云文档、批量上传下载、Wiki 节点操作。企业用户必备。</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[#58a6ff] font-semibold">🔧 Skill: healthcheck</h4>
+                        <p class="text-sm text-[#c9d1d9]">主机安全巡检与加固。支持防火墙/SSH/更新硬化、风险容忍度配置、OpenClaw cron 调度检查。适合 VPS/服务器运维场景。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 企业落地案例 -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <span>🏢</span> 企业落地案例
+            </h2>
+            <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-5">
+                <div class="space-y-4">
+                    <div class="border-l-2 border-[#58a6ff] pl-4">
+                        <h4 class="text-white font-semibold">某头部保险公司：理赔初审 Agent</h4>
+                        <p class="text-sm text-[#8b949e] mt-1">单日处理量从人工 2000 件提升至 15000 件，准确率达 97.3%，人力成本降低约 60%。Agent 自动提取保单信息、核对理赔材料、生成初审结论，人工仅复核异常案件。</p>
+                    </div>
+                    <div class="border-l-2 border-[#3fb950] pl-4">
+                        <h4 class="text-white font-semibold">头部游戏公司：客服 Agent（ArkClaw）</h4>
+                        <p class="text-sm text-[#8b949e] mt-1">日均处理对话超 1000 万次，客服效率提升 3 倍。Agent 基于游戏知识库自动回答玩家咨询，复杂问题自动转人工并附带上下文摘要。</p>
+                    </div>
+                    <div class="border-l-2 border-[#f0883e] pl-4">
+                        <h4 class="text-white font-semibold">欧坚网络：报关单自动化（ArkClaw）</h4>
+                        <p class="text-sm text-[#8b949e] mt-1">使用 ArkClaw 自动化报关单处理流程，准确率提升显著，报关员从重复性录入工作中解放，专注处理异常与合规审核。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 延伸阅读 -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <span>🔗</span> 延伸阅读链接
+            </h2>
+            <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-5">
+                <ul class="space-y-2 text-sm">
+                    <li><a href="https://developer.volcengine.com/articles/7630198321433051163" target="_blank" class="text-[#58a6ff] hover:underline">腾讯 WorkBuddy 深度指南：MCP协议 + Skills扩展</a></li>
+                    <li><a href="https://maxclaw.ai/maxclaw-vs-kimiclaw" target="_blank" class="text-[#58a6ff] hover:underline">MaxClaw vs KimiClaw 详细对比 2026</a></li>
+                    <li><a href="https://developer.cloud.tencent.com/article/2654425" target="_blank" class="text-[#58a6ff] hover:underline">2026国产OpenClaw生态全景指南</a></li>
+                    <li><a href="https://developer.aliyun.com/article/1716936" target="_blank" class="text-[#58a6ff] hover:underline">国产OpenClaw平替技术实测与选型指南</a></li>
+                    <li><a href="https://deepseek.csdn.net/69fafb6e54b52172bc7206c5.html" target="_blank" class="text-[#58a6ff] hover:underline">2026企业AI Agent落地完全指南（含避坑清单）</a></li>
+                    <li><a href="https://help.aliyun.com/zh/model-studio/openclaw" target="_blank" class="text-[#58a6ff] hover:underline">阿里云百炼 OpenClaw 接入官方文档</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="text-center text-xs text-[#8b949e] pt-8 border-t border-[#30363d]">
+            <p>OpenClaw Daily Report · Agent 进化研报</p>
+            <p class="mt-1">Generated by Kimi Claw · 数据截止 2026-05-09 00:45 CST</p>
+        </footer>
+    </div>
+</body>
+</html>
