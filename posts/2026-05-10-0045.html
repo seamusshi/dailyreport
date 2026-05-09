@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年5月10日</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1>OpenClaw Daily Report</h1>
+            <p class="date">2026年5月10日 星期日</p>
+        </header>
+        
+        <main>
+            <!-- 今日概览 -->
+            <section class="overview">
+                <h2>今日概览</h2>
+                <div class="highlight-cards">
+                    <div class="card">
+                        <span class="badge">市场报告</span>
+                        <p>WorkBuddy登顶国内PC端AI办公智能体市场，月访问量和环比增速均位列第一</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">财报亮眼</span>
+                        <p>猎豹移动2025年营收11.5亿同比增长42.6%，AI业务占比近半扭亏为盈</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">新对手</span>
+                        <p>Hermes Agent GitHub Stars突破10万+，增速超同期OpenClaw三倍</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">生态升级</span>
+                        <p>腾讯混元Hy3 preview模型亮相，已接入WorkBuddy/CodeBuddy全线产品</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">开源动态</span>
+                        <p>阿里CoPaw更名为QwenPaw，字节MoltBook社区版GitHub Stars破15K</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OpenClaw官方动态 -->
+            <section class="official">
+                <h2>OpenClaw 官方动态</h2>
+                
+                <article class="news-item">
+                    <h3>GitHub星标持续领跑，但面临新挑战</h3>
+                    <p>OpenClaw自2026年1月开源以来，已成为GitHub史上最快获得10万星标的开源项目。然而近期面临双重挑战：Anthropic调整Claude订阅额度不再覆盖第三方框架，同时曝出多个高危CVE漏洞（CVSS评分9.9）。Nous Research顺势推出hermes-claw-migrate一键迁移工具，精准承接迁移需求。</p>
+                    <span class="source">来源：GitHub / 安全公告</span>
+                </article>
+
+                <article class="news-item">
+                    <h3>创始人质疑腾讯"只复制不贡献"</h3>
+                    <p>OpenClaw创始人Peter Steinberger公开质疑腾讯"只复制不贡献"，引发社区热议。腾讯回应称团队成员是OpenClaw的活跃贡献者。目前腾讯围绕OpenClaw生态构建了三层产品矩阵：Lighthouse（面向开发者）、QClaw（本地客户端）、WorkBuddy（职场桌面），全面覆盖不同用户群体。</p>
+                    <span class="source">来源：财新网</span>
+                </article>
+            </section>
+
+            <!-- 核心功能更新 -->
+            <section class="core-updates">
+                <h2>核心功能更新详情</h2>
+                
+                <div class="update-list">
+                    <div class="update-item">
+                        <h4>MCP协议成为事实标准</h4>
+                        <p>MCP（Model Context Protocol）已成为AI Agent工具调用的统一协议，主流框架均实现兼容。OpenClaw、Hermes Agent、CoPaw等均支持MCP热插拔，运行时动态新增工具无需重启。</p>
+                    </div>
+                    
+                    <div class="update-item">
+                        <h4>Harness Engineering概念提出</h4>
+                        <p>2026年2月11日OpenAI Codex团队正式提出Harness Engineering（驾驭工程），围绕AI Agent设计约束机制、反馈回路、工作流编排、安全管控的系统工程实践。核心公式：AI Agent = 大模型 + Harness Engineering。</p>
+                    </div>
+                    
+                    <div class="update-item">
+                        <h4>端侧Agent加速落地</h4>
+                        <p>随着端侧大模型技术成熟，手机、PC、IoT设备本地运行Agent成为趋势。华为小艺Claw、荣耀YOYO Claw、小米miclaw等端侧产品陆续推出，优势在于隐私保护、低延迟、离线可用。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 竞品动态 -->
+            <section class="competitors">
+                <h2>竞品动态</h2>
+                
+                <div class="competitor-card">
+                    <h3>腾讯 WorkBuddy <span class="tag hot">月访问量第一</span></h3>
+                    <ul>
+                        <li>《中国办公智能体平台市场研究报告2026》显示：WorkBuddy月访问量和环比增速均位列国内PC端AI原生办公智能体市场第一</li>
+                        <li>3月9日正式上线，基于腾讯自研多智能体架构，与CodeBuddy同源</li>
+                        <li>完全兼容OpenClaw skills，支持微信/企微/QQ远程遥控</li>
+                        <li>4月发布V2版本，支持最多3个Agent并行工作</li>
+                        <li>SkillHub已收录超3.5万个技能</li>
+                        <li>混元Hy3 preview模型（295B总参数/21B激活/256K上下文）已接入</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>阿里 QwenPaw（原CoPaw）</h3>
+                    <ul>
+                        <li>阿里云通义AgentScope团队出品，2026年2月28日开源</li>
+                        <li>从CoPaw更名为QwenPaw，更强调与通义千问生态绑定</li>
+                        <li>原生支持钉钉、飞书、QQ，三条命令本地跑通</li>
+                        <li>Apache 2.0协议，支持免费商用</li>
+                        <li>ReMe记忆系统、MCP热插拔、Skills Hub社区导入</li>
+                        <li>支持Ollama/llama.cpp/MLX本地模型 + DashScope云模型</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>字节跳动 ArkClaw / Coze</h3>
+                    <ul>
+                        <li>ArkClaw：火山引擎2026年3月9日推出的云端SaaS版OpenClaw</li>
+                        <li>Lite版月费低至8.9元，7×24小时在线，深度集成豆包模型</li>
+                        <li>Coze（扣子）：零代码Agent搭建平台，扣子商店超10万个Bot</li>
+                        <li>4月扣子品牌升级，推出扣子空间（Coze Space）</li>
+                        <li>MoltBook：扣子社区/OpenClaw社区版，Apache 2.0协议，Stars破15K</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>猎豹移动 EasyClaw <span class="tag highlight">财报扭亏</span></h3>
+                    <ul>
+                        <li>2025年营收11.5亿元，同比增长42.6%，Non-GAAP营业利润1421万元</li>
+                        <li>AI业务营收5.35亿元，同比增长85%，占总营收46.5%</li>
+                        <li>2026年初发布EasyClaw，覆盖To C（个人版）和To B（企业版）</li>
+                        <li>3月3日推出出海企业版，3月底携EasyClaw登陆中国跨交会</li>
+                        <li>傅盛骨折卧床14天用8只Agent完成CEO+团队全部工作</li>
+                        <li>日均Token消耗100-200美元，公众号涨粉数万</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>Hermes Agent <span class="tag new">增速冠军</span></h3>
+                    <ul>
+                        <li>Nous Research 2026年2月25日推出，MIT协议完全免费</li>
+                        <li>GitHub Stars突破10万+，增速是同期OpenClaw的三倍</li>
+                        <li>四级分层记忆架构：事实记忆→情景记忆→语义记忆→技能记忆</li>
+                        <li>核心特色：自主进化闭环（执行→评估→抽象→优化）</li>
+                        <li>支持15+平台、12+模型服务商，零CVE漏洞记录</li>
+                        <li>商业模式：开源获客 + Nous Portal云服务变现</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>其他值得关注的竞品</h3>
+                    <ul>
+                        <li><strong>Kimi Claw</strong>（月之暗面）：跨平台（Web/iOS/Android），40GB免费存储，长文本处理王者</li>
+                        <li><strong>MaxClaw</strong>（MiniMax）：基于OpenClaw打造，MoE模型加持，月费39元</li>
+                        <li><strong>百度红手指Operator</strong>：浏览器自动化AI Agent，执行式Agent代表</li>
+                        <li><strong>JVSClaw</strong>（阿里云）：云端托管SaaS，注册即用零部署</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 社区趣味应用 -->
+            <section class="community">
+                <h2>社区趣味应用案例</h2>
+                
+                <div class="case-list">
+                    <div class="case-item">
+                        <h4>CEO的数字替身</h4>
+                        <p>猎豹移动CEO傅盛骨折卧床14天，用8只Agent组成的"三万"团队完成全部工作：公众号日更6篇、给611名员工个性化拜年、推特百万阅读爆款、短视频30万+播放。日均1157条消息、22万字对话。</p>
+                        <span class="tag">个人效率</span>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h4>预测市场套利机器人</h4>
+                        <p>有开发者用OpenClaw搭建Polymarket预测市场套利机器人，每5秒扫描一次市场，自动捕捉价差机会。</p>
+                        <span class="tag">金融交易</span>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h4>猎户星空机器人+EasyClaw</h4>
+                        <p>猎豹移动将EasyClaw接入猎户星空服务机器人，实现语音指令驱动。机器人可去店门口即兴宣传，根据现场情况调整话术，从固定场景接待升级为动态互动。</p>
+                        <span class="tag">具身智能</span>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h4>欧坚网络报关自动化</h4>
+                        <p>使用ArkClaw自动化报关单处理，准确率提升至99.8%，大幅节省人工审核成本。</p>
+                        <span class="tag">企业服务</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skill学习指南 -->
+            <section class="skills">
+                <h2>精选 Skill 学习指南</h2>
+                
+                <div class="skill-guide">
+                    <h4>Harness Engineering 实践指南</h4>
+                    <p>2026年最重要的Agent工程方法论。核心要点：</p>
+                    <ol>
+                        <li>约束机制：为Agent设定明确的操作边界和权限范围</li>
+                        <li>反馈回路：建立执行结果的自动评估和修正机制</li>
+                        <li>工作流编排：将复杂任务拆解为可编排的子任务序列</li>
+                        <li>安全管控：预执行扫描、路径遍历防护、MCP OAuth 2.1</li>
+                    </ol>
+                    <p>推荐框架：Hermes Agent（内置Tirith安全沙箱）、OpenClaw（企业级审计日志）</p>
+                </div>
+
+                <div class="skill-guide">
+                    <h4>MCP协议开发入门</h4>
+                    <p>Model Context Protocol已成为Agent工具调用的统一标准：</p>
+                    <ol>
+                        <li>了解MCP基础架构：Server/Client/Transport三层模型</li>
+                        <li>使用mcp.createServer()创建自定义工具</li>
+                        <li>配置stdio或HTTP传输层</li>
+                        <li>在OpenClaw/Hermes中通过mcpSettings.json接入</li>
+                    </ol>
+                    <p>参考资源：ModelContextProtocol.io官方文档、ClawHub MCP分类</p>
+                </div>
+
+                <div class="skill-guide">
+                    <h4>多Agent协作架构设计</h4>
+                    <p>单一Agent能力有限，Multi-Agent协作成为标配：</p>
+                    <ol>
+                        <li>规划Agent：负责任务拆解和策略制定</li>
+                        <li>执行Agent：调用工具、操作软件</li>
+                        <li>校验Agent：检查结果、修正错误</li>
+                        <li>使用消息总线实现Agent间通信</li>
+                    </ol>
+                    <p>推荐框架：MetaGPT、AutoGen、Hermes Agent（动态Router）</p>
+                </div>
+            </section>
+
+            <!-- 企业落地案例 -->
+            <section class="enterprise">
+                <h2>企业落地案例</h2>
+                
+                <div class="case-study">
+                    <h4>腾讯云全栈Agent产品矩阵</h4>
+                    <p>腾讯云在2026年上海峰会发布Agent产品全景图，覆盖"用Agent、造Agent、管Agent"全链路：</p>
+                    <ul>
+                        <li>WorkBuddy+QClaw：面向个人用户的"开箱即用"组合</li>
+                        <li>腾讯乐享2.0：从问答工具升级为可执行任务的智能知识库</li>
+                        <li>企点营销云MAGIC Agent 2.0：数据感知+策略执行，海外版同步首发</li>
+                        <li>TC Data Agent：业务人员通过对话完成数据查询，无需技术团队写SQL</li>
+                        <li>CodeBuddy：覆盖腾讯超90%工程师，从代码生成到测试部署全程AI协同</li>
+                        <li>ADP智能体开发平台：传媒、金融行业广泛应用</li>
+                    </ul>
+                </div>
+
+                <div class="case-study">
+                    <h4>游戏行业AI Agent落地</h4>
+                    <p>《和平精英》成为腾讯首款接入DeepSeek的游戏，用户可与数字人对话，计划上线"AI队友"。腾讯混元发布游戏视觉生成平台，支持美术设计师用草图+指令快速生成游戏素材。</p>
+                </div>
+            </section>
+
+            <!-- 延伸阅读 -->
+            <section class="reading">
+                <h2>延伸阅读</h2>
+                <ul class="link-list">
+                    <li><a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw GitHub 仓库</a></li>
+                    <li><a href="https://github.com/NousResearch/hermes-agent" target="_blank">Hermes Agent GitHub 仓库</a></li>
+                    <li><a href="https://github.com/agentscope-ai/CoPaw" target="_blank">QwenPaw (CoPaw) GitHub 仓库</a></li>
+                    <li><a href="https://www.volcengine.com/product/arkclaw" target="_blank">ArkClaw 火山引擎官网</a></li>
+                    <li><a href="https://workbuddy.qq.com" target="_blank">腾讯 WorkBuddy 官网</a></li>
+                    <li><a href="https://easyclaw.cn" target="_blank">EasyClaw 官网</a></li>
+                    <li><a href="https://www.coze.cn" target="_blank">Coze 扣子官网</a></li>
+                    <li><a href="https://clawhub.com" target="_blank">ClawHub Skill 市场</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>OpenClaw Daily Report - 自动生成，每日更新</p>
+            <p>数据来源：公开互联网信息整理，仅供参考</p>
+        </footer>
+    </div>
+</body>
+</html>
