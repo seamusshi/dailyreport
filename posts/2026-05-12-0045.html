@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年5月12日</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1>OpenClaw Daily Report</h1>
+            <p class="date">2026年5月12日 星期二</p>
+        </header>
+        
+        <main>
+            <!-- 今日概览 -->
+            <section class="overview">
+                <h2>今日概览</h2>
+                <div class="highlight-cards">
+                    <div class="card">
+                        <span class="badge">重大发布</span>
+                        <p>OpenClaw v0.6.0 重磅发布：Teams/Claw 团队协作功能上线，企业级多 Agent 协同成为可能</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">生态里程碑</span>
+                        <p>ClawHub 突破 44,000+ Skills，累计安装量超 4800 万次，OpenClaw GitHub Stars 达 194,000+</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">安全升级</span>
+                        <p>Skill 供应链安全体系升级：skill-vetter 官方审计工具、Docker 沙箱增强、验证 Skills 安装成功率 98.5%</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">竞品白热化</span>
+                        <p>国产"百虾大战"全面升级：腾讯 WorkBuddy 月活 120 万+领跑，字节扣子商店 10 万+ Bot，阿里 CoPaw 端云双模</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">新玩家</span>
+                        <p>Hermes Agent 103,000+ Stars 强势崛起，v0.10.0 自带 118 Skills + 自进化闭环，零 CVE 记录</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OpenClaw官方动态 -->
+            <section class="official">
+                <h2>OpenClaw 官方动态</h2>
+                
+                <article class="news-item">
+                    <h3>OpenClaw v0.6.0 重磅发布 —— 团队协作时代开启</h3>
+                    <p>OpenClaw 于 5 月 10 日发布 v0.6.0 重大版本更新，核心亮点是全新的 Teams: Claw 功能。该功能支持企业级多 Agent 协同工作，团队成员可以共享 Skills、统一配置策略、分配任务权限。这意味着 OpenClaw 从个人智能助手正式升级为团队级 AI 操作系统，企业可以构建"AI 员工团队"来协作完成复杂项目。</p>
+                    <span class="source">来源：OpenClaw GitHub Release / clawhub.com</span>
+                </article>
+
+                <article class="news-item">
+                    <h3>ClawHub 生态数据刷新：44,000+ Skills、4800 万+ 安装</h3>
+                    <p>ClawHub 作为 OpenClaw 的 Skills 分发中心，截至 5 月初已收录超过 44,000 个社区 Skills，累计安装次数突破 4800 万次。验证 Skills（Verified）的安装成功率高达 98.5%，显著高于社区 Skills 的 82.3%。官方推出的 skill-vetter 工具帮助用户在安装前自动审计 Skill 安全性，有效防范供应链投毒攻击。</p>
+                    <span class="source">来源：ClawHub 官方数据 / SkyWork AI 研报</span>
+                </article>
+
+                <article class="news-item">
+                    <h3>OpenClaw 101 官方教程站持续更新，Skills 开发指南发布</h3>
+                    <p>OpenClaw 官方文档站点 openclaw101.dev 发布了完整的 Skills 开发指南，从编写第一个 SKILL.md 到打包发布到 ClawHub，覆盖完整流程。新增最佳实践文档：Agent Development Guide，涵盖会话状态管理、心跳机制、记忆系统、Cron 任务等高级主题。DataCamp 也上线了《Building Custom OpenClaw Skills》实战教程。</p>
+                    <span class="source">来源：openclaw101.dev / DataCamp / GrowExx</span>
+                </article>
+
+                <article class="news-item">
+                    <h3>Docker MCP Server + Heroku 一键部署上线</h3>
+                    <p>OpenClaw 新增 Docker MCP Server 支持，允许 Agent 直接管理 Docker 容器生命周期（启动、停止、构建镜像）。同时 Heroku 一键部署按钮上线，开发者可以在 60 秒内将 OpenClaw 部署到云端，无需配置服务器。DigitalOcean 1-Click Marketplace 也已集成 OpenClaw Droplet 和 App Platform 两种部署方案。</p>
+                    <span class="source">来源：OpenClaw 官方文档 / DigitalOcean</span>
+                </article>
+            </section>
+
+            <!-- 核心功能更新 -->
+            <section class="core-updates">
+                <h2>核心功能更新详情</h2>
+                
+                <div class="update-list">
+                    <div class="update-item">
+                        <h4>Teams: Claw — 企业级多 Agent 协作</h4>
+                        <p>v0.6.0 引入的团队功能是 OpenClaw 迄今最大的架构升级。支持：团队成员共享 Skills 仓库、统一的身份认证与权限管理、跨 Agent 任务委派、团队级会话隔离。企业可以为不同部门配置独立的 Agent 实例，共享核心 Skills 的同时保持数据隔离。这直接对标了 CrewAI 的多 Agent 协作能力。</p>
+                    </div>
+                    
+                    <div class="update-item">
+                        <h4>Docker 沙箱执行环境强化</h4>
+                        <p>针对此前曝出的 CVE-2026-25253（CVSS 8.8）漏洞和 ClawHub 上 341 个恶意 Skills 的发现，v0.6.0 大幅强化了执行隔离。默认启用 Docker 容器沙箱，Skills 的执行被限制在独立容器中，即使恶意代码也无法访问宿主文件系统。新增的 execution.sandbox.mode 配置支持 strict / permissive / disabled 三档。</p>
+                    </div>
+                    
+                    <div class="update-item">
+                        <h4>Skills 插件架构重构</h4>
+                        <p>全新的 Skills Plugin Architecture 将 Skill 加载机制从简单的 Markdown 读取升级为模块化插件系统。支持：YAML frontmatter 元数据校验、运行时 capability 权限申请、hooks 系统（工具调用前后自动触发）、多语言脚本执行（Python/Node.js/Bash）。这一重构使得复杂 Skills 的开发门槛大幅降低。</p>
+                    </div>
+                    
+                    <div class="update-item">
+                        <h4>Claude 4.7 系列模型接入优化</h4>
+                        <p>Anthropic 发布 Claude 4.7 Sonnet / Opus 系列后，OpenClaw 第一时间完成适配。Sonnet 4.7 在 SWE-Bench 编码基准测试中的得分进一步提升，而 OpenClaw 的 Claude Code 集成模式可以直接调用 Sonnet 4.7 进行代码审查和跨文件重构。支持 100 万 token 上下文的 beta 版本适合大型代码库分析。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 竞品动态 -->
+            <section class="competitors">
+                <h2>竞品动态</h2>
+                
+                <div class="competitor-card">
+                    <h3>Hermes Agent <span class="tag hot">增长之王</span></h3>
+                    <ul>
+                        <li>Nous Research 出品，2 月 25 日发布，7 周内突破 103,000 GitHub Stars，增速超 LangChain + AutoGen 之和</li>
+                        <li>v0.10.0（4 月 16 日）内置 118 Skills、三层记忆架构、15+ LLM 提供商支持</li>
+                        <li>核心差异化：GEPA 自进化机制 —— Agent 从任务执行中自动提炼可复用 Skills，20+ 自生成 Skills 后同领域任务提速 40%</li>
+                        <li>零 CVE 记录，与 OpenClaw 的 CVE-2026-25253（CVSS 8.8）+ 42,000 暴露实例形成鲜明对比</li>
+                        <li>支持 Telegram、Discord、Slack、WhatsApp、Signal、企业微信、飞书等 15+ 平台</li>
+                        <li>MIT 协议完全免费，无企业版限制，$5/月 VPS 即可跑通</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>腾讯 WorkBuddy / QClaw / CodeBuddy</h3>
+                    <ul>
+                        <li>WorkBuddy 月活 120 万+，稳居国内 PC 端 AI 办公智能体市场第一</li>
+                        <li>CodeBuddy 覆盖腾讯超 90% 工程师，从代码生成到测试部署全程 AI 协同</li>
+                        <li>QClaw 内测中，14 亿人微信/QQ 生态的原生 AI Agent 入口，一键部署</li>
+                        <li>混元 Hy3 preview 模型（295B 总参数 / 256K 上下文）已接入全线产品</li>
+                        <li>《和平精英》接入 DeepSeek，计划上线"AI 队友"功能</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>字节跳动 ArkClaw / Coze / MoltBook</h3>
+                    <ul>
+                        <li>扣子（Coze）商店已有超过 100,000 个第三方 Bot，支持一键发布到抖音、飞书、微信公众号</li>
+                        <li>ArkClaw 企业版通过等保三级、ISO27001 认证，适配公有云 / 私有云 / 混合云</li>
+                        <li>MoltBook（扣子社区版 / OpenClaw 社区版）GitHub Stars 突破 15K，Apache 2.0 协议</li>
+                        <li>火山引擎 Coding Plan 套餐实现固定成本可控，告别 Token 按量计费焦虑</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>阿里 QwenPaw / CoPaw / HiClaw</h3>
+                    <ul>
+                        <li>CoPaw 从阿里云品牌升级为 QwenPaw，深度绑定通义千问生态</li>
+                        <li>端云双模部署：本地三行命令 + 阿里云一键上云，支持钉钉 / 飞书原生集成</li>
+                        <li>ReMe 记忆系统、MCP 热插拔、Skills Hub 社区导入、Ollama 本地模型支持</li>
+                        <li>阿里云函数计算 FC 新增 AgentRun 知识库，支持外部专业文档关联</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>其他竞品动态</h3>
+                    <ul>
+                        <li><strong>智谱 AutoClaw</strong>：AUTOGLM 沉思模式支持 50+ 步自动化，月活 65 万+</li>
+                        <li><strong>猎豹 EasyClaw</strong>：个人终身免费，AI 业务占总营收 46.5%，桌面 GUI 双击即用</li>
+                        <li><strong>Kimi Claw</strong>（月之暗面）：长上下文处理王者，飞书深度适配，199 元/月</li>
+                        <li><strong>MaxClaw</strong>（MiniMax）：39 元/月起，MoE M2.5 模型，自然语言即可创建 Skill</li>
+                        <li><strong>百度千帆</strong>：红手指 Operator 月活 95 万+，DuClaw 17.8 元首月</li>
+                        <li><strong>七牛云 Linclaw</strong>：开源 MIT，零部署桌面版，一键打通微信/钉钉/飞书</li>
+                        <li><strong>网易 LobsterAI</strong>：MIT 开源，中文优化，沙箱机制，全场景个人助理</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 社区趣味应用 -->
+            <section class="community">
+                <h2>社区趣味应用案例</h2>
+                
+                <div class="case-list">
+                    <div class="case-item">
+                        <h4>Morning Briefing Skill — 自动化晨间简报</h4>
+                        <p>社区热门 Skill 模板：每天早上 7 点自动检查天气、搜索当日头条、读取日历事件、检查待办任务，整合成一份干净的信息简报推送给用户。通过 skill.yaml 配置触发时间、时区、新闻主题，无需写一行代码即可拥有专属 AI 秘书。</p>
+                        <span class="tag">自动化</span>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h4>Notebook-to-DOCX 科研效率神器</h4>
+                        <p>DataCamp 教程中的实战 Skill：将 Jupyter Notebook 一键转换为格式规范的 Word 文档。保留 Markdown 格式（粗体/斜体/标题）、代码块使用 Courier New 字体、图片自动嵌入、超链接保持可点击。科研人员再也不用手动复制粘贴到 Word 了。</p>
+                        <span class="tag">科研办公</span>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h4>Hermes + OpenClaw 混合架构实践</h4>
+                        <p>开发者社区探索出"双 Agent 互补"方案：Hermes Agent 作为推理+记忆大脑（负责规划、学习、记忆持久化），OpenClaw Launch 作为渠道+运维层（负责 Telegram/Discord/企微/飞书多平台接入、可视化配置、实时监控看板）。两者通过 MCP 协议互通，不是竞争而是互补。</p>
+                        <span class="tag">架构创新</span>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h4>Self-Improving Agent 自主进化</h4>
+                        <p>Hermes Agent 的 GEPA 机制在社区引发模仿潮。开发者发现 Hermes 在完成复杂任务后会自动将经验抽象为可复用 Skill，下次同类任务直接跳过探索阶段。社区统计显示：拥有 20+ 自生成 Skills 的 Agent，同领域重复任务执行速度提升 40%。</p>
+                        <span class="tag">自主进化</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skill学习指南 -->
+            <section class="skills">
+                <h2>精选 Skill 学习指南</h2>
+                
+                <div class="skill-guide">
+                    <h4>从零编写第一个 Skill（2026 官方指南）</h4>
+                    <p>OpenClaw101.dev 最新教程的核心步骤：</p>
+                    <ol>
+                        <li><strong>定义 Skill 边界</strong>：用一段话描述"什么时候用、做什么、输出什么"，防止范围蔓延</li>
+                        <li><strong>创建目录</strong>：mkdir ~/.openclaw/skills/your-skill，或使用 npx clawhub create</li>
+                        <li><strong>编写 SKILL.md</strong>：YAML frontmatter 定义元数据（name、version、capabilities），Markdown 正文写指令</li>
+                        <li><strong>配置触发</strong>：heartbeat 定时触发、slash command 手动触发、或 model-invocation 自动触发</li>
+                        <li><strong>本地测试</strong>：openclaw skill test your-skill --task task-name</li>
+                        <li><strong>安装生效</strong>：openclaw skill install ./your-skill 或从 GitHub 直接安装</li>
+                    </ol>
+                    <p>关键提示：YAML frontmatter 只支持单行值，metadata 用单行 JSON；{baseDir} 模板变量会自动解析为 Skill 文件夹路径。</p>
+                </div>
+
+                <div class="skill-guide">
+                    <h4>Skill 安全三重防护（2026 实测版）</h4>
+                    <p>针对"利爪浩劫"供应链攻击事件，建立完整防护体系：</p>
+                    <ol>
+                        <li><strong>安装前审查</strong>：使用 skill-vetter 官方工具扫描，检查是否包含可疑 shell 命令、网络请求、文件系统操作</li>
+                        <li><strong>安装后扫描</strong>：ClawSec（Prompt Security 团队出品）开启自动安全模式，定期扫描已安装 Skills</li>
+                        <li><strong>运行时隔离</strong>：配置 execution.sandbox.mode=strict，所有 Skill 在 Docker 容器中执行，无法触及宿主系统</li>
+                        <li><strong>凭证保护</strong>：API Key、密码放入 secrets 管理器，禁止明文存储在 SOUL.md 或配置文件中</li>
+                        <li><strong>网络隔离</strong>：绑定 127.0.0.1:18789（而非 0.0.0.0），如需远程访问走 VPN 而非反向代理</li>
+                    </ol>
+                    <p>⚠️ 实测数据：ClawHub 2,857 个测试 Skills 中 341 个存在数据窃取行为，验证 Skills 相对安全（98.5% 可靠），社区 Skills 风险较高（65.1% Beta 插件不可靠）。</p>
+                </div>
+
+                <div class="skill-guide">
+                    <h4>生产力 Skills 推荐清单</h4>
+                    <p>社区亲测好用的效率 Skills：</p>
+                    <ol>
+                        <li><strong>summarize</strong>：长文本/网页快速提炼，应对信息过载</li>
+                        <li><strong>markdown-convert</strong>：网页转 Markdown，方便存入 Obsidian/Notion</li>
+                        <li><strong>auto-updater</strong>：自动保持所有已安装 Skills 为最新版本</li>
+                        <li><strong>proactive-agent</strong>：根据日程主动提醒，从被动问答升级主动服务</li>
+                        <li><strong>docker-mcp</strong>：直接管理 Docker 容器，DevOps 场景必备</li>
+                        <li><strong>tavily-tool</strong>：Tavily 搜索 API 接入，网络搜索能力增强</li>
+                        <li><strong>humanizer</strong>：去除 AI 痕迹，让回复更像真人写的</li>
+                    </ol>
+                    <p>安装命令：clawhub install &lt;skill-slug&gt; 或对话"帮我安装 xxx skill"</p>
+                </div>
+            </section>
+
+            <!-- 企业落地案例 -->
+            <section class="enterprise">
+                <h2>企业落地案例</h2>
+                
+                <div class="case-study">
+                    <h4>2026 国产 AI Agent "百虾大战"格局</h4>
+                    <p>2026 年国内大厂和 AI 六小龙全面入场，形成九大主流产品矩阵：</p>
+                    <table>
+                        <tr><th>产品</th><th>厂商</th><th>核心定位</th><th>部署方式</th><th>月活</th></tr>
+                        <tr><td>WorkBuddy</td><td>腾讯</td><td>全场景企业级 AI 工作台</td><td>本地桌面</td><td>120 万+</td></tr>
+                        <tr><td>ArkClaw</td><td>字节</td><td>火山引擎企业级 Agent</td><td>云端 SaaS</td><td>45 万+</td></tr>
+                        <tr><td>QwenPaw</td><td>阿里</td><td>开源企业级多 Agent 协同</td><td>本地/云端</td><td>—</td></tr>
+                        <tr><td>EasyClaw</td><td>猎豹</td><td>零门槛桌面 AI 助手</td><td>本地桌面</td><td>52 万+</td></tr>
+                        <tr><td>Kimi Claw</td><td>月之暗面</td><td>长文本处理王者</td><td>云端</td><td>38 万+</td></tr>
+                        <tr><td>AutoClaw</td><td>智谱</td><td>多步自动化+沉思模式</td><td>本地</td><td>65 万+</td></tr>
+                        <tr><td>MaxClaw</td><td>MiniMax</td><td>多模态 AI Agent</td><td>本地/云端</td><td>28 万+</td></tr>
+                        <tr><td>红手指 Operator</td><td>百度</td><td>云端虚拟手机 AI</td><td>云端</td><td>95 万+</td></tr>
+                        <tr><td>Linclaw</td><td>七牛云</td><td>零部署桌面版</td><td>本地</td><td>—</td></tr>
+                    </table>
+                    <p>用户选择平替的四大痛点：部署复杂（73%）→ 云端托管/一键包解决；安全隐患（68%）→ 沙箱隔离+权限管控；单用户架构（55%）→ 多 Agent 协作；成本失控（42%）→ 按量付费或开源方案。</p>
+                </div>
+
+                <div class="case-study">
+                    <h4>Salesforce Agentic Enterprise 架构</h4>
+                    <p>Salesforce 提出面向未来 3-5 年的企业级 Agent 四层架构：语义层（数据理解桥梁）、AI/ML 层（技术核心）、Agentic 层（载体容器）、企业编排层（协同中枢）。落地路径从 Lvl1 信息检索型智能体逐步升级到 Lvl4 多智能体工作流编排，让企业复用现有 IT 资产同时逐步解锁智能体价值。Gartner 预测：到 2026 年底 40% 的企业应用将包含任务特定 AI Agent，较 2025 年的不足 5% 大幅提升。</p>
+                </div>
+
+                <div class="case-study">
+                    <h4>企业 Agent 落地完整路径</h4>
+                    <p>基于数百企业案例提炼的标准路径：</p>
+                    <ul>
+                        <li><strong>第一阶段：数据连接</strong>——让企业数据进入统一平台，没有数据连接 AI 只能停留在表层对话</li>
+                        <li><strong>第二阶段：业务分析</strong>——Agent 具备业务分析能力，从商品、渠道、素材等场景发现问题</li>
+                        <li><strong>第三阶段：工作流嵌入</strong>——AI 进入邮件、IM、素材研究、后台配置等日常工作流</li>
+                        <li><strong>第四阶段：组织管理</strong>——通过权限、数据源和功能管控，让 AI 从单点工具变成企业系统</li>
+                    </ul>
+                    <p>核心痛点：技术整合复杂性、知识冷启动困难、多智能体协作机制缺失、生产环境治理空白、ROI 量化困难。</p>
+                </div>
+
+                <div class="case-study">
+                    <h4>西安铂傲智能：西北实业 AI 落地</h4>
+                    <p>通过 OpenClaw China 方案，助力西北实业公司实现智能客服、辅助拓客与低成本经营，覆盖便利店、建筑材料、地产、家居建材等业务场景，验证了 AI Agent 在传统行业中小企业的落地可行性。</p>
+                </div>
+            </section>
+
+            <!-- 延伸阅读 -->
+            <section class="reading">
+                <h2>延伸阅读</h2>
+                <ul class="link-list">
+                    <li><a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw GitHub 仓库（194K+ Stars）</a></li>
+                    <li><a href="https://github.com/NousResearch/hermes-agent" target="_blank">Hermes Agent GitHub 仓库（103K+ Stars）</a></li>
+                    <li><a href="https://github.com/agentscope-ai/CoPaw" target="_blank">QwenPaw (CoPaw) GitHub 仓库</a></li>
+                    <li><a href="https://github.com/BytePioneer-AI/openclaw-china" target="_blank">OpenClaw China 渠道扩展</a></li>
+                    <li><a href="https://clawhub.com" target="_blank">ClawHub Skill 市场（44K+ Skills）</a></li>
+                    <li><a href="https://openclaw101.dev/zh" target="_blank">OpenClaw101 中文学习站</a></li>
+                    <li><a href="https://clawd.org.cn/" target="_blank">OpenClaw 中文社区</a></li>
+                    <li><a href="https://github.com/cenyi/openclawhub.uk" target="_blank">OpenClawHub 产品对比站</a></li>
+                    <li><a href="https://blog.csdn.net/qq_44866828/article/details/160622087" target="_blank">2026 国产 40 款龙虾工具横向对比</a></li>
+                    <li><a href="https://juejin.cn/post/7615650902230941737" target="_blank">腾讯 QClaw 全解析：14 亿人的 AI Agent 入口</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>OpenClaw Daily Report - 自动生成，每日更新</p>
+            <p>数据来源：公开互联网信息整理，仅供参考</p>
+        </footer>
+    </div>
+</body>
+</html>
