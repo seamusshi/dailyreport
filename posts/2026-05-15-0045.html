@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年5月15日</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年5月15日 星期五</p>
+        </header>
+
+        <main>
+            <!-- 今日概览 -->
+            <section class="overview">
+                <h2>今日概览</h2>
+                <div class="highlight-cards">
+                    <div class="card">
+                        <span class="badge">定价生效</span>
+                        <p>腾讯 WorkBuddy 今日起执行新阶梯定价，企业版全面涨价，Team 版从 $49/月调至 $75/月，标志国产 AI Agent 商业化进入深水区</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">协议标准</span>
+                        <p>MCP（Model Context Protocol）成为 AI Agent 事实标准，月下载量突破 9700 万，78% 企业已采用，Anthropic 开放协议治理</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">版本更新</span>
+                        <p>OpenClaw v0.10.3 发布：语音模式可用性修复、Cron 表达式验证改进、Workspace 修复，持续打磨生产环境稳定性</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">部署爆发</span>
+                        <p>阿里云百炼 OpenClaw/Hermes Agent 一键部署教程霸榜开发者社区，轻量服务器 38 元/年起即可拥有专属 AI 智能体</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">百虾全景</span>
+                        <p>国产"百虾大战"全景图出炉：30+ 款 OpenClaw 类产品覆盖腾讯、字节、阿里、百度、MiniMax、网易、猎豹、智谱、小米、华为、京东、快手、美图、360、商汤等全阵营</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OpenClaw 官方动态 -->
+            <section class="official">
+                <h2>OpenClaw 官方动态</h2>
+
+                <article class="news-item">
+                    <h3>🚀 OpenClaw v0.10.3 发布 —— 语音与 Cron 稳定性修复</h3>
+                    <p>5 月 12 日，OpenClaw 发布 v0.10.3 版本，核心修复包括：语音模式可用性改进（解决部分 TTS 提供商在长时间会话中的断连问题）；Cron 表达式验证增强，提供更清晰的错误提示；Workspace 路径解析修复，解决特定符号链接场景下的文件访问异常。虽是小版本更新，但体现了团队对生产环境稳定性的持续投入。</p>
+                    <span class="source">来源：OpenClaw GitHub Releases</span>
+                </article>
+
+                <article class="news-item">
+                    <h3>🌐 MCP 协议成为 AI Agent 事实标准 —— 97M 月下载量</h3>
+                    <p>Model Context Protocol（MCP）已跃升为 AI Agent 领域的通用连接协议。最新数据显示 MCP 月下载量突破 9700 万，78% 的企业在部署 Agent 时采用 MCP 作为工具调用标准。Anthropic 宣布开放 MCP 协议治理，邀请社区参与标准演进。这一趋势意味着 OpenClaw 的 <code>mcporter</code> Skill 正从"加分项"变为"必选项"。</p>
+                    <span class="source">来源：Anthropic 官方博客 / 社区统计</span>
+                </article>
+
+                <article class="news-item">
+                    <h3>📊 GitHub Stars 稳守 250K+，生态持续扩张</h3>
+                    <p>OpenClaw 主仓库 GitHub Stars 维持在 250,000+ 水平，仍是全球最受关注的开源 AI Agent 框架。ClawHub 社区技能库突破 5,000 个，每日新增 Skills 约 30-50 个。SkillHub 国内加速镜像（腾讯云）聚合 13,000+ 官方 Skills，解决国内用户安装慢、易中断的痛点。</p>
+                    <span class="source">来源：GitHub / ClawHub / 腾讯云 SkillHub</span>
+                </article>
+
+                <article class="news-item">
+                    <h3>⚠️ 浏览器控制模式迁移持续推进</h3>
+                    <p>OpenClaw 正从 legacy Chrome 扩展 relay 路径全面迁移到 <code>existing-session</code> / <code>user</code> 浏览器附着模式。新架构支持通过 <code>userDataDir</code> 加载 Chromium 家族配置文件，Agent 可直接附着到已登录的真实浏览器会话，保留真实登录态。这一变化对依赖浏览器自动化的企业用户至关重要。</p>
+                    <span class="source">来源：OpenClaw GitHub PR / 官方文档</span>
+                </article>
+            </section>
+
+            <!-- 核心功能更新详情 -->
+            <section class="core-updates">
+                <h2>📌 核心功能更新详情</h2>
+
+                <div class="update-list">
+                    <div class="update-item">
+                        <h4>语音模式可用性修复（v0.10.3）</h4>
+                        <p>修复了部分 TTS 提供商（包括 Azure Speech、ElevenLabs v3、火山引擎等）在长时间会话中可能出现的断连和音频卡顿问题。同时优化了语音模式下的错误恢复机制，当某个 TTS 提供商失败时自动回退到备用提供商。</p>
+                    </div>
+
+                    <div class="update-item">
+                        <h4>Cron 表达式验证增强</h4>
+                        <p>改进了 Cron 任务的表达式解析和验证逻辑，现在会在任务创建阶段就检测非法表达式并给出明确的错误提示（如"第 5 个字段范围超出 0-6"），避免此前"静默失败"导致的任务不执行问题。</p>
+                    </div>
+
+                    <div class="update-item">
+                        <h4>Workspace 路径解析修复</h4>
+                        <p>修复了 Workspace 目录中包含符号链接（symlink）或特殊字符时的路径解析异常，确保 Agent 在复杂文件系统布局中仍能正确读写工作目录。</p>
+                    </div>
+
+                    <div class="update-item">
+                        <h4>MCP 协议原生支持深化</h4>
+                        <p>随着 MCP 成为行业标准，OpenClaw 对 MCP Server 的连接稳定性进行了多项底层优化，包括连接池管理、心跳检测和自动重连机制，确保长时间运行的 Agent 与外部工具之间的通信可靠。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 竞品动态 -->
+            <section class="competitors">
+                <h2>竞品动态</h2>
+
+                <div class="competitor-card">
+                    <h3>腾讯 · WorkBuddy / QClaw / 龙虾管家 <span class="tag hot">今日涨价</span></h3>
+                    <ul>
+                        <li><strong>价格调整生效</strong>：5 月 15 日起 WorkBuddy 执行新阶梯定价，企业版全面涨价，标志商业化进入深水区</li>
+                        <li>WorkBuddy 定位全场景职场 AI 智能体桌面工作台，免部署、安装即用，被称为"国产小龙虾"</li>
+                        <li>核心能力：自然语言操控本地文件、多格式文档处理、多模型切换（混元/DeepSeek/GLM/Kimi）、IM 远程控制</li>
+                        <li>企业级安全：文件夹级授权、高危指令拦截、执行确认、腾讯级安全网关护航</li>
+                        <li>兼容 OpenClaw Skills 生态，支持 MCP Server 协议扩展</li>
+                        <li>内部测试覆盖 2,000+ 腾讯员工，在数据处理、知识库构建、内容创作等场景表现突出</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>字节跳动 · ArkClaw / 扣子 <span class="tag hot">飞书原生</span></h3>
+                    <ul>
+                        <li>ArkClaw：云端 SaaS 零部署，7×24 小时在线，飞书原生深度集成</li>
+                        <li>内置豆包 Seed 2.0 Pro 模型，独立沙箱 + 安全审计</li>
+                        <li>扣子（Coze）商店第三方 Bot 已超 100,000 个，一键发布到抖音、飞书、微信公众号</li>
+                        <li>火山引擎 Coding Plan 实现固定成本可控，API 调用额度大幅提升</li>
+                        <li>企业版通过等保三级、ISO27001 认证，支持公有云/私有云/混合云</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>阿里 · CoPaw / JVSClaw / 阿里云百炼 <span class="tag hot">开源免费</span></h3>
+                    <ul>
+                        <li>CoPaw：Apache 2.0 开源，本地/云端双部署，钉钉/飞书/QQ 原生适配</li>
+                        <li>阿里云百炼推出 OpenClaw 专属 Token Plan，包月订阅统一 Credits 积分</li>
+                        <li>轻量服务器预置 OpenClaw 镜像，3 分钟完成部署，38 元/年起</li>
+                        <li>百炼控制台新增"记忆库"能力，支持 OpenClaw 持久化记忆存储</li>
+                        <li>支持 qwen3.6-plus、glm-5、deepseek-v3.2 等多模型切换</li>
+                        <li>RDSClaw 基于 OpenClaw 构建数据库原生 AI Agent 服务</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>月之暗面 · Kimi Claw <span class="tag hot">5K+ Skills</span></h3>
+                    <ul>
+                        <li>云端一键部署，Kimi K2.5 模型（1T 参数 MoE）</li>
+                        <li>40GB 云存储，5,000+ ClawHub Skills 生态</li>
+                        <li>BYOC（Bring Your Own Claw）支持本地 OpenClaw 连接云端</li>
+                        <li>Pro-Grade Search 集成实时金融数据（Yahoo Finance）</li>
+                        <li>Allegretto 会员 199 元/月，受 OpenClaw 带动 20 天收入超 2025 全年</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>MiniMax · MaxClaw <span class="tag hot">多平台</span></h3>
+                    <ul>
+                        <li>M2.5 模型（229B 参数 MoE），20 万+ Token 持久记忆</li>
+                        <li>Telegram/WhatsApp/Slack/Discord 四平台 24/7 在线</li>
+                        <li>Expert 2.0 自然语言配置，零 YAML 零参数调优</li>
+                        <li>MiniMax 订阅制，无额外 API 费用，成本可预测</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>其他竞品动态</h3>
+                    <ul>
+                        <li><strong>猎豹 EasyClaw</strong>：个人终身免费，双击即用桌面 GUI，傅盛同款技能包，AI 业务占总营收 46.5%</li>
+                        <li><strong>百度 DuClaw</strong>：文心大模型驱动，红手指 Operator 月活 95 万+，17.8 元首月</li>
+                        <li><strong>智谱 AutoClaw</strong>：本地一键安装 1 分钟可用，预置 50+ 技能，AUTOGLM 沉思模式支持 50+ 步自动化</li>
+                        <li><strong>网易 LobsterAI</strong>：MIT 协议全开源，被称为"中国版 OpenClaw"，图形化界面降低命令行门槛</li>
+                        <li><strong>科大讯飞 AstronClaw</strong>：星火 X2 模型，10,000+ Skills，教育/医疗/办公场景优化</li>
+                        <li><strong>华为小艺 Claw</strong>：HarmonyOS 内置，多端协同</li>
+                        <li><strong>小米 MiClaw</strong>：基于 MiMo 大模型的端侧 AI 智能体</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 社区趣味应用 -->
+            <section class="community">
+                <h2>🚀 社区趣味应用案例分享</h2>
+
+                <div class="case-list">
+                    <div class="case-item">
+                        <h4>阿里云百炼 × OpenClaw：零代码一键部署热潮</h4>
+                        <p>社区涌现大量阿里云部署 OpenClaw 的保姆级教程，从购买 38 元/年的轻量服务器到配置百炼 API Key、放行端口、设置开机自启，全程可视化操作。新手 10 分钟即可拥有云端 AI 助手，彻底解决了原版 OpenClaw"安装劝退 99% 非技术用户"的痛点。</p>
+                        <span class="tag">云服务</span>
+                    </div>
+
+                    <div class="case-item">
+                        <h4>腾讯云 WorkBuddy 实战：一句话生成 PPT</h4>
+                        <p>用户实测 WorkBuddy 办公场景：输入"根据这个 Excel 销售数据生成一份季度总结 PPT"，AI 自动完成数据读取、图表生成、文案撰写、PPT 排版，全程约 3 分钟。相比传统方式需要 2-3 小时的数据整理和排版工作，效率提升 40 倍以上。</p>
+                        <span class="tag">办公自动化</span>
+                    </div>
+
+                    <div class="case-item">
+                        <h4>多 Agent 程序开发团队：Leader + PM + 前后端协作</h4>
+                        <p>开发者基于 OpenClaw 多智能体架构，创建了由 leader、pm、frontend、backend 四个 Agent 组成的虚拟开发团队。每个 Agent 拥有独立工作空间和身份配置，通过飞书多机器人协作完成从需求分析到代码生成的完整流程。PM Agent 负责拆解任务，frontend/backend Agent 并行编码，leader Agent 负责代码审查和整合。</p>
+                        <span class="tag">多智能体</span>
+                    </div>
+
+                    <div class="case-item">
+                        <h4>MCP 协议实战：打通千款工具的万能钥匙</h4>
+                        <p>社区开发者使用 McPorter Skill 将 OpenClaw 连接到各类 MCP Server，实现了一键调用 GitHub、Slack、Notion、Figma、数据库等工具。典型案例：Agent 自动监控 GitHub Issue → 分析优先级 → 创建 Slack 通知 → 更新 Notion 看板 → 生成周报摘要，全流程无需人工干预。</p>
+                        <span class="tag">MCP生态</span>
+                    </div>
+
+                    <div class="case-item">
+                        <h4>手机端 OpenClaw：口袋里的 7×24 AI 助手</h4>
+                        <p>社区持续完善 Android 手机部署方案：Termux + Proot-distro + Ubuntu + zsh 完整部署 OpenClaw，接入腾讯云 SkillHub 加速安装 skills，绑定企业微信机器人。配合 cron 定时任务，手机 Agent 可自动完成每日新闻摘要、股票监控、待办提醒等任务。</p>
+                        <span class="tag">移动端</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skill 学习指南 -->
+            <section class="skills">
+                <h2>📚 精选 Skill 学习指南</h2>
+
+                <div class="skill-guide">
+                    <h4>MCP 时代必装：McPorter Skill 深度指南</h4>
+                    <p>随着 MCP 成为 AI Agent 事实标准，<strong>McPorter</strong> 已成为 OpenClaw 的必装 Skill。安装后 Agent 可直接连接任何 MCP Server，无需编写胶水代码：</p>
+                    <ol>
+                        <li>安装：<code>openclaw skill add mcporter</code></li>
+                        <li>配置 MCP Server：在 <code>mcpServers</code> 配置块中添加目标服务（如 GitHub、Slack、PostgreSQL）</li>
+                        <li>Agent 自动发现可用工具并调用</li>
+                    </ol>
+                    <p>推荐 MCP Server：GitHub（代码管理）、Brave Search（实时搜索）、Slack（团队协作）、Notion（知识管理）、Figma（设计协作）。</p>
+                </div>
+
+                <div class="skill-guide">
+                    <h4>腾讯云 SkillHub 国内加速方案</h4>
+                    <p>国内用户安装 Skills 常遇网络问题，腾讯云 SkillHub 提供官方镜像加速：</p>
+                    <ol>
+                        <li>访问 <a href="https://skillhub.tencent.com/" target="_blank">skillhub.tencent.com</a></li>
+                        <li>搜索所需 Skill（支持中文关键词）</li>
+                        <li>复制安装命令，在 OpenClaw 中执行</li>
+                    </ol>
+                    <p>当前聚合 13,000+ 官方 Skills，涵盖办公自动化、代码开发、数据分析、内容创作等全领域。实测安装速度提升 5-10 倍，成功率从 65% 提升至 98.5%。</p>
+                </div>
+
+                <div class="skill-guide">
+                    <h4>Top 10 新增/热门 Skills 推荐</h4>
+                    <ol>
+                        <li><strong>mcporter</strong>：MCP 协议连接网关，必装</li>
+                        <li><strong>brave-search</strong>：实时全网搜索，解决数据过时问题</li>
+                        <li><strong>summarize</strong>：URL/网页/PDF/音频/视频摘要（官方内置）</li>
+                        <li><strong>agent-browser</strong>：浏览器自动化，老旧网站无 API 也能操作</li>
+                        <li><strong>design-doc-mermaid</strong>：自然语言生成架构图、时序图</li>
+                        <li><strong>google-workspace</strong>：Gmail/Calendar/Docs 无缝连接</li>
+                        <li><strong>skill-creator</strong>：5 分钟自然语言创建新 Skill</li>
+                        <li><strong>proactive-agent</strong>：主动观察用户习惯，提出自动化建议</li>
+                        <li><strong>self-improving</strong>：自我反思学习，固化知识到记忆文件</li>
+                        <li><strong>healthcheck</strong>：主机安全审计与加固</li>
+                    </ol>
+                    <p>⚠️ 安全提醒：安装社区 Skills 前建议使用 <code>clawscan</code> 或 <code>skill-scanner</code> 进行安全预检，避免数据泄露风险。</p>
+                </div>
+
+                <div class="skill-guide">
+                    <h4>Skills 组合推荐（2026 年 5 月版）</h4>
+                    <ul>
+                        <li><strong>MCP 万能套装</strong>：mcporter + brave-search + summarize + agent-browser —— 连接千款工具、实时搜索、内容摘要、网页操作</li>
+                        <li><strong>办公自动化套装</strong>：summarize + google-workspace + agent-browser + proactive-agent —— 邮件处理、日程管理、网页自动化、主动建议</li>
+                        <li><strong>开发者套装</strong>：mcporter + brave-search + summarize + design-doc-mermaid + skill-creator —— 开发全流程辅助</li>
+                        <li><strong>内容创作套装</strong>：brave-search + summarize + design-doc-mermaid + nano-banana-pro —— 热点追踪、文案生成、配图制作</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 企业落地案例 -->
+            <section class="enterprise">
+                <h2>企业落地案例</h2>
+
+                <div class="case-study">
+                    <h4>2026 年企业 AI Agent 落地：从试点到规模化</h4>
+                    <p>多项数据确认 2026 年为企业 AI Agent 规模化落地元年。Capgemini 调研显示 82% 的组织已部署或计划部署 AI Agent；88% 的已部署企业获得正向 ROI，平均回本周期 6-18 个月。企业落地遵循"高重复 + 数据已有 + 流程标准"三原则，从客服工单、财务报表、IT 告警等单点场景切入。</p>
+                </div>
+
+                <div class="case-study">
+                    <h4>腾讯 WorkBuddy 内部实践：2,000+ 员工的 AI 工作台</h4>
+                    <p>WorkBuddy 在腾讯内部覆盖 2,000+ 员工，在 HR、行政、秘书、运营、销售等角色中实现数据处理、知识库构建、内容创作、海报生成、自动化办公等场景提效。产品由腾讯云 CodeBuddy 团队开发，经过内部充分验证后推向市场，5 月 15 日起正式执行商业化定价。</p>
+                </div>
+
+                <div class="case-study">
+                    <h4>阿里云百炼 Token Plan：企业降本新范式</h4>
+                    <p>阿里云百炼推出 Token Plan 后，企业用户可从"按量计费"转向"包月订阅"，多模型统一 Credits 积分，彻底告别账单不可控。配合轻量服务器预置镜像，企业 10 分钟即可完成 OpenClaw 部署，成本从数千元/月降至 38 元/年起（服务器）+ Token Plan 订阅费。</p>
+                </div>
+
+                <div class="case-study">
+                    <h4>京东工业：SKU 专家团 AI Agent 上线</h4>
+                    <p>京东工业将其自研 Orcawise 企业级 Agent 平台接入商品数字化采购场景，SKU 专家团 AI Agent 将采购决策中的主观判断转化为结构化推理，验证 AI Agent 在 B2B 场景中的落地价值。</p>
+                </div>
+
+                <div class="case-study">
+                    <h4>某头部游戏公司：ArkClaw 智能客服 Agent</h4>
+                    <p>使用字节 ArkClaw 搭建智能客服 Agent，承载日均 1000 万+ 对话，响应延迟 <200ms，成本较自建降低 60%。字节火山引擎 DPU + 自研芯片提供高并发基础设施支撑。</p>
+                </div>
+            </section>
+
+            <!-- 延伸阅读 -->
+            <section class="reading">
+                <h2>延伸阅读</h2>
+                <ul class="link-list">
+                    <li><a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw GitHub 仓库（250K+ Stars）</a></li>
+                    <li><a href="https://github.com/NousResearch/hermes-agent" target="_blank">Hermes Agent GitHub 仓库（120K+ Stars）</a></li>
+                    <li><a href="https://www.codebuddy.cn/work/" target="_blank">腾讯 WorkBuddy 官网</a></li>
+                    <li><a href="https://developer.aliyun.com/ask/703522" target="_blank">阿里云 OpenClaw/Hermes Agent 一键部署保姆级教程</a></li>
+                    <li><a href="https://developer.aliyun.com/ask/703605" target="_blank">阿里云百炼 Token Plan 快速部署指南</a></li>
+                    <li><a href="https://skillhub.tencent.com/" target="_blank">腾讯云 SkillHub（国内加速镜像）</a></li>
+                    <li><a href="https://github.com/agentscope-ai/CoPaw" target="_blank">阿里 CoPaw GitHub 仓库（Apache 2.0）</a></li>
+                    <li><a href="https://github.com/datawhalechina/hello-claw" target="_blank">hello-claw：OpenClaw 中文入门教程</a></li>
+                    <li><a href="https://juejin.cn/post/7612175668342112283" target="_blank">OpenClaw/MaxClaw/KimiClaw/Molili 四大 AI Agent 横评</a></li>
+                    <li><a href="https://post.smzdm.com/p/aoml8d86" target="_blank">2026 年 AI Agent 办公场景落地：OpenClaw、MaxClaw 与 KimiClaw 深度对比</a></li>
+                    <li><a href="https://www.cnblogs.com/Liuq-24/p/19989952" target="_blank">聊聊几款国产龙虾产品</a></li>
+                    <li><a href="https://juejin.cn/post/7625923696348921882" target="_blank">OpenClaw 爆火出圈：2026 年 AI Agent 元年已至</a></li>
+                    <li><a href="https://mengzi.pro/" target="_blank">猛子工具箱：养小龙虾工具导航</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>🦞 OpenClaw Daily Report - 自动生成，每日更新</p>
+            <p>数据来源：公开互联网信息整理，仅供参考</p>
+        </footer>
+    </div>
+</body>
+</html>
