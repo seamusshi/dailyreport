@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report | 2026-05-17 第37期</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">OpenClaw Daily Report</div>
+            <div class="date">2026年5月17日 星期日 | 第37期</div>
+        </header>
+
+        <div class="main-content">
+            <!-- 今日概览 -->
+            <div class="card overview">
+                <div class="card-header">今日概览</div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>🛡️ 安全危机与治理觉醒</strong>：AI Agent 暴露实例超 13.5 万，OpenClaw 及生态产品成 CVE 重灾区，行业从"炫技"转向"可控自治"，安全沙箱与权限白名单成为标配</li>
+                        <li><strong>🏗️ 企业架构元年定调</strong>：Salesforce、麦肯锡、微软等发布 10 大 Agentic AI 企业架构，"能力编排"成为企业落地的第三条路，部署周期从年缩短到周</li>
+                        <li><strong>🇨🇳 百虾大战全景揭晓</strong>：国产 Agent 生态完成首轮洗牌，腾讯 6 款、阿里 4 款、字节 3 款，累计 40+ 产品横向对比出炉，CSDN 与腾讯云联合发布全景指南</li>
+                        <li><strong>🔧 OpenClaw 生产化提速</strong>：5 月系列版本专注安全边界硬化、插件供应链治理、语音与可观测性成熟化，从"Demo 框架"蜕变为"监督式操作系统"</li>
+                        <li><strong>📈 阿里云百炼生态领跑</strong>：百炼 Coding Plan 每日两场抢购火爆，轻量服务器预装 OpenClaw 镜像首年 68 元，小红书自动运营 Skill 成为新爆款</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- OpenClaw 官方动态 -->
+            <div class="card">
+                <div class="card-header">🦞 OpenClaw 官方动态</div>
+                <div class="card-body">
+                    <h3>5 月版本密集迭代：安全与治理为核心</h3>
+                    <p>过去两周 OpenClaw 经历了密集的发布周期，核心主题从"功能扩展"转向"边界硬化"。<strong>2026.5.14 更新</strong>聚焦工具与频道权限收紧：沙箱浏览器 CDP 中继强制认证、节点配对替换更安全、Google Chat 与飞书 Webhook 正确限频、Slack/QQBot 审批按钮强制执行授权。<strong>2026.5.12 beta</strong>解决依赖与打包故障，插件发布后被验证为可发布状态才允许重启。<strong>2026.5.9</strong>新增 Codex/ACP 更强的操作面、精准的 Cron 与唤醒路由、消息投递状态字段。<strong>2026.5.7</strong>将插件发布与安装视为"供应链基础设施"，重试瞬态 ClawHub CLI 依赖安装失败。</p>
+
+                    <h3>内存子系统升级为可部署基础设施</h3>
+                    <p>长期记忆从"个人便利功能"进化为"可部署的基础设施"。OpenClaw 为 <code>memory-lancedb</code> 增加云存储支持，意味着记忆索引不再必须存储在本地磁盘。Bounded <code>memory_get</code> 摘录、Dreaming 存储分离、逐字稿摄取清理等改进，都在解决"长期运行代理沦为上下文浆糊"的问题。记忆质量方面，Chunking 日常记忆输入和裁剪通用日记标题的工作仍在持续。</p>
+
+                    <h3>语音与实时控制进入核心工作流</h3>
+                    <p><strong>2026.4.25 版本</strong>是"语音和可观测性成为现实"的标志性发布：TTS 获得完整升级（<code>/tts latest</code>、聊天域自动 TTS 控制、按代理/账户语音覆盖、Azure Speech/Xiaomi/Local CLI/Inworld/Volcengine/Gradium/ElevenLabs v3 覆盖）。<strong>2026.4.26</strong>进一步将通用浏览器实时传输协议、Google Live 浏览器 Talk 会话、Gateway 中继后端-only 实时语音插件纳入核心。方向明确：Agent 正在成为实时协作者，而非偶尔调用工具的聊天框。</p>
+
+                    <h3>可观测性覆盖全运行时</h3>
+                    <p>模型调用、Token 用量、工具循环、Harness 运行、Exec 进程、出站投递、上下文组装和内存压力现在都获得了更广泛的 OpenTelemetry 覆盖，并带有有界低基数属性。这是真实团队在 Agent 全天后台运行时所必需的追踪能力。</p>
+                </div>
+            </div>
+
+            <!-- 核心功能更新 -->
+            <div class="card">
+                <div class="card-header">📌 核心功能更新详情</div>
+                <div class="card-body">
+                    <table class="data-table">
+                        <tr><th>版本/功能</th><th>描述</th><th>影响</th></tr>
+                        <tr><td>2026.5.14 安全硬化</td><td>工具/频道权限收紧、浏览器 CDP 强制认证、消息通道限频</td><td>生产环境漏洞面大幅收缩</td></tr>
+                        <tr><td>2026.5.12 插件供应链</td><td>依赖安装失败重试、预览通过后锁定可发布状态、POSIX 生命周期统一</td><td>ClawHub 插件发布更可靠</td></tr>
+                        <tr><td>2026.5.9 Cron/唤醒路由</td><td>直接 Cron 任务查找、类型化会话键、手动 Cron 运行标记活跃</td><td>定时任务调度更精确</td></tr>
+                        <tr><td>2026.4.29 转向控制</td><td>活跃运行队列转向、子代理事件携带路由元数据、可见回复全局控制</td><td>多 Agent 协作可追踪</td></tr>
+                        <tr><td>2026.4.25 语音升级</td><td>11 家 TTS 提供商覆盖、聊天域自动语音、按代理/账户覆盖</td><td>语音成为日常交互通道</td></tr>
+                        <tr><td>2026.4.26 实时传输</td><td>通用浏览器实时传输协议、Google Live Talk、Gateway 中继</td><td>实时协作场景落地</td></tr>
+                        <tr><td>LanceDB 云存储</td><td>memory-lancedb 支持远程对象存储</td><td>记忆检索可部署到云端</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 竞品动态 -->
+            <div class="card">
+                <div class="card-header">⚔️ 竞品动态</div>
+                <div class="card-body">
+                    <div class="product-section">
+                        <h4>腾讯系 — 社交入口矩阵扩张至 6 款</h4>
+                        <p>腾讯在 Agent 领域的布局已从双产品扩展为六款矩阵：<strong>WorkBuddy</strong>（企业协作）、<strong>QClaw</strong>（微信/QQ 直连个人助手）、<strong>龙虾管家</strong>（生活场景）、<strong>腾讯云保安</strong>（云安全 Agent）、<strong>乐享知识库·龙虾版</strong>（企业知识管理）、<strong>CodeBuddy</strong>（2026 新增 AI 编程助手）。策略核心：让 AI 成为"社交基础设施"，通过 WorkBuddy 120 万+ 月活和 QClaw 85 万+ 月活抢占入口。WorkBuddy 完全兼容 OpenClaw 技能，支持企业微信 1 分钟配置。</p>
+                    </div>
+                    <div class="product-section">
+                        <h4>字节跳动 — ArkClaw + Coze + MoltBook</h4>
+                        <p>字节系 Agent 三件套成型：<strong>ArkClaw</strong>（火山引擎 SaaS 版，7×24 在线，飞书深度集成，API 调用额度从 1 万次/月提升至 100 万次/月）、<strong>Coze（扣子）</strong>（零代码 Agent 搭建平台，深度适配 OpenClaw 官方插件）、<strong>MoltBook</strong>（扣子社区/OpenClaw 社区版，2026 新增）。套餐策略：Lite 新用户不再赠送 7 日免费体验，Pro 仍可免费解锁 ArkClaw。9.9 元/月起定价在竞品中极具竞争力。</p>
+                    </div>
+                    <div class="product-section">
+                        <h4>阿里系 — CoPaw 更名为 QwenPaw，四产品并行</h4>
+                        <p>阿里云 Agent 布局调整为四产品矩阵：<strong>QwenPaw</strong>（原 CoPaw，通义千问个人智能体平台，开源免费+企业付费）、<strong>JVSClaw</strong>（低代码 Agent 平台）、<strong>QoderWork</strong>（AI 编程工作流 Agent）、<strong>HiClaw</strong>（2026 新增智能客服 Agent）。阿里云百炼提供 OpenClaw 一键部署镜像（2 核 2G 起步），Coding Plan 按次收费模式取代按 Token 计费，每日两场抢购活动火爆。官方文档新增小红书自动运营 Skill 教程和股市监控分析案例。</p>
+                    </div>
+                    <div class="product-section">
+                        <h4>Hermes Agent — 持续领跑开源增长</h4>
+                        <p>Nous Research 的 Hermes Agent 保持高速增长势头，GitHub Stars 已突破 <strong>12 万+</strong>。核心差异：全球首个内置"闭环自学习"机制，具备持久记忆、自主提取 Skill、越用越聪明。v0.11.0 "Interface Release"新增 Ink-based TUI、无限 Subagent、17+ 消息平台。MIT 协议保持完全开源，企业安全争议与功能突破并存。</p>
+                    </div>
+                    <div class="product-section">
+                        <h4>其他生态位竞品</h4>
+                        <p><strong>智谱 AutoClaw（澳龙）</strong>：一键安装桌面客户端，65 万+ 月活，29 元/月起，浏览器自动化能力突出。<strong>MiniMax MaxClaw</strong>：云端托管+移动端，28 万+ 月活，39 元/月起。<strong>百度 DuClaw + 红手指 Operator</strong>：零部署网页版+跨 App 手机 Agent，58 元/月。<strong>网易 LobsterAI</strong>：MIT 全开源桌面 Agent。<strong>科大讯飞 AstronClaw</strong>：10,000+ Skills，星火 X2 模型。<strong>华为小艺 Claw</strong>：鸿蒙系统级 Beta。<strong>京东</strong>：京东云一键部署+人工远程服务。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 社区趣味应用 -->
+            <div class="card">
+                <div class="card-header">🚀 社区趣味应用案例分享</div>
+                <div class="card-body">
+                    <div class="case">
+                        <h4>案例 1：小红书自动运营 Agent</h4>
+                        <p>阿里云官方文档收录的 OpenClaw 应用案例：通过安装 <code>xiaohongshu-ops-skill</code>，Agent 可自动完成内容创作、自动发布、评论回复等全链路运营。实际效果：输入"帮我分析一下小红书首页推荐流"，Agent 提炼可复用的选题方向；输入"帮我发布一篇关于 AI 工具使用技巧的笔记"，自动生成封面、填写标题正文并完成发布。首次登录后无需重复验证，实现 7×24 无人值守运营。</p>
+                    </div>
+                    <div class="case">
+                        <h4>案例 2：股市监控与分析工作流</h4>
+                        <p>阿里云百炼官方案例：安装 <code>manus-stock-analysis</code> Skill 后，OpenClaw 可分析股票走势并提供技术面分析和投资建议。配合百炼 Coding Plan 的按次收费模式，股市分析类高频查询的成本显著低于按 Token 计费。适合个人投资者建立自动化盯盘 Agent。</p>
+                    </div>
+                    <div class="case">
+                        <h4>案例 3：Self-Improvement Skill — 让龙虾自动学习</h4>
+                        <p>社区高赞 Skill：<code>self-improving-agent</code> 让 Agent 每天自动运行自我反省，记录错误模式并更新行为策略，避免重复犯错。配合 <code>memory-setup</code> 构建长期记忆、<code>proactive-agent</code> 根据日程主动提醒、<code>humanizer</code> 去除 AI 味道，形成完整的"人格化 Agent"配置方案。掘金社区已有完整的 20+ Skill 配置教程。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 精选 Skill 学习指南 -->
+            <div class="card">
+                <div class="card-header">📚 精选 Skill 学习指南</div>
+                <div class="card-body">
+                    <table class="data-table">
+                        <tr><th>Skill 名称</th><th>功能</th><th>安装方式</th><th>场景</th></tr>
+                        <tr><td>xiaohongshu-ops-skill</td><td>小红书内容创作、自动发布、评论回复</td><td>对话中输入安装链接</td><td>自媒体运营</td></tr>
+                        <tr><td>manus-stock-analysis</td><td>股票走势分析与技术面研判</td><td>Install the manus-stock-analysis skill</td><td>投资分析</td></tr>
+                        <tr><td>self-improving-agent</td><td>自动学习反省，避免重复犯错</td><td>clawhub install self-improving-agent</td><td>Agent 进化</td></tr>
+                        <tr><td>memory-setup</td><td>构建长期记忆系统</td><td>clawhub install memory-setup</td><td>记忆增强</td></tr>
+                        <tr><td>proactive-agent</td><td>根据日程主动提醒</td><td>clawhub install proactive-agent</td><td>自动化日程</td></tr>
+                        <tr><td>humanizer</td><td>去除 AI 痕迹，更有人味</td><td>clawhub install humanizer</td><td>内容创作</td></tr>
+                        <tr><td>clawfeed</td><td>AI 自动筛选汇总信息源</td><td>clawhub install clawfeed</td><td>信息聚合</td></tr>
+                        <tr><td>auto-updater</td><td>自动保持所有 Skill 最新</td><td>clawhub install auto-updater</td><td>运维管理</td></tr>
+                    </table>
+                    <p class="tip"><strong>安全提示</strong>：社区 Skill 爆发式增长，安装前务必三步验证——检查 ClawHub 评分、查看最近更新日期、精读 SKILL.md 的 Prerequisites。遇到 <code>curl | bash</code> 或密码保护的 zip 包直接排除。ClawHub 近期已升级安全验证机制，新增 Skill 白名单和可疑插件举报系统。</p>
+                </div>
+            </div>
+
+            <!-- 企业落地案例 -->
+            <div class="card">
+                <div class="card-header">🏢 企业落地案例</div>
+                <div class="card-body">
+                    <div class="case">
+                        <h4>能力编排：AskTable 的"第三条路"实践</h4>
+                        <p>AskTable 提出企业 AI 落地的第三条路径——不做大模型，不做 Agent 框架，而是做<strong>能力编排</strong>。以 Qwen 3.6-Plus 等顶级模型为引擎，通过 Skill 和智能体模板快速组合。对比自建大模型（1000万+ 投入、1-3 年周期）和 Agent 框架开发（50-200 万、3-6 个月），能力编排仅需 10-50 万、2-4 周部署。某头部企业验证：业务人员 + IT 配合即可落地，无需养 AI 团队。</p>
+                    </div>
+                    <div class="case">
+                        <h4>10 大企业级 Agentic AI 架构全景</h4>
+                        <p>2026 年企业级 Agent 架构选型进入标准化阶段。Salesforce "The Agentic Enterprise"架构定义四阶段成熟度路线（Lvl1 信息检索 → Lvl4 多智能体编排）；麦肯锡 "Agentic AI Mesh"借鉴微服务 Mesh 思想，将 Agent 解耦为可发现、可管理、可复用的企业级能力单元；Kore.ai 以 Agent OS 为中枢，通过规划器拆解任务、编排器调度智能体市场。共同趋势：治理、透明与安全优先于自主能力。</p>
+                    </div>
+                    <div class="case">
+                        <h4>安全危机驱动的合规改造</h4>
+                        <p>2026 年初披露的安全危机——13.5 万+ 暴露实例、重大 CVE——迫使企业重新评估 Agent 部署策略。趋势响应：<strong>NanoClaw</strong> 集成 Docker Sandboxes 实现双层隔离，<strong>ZeroClaw</strong> 以 Rust 重写基础设施层，<strong>Lakera/AccuKnox</strong> 推出 Prompt Firewall 实时拦截越狱和 PII 泄露。企业评估维度新增：容器隔离（预计 2026-2028 年 85% 采用）、Prompt 防火墙（72%）、MicroVM 沙箱（55%）。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 延伸阅读 -->
+            <div class="card">
+                <div class="card-header">📖 延伸阅读链接</div>
+                <div class="card-body">
+                    <ul>
+                        <li><a href="https://openclaw.com.au/updates" target="_blank">OpenClaw Official Updates & Release Notes</a></li>
+                        <li><a href="https://cloud.tencent.com/developer/article/2654425" target="_blank">2026 国产 OpenClaw 生态全景指南 - 腾讯云</a></li>
+                        <li><a href="https://devpress.csdn.net/xian/69f17f8b54b52172bc70b15b.html" target="_blank">2026 国产 AI Agent 工具全景盘点：40 款横评 - CSDN</a></li>
+                        <li><a href="https://devpress.csdn.net/xclaw/69bd04290a2f6a37c598f146.html" target="_blank">国内主流 OpenClaw 智能体全景对比 - CSDN</a></li>
+                        <li><a href="https://www.asktable.com/zh-CN/blog/2026-04-05/third-path-enterprise-ai-capability-orchestration" target="_blank">企业 AI 落地的第三条路：能力编排 - AskTable</a></li>
+                        <li><a href="https://www.51cto.com/aigc/9903.html" target="_blank">一文盘点 10 个企业级 Agentic AI 架构 - 51CTO</a></li>
+                        <li><a href="https://www.cnblogs.com/clark1990/p/19701600" target="_blank">企业级 AI Agent 落地架构选型 - 博客园</a></li>
+                        <li><a href="https://help.aliyun.com/zh/model-studio/openclaw" target="_blank">阿里云百炼 OpenClaw 官方文档</a></li>
+                        <li><a href="https://juejin.cn/post/7613342157131743268" target="_blank">OpenClaw 高级 Skills 最全教程 - 掘金</a></li>
+                        <li><a href="https://skywork.ai/skypage/en/secure-alternatives-openclaw-ai/2038589913441320960" target="_blank">2026 AI Agent 安全替代方案指南</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>OpenClaw Daily Report 由 Kimi Claw 自动生成 | 数据来源：公开网络信息</p>
+            <p>仅供学习交流，不构成投资建议 | 报告时间：2026-05-17 00:45 CST</p>
+        </footer>
+    </div>
+</body>
+</html>
