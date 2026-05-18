@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年5月19日</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年5月19日 | 第39期</p>
+            <p class="tagline">安全与治理成为主战场 | 百虾大战40款产品横评 | WorkBuddy登顶PC端智能体市场</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📋 今日概览</h2>
+                <div class="highlights">
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 登顶</span>
+                        <p><strong>腾讯WorkBuddy月访问量登顶国内PC端AI原生办公智能体市场：</strong>据《中国办公智能体平台市场研究报告2026》，WorkBuddy月访问量和环比增速均位列第一，腾讯正式完成对OpenClaw技能生态的反向收编</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 横评</span>
+                        <p><strong>2026国产AI Agent百虾大战全景横评出炉：</strong>40款龙虾工具横向对比，从WorkBuddy到红手指Operator，国产Agent生态格局首次系统性梳理</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag trend">📈 趋势</span>
+                        <p><strong>安全与治理成为2026年Agent落地最大瓶颈：</strong>NIST启动AI Agent标准计划、OpenClaw CVE-2026-25253漏洞、ClawHavoc供应链攻击、OpenAI加入FIDO联盟——安全不再是可选项</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag new">🆕 集成</span>
+                        <p><strong>阿里云百炼×腾讯云竞相发布OpenClaw部署教程：</strong>从一键部署到Token Plan配置，云厂商争夺Agent托管入口白热化</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag ecosystem">🌐 生态</span>
+                        <p><strong>NVIDIA NemoClaw以安全加固切入企业市场：</strong>OpenShell运行时+AI-Q架构降低企业推理成本50%+，企业级Agent部署进入"安全优先"时代</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏢 OpenClaw 官方与社区动态</h2>
+                <h3>🔧 核心框架进展</h3>
+                <ul>
+                    <li><strong>OpenClaw GitHub Stars 突破25万</strong>，从0到25万仅用约60天，成为GitHub史上增速最快的开源项目之一，超越Meta React同期增速</li>
+                    <li><strong>Peter Steinberger正式加入OpenAI</strong>（2026年2月），OpenClaw项目移交开源基金会，OpenAI成为赞助方。此举被视为OpenAI获取Agent实战失败模式与攻击面的战略布局</li>
+                    <li><strong>OpenClaw CVE-2026-25253高危漏洞</strong>：CVSS评分8.8的一键远程代码执行漏洞，2026年1月被Cisco安全团队发现，再次凸显开源Agent框架的安全治理紧迫性</li>
+                    <li><strong>ClawHavoc供应链攻击</strong>：社区发现341个恶意技能包植入数据窃取与提示注入代码，影响超9000个安装实例。安全不再是"可选项"</li>
+                    <li><strong>MCP（Model Context Protocol）成为事实标准</strong>：由Anthropic开发并捐赠给Linux基金会，成为Agent与ERP/CRM/数据库等企业系统互通的开放协议</li>
+                    <li><strong>ZeroClaw（Rust重写版）</strong>：二进制仅3.4MB、内存占用&lt;5MB，成为树莓派/IoT设备Agent首选运行时</li>
+                    <li><strong>PicoClaw（Go语言版）</strong>：面向嵌入式硬件，启动时间&lt;1秒，在工业边缘计算场景崭露头角</li>
+                </ul>
+
+                <h3>📌 核心功能更新详情</h3>
+                <div class="detail-box">
+                    <h4>Skills 2.0：从工具到工作流</h4>
+                    <p>Agent Skills已从单一工具调用进化为可组合的多步骤工作流。通过skill-creator技能，用户可用自然语言描述需求自动生成.skill包。社区热门技能持续扩展：Tavily搜索、多搜索引擎聚合、加密货币盯盘、Self-Improvement记忆增强、GitHub自动化等。</p>
+                </div>
+                <div class="detail-box">
+                    <h4>ClawHub安全治理升级</h4>
+                    <p>在ClawHavoc事件后，OpenClaw团队推出技能举报功能和社区审核机制。当前推荐通过ClawHub CLI安装技能（<code>clawhub install &lt;skill-slug&gt;</code>），支持版本锁定和自动更新。企业用户强烈建议安装ClawSec安全扫描技能后再安装第三方技能。</p>
+                </div>
+                <div class="detail-box">
+                    <h4>多模型Provider标准化</h4>
+                    <p>OpenClaw已统一模型目录格式（2026.5.9-beta.1），支持通过标准OpenAI SDK格式接入各大云厂商模型：阿里云百炼（bailian/qwen-plus）、腾讯云混元、火山引擎豆包、硅基流动等。切换模型只需一条配置命令。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>⚔️ 竞品动态</h2>
+
+                <h3>🐧 腾讯：龙虾矩阵全线登顶</h3>
+                <div class="product-card">
+                    <p><strong>WorkBuddy</strong>：据最新发布的《中国办公智能体平台市场研究报告2026》，WorkBuddy在国内PC端AI原生办公智能体市场中<strong>月访问量和环比增速均位列第一</strong>。该产品于2026年3月9日正式上线，基于腾讯云CodeBuddy团队自研多智能体架构，完全兼容OpenClaw全部Skills。WorkBuddy采用"模型中立"策略，内置Hunyuan、DeepSeek、GLM、Kimi、MiniMax等主流模型一键切换。花旗分析师Alicia Yap指出，WorkBuddy标志着国内AI从"对话范式"向"行动范式"的关键跃迁。</p>
+                    <p><strong>核心设计哲学</strong>："Skills即服务"——内置超20种技能包，覆盖代码开发、文档总结、数据分析、本地任务执行。打通企业微信/QQ/飞书/钉钉，实现"在聊天中使用AI"。</p>
+                    <p><strong>WorkBuddy vs OpenClaw最全对比出炉</strong>（5月18日）：技术用户选OpenClaw（免费、高度可定制），普通职场人选WorkBuddy（开箱即用¥58/人/月起），企业管理者必须选WorkBuddy（完整安全审计、统一账号计费）。</p>
+                    <p><strong>CodeBuddy</strong>：已在腾讯内部实现90%+工程师覆盖，AI生成代码占比超50%，研发提效逾20%。通过Agent SDK向第三方开放能力。</p>
+                </div>
+
+                <h3>🌙 月之暗面：Kimi Claw深耕云存储+技能生态</h3>
+                <div class="product-card">
+                    <p>Kimi Claw搭载K2.5模型（1T参数MoE架构），提供<strong>40GB云存储/用户</strong>，专为RAG式文档检索工作流设计。拥有5,000+ ClawHub技能库访问权限。独特<strong>BYOC（Bring Your Own Claw）</strong>模式允许连接本地OpenClaw实例到kimi.com，实现本地工具执行+云端智能混合。</p>
+                    <p><strong>Agent Swarm</strong>：Kimi K2.5的杀手锏功能——一个指令自动拉起100个"分身"Agent，分别负责搜资料、写代码、做数据分析，最终汇总为完整报告。这是Agent编排领域的前沿实践。</p>
+                    <p><strong>定价</strong>：需Allegretto会员$39/月，无免费Agent功能层。Pro-Grade Search集成Yahoo Finance实时金融数据。</p>
+                </div>
+
+                <h3>🎭 MiniMax：MaxClaw极致性价比路线</h3>
+                <div class="product-card">
+                    <p>MaxClaw搭载M2.5 MoE模型（229B总量/10B激活），推理速度达100 tokens/秒，成本仅为Claude 3.5 Sonnet的<strong>1/7~1/20</strong>。支持Telegram/WhatsApp/Slack/Discord/Feishu/DingTalk六大渠道，实现真正的"全渠道Agent"。</p>
+                    <p><strong>Expert 2.0</strong>自然语言配置系统实现零YAML、零参数调优，用户用自然语言描述需求即可自动配置Agent。MiniMax 2026年1月港交所上市，估值25亿美元，拥有2.12亿用户。</p>
+                    <p><strong>定价</strong>：$19/月统一费率，无额外API费用，成本可预测性强。</p>
+                </div>
+
+                <h3>🌋 字节跳动：ArkClaw+MoltBook双引擎</h3>
+                <div class="product-card">
+                    <p><strong>ArkClaw</strong>：2026年3月正式上线，定位"云养虾"——7×24小时云端托管。Lite版月费低至8.9元，通过等保三级、ISO27001认证。已集成Hermes Agent（Nous Research开源框架），实现闭环学习——从对话中学习、自动生成可复用Skill、跨会话持久化记忆。</p>
+                    <p><strong>Coze（扣子）</strong>：零代码AI Agent搭建平台，扣子商店已有超<strong>10万个第三方Bot</strong>。支持一键发布到抖音、飞书、微信公众号、微信客服，实现一次开发多端部署。</p>
+                    <p><strong>MoltBook</strong>：字节推出的开源Agent模板库，兼容OpenClaw标准协议，GitHub Stars突破15K。Apache 2.0协议，提供预置Agent模板和Skill技能库。</p>
+                </div>
+
+                <h3>☁️ 阿里云：百炼×CoPaw×QwenPaw三箭齐发</h3>
+                <div class="product-card">
+                    <p><strong>阿里云百炼</strong>：OpenClaw一键部署首选平台。提供计算巢、轻量服务器、无影云电脑三种部署方案，支持Coding Plan按次计费（非按token），大幅降低企业成本。最新教程显示零基础用户30分钟内可完成部署。</p>
+                    <p><strong>QwenPaw（Qoder）</strong>：深度整合阿里云生态，与函数计算、Serverless应用引擎协同，定位为云原生开发的"智能入口"。通过24小时数据飞轮持续进化。</p>
+                    <p><strong>CoPaw</strong>：阿里企业级Agent平台，HiClaw接入CoPaw Worker实现企业自动化。2026年5月已发布1.0正式版。</p>
+                </div>
+
+                <h3>🦁 猎豹移动：EasyClaw出海+国内双线作战</h3>
+                <div class="product-card">
+                    <p>EasyClaw持续巩固"最易上手"定位，面向个人用户一键启动Agent。近期推出企业版面向出海市场，财报表现亮眼。国内与腾讯WorkBuddy、字节ArkClaw形成三足鼎立的"易用型Agent"格局。</p>
+                </div>
+
+                <h3>🔍 百度：红手指Operator定义"执行式Agent"</h3>
+                <div class="product-card">
+                    <p><strong>红手指Operator</strong>：浏览器自动化AI Agent，基于视觉语言模型（VLM）+浏览器自动化协议，无需API即可像人类一样操作浏览器。自动填表、点击、滚动、提交——这是通往AGI的关键一步。技术路线为Computer Use，代表了2026年Agent从"对话"到"执行"的核心进化方向。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                <ul>
+                    <li><strong>腾讯云99元/年轻量服务器养虾</strong>：开发者社区出现大量"OpenClaw+腾讯云Lighthouse"低成本7×24小时Agent托管方案。预置环境+自动公网IP+简化防火墙，新手零门槛拥有自己的数字员工。</li>
+                    <li><strong>AI Agent日报机器人</strong>：使用OpenClaw Perplexity+Stock Analysis+GitHub技能组合，自动搜集AI行业动态、生成结构化日报、推送到飞书群。已成为多个AI社群的标配。</li>
+                    <li><strong>加密货币盯盘Agent</strong>：社区Skill实现7×24自动监控币安/OKX行情，设置价格阈值自动报警并生成技术分析报告，周末不休市的"数字交易员"。</li>
+                    <li><strong>个人知识库管家</strong>：用Kimi Claw 40GB云存储+RAG能力，将个人所有文档、笔记、论文构建为私有知识图谱，Agent可跨文档回答任意关联问题。</li>
+                    <li><strong> Hermes Agent自进化实验</strong>：社区开发者让OpenClaw实例运行Self-Improvement技能，连续7天后生成了一个全新的"邮件分类+自动回复"专用Skill，证明了Agent的自主学习潜力。</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <div class="skill-guide">
+                    <h4>🔒 必装技能①：ClawSec — 安全护栏</h4>
+                    <p>企业/个人部署Agent的<strong>第一优先级</strong>。安装新技能前自动扫描恶意代码与可疑权限，检测依赖漏洞，限制技能访问范围。</p>
+                    <code>npx clawhub@latest install clawsec<br>npx clawsec scan --all</code>
+                </div>
+                <div class="skill-guide">
+                    <h4>🔍 必装技能②：Perplexity — 实时联网检索</h4>
+                    <p>为大模型装上"实时眼睛"。自动检索最新资讯、政策、版本更新，对比多源信息并自动引用来源。内容创作者的必备利器。</p>
+                    <code>npx clawhub@latest install perplexity</code>
+                </div>
+                <div class="skill-guide">
+                    <h4>📊 必装技能③：Stock Analysis — 结构化金融分析</h4>
+                    <p>整合行情、财报、舆情多维度数据，按固定模板输出结论、风险点、催化剂。支持自定义分析维度，形成个人研究风格。</p>
+                    <code>npx clawhub@latest install stock-analysis</code>
+                </div>
+                <div class="skill-guide">
+                    <h4>📚 推荐安装顺序</h4>
+                    <p><strong>ClawHub → ClawSec → GitHub → Perplexity → Stock Analysis</strong>。前3步让你的Agent具备"可交付"的核心价值，后两步属于"效率加速器"。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏭 企业落地案例</h2>
+                <ul>
+                    <li><strong>腾讯内部WorkBuddy规模化部署</strong>：超2000名HR、行政、运营、销售等非技术员工日常使用，覆盖数据处理效率提升、文档生成、海报制作等场景。CodeBuddy实现90%+工程师覆盖，AI生成代码占比超50%。</li>
+                    <li><strong>Deloitte银行AI Agent实践</strong>：多个Agent协同处理日内流动性优化，匹配支付确认、Nostro对账单、分类账分录和结算信息。Agent自主请求澄清、附加证据，仅将真实异常上报人工——释放被困现金、降低日内缓冲。</li>
+                    <li><strong>OpenAI Frontier平台</strong>：HP、Intuit、Oracle、State Farm、Thermo Fisher Scientific、Uber等企业已确认接入。平台提供Business Context语义层、Agent Execution执行环境、Evaluation优化反馈、Enterprise Security治理四大模块。</li>
+                    <li><strong>Azure AI Foundry Agent Service</strong>：2025年5月GA，提供build-test-deploy-monitor全生命周期管理。支持Foundry模型目录中多种模型，不限于Azure OpenAI，减少供应商锁定。</li>
+                    <li><strong>企业Agent落地数据</strong>：IDC/AWS 2025年11月调研显示，85%企业正在实验Agentic AI，但仅<strong>3%成功实现跨部门规模化部署</strong>。Gartner预测2026年底40%企业应用将集成任务专用Agent。安全与治理是最大瓶颈。</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <ul>
+                    <li><a href="https://www.citnews.com.cn/news/217114" target="_blank">腾讯WorkBuddy月访问量居AI原生办公智能体市场首位 - CITNews</a></li>
+                    <li><a href="https://www.cnblogs.com/newjpz/p/20070316" target="_blank">WorkBuddy和OpenClaw最全对比指南 - 博客园</a></li>
+                    <li><a href="https://blog.csdn.net/qq_44866828/article/details/160622087" target="_blank">2026国产AI Agent工具全景盘点：40款龙虾工具横评 - CSDN</a></li>
+                    <li><a href="https://skywork.ai/skypage/en/ultimate-ai-agent-showdown/2052981698248863745" target="_blank">The Ultimate AI Agent Showdown: Kimi Claw vs OpenClaw - Skywork</a></li>
+                    <li><a href="https://developer.aliyun.com/article/1717142" target="_blank">OpenClaw阿里云部署+百炼Coding Plan配置+必装5大技能指南 - 阿里云</a></li>
+                    <li><a href="https://www.cnblogs.com/05-hust/p/19956026" target="_blank">腾讯云轻量服务器99元/年搭建OpenClaw 7x24小时AI助手 - 博客园</a></li>
+                    <li><a href="https://business20channel.tv/nvidia-nemoclaw-2026-how-openclaw-agents-reshape-enterprise--8-may-2026" target="_blank">NVIDIA NemoClaw 2026: OpenClaw Agents Reshape Enterprise AI - B20Channel</a></li>
+                    <li><a href="https://www.kai-waehner.de/blog/2026/04/06/enterprise-agentic-ai-landscape-2026-trust-flexibility-and-vendor-lock-in/" target="_blank">Enterprise Agentic AI Landscape 2026 - Kai Waehner</a></li>
+                    <li><a href="https://oski.site/blog/ai-agents-enterprise-news/" target="_blank">AI Agents Enterprise News 2026: Standards & Deployment</a></li>
+                    <li><a href="https://aegisai.in/enterprise-ai-agents-2026-strategy-deployment-guide/" target="_blank">Enterprise AI Agents in 2026: Strategic Deployment Guide - Aegis AI</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>🦞 OpenClaw Daily Report | 每日自动采集生成 | 数据来源：公开互联网</p>
+            <p>生成时间：2026-05-19 00:45 CST</p>
+        </footer>
+    </div>
+</body>
+</html>
