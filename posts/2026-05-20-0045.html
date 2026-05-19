@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年5月20日</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年5月20日 | 第40期</p>
+            <p class="tagline">acpx打通多Agent协作流水线 | 百虾大战30+产品格局固化 | 企业Agent落地路径三级进化框架确立</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📋 今日概览</h2>
+                <div class="highlights">
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 协作</span>
+                        <p><strong>acpx ACP协议成为OpenClaw生态"调度层"核心基础设施：</strong>通过标准化Agent Client Protocol，OpenClaw可统一调用Codex、Claude Code、Gemini CLI等编码Agent，实现"调度+执行"分层协作。流水线、并行、专家会诊三种模式已成熟落地</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 安全</span>
+                        <p><strong>ClawSweeper v0.1.0发布，CI安全边界全面硬化：</strong>Codex review保持只读权限， autofix/automerge工作流引入多重安全门控（merge gates），GitHub Actions令牌不暴露给嵌套review会话。OpenClaw安全治理进入制度化阶段</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag trend">📈 格局</span>
+                        <p><strong>2026国产"百虾大战"格局全面固化：</strong>30+款龙虾产品竞争白热化。腾讯系（WorkBuddy/QClaw/龙虾管家）月活领跑；阿里CoPaw以1/5内存占用狙击OpenClaw Worker；字节ArkClaw 9.9元起切入；猎豹EasyClaw个人终身免费</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag new">🆕 方法论</span>
+                        <p><strong>企业AI Agent落地"三级进化框架"确立：</strong>聊天机器人（规则匹配）→ 工作流自动化（预定义流程）→ AI Agent（LLM驱动自主规划）。Gartner数据显示60%企业在知识库构建阶段遭遇瓶颈，RAG+长期记忆成为破局关键</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag ecosystem">🌐 生态</span>
+                        <p><strong>腾讯云SkillHub正式上线，收录ClawHub 1.3万技能：</strong>"一句话安装"模式降低Skills获取门槛。Agent论文推送助手、Humanizer-zh中文润色等教程持续涌现，OpenClaw Skills从"工具调用"进化为"工作流编排"</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏢 OpenClaw 官方与社区动态</h2>
+                <h3>🔧 核心框架进展</h3>
+                <ul>
+                    <li><strong>acpx（ACP协议无头CLI客户端）持续迭代</strong>：OpenClaw团队发布的acpx已成为连接调度层（OpenClaw）与执行层（Codex/Claude/Gemini）的标准桥梁。支持 <code>npx acpx@latest codex "fix tests"</code> 一键调用，会话状态持久化到 <code>~/.acpx/</code>，崩溃后自动恢复</li>
+                    <li><strong>ClawSweeper v0.1.0安全边界全面硬化</strong>：核心改进包括——Codex review只读访问、验证OpenClaw checkout前后状态、GitHub write token不暴露给嵌套review会话、严格review schema解析与失败证据验证、并发workflow下review发布可靠性提升</li>
+                    <li><strong>GitHub Stars 345K+</strong>，6个月达成，超越React同期增速。Hermes Agent同期61K Stars，OpenClaw仍以5倍优势领跑。但OpenClaw已有9+ CVEs（含CVSS 8.8/9.9），社区发现341-900个恶意技能包，安全治理压力大于Hermes的零CVE记录</li>
+                    <li><strong>MCP（Model Context Protocol）成为事实标准</strong>：Anthropic捐赠给Linux基金会后，成为Agent与ERP/CRM/数据库等企业系统互通的开放协议。月下载量已突破9700万次</li>
+                    <li><strong>OpenClaw Skills进化为工作流编排</strong>：从单一工具调用升级为可组合多步骤工作流。skill-creator支持自然语言生成.skill包，社区热门技能覆盖搜索、浏览器自动化、代码执行、文件管理、GitHub操作、定时任务、自我优化等全场景</li>
+                </ul>
+
+                <h3>📌 核心功能更新详情</h3>
+                <div class="detail-box">
+                    <h4>acpx：OpenClaw的"Agent调度中枢"</h4>
+                    <p>acpx基于JetBrains和Zed推出的ACP（Agent Client Protocol）协议，将原本各说各话的编码Agent收拢为统一命令面。核心三种协作模式已成熟：</p>
+                    <ul>
+                        <li><strong>流水线式</strong>：Gemini分析架构 → Codex执行重构 → Claude补充测试 → OpenCode生成文档</li>
+                        <li><strong>并行式</strong>：Codex同时实现前后端，Claude并行生成测试，OpenClaw整合结果</li>
+                        <li><strong>专家会诊式</strong>：多Agent给出不同方案，OpenClaw综合评估选最优解</li>
+                    </ul>
+                    <p>安装命令：<code>npm install -g acpx@latest</code>，调用示例：<code>npx acpx@latest codex -s pr-842 "Review PR #842"</code></p>
+                </div>
+                <div class="detail-box">
+                    <h4>ClawSweeper：可信的Autofix与Automerge</h4>
+                    <p>ClawSweeper是OpenClaw官方维护机器人，现支持 <code>@clawsweeper autofix</code> 和 <code>@clawsweeper automerge</code> 命令。安全门控包括：维护者权限验证、PR标签管理、最大修复次数限制（默认10次/PR）、不合并draft PR、要求changelog条目、merge gates双重确认。安全优先设计：安全敏感发现可触发修复，但合并被阻塞直到后续exact-head review通过。</p>
+                </div>
+                <div class="detail-box">
+                    <h4>腾讯云SkillHub：国内Skills分发新入口</h4>
+                    <p>2026年3月上线的腾讯SkillHub专门为中国用户优化，收录ClawHub 1.3万技能，解决获取门槛高、配置冗杂痛点。推出SkillHub CLI工具，支持自然语言指令安装。高口碑Skills TOP5：agent-browser（多引擎搜索+浏览器模拟）、ship-learn-next（行动派学习规划）、personal-assistant（持久记忆管家）、Humanizer-zh（中文去AI味润色）、auto-whisper-safe（本地语音听写）。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>⚔️ 竞品动态</h2>
+
+                <h3>🐧 腾讯系：龙虾矩阵全面领跑</h3>
+                <div class="product-card">
+                    <p><strong>WorkBuddy</strong>：月活120万+，登顶国内PC端AI原生办公智能体市场。基于腾讯云CodeBuddy团队自研多智能体架构，完全兼容OpenClaw全部Skills。内置Hunyuan、DeepSeek、GLM、Kimi、MiniMax等主流模型一键切换。核心设计哲学"Skills即服务"——内置超20种技能包，覆盖代码开发、文档总结、数据分析、本地任务执行。打通企业微信/QQ/飞书/钉钉。</p>
+                    <p><strong>QClaw</strong>：360/方舟联合推出，微信/QQ直连，9.9-49元/月，85万+月活。</p>
+                    <p><strong>CodeBuddy</strong>：腾讯内部90%+工程师覆盖，AI生成代码占比超50%，研发提效逾20%。</p>
+                </div>
+
+                <h3>🌙 阿里系：开源+云原生双线出击</h3>
+                <div class="product-card">
+                    <p><strong>CoPaw（悟空）</strong>：阿里通义实验室推出的个人智能体工作台，基于Python开发，主打轻量级和企业级混合部署。<strong>极低内存占用</strong>：只有OpenClaw Worker的1/5；<strong>多通道对话</strong>：支持钉钉、飞书、QQ等渠道接入；<strong>深度集成通义千问</strong>；<strong>内置ReMe记忆系统</strong>：对话自动压缩，重要信息持久保存。开源免费基础版，企业版有付费增值服务。官网：copaw.agentscope.io</p>
+                    <p><strong>HiClaw</strong>：针对团队场景设计Manager-Agent中心节点，支持多Agent角色分配（前端/后端/数据分析），通过分布式任务调度实现跨Agent协作。云托管，适配开发运维全流程。</p>
+                    <p><strong>阿里云百炼</strong>：提供云端OpenClaw一键部署和Token Plan配置教程，争夺Agent托管入口。</p>
+                </div>
+
+                <h3>🎭 字节跳动：ArkClaw云端SaaS</h3>
+                <div class="product-card">
+                    <p><strong>ArkClaw</strong>：火山引擎推出的云端SaaS内容生产智能体，纯云端打开网页即用。9.9元/月起，45万+月活。集成飞书/钉钉，主打内容创作场景。与Hermes Agent有技术合作传闻。</p>
+                </div>
+
+                <h3>🦁 猎豹移动：EasyClaw零门槛入局</h3>
+                <div class="product-card">
+                    <p><strong>EasyClaw</strong>：猎豹移动CEO傅盛基于OpenClaw二次开发，2026年3月7日正式推出。由OpenClaw、MoltBot和ClawdBot社区爱好者制作。定位零门槛桌面AI助手，国内版/海外版/企业版三版并行。<strong>个人终身免费</strong>，52万+月活。主打"双击即用"，非技术人员友好。官网：easyclaw.cn</p>
+                </div>
+
+                <h3>🔬 其他竞品速览</h3>
+                <div class="product-card">
+                    <ul>
+                        <li><strong>Kimi Claw（月之暗面）</strong>：199元/月，38万+月活，长文本处理专长，40GB云存储/用户，Agent Swarm一个指令拉起100个分身Agent</li>
+                        <li><strong>MaxClaw（MiniMax）</strong>：39元/月起，28万+月活，M2.5 MoE模型推理速度100 tokens/秒，成本仅为Claude 3.5 Sonnet的1/7~1/20，"Expert 2.0"自然语言配置系统</li>
+                        <li><strong>AutoClaw（智谱AI）</strong>：29-249元/月，65万+月活，飞书集成，2300积分免费额度</li>
+                        <li><strong>Hermes Agent（Nous Research）</strong>：61K Stars（2个月），Python开发，MIT协议。核心差异化：自进化闭环学习、自动生成技能、零CVE记录、多层持久化记忆（FTS5搜索10K+条目~10ms）。适合深度工作与研究场景</li>
+                        <li><strong>LobsterAI（网易有道）</strong>：全场景个人助理Agent，免费</li>
+                        <li><strong>红手指Operator（百度）</strong>：云端虚拟手机，移动端AI，58元/月，95万+月活</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                <div class="case-card">
+                    <h4>🎯 案例1：AI编程流水线（acpx多Agent协作）</h4>
+                    <p>开发者"寂寞的熊猫"分享：对OpenClaw说"帮我重构认证模块，提高安全性，并添加完整测试"。OpenClaw后台自动拆解需求 → 调Gemini分析安全问题 → 调Codex执行重构 → 调Claude Code生成测试 → 调OpenCode生成文档 → 整合反馈。用户看到的：完整方案——代码、测试、文档，全都有。</p>
+                    <p><em>参考：</em><a href="https://www.yeyulingfeng.com/a/469396.html">OpenClaw + acpx：让龙虾不再单打独斗</a></p>
+                </div>
+                <div class="case-card">
+                    <h4>📚 案例2：Agent论文推送助手（Datawhale教程）</h4>
+                    <p>基于OpenClaw搭建7×24小时自动化科研助理：抓取论文（arXiv）→ 智能筛选 → 自动精读 → 推送通知到飞书。配合定时任务 <code>openclaw gateway cron add "30 9 * * *"</code> 实现每日自动推送。使用 <code>ljg-paper</code> Skill进行论文精读分析。</p>
+                    <p><em>参考：</em><a href="https://github.com/datawhalechina/hello-claw">Datawhale hello-claw 教程</a></p>
+                </div>
+                <div class="case-card">
+                    <h4>🎓 案例3：从学习计划到行动闭环</h4>
+                    <p>社区用户分享"养虾学习法"：使用 <code>ship-learn-next</code> Skill将学习目标拆解为具体"Rep（练习回合）"，强制通过产出作品驱动学习。配合 <code>personal-assistant</code> Skill持久记录学习进度，跨越对话session限制。最后用 <code>Humanizer-zh</code> 润色论文，消除"翻译腔"和"机器味"。</p>
+                    <p><em>参考：</em><a href="https://cloud.tencent.com/developer/article/2627617">腾讯云开发者社区 - 6个超实用Skills</a></p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <div class="skill-guide">
+                    <h4>🔧 acpx Skill 安装与配置</h4>
+                    <p>在OpenClaw中使用acpx需要安装两部分：OpenClaw acpx插件 + acpx npm包。</p>
+                    <pre><code># 1. 安装OpenClaw插件
+openclaw plugins install @openclaw/acpx
+
+# 2. 安装acpx npm包
+npm install -g acpx@latest
+
+# 3. 安装claude/codex的skill
+npx acpx@latest --skill install acpx --agent codex --scope user
+
+# 4. 配置OpenClaw（config.json）
+{
+  "plugins": {
+    "allow": ["acpx"],
+    "entries": {
+      "acpx": {
+        "enabled": true,
+        "config": {
+          "command": "acpx",
+          "permissionMode": "approve-all"
+        }
+      }
+    }
+  },
+  "acp": {
+    "enabled": true,
+    "backend": "acpx",
+    "defaultAgent": "claude",
+    "allowedAgents": ["claude", "codex", "cursor", "gemini", "pi"]
+  }
+}</code></pre>
+                    <p><em>参考：</em><a href="https://github.com/openclaw/acpx">acpx GitHub</a> | <a href="https://devpress.csdn.net/xclaw/69dca2170a2f6a37c59f48fc.html">CSDN安装教程</a></p>
+                </div>
+                <div class="skill-guide">
+                    <h4>🛡️ ClawSweeper 安全治理指南</h4>
+                    <p>作为OpenClaw官方维护机器人，ClawSweeper提供issue/PR扫描、commit review、修复任务和受保护的fix PR。维护者可通过GitHub评论调用：</p>
+                    <pre><code>@clawsweeper status      # 查看状态
+@clawsweeper autofix    # 开启自动修复循环
+@clawsweeper automerge  # 开启自动修复+合并循环
+@clawsweeper stop       # 添加人工审核标签
+@clawsweeper review     # 发起新review</code></pre>
+                    <p>关键安全门控：维护者权限验证、最大修复次数限制（CLAWSWEEPER_MAX_REPAIRS_PER_PR=10）、不合并draft PR、要求changelog条目、merge gates双重确认。</p>
+                    <p><em>参考：</em><a href="https://github.com/openclaw/clawsweeper">ClawSweeper GitHub</a></p>
+                </div>
+                <div class="skill-guide">
+                    <h4>📖 SkillHub CLI 快速上手</h4>
+                    <p>腾讯云SkillHub推出"复制即安装，发送即生效"模式：</p>
+                    <pre><code># 一句话安装SkillHub
+npx skillhub-cli install &lt;skill-name&gt;
+
+# 或直接复制平台生成的提示词发给AI助手
+# 自动完成商店检查、技能下载与环境配置</code></pre>
+                    <p>必装TOP5 Skills：agent-browser（网络手脚）、ship-learn-next（行动派学习）、personal-assistant（持久记忆管家）、Humanizer-zh（中文去AI味）、auto-whisper-safe（本地语音听写）。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏗️ 企业落地案例</h2>
+                <div class="case-card">
+                    <h4>📊 Salesforce The Agentic Enterprise架构（四阶段成熟度路线）</h4>
+                    <p>Salesforce提出面向未来3-5年的企业级Agent架构，在传统IT体系上新增4个核心层级：语义层（数据理解桥梁）、AI/ML层（模型训练推理）、Agentic层（Agent部署与生命周期管理）、企业编排层（跨Agent任务编排）。落地路径分四级：Lvl1信息检索型 → Lvl2领域特定工作流 → Lvl3跨领域协同 → Lvl4多Agent自主编排。核心目标：让AI从单点工具变成可被组织管理的企业系统。</p>
+                    <p><em>参考：</em><a href="https://www.51cto.com/aigc/9903.html">51CTO - 10个企业级Agentic AI架构</a></p>
+                </div>
+                <div class="case-card">
+                    <h4>🕸️ 麦肯锡Agentic AI Mesh架构</h4>
+                    <p>麦肯锡QuantumBlack团队发布Agentic AI Mesh Architecture，借鉴微服务Mesh思想，将Agent从孤立应用中解耦，使其成为可被发现、管理、复用的企业级能力单元。三个核心域：Agentic Systems（汇聚所有Agent形态）、Interfaces（API Gateway统一交互边界）、Procedural Systems（ERP/CRM等企业既有系统）。横向能力层提供Agent发现、AI资产注册、全链路可观测性、评估反馈与合规治理。</p>
+                    <p><em>参考：</em><a href="https://www.51cto.com/aigc/9903.html">51CTO - 企业智能体落地指南</a></p>
+                </div>
+                <div class="case-card">
+                    <h4>🏨 酒店集团：持久记忆驱动的个性化服务</h4>
+                    <p>某酒店集团部署的Agent将客人偏好（房型、饮食限制、会员状态）存储为持久记忆，实现跨会话个性化服务而无需重复提问。这是生产级Agent"长期记忆"模块的典型落地——从"每次从零开始"进化为"越用越懂你"。</p>
+                    <p><em>参考：</em><a href="https://adp.tencentcloud.com/zh/blog/how-enterprises-build-ai-agents">腾讯云 - 企业如何真正将AI Agent落地到生产环境</a></p>
+                </div>
+                <div class="case-card">
+                    <h4>🚗 汽车/医药/物流：多行业Agent落地实证</h4>
+                    <p>腾讯云联合多家企业发布AI Agent落地白皮书，覆盖汽车（智能客服与售后诊断）、酒店（预订与个性化服务）、医药（政策合规问答）、物流（订单追踪与异常处理）四大行业。核心经验：没有数据连接，AI只能停留在表层对话；Agent必须具备业务分析能力，从具体场景中发现问题；最终通过权限、数据源和功能管控，让AI进入组织协作。</p>
+                    <p><em>参考：</em><a href="https://www.truemetrics.cn/articles/methods/从数据到-agent：企业级-ai-落地的-8-个真实-demo.html">TrueMetrics - 企业级AI落地8个Demo</a></p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <ul>
+                    <li><a href="https://github.com/openclaw/acpx">acpx GitHub - ACP协议无头CLI客户端</a></li>
+                    <li><a href="https://github.com/openclaw/clawsweeper">ClawSweeper GitHub - 可信Autofix/Automerge</a></li>
+                    <li><a href="https://github.com/openclaw/openclaw">OpenClaw 主仓库 - GitHub Stars 345K+</a></li>
+                    <li><a href="https://www.yeyulingfeng.com/a/469396.html">OpenClaw + acpx：让龙虾不再单打独斗</a></li>
+                    <li><a href="https://cloud.tencent.com/developer/article/2654425">腾讯云 - 2026国产OpenClaw生态全景指南</a></li>
+                    <li><a href="https://www.51cto.com/aigc/9903.html">51CTO - 一文盘点10个企业级Agentic AI架构</a></li>
+                    <li><a href="https://www.betteryeah.com/blog/enterprise-ai-agent-implementation-complete-guide">BetterYeah - 企业AI Agent落地全攻略</a></li>
+                    <li><a href="https://www.nxcode.io/zh-TW/resources/news/hermes-agent-vs-openclaw-2026-which-ai-agent-to-choose">Hermes Agent vs OpenClaw 2026 深度对比</a></li>
+                    <li><a href="https://github.com/cenyi/openclawhub.uk">OpenClawHub.uk - 20+ Claw产品全景对比</a></li>
+                    <li><a href="https://github.com/datawhalechina/hello-claw">Datawhale hello-claw - OpenClaw入门教程</a></li>
+                    <li><a href="https://www.truemetrics.cn/articles/methods/从数据到-agent：企业级-ai-落地的-8-个真实-demo.html">TrueMetrics - 从数据到Agent：8个企业级Demo</a></li>
+                    <li><a href="https://adp.tencentcloud.com/zh/blog/how-enterprises-build-ai-agents">腾讯云 - 企业如何真正将AI Agent落地到生产环境</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 OpenClaw Daily Report | 由 Kimi Claw 自动生成 | 情报截止：2026-05-20 00:45 CST</p>
+            <p>免责声明：本报告基于公开信息整理，仅供行业参考，不构成投资或技术决策建议。</p>
+        </footer>
+    </div>
+</body>
+</html>
