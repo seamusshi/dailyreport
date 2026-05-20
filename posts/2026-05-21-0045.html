@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年5月21日</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年5月21日 | 第41期</p>
+            <p class="tagline">OpenClaw 2026.5.19-beta.2 发布 | 浏览器控制架构大升级 | 百虾大战 40+ 产品格局白热化 | 企业 Agent 落地进入「安全优先」阶段</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📋 今日概览</h2>
+                <div class="highlights">
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 发布</span>
+                        <p><strong>OpenClaw 2026.5.19-beta.2 发布，浏览器控制架构大升级：</strong>正式弃用 Chrome 扩展中继路径，转向 existing-session / user 浏览器附加模式，支持 Chromium-family profiles via userDataDir。更稳定、更少灵异 bug，贴近真实运维场景</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 修复</span>
+                        <p><strong>今日 PR 聚焦可靠性修复：</strong>恢复注册上下文引擎的插件缓存、内存语料补充注册幂等化、Telegram 健康探针超时控制、浏览器实时路由通过 Gateway relay、保留一流网页搜索提供商、修复旧配置更新通道切换前的问题</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag trend">📈 格局</span>
+                        <p><strong>2026 国产「百虾大战」40+ 产品白热化竞争：</strong>腾讯系 6 款（WorkBuddy/QClaw/龙虾管家/CodeBuddy 等）、阿里系 4 款（CoPaw/QwenPaw/HiClaw/QoderWork）、字节 3 款（ArkClaw/Coze/MoltBook）、百度 2 款、AI 新势力 5 款（Kimi Claw/MaxClaw/AstronClaw/AutoClaw）。市场从「百花齐放」进入「分化洗牌」</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag new">🆕 安全</span>
+                        <p><strong>企业 Agent 落地进入「安全优先」阶段：</strong>国家互联网应急中心发布「养龙虾」安全预警，提示词注入、插件投毒、记忆投毒三大风险。OpenClaw 官方同步强化 SSRF 策略、webhook 硬化、scoped approvals、delivery routing，安全治理成为企业采购首要考量</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag ecosystem">🌐 生态</span>
+                        <p><strong>GitHub Stars 26 万+，登顶全球开源项目 TOP1：</strong>超越 React、Linux，标志 AI Agent 时代全面到来。OpenClawHub 收录 30+ 国产变体、27 个大厂出品项目，生态从「单一框架」进化为「行业标准」</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏢 OpenClaw 官方与社区动态</h2>
+                <h3>🔧 核心框架进展</h3>
+                <ul>
+                    <li><strong>OpenClaw 2026.5.19-beta.2 发布</strong>：最新 beta 版本聚焦「让常开 Agent 更少脆断」。Active Memory 新增 per-conversation allowedChatIds / deniedChatIds 过滤，召回只在应该运行的地方执行；bounded partial recall summaries 确保有用上下文不会因隐藏的 memory sub-agent 超时而被丢弃</li>
+                    <li><strong>浏览器控制架构大升级</strong>：官方正式弃用 legacy Chrome extension relay 路径，全面转向 existing-session / user 浏览器附加模式，支持 Chromium-family profiles via userDataDir。优势：保留真实登录态和审批时刻、不再依赖脆弱的扩展 hack、更贴近严肃运维人员的工作方式。PR #48170 已合并</li>
+                    <li><strong>Turn 启动体验优化</strong>：memory recall 现在根据配置超时+设置宽限期注册，而非最大预算；restart drains 有界；stuck-session recovery 可保守释放 stale lanes；slow local gateway probes 降级为「可达但降级」状态而非过早尖叫「不可达」</li>
+                    <li><strong>频道安全持续硬化</strong>：Telegram exec approvals 现在需要 explicit approvers 或 owner identity，不再继承 broad chat allowlists；敏感群组诊断/导出结果私路由 owner；重复 Discord bot-token 监视器被抑制；Discord/WhatsApp 连接状态暴露更诚实的失败和抖动信号</li>
+                    <li><strong>GitHub 动态（Issues + PRs）</strong>：24h 内 Issues 更新 500 条（新开/活跃 247，关闭 253），PR 更新 500 条（待合并 366，已合并/关闭 134）。热点问题：gateway credentials 出现在 media URLs 中、长时间运行后 restart/downgrade 崩溃、Docker + Tailscale Gmail webhook 投递缺口、Telegram 重试索引粘连、npm chunk-hash 替换导致原地升级失败</li>
+                    <li><strong>更新与插件路径防误配</strong>：recent commits 拒绝缺失 plugin IDs 的配置写入、阻止从活跃 Gateway 进程树启动的包更新、修复缺失的外部插件安装、收紧 ClawHub/npm fallback 行为，确保更新不会把运维人员留在半升级状态</li>
+                </ul>
+
+                <h3>📌 核心功能更新详情</h3>
+                <div class="detail-box">
+                    <h4>浏览器控制：从「扩展 hack」到「真实会话附加」</h4>
+                    <p>OpenClaw 的浏览器控制策略正在经历范式转移：</p>
+                    <ul>
+                        <li><strong>旧路径（逐渐废弃）</strong>：Chrome 扩展中继，依赖 HMAC-SHA256 派生令牌，配置复杂，易受扩展更新影响</li>
+                        <li><strong>新路径（推荐）</strong>：existing-session / user 附加，支持 <code>profile="user"</code> 和 <code>profile="chrome-relay"</code>，通过 <code>userDataDir</code> 指定 Chromium profile 路径</li>
+                        <li><strong>好处</strong>：保留真实浏览器登录态、减少 setup 诅咒胶带、更接近严肃运维的实际工作方式、支持 batch act 和 selector targeting，自动化更顺滑</li>
+                    </ul>
+                    <p>使用示例：<code>browser: act {"kind":"navigate","url":"https://github.com","profile":"user"}</code></p>
+                </div>
+                <div class="detail-box">
+                    <h4>Active Memory：更 operator-controlled 的记忆系统</h4>
+                    <p>最新的 Active Memory 改进让记忆召回更可控：</p>
+                    <ul>
+                        <li><strong>per-conversation 过滤</strong>：通过 <code>allowedChatIds</code> 和 <code>deniedChatIds</code> 精确控制哪些对话可以触发记忆召回</li>
+                        <li><strong>bounded partial recall</strong>：部分召回摘要现在有界，不会因 sub-agent 超时而丢弃有价值的恢复上下文</li>
+                        <li><strong>timeout 注册修正</strong>：memory recall 现在正确注册为「配置超时 + 设置宽限期」，而非错误地占用最大预算</li>
+                    </ul>
+                    <p>这意味着长时间运行的 Agent 在重启或恢复时，记忆系统更可靠，不会因为边缘 case 而「失忆」。</p>
+                </div>
+                <div class="detail-box">
+                    <h4>状态面板：从「装饰」进化为「运维遥测」</h4>
+                    <p>status/deep checks 现在真正服务于运维场景：</p>
+                    <ul>
+                        <li>Discord transport degradation 和 gateway event-loop starvation 现在会在状态检查中暴露</li>
+                        <li>async session-list hydration 有界，防止 Control UI 轮询时扫描 huge transcripts</li>
+                        <li>manual cron run IDs 在任务完成后保留，支持事后关联追踪</li>
+                    </ul>
+                    <p>OpenClaw 正在从「agent app」蜕变为「operator-grade infrastructure」。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>⚔️ 竞品动态</h2>
+
+                <h3>🐧 腾讯系：最完整的生态矩阵</h3>
+                <div class="product-card">
+                    <p><strong>WorkBuddy</strong>：企业协作 AI Agent，基于混元大模型 + MCP 架构，深度集成企业微信/QQ/飞书/钉钉。定位对标微软 Copilot、钉钉 AI 助理。月活 120 万+，国内 PC 端 AI 原生办公智能体市场第一。兼容全部 OpenClaw Skills，内置 Hunyuan/DeepSeek/GLM/Kimi/MiniMax 一键切换。</p>
+                    <p><strong>QClaw（本地虾）</strong>：腾讯电脑管家团队推出，微信/QQ 远程控电脑是核心卖点。一键启动包，内置多模型（Kimi、MiniMax），5000+ Skills。Mac/Windows 双端。适合个人用户远程办公。</p>
+                    <p><strong>CodeBuddy</strong>：2026 新增，腾讯内部 90%+ 工程师覆盖，AI 生成代码占比超 50%，研发提效逾 20%。</p>
+                    <p><strong>龙虾管家</strong>：C 端个人助手，深度集成微信支付、小程序生态，覆盖日程提醒、出行规划、购物比价、生活缴费。</p>
+                </div>
+
+                <h3>🌙 阿里系：开源+云原生双轨并行</h3>
+                <div class="product-card">
+                    <p><strong>CoPaw（悟空）</strong>：阿里云通义团队推出的个人智能体，基于 Python 开发，<strong>内存占用仅为 OpenClaw Worker 的 1/5</strong>。支持本地与云端双模式部署，开源架构保留 OpenClaw 原生灵活性。深度适配钉钉/飞书办公，内置 ReMe 记忆系统。开发者和技术团队首选。官网：copaw.agentscope.io</p>
+                    <p><strong>QwenPaw（原 CoPaw 品牌升级）</strong>：通义千问 AI Agent，百炼平台一键部署，Token Plan 按次计费取代按 tokens 计费。</p>
+                    <p><strong>QoderWork</strong>：阿里出品的桌面 Agent，支持 Ask/Agent/Quest 三种模式，MCP 协议 + 自定义 Skills。</p>
+                    <p><strong>HiClaw</strong>：针对团队场景，Manager-Agent 中心节点 + 多 Agent 角色分配（前端/后端/数据分析），分布式任务调度。</p>
+                </div>
+
+                <h3>🎭 字节跳动：云端 SaaS + 飞书生态</h3>
+                <div class="product-card">
+                    <p><strong>ArkClaw</strong>：火山引擎 2026 年 3 月 9 日推出的云端 AI Agent 服务，「云养虾」定位——零安装、打开网页即用。Lite 版月费低至 8.9 元（另有报道 9.9 元、50 元不同档位），Pro 版功能更完整。7×24 云端托管，集成飞书/钉钉，支持多模型切换（Doubao/Kimi/GLM）。头部游戏公司日均处理对话超 1000 万次，客服效率提升 3 倍；欧坚网络报关单自动化处理准确率 99.8%。评测综合评分 4.2/5。</p>
+                    <p><strong>Coze（扣子）</strong>：零代码 AI Agent 搭建平台，可视化拖拽，豆包大模型驱动。</p>
+                    <p><strong>MoltBook</strong>：2026 新增，扣子社区/OpenClaw 社区版，打通微信+钉钉+飞书+Siri 四入口。</p>
+                </div>
+
+                <h3>🌕 月之暗面：长文本处理王者</h3>
+                <div class="product-card">
+                    <p><strong>Kimi Claw</strong>：2026 年 2 月 18 日上线，云端一键部署，1 分钟完成配置。内置 K2.5 模型，40GB 云存储，集成 ClawHub 5000+ 技能。飞书一键部署，支持 7×24 定时任务。核心优势：<strong>200 万字超长上下文</strong>，行业第一，采用无损压缩技术。适合法律合同审查、学术论文分析、长篇小说创作。月费 199 元（需 Kimi Allegretto 会员）。局限：模型未经系统性优化，缺乏本地文件操作能力。</p>
+                </div>
+
+                <h3>🦁 MiniMax：成本杀手</h3>
+                <div class="product-card">
+                    <p><strong>MaxClaw</strong>：云端托管 + 移动端，0 代码拖拽，16,000+ 技能库，<strong>39 元/月</strong>性价比拉满。搭载 MiniMax M2.5 模型，多模态（文本/语音/视频/图像）能力。预置内容创作专家，信源交叉验证。适合非技术用户、中小企业、内容创作者。</p>
+                </div>
+
+                <h3>🐆 猎豹移动：入门轻量</h3>
+                <div class="product-card">
+                    <p><strong>EasyClaw</strong>：一键安装，3 分钟开箱即用，本地隐私保护。Windows/macOS 桌面 GUI，国际版 + 元气 AIBot 桌面 Agent。CEO 傅盛卧床 14 天靠 OpenClaw 搭建 8 个 AI Agent 替自己办公（除夕夜给 611 人拜年、产出 6 篇公众号、策划播放量超 30 万短视频）。<strong>个人终身免费</strong>，企业版付费。</p>
+                </div>
+
+                <h3>📊 竞品选择速查表</h3>
+                <table class="comparison-table">
+                    <tr><th>需求</th><th>首选</th><th>次选</th><th>关键理由</th></tr>
+                    <tr><td>完全零基础</td><td>Kimi Claw</td><td>MaxClaw</td><td>云端一键，2 分钟上手</td></tr>
+                    <tr><td>性价比/预算有限</td><td>MaxClaw</td><td>智谱 AutoClaw</td><td>39 元/月含模型费</td></tr>
+                    <tr><td>重视隐私/数据敏感</td><td>EasyClaw</td><td>智谱 AutoClaw</td><td>本地运行，不上云</td></tr>
+                    <tr><td>企业办公/飞书钉钉</td><td>WorkBuddy</td><td>CoPaw/ArkClaw</td><td>深度集成企微/QQ/飞书/钉钉</td></tr>
+                    <tr><td>微信控电脑</td><td>QClaw</td><td>EasyClaw</td><td>微信扫码即用</td></tr>
+                    <tr><td>7×24 自动化</td><td>MaxClaw</td><td>Kimi Claw</td><td>云端常驻，定时任务稳定</td></tr>
+                    <tr><td>开发者/二次开发</td><td>CoPaw</td><td>LobsterAI</td><td>开源架构，原生 OpenClaw 灵活性</td></tr>
+                    <tr><td>长文本/法律学术</td><td>Kimi Claw</td><td>—</td><td>200 万字上下文，行业第一</td></tr>
+                </table>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                <ul>
+                    <li><strong>猎豹 CEO 傅盛的「Agent 代班」</strong>：卧床 14 天期间，用 OpenClaw 搭建 8 个 AI Agent 替自己办公。除夕夜自动给 611 人拜年、产出 6 篇公众号内容、策划制作并发布播放量超 30 万的短视频。这是「养龙虾」最出圈的 C 端案例。</li>
+                    <li><strong>腾讯云「鹅厂门口排大队」</strong>：2026 年 3 月 6 日，腾讯云把工程师拉到腾讯大厦北广场，免费帮上千人部署 OpenClaw，从装系统到配模型到接入微信/QQ，一条龙服务。现场火爆程度堪比抢限量球鞋。</li>
+                    <li><strong>GitHub Maintainer 自动化 11 大工作流</strong>：社区分享最高频的非邮件 OpenClaw 场景——issue 分类路由、bug 报告转标签任务、重复修复自动开 PR、每周 maintainer 摘要、issue 积压总结、支持对话转 GitHub issue、从合并 PR 生成 release notes、文档格式化 cleanup PR、功能请求 vs 支持问题分类、项目看板状态更新、用当前代码库上下文解释老 issue。</li>
+                    <li><strong>15 Agent 集群清理 10000+ 邮件</strong>：某企业用 15 个 OpenClaw Agent 实例运行多 Agent 编排，清理积压客户邮件，100% 数据隐私保留在本地服务器。</li>
+                    <li><strong>欧坚网络报关单自动化</strong>：使用 ArkClaw 处理报关单，准确率从人工的 95% 提升至 99.8%，处理时间从小时级降至分钟级。</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <ul>
+                    <li><strong>agent-browser</strong>：多引擎搜索 + 浏览器模拟 Skill。支持在 Agent 中调用搜索引擎、模拟浏览器行为、抓取网页内容。是信息搜集类任务的基础设施 Skill。</li>
+                    <li><strong>Humanizer-zh</strong>：中文去 AI 味润色 Skill。将 AI 生成的文本转化为更自然的中文表达，消除「AI 腔」。内容创作者必备。</li>
+                    <li><strong>ship-learn-next</strong>：行动派学习规划 Skill。不只是生成学习计划，而是结合用户当前状态、可用时间、目标难度，输出可执行的下一步行动。适合自驱学习者。</li>
+                    <li><strong>personal-assistant</strong>：持久记忆管家 Skill。通过长期记忆机制追踪用户习惯，最终蜕变为贴合个人风格的智能助理。与 Active Memory 系统深度配合。</li>
+                    <li><strong>auto-whisper-safe</strong>：本地语音听写 Skill。在本地完成语音转文字，不上传云端，保护隐私。适合会议记录、灵感捕捉。</li>
+                    <li><strong>GitHub maintainer skill pack（gisia 项目）</strong>：社区项目，将 repo 管理工作流打包为可复用的 skill 视图。包括 issue triage、labeling、PR drafting 等模板。GitHub 地址：github.com/gisia</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🏭 企业落地案例</h2>
+                <ul>
+                    <li><strong>阿里云企业级 OpenClaw 部署方案</strong>：基于阿里云 ACS 的大规模网络部署，利用 VPC 附加网段 + 企业版转发路由器构建分层架构。主网段部署 ALB 和管理平面，附加网段专用于 ACS 上运行的数千至上万个 Sandbox Agent 容器。支持 Hologres + Mem0 替代本地 SQLite/LanceDB，实现 PB 级向量存储、毫秒级实时写入。部署形态：无影云电脑（单用户专属）、轻量应用服务器（中小规模快速上线）、SAE（全托管免运维，秒级弹性至零）。</li>
+                    <li><strong>腾讯云 × OpenClaw「封神组合」</strong>：混元模型 + IM 通道的企业级 Agent 落地指南。腾讯云 Lighthouse 轻量服务器预装 OpenClaw 镜像，一键接入企微/钉钉/QQ/飞书。2026 年 3 月 6 日现场部署活动后，发布完整企业级配置教程，涵盖系统级 Prompt 设计、Skill 安装、持久化运行配置。</li>
+                    <li><strong>游戏公司 ArkClaw 客服场景</strong>：头部游戏公司使用 ArkClaw 日均处理对话超 1000 万次，客服效率提升 3 倍，7×24 云端托管保证服务不中断。</li>
+                    <li><strong>安全治理制度化</strong>：国家互联网应急中心发布 OpenClaw 安全预警，提示三大风险（提示词注入、插件投毒、记忆投毒）。企业落地需遵循：SOUL.md 写明「不确定就拒绝，不准删文件」、只装 ClawHub/SkillHub 认证 Skills、定期清理 MEMORY.md、API Key 起可识别名字、备用机/虚拟机隔离部署。</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <ul class="links">
+                    <li><a href="https://openclaw.com.au/updates" target="_blank">OpenClaw 官方更新日志</a></li>
+                    <li><a href="https://github.com/openclaw/openclaw/releases" target="_blank">OpenClaw GitHub Releases</a></li>
+                    <li><a href="https://github.com/openclaw/openclaw/pulls" target="_blank">OpenClaw 活跃 PR 列表</a></li>
+                    <li><a href="https://github.com/openclaw/openclaw/issues" target="_blank">OpenClaw Issues（社区痛点）</a></li>
+                    <li><a href="https://github.com/datawhalechina/hello-claw" target="_blank">Hello-Claw 中文教程仓库</a></li>
+                    <li><a href="https://github.com/cenyi/openclawhub.uk" target="_blank">OpenClawHub - 30+ 国产变体对比</a></li>
+                    <li><a href="https://developer.aliyun.com/ask/701498" target="_blank">阿里云 OpenClaw/Hermes Agent 部署教程</a></li>
+                    <li><a href="https://www.woshipm.com/ai/6360476.html" target="_blank">ArkClaw 深度评测 - 人人都是产品经理</a></li>
+                    <li><a href="https://www.ifanr.com/1657675" target="_blank">全网最细安全养龙虾指南 - 爱范儿</a></li>
+                    <li><a href="https://cloud.tencent.com/developer/article/2636229" target="_blank">OpenClaw 登顶 GitHub 全球第一解析 - 腾讯云社区</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>🦞 OpenClaw Daily Report |  generated by Kimi Claw</p>
+            <p>数据来源：公开网络检索 | 仅供参考</p>
+        </footer>
+    </div>
+</body>
+</html>
