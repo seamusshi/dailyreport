@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年5月23日</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年5月23日 | 第43期</p>
+            <p class="tagline">OpenClaw 2026.5.20 正式发布 · 腾讯云云桌面预装OpenClaw · Kimi K2.6 Agent集群升级 · 企业落地进入深水区</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📋 今日概览</h2>
+                <div class="highlights">
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 发布</span>
+                        <p><strong>OpenClaw 2026.5.20 正式发布：</strong>5月21日上线稳定版，Codex harness 升级至 0.132.0，Discord 语音会话支持跟随用户进入语音频道（含多用户交接与 DAVE 恢复），新增 Policy 插件用于策略合规检查，xAI 新增设备码 OAuth 支持远程/无头环境登录。Exec 审批移除旧版兼容路径，强制通过 read 工具加载 skill 文件</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 平台</span>
+                        <p><strong>腾讯云推出 OpenClaw 云桌面 + 轻量服务器双轨部署：</strong>5月22日全新上线云桌面预装 OpenClaw，支持 Linux/Windows 双系统 GUI，按量计费 1.42 元/小时起；轻量应用服务器 Lighthouse 同步更新应用模板，独家首发支持 QQ、企业微信、钉钉、飞书四大国内 IM 接入。腾讯云大模型 Token Plan 兼容 OpenClaw 和 Codebuddy</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag trend">📈 模型</span>
+                        <p><strong>Kimi K2.6 持续引领开源 Agent 模型格局：</strong>月之暗面 4 月 21 日发布的 K2.6 支持 300 个子 Agent 并行完成 4000 个协作步骤，可持续自主运行长达 5 天。OpenClaw 官方通道已原生支持 K2.6，Kimi K2.5 仍在 OpenRouter 多榜排名首位（一周总榜 1.16 万亿 token）</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag new">🆕 落地</span>
+                        <p><strong>企业级 OpenClaw 落地进入深水区：</strong>乘云数字 OpenOcta 已服务国家电网、华夏银行等标杆客户；青藤云安全 WorkClaw 提供 SOC 安全运营、HR 数据助手、代码审查等场景方案；中关村科金得助智枢平台实现智能问答/写作/审核/问数四大办公场景。金智维、澜舟科技、数商云等厂商持续加码</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag ecosystem">🌐 生态</span>
+                        <p><strong>OpenClaw Skills 生态全面爆发：</strong>ClawHub 技能市场收录 5400+ 第三方 Skills，数据鲸开源教程项目获数千 Star。阿里云百炼提供 7000 万+ Token 免费额度，联合 52 个官方 Skill + 5700+ 社区 Skill。GitHub 上 awesome-openclaw-usecases 项目收录 30+ 可直接复用的实战案例</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏢 OpenClaw 官方与社区动态</h2>
+                <h3>🔧 核心框架进展</h3>
+                <ul>
+                    <li><strong>OpenClaw 2026.5.20 稳定版发布</strong>：5月21日正式上线，包含 Codex harness 升级至 @openai/codex 0.132.0、Discord 语音会话支持跟随用户进入语音频道（含允许频道检查、多用户交接、有界协调和 DAVE 恢复）、默认在实时语音指令中包含 IDENTITY.md/USER.md/SOUL.md 配置上下文、新增 Policy 插件用于策略支持的渠道合规检查和 workspace 修复</li>
+                    <li><strong>xAI 设备码 OAuth 登录</strong>：新增设备码流程，使远程和无头环境无需本地浏览器回调即可授权 xAI，极大简化服务器部署场景的配置体验</li>
+                    <li><strong>OpenRouter provider 路由策略优化</strong>：支持 provider 级别的 params.provider 路由策略，模型和 agent 参数可覆盖默认值，提升多模型切换的灵活性</li>
+                    <li><strong>Agent 本地模型精简模式可按 agent 启用</strong>：新增 agents.list[].experimental.localModelLean 配置，允许为单个 agent 启用精简模式而非全局开关</li>
+                    <li><strong>Cron 稳定性大幅增强</strong>：主会话定时任务在 cron 拥有的 wake lane 上运行，不再阻塞人类主会话聊天；成功运行的最终输出优先交付，避免被后处理警告替换</li>
+                    <li><strong>CLI 安全加固</strong>：Exec 审批移除旧的 cat SKILL.md + printf 兼容路径，skill 文件必须通过 read 工具加载；恢复 tryReadSecretFileSync 的 fail-closed 契约，拒绝符号链接凭证文件；浏览器截图遵循配置的图像清理限制</li>
+                    <li><strong>WhatsApp 更新至 Baileys 7.0.0-rc12</strong>，MiniMax music_generate 停止宣传 durationSeconds 控制以避免误导</li>
+                </ul>
+
+                <h3>🌟 GitHub 社区动态</h3>
+                <ul>
+                    <li><strong>核心框架 Stars 超 353,000</strong>：截至 2026 年 3 月，OpenClaw 主仓库获 35.3 万+ Stars，增速持续领先开源项目</li>
+                    <li><strong>awesome-openclaw-usecases</strong>：社区维护的实战案例手册收录 30+ 真实落地场景，覆盖个人提效、内容创作、企业运维、业务增长，获数千 Stars</li>
+                    <li><strong>datawhalechina/openclaw-tutorial</strong>：DataWhale 开源的 7 天学习教程，帮助用户从安装配置到自动化工作流，含飞书/Discord/Telegram 多渠道配置实战</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <h3>Discord 语音会话重大升级</h3>
+                <p>2026.5.20 版本中，Discord 语音通道获得三项关键能力：</p>
+                <ul>
+                    <li><strong>语音跟随</strong>：AI 可跟随配置的 Discord 用户进入语音频道，实现"走到哪跟到哪"的沉浸体验</li>
+                    <li><strong>多用户交接</strong>：支持在多个用户间无缝切换对话焦点</li>
+                    <li><strong>人格上下文注入</strong>：实时语音会话默认接收 IDENTITY.md、USER.md 和 SOUL.md 的有限上下文，让语音交互更具个性化</li>
+                </ul>
+
+                <h3>Policy 插件：企业合规新利器</h3>
+                <p>新增 bundled Policy 插件，提供：</p>
+                <ul>
+                    <li>策略支持的渠道合规性检查</li>
+                    <li>Doctor lint 发现项的自动修复建议</li>
+                    <li>可选的 workspace 修复功能</li>
+                </ul>
+                <p>这为企业用户在多团队协作时提供了基础的安全策略框架。</p>
+
+                <h3>Cron 调度系统可靠性提升</h3>
+                <p>解决了长期以来 cron 任务可能阻塞主会话的问题：</p>
+                <ul>
+                    <li>后台 cron 任务在独立的 wake lane 运行，不再干扰实时对话</li>
+                    <li>隔离任务使用结构化嵌入运行拒绝元数据，被阻止的 exec 请求正确失败</li>
+                    <li>成功运行的最终输出优先保留，不再被警告信息覆盖</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🏢 竞品与生态动态</h2>
+
+                <h3>腾讯云 / WorkBuddy</h3>
+                <ul>
+                    <li><strong>OpenClaw 云桌面正式上线</strong>：5月22日全新发布，预装 OpenClaw 免部署，可视化界面一键配置，支持 Linux & Windows 双操作系统及 GUI。包年包月特惠 + 按量计费 1.42 元/小时起</li>
+                    <li><strong>轻量应用服务器 Lighthouse 深度集成</strong>：应用镜像一键安装 OpenClaw，独家首发支持 QQ、企业微信、钉钉、飞书四大国内 IM 软件接入</li>
+                    <li><strong>腾讯云大模型 Token Plan</strong>：集合 Tencent HY 2.0、GLM-5、kimi-k2.5、MiniMax-M2.5 等主流模型，兼容 OpenClaw 和 Codebuddy 等编程工具，套餐价格比 API 按量计费便宜 50%-80%</li>
+                    <li><strong>腾讯为 OpenClaw 官方赞助商</strong>：3月16日正式加入 OpenClaw 赞助商名单，此前 OpenAI 和百度已赞助</li>
+                </ul>
+
+                <h3>Kimi Claw / 月之暗面</h3>
+                <ul>
+                    <li><strong>Kimi K2.6 发布</strong>：4月21日开源，支持 300 子 Agent 并行 4000 协作步骤，可持续运行 5 天。K2.6 在 OpenClaw、Hermes Agent 等主动式框架上展现自动化任务处理能力</li>
+                    <li><strong>Kimi K2.5 持续霸榜</strong>：在 OpenRouter 一周总榜以 1.16 万亿 token 使用量排名第一，领先 Gemini 3 Flash Preview 和 Claude Sonnet 4.5 超 50%</li>
+                    <li><strong>Kimi Claw 商业增长迅猛</strong>：K2.5 发布后近 20 天累计收入超 2025 全年，Stripe 显示个人订阅用户 1 月支付订单环比增长 8280%</li>
+                    <li><strong>月之暗面估值飙升</strong>：2026 年 3 月中旬新一轮 10 亿美元融资推进中，估值已达 180 亿美元</li>
+                    <li><strong>OpenClaw 官方免费支持 Kimi K2.5 + Kimi Coding</strong>：2026.1.30 版本后官方补贴算力，用户可 0 成本接入</li>
+                </ul>
+
+                <h3>阿里 CoPaw / 阿里云百炼</h3>
+                <ul>
+                    <li><strong>阿里云百炼 OpenClaw 一键部署</strong>：联合推出轻量应用服务器预置镜像，提供 7000 万+ Token 免费额度，支持 52 个官方 Skill + 5700+ 社区 Skill</li>
+                    <li><strong>阿里云无影云电脑一键部署</strong>：提供 OpenClaw 专属活动页，支持云端免部署运行</li>
+                    <li><strong>Qwen3-Coder-Next 开源</strong>：阿里开源智能体编程模型，对标 OpenClaw 编程场景</li>
+                    <li><strong>CoPaw 主打极简部署与钉钉生态融合</strong>：作为阿里云自研替代方案，深度整合钉钉工作流</li>
+                </ul>
+
+                <h3>EasyClaw / 猎豹移动</h3>
+                <ul>
+                    <li>个人版继续免费策略，面向 C 端用户快速获取市场份额</li>
+                </ul>
+
+                <h3>ArkClaw / 字节跳动</h3>
+                <ul>
+                    <li>火山引擎提供即开即用的云上 SaaS 版 ArkClaw，9.9 元起</li>
+                    <li>抖音生态正在探索与 ArkClaw 的内容创作自动化场景</li>
+                </ul>
+
+                <h3>Hermes Agent / Nous Research</h3>
+                <ul>
+                    <li><strong>v0.14.0 "The Foundation Release"</strong>：Transport 层全面重构，支持 Anthropic、ChatCompletions、Responses API、Bedrock 四大传输路径</li>
+                    <li><strong>140,000+ GitHub Stars</strong>：3 个月内从零冲到 14 万+，OpenRouter 认证"全球最常用 Agent"</li>
+                    <li><strong>NVIDIA 官方背书 NemoClaw</strong>：GTC 2026 宣布，优化 OpenClaw 在 NVIDIA 设备上的体验，现已支持 WSL2</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                <ul>
+                    <li><strong>一句话生成 + 自动部署网站</strong>：用户通过 Discord 手机端给 OpenClaw 发送"帮我做个番茄闹钟网页"，Kimi K2.5 自动生成并自动部署上线，全程无需人工干预</li>
+                    <li><strong>Moltbook 机器人社交平台</strong>：社区开发者创建基于 OpenClaw 的机器人社交网站，AI bot 可自主发帖、与其他 bot 互动</li>
+                    <li><strong>股市分析师实战</strong>：基于腾讯云 Lighthouse + OpenClaw 搭建专属股市监控助手，实时跟踪金价/股价波动并推送通知</li>
+                    <li><strong>新闻早报机器人</strong>：配置 Cron 定时任务，每天早晨 8 点自动汇总指定区域/类别/公司的新闻早报，推送到飞书/Discord</li>
+                    <li><strong>Three.js 可视化 Skill</strong>：开发者利用 OpenClaw Skills 接口接入 Three.js，实现自然语言驱动的 3D 场景生成</li>
+                    <li><strong>微信私域营销助手</strong>：通过 OpenClaw 实现客户意图识别、会话内容改写，联动企业知识库完成精准推荐（澜舟科技银行案例）</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <ul>
+                    <li><strong>《OpenClaw 接入大模型 API 完整教程》</strong>（掘金，2026-03-21）：从零创建 Skill 到配置 LLM Provider，涵盖 OpenAI 官方 API、聚合 API（ofox.ai）两种方案，详细记录踩坑记录（skill.yaml model 字段冲突、SSE 流式格式等）</li>
+                    <li><strong>《OpenClaw 入门到进阶完整学习教程（2026）》</strong>（七牛云，2026-03-16）：四阶段学习路径——安装配置 → 渠道接入 → 技能与工具 → 进阶自动化，含 ClawHub DNS 故障绕过方案（改用 npx skills add）</li>
+                    <li><strong>《OpenClaw 小龙虾 Windows 一键部署》</strong>（掘金，2026-04-07）：10 分钟完成 Windows 部署，内置所有运行依赖，解压即用。推荐后续学习：本地模型接入、聊天工具联动、Skill 开发</li>
+                    <li><strong>《在腾讯云轻量服务器搭建 OpenClaw 7x24 AI 助手》</strong>（博客园，2026-04-30）：99 元/年方案详解，覆盖自动化运维、信息聚合、多渠道接入、数据隐私四大场景</li>
+                    <li><strong>《从零到一：腾讯云服务器部署 + 飞书接入实战》</strong>（博客园，2026-04-07）：详细记录 Lighthouse 选购 → Web Shell 配置 → onboard 向导 → 飞书 App ID/Secret 接入全流程</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🏭 企业落地案例</h2>
+                <ul>
+                    <li><strong>乘云数字 OpenOcta（中文版 OpenClaw）</strong>：杭州乘云数字推出企业级智能体平台，单一 Go 二进制 + 内嵌前端架构，一条命令 3 分钟部署。已服务国家电网、南方电网、上港集团、九洲药业、华夏银行、上海期货交易所等标杆客户</li>
+                    <li><strong>青藤云安全 WorkClaw</strong>：提供 SOC 安全运营智能体（动态短租凭证、180 天全量审计）、HR 人事数据助手（API 网关自动脱敏、RBAC 细粒度权限）、研发代码审查助手（PR 强制人工审批）三大场景方案</li>
+                    <li><strong>中关村科金得助智枢</strong>：聚焦智能问答、智能写作（内容采纳率超 80%）、智能审核（规则引擎 + 大模型）、智能问数（自然语言获取数据洞察）四大办公场景，支持千人以上规模私有化部署</li>
+                    <li><strong>澜舟科技企业级方案</strong>：金融合规智能助手（合规风险减少 30%+，合同编制周期缩短 40%）、银行私域营销助手（人均维护客群从 15 增至 20）、金融投研智能分析（研报搜索 500ms 响应，效率提升 20 倍）</li>
+                    <li><strong>金智维 K-APA</strong>：打造中国版企业级"OpenClaw"，可信安全、精准可控、弹性可扩展，已在珠海等多地举办 OpenClaw 技术实战活动</li>
+                    <li><strong>数商云企业级部署</strong>：支持 500 并发用户、日均 10 万次任务执行，响应延迟 <300ms，提供年度安全渗透测试与 OpenClaw 运维培训</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <ul>
+                    <li><a href="https://github.com/openclaw/openclaw/releases" target="_blank">OpenClaw 官方 Release Notes - 2026.5.20</a></li>
+                    <li><a href="https://cloud.tencent.com/act/pro/openclaw" target="_blank">腾讯云 OpenClaw 轻量服务器部署专区</a></li>
+                    <li><a href="https://cloud.tencent.com/act/pro/CVD" target="_blank">腾讯云桌面预装 OpenClaw</a></li>
+                    <li><a href="https://github.com/datawhalechina/openclaw-tutorial" target="_blank">DataWhale OpenClaw 一周学习教程（GitHub）</a></li>
+                    <li><a href="https://juejin.cn/post/7619145808709550132" target="_blank">OpenClaw 接入大模型 API 完整教程 - 掘金</a></li>
+                    <li><a href="https://news.qiniu.com/archives/1773624961690" target="_blank">OpenClaw 入门到进阶完整学习教程（2026）</a></li>
+                    <li><a href="https://juejin.cn/post/7613042997150957583" target="_blank">OpenClaw 30+ 实战案例解析 - 掘金</a></li>
+                    <li><a href="https://www.cnblogs.com/brand2026/p/19883643" target="_blank">青藤 WorkClaw 企业级方案详解</a></li>
+                    <li><a href="https://www.cnblogs.com/bsoo/p/20022431" target="_blank">乘云数字 OpenOcta 中文版 OpenClaw 介绍</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Generated by OpenClaw Daily Report Agent | 数据来源：kimi_search 实时检索</p>
+            <p>📅 2026-05-23 00:45 | 🦞 OpenClaw 每日情报</p>
+        </footer>
+    </div>
+</body>
+</html>
