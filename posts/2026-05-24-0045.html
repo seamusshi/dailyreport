@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年5月24日</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年5月24日 | 第44期</p>
+            <p class="tagline">字节跳动加注Agent生态精粮、Hermes Agent自进化闭环成熟、LobsterAI开源入场、企业Agent落地深水区加速</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📋 今日概览</h2>
+                <div class="highlights">
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 生态</span>
+                        <p><strong>字节跳动为 Hermes Agent / Claude Code 投喂「精粮」：</strong>火山引擎推出 Ark Helper CLI，三分钟完成 Coding Plan 套餐配置（Seedream 生图 + Seedance 生视频 + 联网搜索 + MCP），支持 ark-code-latest 自动选模。已覆盖 OpenClaw、Claude Code、Cursor、TRAE 等主流工具</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag trend">📈 框架</span>
+                        <p><strong>Hermes Agent 自进化闭环进入成熟期：</strong>Skill 自动创建 + 三层记忆架构（SQLite 会话 + MEMORY.md/USER.md 知识 + Honcho/Mem0 外部向量库）+ 后台 Review Agent，形成「解决→提炼→复用→优化」的完整飞轮。两周内 GitHub Stars 从 91K 冲向 140K+</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag new">🆕 产品</span>
+                        <p><strong>网易有道 LobsterAI 正式开源入场：</strong>定位 7×24 全场景数字员工，融合 OpenClaw 跨应用执行能力 + Claude Cowork 直观 GUI，支持 macOS/Windows/Linux/移动端全平台，MIT 协议开源。主打办公场景结果交付（PPT、数据分析）</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag ecosystem">🌐 落地</span>
+                        <p><strong>企业 Agent 落地进入「低代码双向奔赴」阶段：</strong>OpenClaw 从「万能黑箱工具」演变为企业级 AI 基础设施，与低代码平台形成互补——低代码为 Agent 提供标准化业务上下文和治理框架，Agent 让「意图」成为核心导向</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 部署</span>
+                        <p><strong>阿里云/腾讯云部署教程持续霸榜开发者社区：</strong>保姆级一键部署文章覆盖轻量服务器、无影云电脑、ECS 弹性计算三种方案，百炼 Token Plan 提供 7000 万+ 免费 Token。OpenClaw 已超越技术圈层，成为新用户接触 AI Agent 的首要入口</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏢 OpenClaw 官方与社区动态</h2>
+                <h3>🔧 核心框架进展</h3>
+                <ul>
+                    <li><strong>ClawHub 技能市场持续扩张</strong>：社区 Skill 数量突破 5700+，每日新增数十个，覆盖从个人自动化到企业级安全的全场景</li>
+                    <li><strong>OpenClaw 安全研究引发关注</strong>：学术论文《Credential Leakage in LLM Agent Skills》对 31,132 个 Skill 进行大规模分析，发现 26.1% 存在至少一个漏洞，157 个恶意 Skill 可发起数据窃取和 Agent 劫持攻击。社区正在推动 Skill 签名验证机制</li>
+                    <li><strong>企业级部署方案标准化</strong>：官方文档新增「生产环境部署指南」，涵盖 Docker 沙箱硬化、权限最小化、网络隔离、审计日志四大维度</li>
+                    <li><strong>acpx 多 Agent 协作流水线打通</strong>：多个 Agent 实例可编排为协作链，支持任务分派、结果汇总和错误回退</li>
+                </ul>
+
+                <h3>🌟 GitHub 社区动态</h3>
+                <ul>
+                    <li><strong>OpenClaw 主仓库 Stars 超 353,000</strong>：稳居全球开源项目前列，日增量保持数百至数千</li>
+                    <li><strong>datawhalechina/openclaw-tutorial</strong>：开源 7 天学习教程持续更新，新增百炼 API 配置、腾讯云 Lighthouse 部署、飞书 Bot 接入等实战章节</li>
+                    <li><strong>awesome-openclaw-usecases</strong>：社区实战案例手册收录 30+ 可直接复用的场景配置，获数千 Stars，新增「股市监控助手」「微信私域营销」等中文用户高频案例</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <h3>字节跳动「Agent 精粮」计划：火山方舟 Coding Plan</h3>
+                <p>5 月 19 日，字节跳动旗下火山引擎推出面向 Agent 开发者的「精粮」套餐，核心包括：</p>
+                <ul>
+                    <li><strong>Seedream 生图 Skill</strong>：byted-ark-seedream-skill，支持自然语言驱动的图像生成</li>
+                    <li><strong>Seedance 生视频 Skill</strong>：byted-ark-seedance-skill，打通内容创作自动化链路</li>
+                    <li><strong>联网搜索 Skill / MCP</strong>：实时信息获取能力，补足模型知识截止日期短板</li>
+                    <li><strong>ark-code-latest 自动选模</strong>：Agent 自动在多个模型间切换，平衡成本与效果</li>
+                </ul>
+                <p>部署体验极简：安装 Ark Helper → 选择 Volcano Engine (国内) Agent Plan → SSO 一键登录拉取 API Key → 选择目标工具（Claude Code / Hermes Agent / OpenClaw / TRAE 等）→ 自动写入配置。全程菜单选择，无需手写 JSON。</p>
+
+                <h3>Hermes Agent 自进化飞轮详解</h3>
+                <p>Hermes Agent 的六条设计哲学正在转化为可感知的用户体验：</p>
+                <ul>
+                    <li><strong>Skill 自动创建</strong>：解决问题后，系统自动提炼经验为 Markdown 格式的 Skill，下次遇到类似问题自动加载</li>
+                    <li><strong>三层记忆架构</strong>：会话级（SQLite FTS5 全文搜索）、知识级（MEMORY.md + USER.md 文件）、外部级（Honcho / Mem0 / OpenViking 向量库）</li>
+                    <li><strong>后台 Review Agent</strong>：所有学习过程在后台 daemon 线程完成，用户零等待</li>
+                    <li><strong>迭代预算防失控</strong>：子 Agent 获得独立预算，不会消耗父 Agent 配额</li>
+                    <li><strong>Provider 自动降级</strong>：200+ 模型一键切换，某端点故障时自动路由到备用</li>
+                    <li><strong>飞书原生接入</strong>：通过飞书 Bot + 飞书 CLI 让 Agent 直接在飞书中执行任务</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🏢 竞品与生态动态</h2>
+
+                <h3>字节跳动 / ArkClaw / 火山引擎</h3>
+                <ul>
+                    <li><strong>Ark Helper CLI 发布</strong>：三分钟完成火山方舟 Coding Plan 配置，覆盖 Seedream/Seedance/联网搜索/MCP，支持 OpenClaw、Claude Code、Cursor、TRAE 等主流工具</li>
+                    <li><strong>ArkClaw 持续迭代</strong>：云养虾模式（开箱即用 SaaS 版 OpenClaw）Lite 版月费低至 8.9 元，7×24 云端托管，解决原生 OpenClaw 环境配置复杂、Token 消耗不可控、进程易中断三大痛点</li>
+                    <li><strong>抖音生态内容创作自动化探索</strong>：利用 Seedance 视频生成 + OpenClaw 任务编排，探索短视频批量生成与发布</li>
+                </ul>
+
+                <h3>Hermes Agent / Nous Research</h3>
+                <ul>
+                    <li><strong>GitHub Stars 突破 140,000</strong>：3 个月内从零冲到 14 万+，OpenRouter 认证「全球最常用 Agent」</li>
+                    <li><strong>v0.14.0 "The Foundation Release"</strong>：Transport 层全面重构，支持 Anthropic、ChatCompletions、Responses API、Bedrock 四大传输路径</li>
+                    <li><strong>与火山方舟 Coding Plan 深度集成</strong>：Nous Research 与字节跳动达成技术合作，Hermes Agent 用户可直接接入火山引擎模型与算力</li>
+                    <li><strong>NVIDIA NemoClaw 官方背书</strong>：GTC 2026 宣布，优化 OpenClaw 在 NVIDIA 设备上的体验，现已支持 WSL2</li>
+                </ul>
+
+                <h3>腾讯 / WorkBuddy</h3>
+                <ul>
+                    <li><strong>WorkBuddy 1.2 万内部员工日常使用</strong>：腾讯深圳总部曾现场「摆摊」免费帮用户完成 OpenClaw 云端安装，当日近千名开发者到场</li>
+                    <li><strong>腾讯云 OpenClaw 部署生态成熟</strong>：轻量服务器 Lighthouse + 云桌面 CVD 双轨并行，独家首发支持 QQ、企业微信、钉钉、飞书四大国内 IM 接入</li>
+                    <li><strong>腾讯为 OpenClaw 官方赞助商</strong>：与 OpenAI、百度共同赞助开源项目</li>
+                </ul>
+
+                <h3>月之暗面 / Kimi Claw</h3>
+                <ul>
+                    <li><strong>Kimi K2.6 开源影响力持续扩散</strong>：支持 300 子 Agent 并行 4000 协作步骤，可持续运行 5 天，在 OpenClaw、Hermes Agent 等主动式框架上展现强大自动化能力</li>
+                    <li><strong>Kimi Claw 5000+ Skills 生态</strong>：40GB 云存储 + ClawHub 5000+ 技能，BYOC 混合部署模式打通云端与本地 OpenClaw 实例</li>
+                    <li><strong>月之暗面估值 180 亿美元</strong>：新一轮 10 亿美元融资推进中，Stripe 显示个人订阅支付订单环比暴增</li>
+                </ul>
+
+                <h3>阿里 / CoPaw / 阿里云百炼</h3>
+                <ul>
+                    <li><strong>阿里云百炼一键部署持续火爆</strong>：轻量应用服务器预置 OpenClaw/Hermes Agent 镜像，提供 7000 万+ Token 免费额度，联合 52 个官方 Skill + 5700+ 社区 Skill</li>
+                    <li><strong>CoPaw 企业级钉钉生态融合</strong>：支持本地极简部署和云端一键运行，内置定时任务模块，自定义 Skill 目录自动加载扩展</li>
+                    <li><strong>JVSClaw 零代码部署</strong>：无需任何代码知识即可在手机、网页和 iPad 上「三步」部署 OpenClaw，无需接入 IM 工具</li>
+                </ul>
+
+                <h3>网易 / LobsterAI</h3>
+                <ul>
+                    <li><strong>LobsterAI 正式开源入场</strong>：网易有道开发，定位 7×24 全场景数字员工，融合 OpenClaw 自主跨应用执行 + Claude Cowork GUI，支持 macOS/Windows/Linux/移动端，MIT 开源</li>
+                    <li><strong>办公场景结果交付</strong>：自动完成做 PPT、分析数据等复杂任务，对非技术用户极度友好</li>
+                </ul>
+
+                <h3>猎豹移动 / EasyClaw</h3>
+                <ul>
+                    <li><strong>个人版继续免费策略</strong>：面向 C 端快速获取市场份额，AI 业务已助力公司扭亏为盈</li>
+                    <li><strong>出海企业版探索</strong>：傅盛 14 天实战 8 个 Agent 的案例持续发酵，验证个人用户规模化落地路径</li>
+                </ul>
+
+                <h3>MiniMax / MaxClaw</h3>
+                <ul>
+                    <li><strong>成本杀手定位稳固</strong>：输入 $0.10/百万 Token、输出 $0.50/百万 Token，仅为 Claude 3.5 Sonnet 的 1/8</li>
+                    <li><strong>10 秒一键云部署</strong>：curl + bash 脚本即可完成，兼容 OpenClaw API，无缝迁移</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                <ul>
+                    <li><strong>火山方舟 × Hermes Agent 持续成长助手</strong>：利用火山 Coding Plan 模型算力 + Hermes 自学习闭环，打造出可长期进化、安全可控、企业级易用的 AI Agent，Skill 自动创建使每次对话都让 Agent 更懂用户</li>
+                    <li><strong>「云养虾」社交网站 Moltbook</strong>：社区开发者创建基于 OpenClaw 的机器人社交平台，AI bot 可自主发帖、与其他 bot 互动，形成独特的 AI 社交生态</li>
+                    <li><strong>自动谈判购车省 $4,200</strong>：软件工程师用 OpenClaw 管理经销商邮件和竞争报价，自主填写联系表单、管理 incoming offers、基于更低报价自动反击，最终节省 4,200 美元</li>
+                    <li><strong>Substack 12,000 订阅 Newsletter 全自动运营</strong>：OpenClaw 监控 200+ 信息源，按主题聚类故事，每周四早晨自动起草 1,500 字 issue，人类编辑仅需 30 分钟。订户增长在切换后反而加速</li>
+                    <li><strong>会议笔记 + 行动项自动分发</strong>：产品经理每周 15+ 会议，OpenClaw 自动提取关键决策、行动项（含负责人和截止日期）、开放问题，直接创建 Linear/Asana 任务。行动项完成率从 60% 提升到 85%</li>
+                    <li><strong>Three.js 自然语言 3D 场景生成</strong>：开发者利用 OpenClaw Skills 接口接入 Three.js，通过自然语言描述生成 3D 可视化场景</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <ul>
+                    <li><strong>《阿里云/腾讯云全面支持一键部署 OpenClaw 保姆级教程》</strong>（腾讯云开发者社区，2026-04-17）：覆盖阿里云百炼 API Key 创建、腾讯云轻量服务器 Lighthouse 选购、端口放行、配置初始化全流程，有手就行</li>
+                    <li><strong>《2026 年阿里云部署 OpenClaw + 配置百炼 Token Plan 图文教程》</strong>（主机索引，2026-05-13）：三种方案（轻量一键部署 / ECS 自定义 / 无影云电脑）对比，含 199 元/年 2核4G 配置推荐</li>
+                    <li><strong>《OpenClaw 接入大模型 API 完整教程》</strong>（掘金，2026-03-21）：从零创建 Skill 到配置 LLM Provider，涵盖 OpenAI 官方 API、聚合 API 方案，详细记录 skill.yaml model 字段冲突、SSE 流式格式踩坑记录</li>
+                    <li><strong>《OpenClaw 入门到进阶完整学习教程（2026）》</strong>（七牛云，2026-03-16）：四阶段学习路径——安装配置 → 渠道接入 → 技能与工具 → 进阶自动化，含 ClawHub DNS 故障绕过方案（改用 npx skills add）</li>
+                    <li><strong>《Hermes Agent 深度架构剖析与 OpenClaw 工程化对比》</strong>（青雲，2026-04-09）：五层架构（入口编排 → Agent 核心 → 工具注册 → 状态持久化 → 平台适配）逐层拆解，同步循环 vs 异步运行时设计哲学对比</li>
+                    <li><strong>《告别一次性对话，Hermes Agent + 火山方舟 Coding Plan 打造持续成长的 AI Agent》</strong>（开发者社区，2026-04-26）：Skill 自动创建机制、三层记忆架构、后台 Review Agent 详解</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🏭 企业落地案例</h2>
+                <ul>
+                    <li><strong>乘云数字 OpenOcta</strong>：单一 Go 二进制 + 内嵌前端架构，一条命令 3 分钟部署。已服务国家电网、南方电网、上港集团、九洲药业、华夏银行、上海期货交易所等标杆客户</li>
+                    <li><strong>青藤云安全 WorkClaw</strong>：SOC 安全运营智能体（动态短租凭证、180 天全量审计）、HR 人事数据助手（API 网关自动脱敏、RBAC 细粒度权限）、研发代码审查助手（PR 强制人工审批）</li>
+                    <li><strong>中关村科金得助智枢</strong>：智能问答、智能写作（内容采纳率超 80%）、智能审核（规则引擎 + 大模型）、智能问数（自然语言获取数据洞察）四大办公场景，支持千人以上私有化部署</li>
+                    <li><strong>澜舟科技金融场景</strong>：合规风险减少 30%+，合同编制周期缩短 40%；银行私域营销助手使人均维护客群从 15 增至 20；金融投研智能分析实现研报搜索 500ms 响应，效率提升 20 倍</li>
+                    <li><strong>当 OpenClaw「潜入」企业</strong>：日常任务执行效率提升 300%+，低代码拖拽组件实现从抓取到邮件的全链路可视化闭环。token 消耗曲线成为大厂竞相接入的核心驱动力——普通 AI 问答一次数百 token，OpenClaw 处理同一任务可达数十至数百倍</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <ul>
+                    <li><a href="https://cloud.tencent.com/developer/article/2670968" target="_blank">字节跳动出手，为 Hermes Agent、Claude Code 投喂精粮 - 腾讯云开发者社区</a></li>
+                    <li><a href="https://developer.volcengine.com/articles/7633264874180575251" target="_blank">告别一次性对话，Hermes Agent + 火山方舟 Coding Plan - 开发者社区</a></li>
+                    <li><a href="https://gitcode.csdn.net/6a080341662f9a54cb74e7b2.html" target="_blank">16 大龙虾系列 AI Agent 框架技术选型全解析 - AtomGit</a></li>
+                    <li><a href="https://www.echovic.com/blog/ai/hermes-agent-deep-architecture-openclaw-comparison/" target="_blank">Hermes Agent 深度架构剖析与 OpenClaw 工程化对比 - 青雲</a></li>
+                    <li><a href="https://cloud.tencent.com/developer/article/2656530" target="_blank">阿里云、腾讯云全面支持一键部署 OpenClaw 保姆级教程 - 腾讯云</a></li>
+                    <li><a href="https://www.vpsquery.com/archives/7705" target="_blank">2026 年阿里云部署 OpenClaw + 配置百炼 Token Plan 图文教程 - 主机索引</a></li>
+                    <li><a href="https://www.cnblogs.com/didaimahangyezixun/articles/20023947" target="_blank">当 OpenClaw「潜入」企业：AI 智能体与低代码的双向奔赴</a></li>
+                    <li><a href="https://weekly.caixin.com/2026-03-14/102422837.html" target="_blank">特别报道｜爆炒「龙虾」- 财新周刊</a></li>
+                    <li><a href="https://www.cnblogs.com/haibindev/p/19881562" target="_blank">Hermes Agent 一周暴涨五万 Star，但我劝你别急着追</a></li>
+                    <li><a href="https://github.com/datawhalechina/openclaw-tutorial" target="_blank">DataWhale OpenClaw 一周学习教程（GitHub）</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Generated by OpenClaw Daily Report Agent | 数据来源：kimi_search 实时检索</p>
+            <p>📅 2026-05-24 00:45 | 🦞 OpenClaw 每日情报</p>
+        </footer>
+    </div>
+</body>
+</html>
