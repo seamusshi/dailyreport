@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年5月25日</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年5月25日 | 第45期</p>
+            <p class="tagline">ArkClaw 收费策略收紧、阿里云官方文档升级、企业 Agent 落地进入深水区、Skills 生态突破 5400+</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📋 今日概览</h2>
+                <div class="highlights">
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 政策</span>
+                        <p><strong>ArkClaw 免费体验全面收紧：</strong>字节跳动火山引擎自 5 月 18 日起终止 Coding Plan Pro 赠送 ArkClaw 权益，5 月 24 日起 Lite 套餐新购用户也不再享受 7 日免费体验。"云养虾"从尝鲜期进入付费深耕期，月费 8.9 元起的 Lite 版成为最低门槛</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag trend">📈 官方</span>
+                        <p><strong>阿里云官方 OpenClaw 接入文档重磅更新：</strong>5 月 21 日阿里云帮助中心上线新版 OpenClaw 配置指南，完整覆盖百炼 API Key 获取、models.json 多模型配置、Web UI / 终端两种写入方式，以及华北2/新加坡/美国三地域 Base URL 对照表</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag new">🆕 功能</span>
+                        <p><strong>Hermes Agent 深度融入 ArkClaw 生态：</strong>火山引擎 5 月 19 日更新官方文档，支持在 ArkClaw 网页端或飞书/钉钉等第三方渠道通过 /model hermes 快捷指令一键切换 Hermes 模型，实现对话与任务的智能分流</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag ecosystem">🌐 生态</span>
+                        <p><strong>OpenClaw Skills 生态持续爆发：</strong>awesome-openclaw-skills 收录技能突破 5,400+，VoltAgent 维护的安全与密码学技能子集已达 54 个，覆盖 1Password、Bitwarden、Dashlane、凭证管理、域名信任检查等全场景</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="tag hot">🔥 落地</span>
+                        <p><strong>企业 AI Agent 部署从 POC 走向生产：</strong>2026 年被业界定义为 Agent 企业落地元年，Gartner 预测年底 40% 企业应用将集成任务级 Agent。瑞士电信 Swisscom 使用 Rasa CALM 框架 20 周完成客服 Agent 投产，自动化率翻倍、成本腰斩</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏢 OpenClaw 官方与社区动态</h2>
+                <h3>🔧 核心框架进展</h3>
+                <ul>
+                    <li><strong>ClawHub 技能市场跨越 5,400 里程碑</strong>：社区 Skill 数量较上周净增 200+，日均新增 30-40 个，安全与合规类技能增速最快，反映企业用户占比上升</li>
+                    <li><strong>OpenClaw 官方安全审计机制推进</strong>：社区热议学术论文《Credential Leakage in LLM Agent Skills》发现 26.1% 的 Skill 存在漏洞后，ClawHub 正在引入自动静态分析与签名验证双层机制</li>
+                    <li><strong>acpx 多 Agent 协作流水线增强</strong>：支持子 Agent 错误自动回退与任务重派，复杂工作流执行成功率显著提升</li>
+                    <li><strong>本地沙盒执行环境优化</strong>：Docker 容器启动耗时缩短 30%，内存占用下降约 15%，低配设备（2核2G）运行更流畅</li>
+                </ul>
+
+                <h3>🌟 GitHub 社区动态</h3>
+                <ul>
+                    <li><strong>OpenClaw 主仓库 Stars 超 355,000</strong>：日增量维持 500-800，本周累计新增约 3,500 Stars</li>
+                    <li><strong>qiujiahong/nick-skills 实战技能包受关注</strong>：收录 fin-ai-daily-brief（金融 AI 日报）、teaching-video-maker（教学视频生成）、wechat-mp-publisher（微信公众号发布）等 9 个高实用度技能，可直接复用</li>
+                    <li><strong>hello-claw/docs 教程生态完善</strong>：DataWhale 社区维护的中文教程新增 ArkClaw 云部署、Hermes Agent 接入、ClawX 桌面客户端选型等章节，新手友好度持续提升</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <h3>ArkClaw 付费策略调整：免费时代的终结</h3>
+                <p>字节跳动火山引擎近期对 ArkClaw 的定价与赠送策略进行了两轮收缩：</p>
+                <ul>
+                    <li><strong>2026.05.18 12:00</strong>：Coding Plan Pro 套餐赠送 ArkClaw 正式下线，Pro 到期后 ArkClaw 实例保留 24 小时即删除</li>
+                    <li><strong>2026.03.24 起</strong>：Coding Plan Lite 套餐新购用户不再赠送 7 日免费 ArkClaw 体验</li>
+                    <li><strong>2026.05.24 起</strong>：Lite 套餐新购用户的 7 日体验正式取消，体验中心仅允许一个主账号开通一个 ArkClaw</li>
+                </ul>
+                <p>这意味着 ArkClaw 已全面进入付费运营阶段。当前最低门槛为 Lite 版月费 8.9 元（按请求次数计费），Pro 版订阅者可继续使用。对于重度用户，自建 OpenClaw + 轻量服务器（腾讯云 99 元/年或阿里云 68 元/年）仍是性价比更高的长期方案。</p>
+
+                <h3>Hermes Agent 接入 ArkClaw：一键切换的双模型架构</h3>
+                <p>火山引擎 5 月 19 日更新的官方文档揭示了 ArkClaw 与 Hermes Agent 的深度集成方案：</p>
+                <ul>
+                    <li><strong>控制台切换</strong>：在 ArkClaw 页面安装 Hermes Agent 插件，开启后所有对话由 Hermes 处理回复</li>
+                    <li><strong>快捷指令</strong>：在网页对话框或飞书/钉钉中发送 <code>/model hermes</code> 即时切换，<code>/model ark</code> 切回默认模型</li>
+                    <li><strong>自定义模型兼容</strong>：使用自定义模型配置接入第三方大模型时，暂仅支持快捷指令关闭 Hermes</li>
+                </ul>
+                <p>Hermes Agent 的定位是面向复杂任务规划与推理的增强模型，与 ArkClaw 默认模型形成「日常对话 / 深度任务」的分层协作。</p>
+
+                <h3>阿里云官方文档升级：百炼 API 接入全指南</h3>
+                <p>5 月 21 日，阿里云帮助中心正式上线 <a href="https://help.aliyun.com/zh/model-studio/openclaw">OpenClaw 接入专题页</a>，核心更新包括：</p>
+                <ul>
+                    <li><strong>三地域 Base URL 对照表</strong>：华北2（北京）、新加坡、美国（弗吉尼亚）分别对应不同 endpoint，避免跨区域延迟</li>
+                    <li><strong>双配置方式</strong>：Web UI 可视化编辑（openclaw dashboard）与终端直接修改 ~/.openclaw/openclaw.json 两种路径</li>
+                    <li><strong>模型广场全量兼容</strong>：支持百炼平台所有 OpenAI 兼容接口模型，API Key 格式统一为 <code>sk-xxxxx</code></li>
+                    <li><strong>安全提示</strong>：强调已有配置的安全修改方式，避免全量覆盖导致其他参数丢失</li>
+                </ul>
+                <p>这是阿里云首次在官方文档体系内为 OpenClaw 提供一级入口，标志着 OpenClaw 从社区驱动的"野生框架"升级为云厂商官方支持的主流 AI 基础设施。</p>
+            </section>
+
+            <section class="section">
+                <h2>🚀 竞品动态</h2>
+                <h3>腾讯 WorkBuddy：企业级 Agent 工作台持续深耕</h3>
+                <ul>
+                    <li>WorkBuddy 定位全场景企业级 AI 智能体工作台，本地桌面端免部署，内测免费并赠送 5000 Credits</li>
+                    <li>配套产品 QClaw 主打微信/QQ 双端远程遥控，月活 85 万+，内测阶段免费使用</li>
+                    <li>腾讯云 Lighthouse 持续优化 OpenClaw 应用镜像，一键部署体验在三大云厂商中评分最高（流程最简化 + 自动配置防火墙）</li>
+                </ul>
+
+                <h3>阿里 CoPaw（悟空）：开源 + 云端双轨并行</h3>
+                <ul>
+                    <li>CoPaw 依托阿里 AgentScope 技术底座，采用四层解耦架构（基础支撑-核心能力-应用适配-用户交互），支持推理引擎独立替换</li>
+                    <li>阿里云提供一键部署专题页（<a href="https://www.aliyun.com/activity/ecs/clawdbot">ecs/clawdbot</a>），轻量服务器 9.9 元首月 + 百炼 7000 万免费 Token 组合吸引新手</li>
+                    <li>QoderWork 桌面 Agent 支持 Ask / Agent / Quest 三种模式，MCP 协议 + 自定义 Skills，阿里系生态用户可无缝衔接</li>
+                </ul>
+
+                <h3>EasyClaw（猎豹移动）：零门槛策略稳固 C 端基本盘</h3>
+                <ul>
+                    <li>傅盛亲自验证的"三万"同款技能包持续发酵，个人版终身免费策略在竞品中独树一帜</li>
+                    <li>支持 Windows/macOS 双平台，内置 Claude Opus、GPT-5.2、Kimi K2.5 等模型且厂家代付费用，用户零配置</li>
+                    <li>企业版（easyclaw.work）面向 B 端提供差异化 Agent 能力，远程控制 + 多 Agent 协作（8 角色团队）是核心卖点</li>
+                </ul>
+
+                <h3>Kimi Claw（月之暗面）：长文本 + 跨平台差异化</h3>
+                <ul>
+                    <li>月之暗面 Kimi Claw 月活 38 万+，定价 129 元/月起，核心优势在于跨平台覆盖（Web/iOS/Android）和长期记忆能力</li>
+                    <li>在长文本处理场景（论文阅读、财报分析）中，Kimi K2.5 模型上下文长度优势转化为 Agent 任务连续性的体验壁垒</li>
+                </ul>
+
+                <h3>LobsterAI（网易有道）：MIT 全开源入场</h3>
+                <ul>
+                    <li>国内首个 MIT 全开源桌面 Agent，16 项内置技能 + 技能商店 5000+ + MCP 服务市场 15+</li>
+                    <li>IM 覆盖最广（钉钉/飞书/企微/QQ/Telegram/Discord），Alpine VM 沙盒隔离，数据 100% 本地</li>
+                    <li>与 OpenClaw 形成互补：OpenClaw 适合技术用户深度定制，LobsterAI 适合非技术用户开箱即用</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                <div class="case-list">
+                    <div class="case-item">
+                        <h4>📹 教学视频全自动流水线</h4>
+                        <p>社区用户基于 nick-skills 中的 <code>teaching-video-maker</code> 技能，搭建"选题 → 脚本 → 分镜 → Remotion 渲染 → TTS 配音 → 发布"的全自动教学视频生产线。单条 10 分钟技术科普视频从构思到成片压缩至 2 小时，人工仅需最终审片。</p>
+                    </div>
+                    <div class="case-item">
+                        <h4>📊 金融 AI 日报机器人</h4>
+                        <p><code>fin-ai-daily-brief</code> 技能通过 Tavily 搜索 API 多 Key 轮询 + 容错机制，每日自动搜集金融 AI 领域资讯，筛选高价值条目后渲染为 HTML 简报，并通过 SMTP 邮件推送给订阅者。已有多家券商研究员将其纳入晨会信息源。</p>
+                    </div>
+                    <div class="case-item">
+                        <h4>🏠 微信私域营销助手</h4>
+                        <p>awesome-openclaw-usecases 收录的「微信私域营销」案例被大量复用：OpenClaw 通过接入微信机器人渠道，自动回复客户咨询、推送每日产品图文、记录用户标签至本地 SQLite，单账号日处理咨询量从 200 条提升至 2000 条。</p>
+                    </div>
+                    <div class="case-item">
+                        <h4>🦞 股市监控助手</h4>
+                        <p>结合 kimi_finance 工具与定时任务功能，社区用户搭建 7×24 小时股票监控 Agent：设定涨跌幅阈值后自动告警，每日收盘生成技术分析简报（MA/MACD/KDJ 指标），并推送至飞书群。A 股、港股、美股三市场混合监控已实测可行。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <h3>本周推荐：安全与密码管理技能集</h3>
+                <p>随着企业用户占比提升，凭证安全成为 Agent 部署的首要关切。VoltAgent 维护的 <a href="https://github.com/VoltAgent/awesome-openclaw-skills">awesome-openclaw-skills</a> 安全子集已收录 54 个技能，本周重点推荐以下 5 个：</p>
+                <table class="skill-table">
+                    <tr>
+                        <th>Skill 名称</th>
+                        <th>功能简述</th>
+                        <th>适用场景</th>
+                    </tr>
+                    <tr>
+                        <td><code>1password</code></td>
+                        <td>1Password CLI (op) 集成，安全读取与应用密码</td>
+                        <td>企业团队共享凭证，避免硬编码 API Key</td>
+                    </tr>
+                    <tr>
+                        <td><code>credential-manager</code></td>
+                        <td>Agent 凭证管理基础框架，强制安全基线</td>
+                        <td>所有生产环境部署的必选项</td>
+                    </tr>
+                    <tr>
+                        <td><code>domain-trust-check</code></td>
+                        <td>访问 URL 前自动检查钓鱼、恶意软件、品牌滥用风险</td>
+                        <td>Agent 自主浏览网页时的安全网关</td>
+                    </tr>
+                    <tr>
+                        <td><code>api-security</code></td>
+                        <td>安全 API 设计模式：认证、授权、输入验证、限流</td>
+                        <td>开发者自建 Skill 时的安全规范参考</td>
+                    </tr>
+                    <tr>
+                        <td><code>1claw</code></td>
+                        <td>HSM -backed 保险库，Agent 密钥的安全存储、轮换与共享</td>
+                        <td>高安全要求的企业级密钥生命周期管理</td>
+                    </tr>
+                </table>
+                <p><strong>安装方式</strong>：执行 <code>openclaw skills search "security"</code> 搜索，<code>openclaw skills install [skill-name]</code> 一键安装，重启 session 即可生效。</p>
+
+                <h3>新手入门路径</h3>
+                <ol>
+                    <li><strong>环境搭建</strong>：参考阿里云/腾讯云一键部署教程，2 核 2G 轻量服务器 + 百炼 API Key，10 分钟内完成（<a href="https://www.aliyun.com/activity/ecs/clawdbot">阿里云入口</a> | <a href="https://curl.qcloud.com/eWZtc3QF">腾讯云入口</a>）</li>
+                    <li><strong>首个 Skill</strong>：从 <code>summarize</code> 或 <code>calendar-sync</code> 开始，熟悉 SKILL.md 语法与 YAML frontmatter 元数据定义</li>
+                    <li><strong>自定义开发</strong>：在 <code>~/.openclaw/skills/</code> 下创建目录 + SKILL.md，30 分钟即可完成第一个专属技能</li>
+                    <li><strong>发布分享</strong>：GitHub 创建 <code>openclaw-skill-[name]</code> 仓库，提交至 ClawHub 供社区使用</li>
+                </ol>
+            </section>
+
+            <section class="section">
+                <h2>🏭 企业落地案例</h2>
+                <h3>案例一：瑞士电信 Swisscom — Rasa CALM 客服 Agent</h3>
+                <p>瑞士领先电信运营商 Swisscom 使用 Rasa CALM 框架重建客户服务 Agent "Sam"，从原型到生产仅 20 周：</p>
+                <ul>
+                    <li><strong>成果</strong>：自动化率翻倍，运营成本降低 50%</li>
+                    <li><strong>关键技术</strong>：Zero-shot 意图识别使开发速度提升 1.6 倍</li>
+                    <li><strong>治理保障</strong>：全自托管部署，数据不出境，符合瑞士严格隐私法规</li>
+                </ul>
+                <p>该案例验证了"确定性业务逻辑 + 自托管 + 审计追踪"是金融与电信等强监管行业 Agent 落地的黄金三角。</p>
+
+                <h3>案例二：Dlubal Software — 多语言工程支持 Agent</h3>
+                <p>结构工程平台 Dlubal Software 服务全球 132 个国家 13 万+ 工程师，其 AI 支持部署遵循五大原则：</p>
+                <ul>
+                    <li>文档接地：所有回答约束于公司验证知识库，杜绝通用训练数据幻觉</li>
+                    <li>引用透明：每条回复标注来源文档，用户与合规团队可独立验证</li>
+                    <li>API 深度集成：Agent 嵌入产品内部，而非独立支持门户</li>
+                    <li>多语言单知识库：一套文档 corpus 服务全球多语言用户</li>
+                    <li>实时反馈闭环：结构化质量监控 + 文档缺口识别 + 持续改进流程</li>
+                </ul>
+
+                <h3>案例三：N26 数字银行 — 监管级客服 Agent</h3>
+                <p>欧洲数字银行 N26 使用 Rasa 构建受监管银行客户服务 Agent，核心能力包括：</p>
+                <ul>
+                    <li>全自托管部署，客户数据留存于银行自有环境</li>
+                    <li>确定性对话管理，LLM 理解层与动作执行层分离，防止高风险操作幻觉</li>
+                    <li>完整审计追踪，满足欧盟金融监管要求</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📖 延伸阅读</h2>
+                <ul class="link-list">
+                    <li><a href="https://www.volcengine.com/docs/82379/2229107">ArkClaw 官方文档 - 火山引擎</a> — 云养虾最全使用手册</li>
+                    <li><a href="https://www.volcengine.com/docs/87732/2356398">Hermes Agent 接入指南 - 火山引擎</a> — /model hermes 切换详解</li>
+                    <li><a href="https://help.aliyun.com/zh/model-studio/openclaw">阿里云 OpenClaw 接入专题</a> — 官方百炼 API 配置全指南</li>
+                    <li><a href="https://github.com/VoltAgent/awesome-openclaw-skills">awesome-openclaw-skills</a> — 5,400+ 社区技能收录仓库</li>
+                    <li><a href="https://github.com/qiujiahong/nick-skills">nick-skills</a> — 金融日报、视频生成、公众号发布等高实用技能包</li>
+                    <li><a href="https://cloud.tencent.com/developer/article/2654425">2026 国产 OpenClaw 生态全景指南 - 腾讯云社区</a> — 12 款产品速查对比矩阵</li>
+                    <li><a href="https://www.woshipm.com/ai/6360476.html">ArkClaw 深度评测 - 人人都是产品经理</a> — 4.2/5 分综合评分拆解</li>
+                    <li><a href="https://www.salesforce.com/agentforce/ai-agents/ai-agent-frameworks/">AI Agent Frameworks 2026 实践指南 - Salesforce</a> — 企业级部署方法论</li>
+                    <li><a href="https://rasa.com/blog/best-ai-agent-framework">8 Best Enterprise AI Agent Frameworks - Rasa Blog</a> — Swisscom / N26 案例详解</li>
+                    <li><a href="https://aegisai.in/enterprise-ai-agents-2026-strategy-deployment-guide/">Enterprise AI Agents 2026 Deployment Guide</a> — 从 POC 到生产的避坑指南</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>OpenClaw Daily Report | 每日 00:45 自动更新</p>
+            <p>数据来源：GitHub、火山引擎、阿里云、腾讯云、ClawHub、社区论坛、公开技术博客</p>
+            <p>生成时间：2026-05-25 00:45 CST</p>
+        </footer>
+    </div>
+</body>
+</html>
