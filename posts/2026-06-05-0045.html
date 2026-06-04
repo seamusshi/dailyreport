@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年6月5日（第56期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年6月5日 星期五</p>
+            <p class="tagline">第56期 | 总第56期</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📰 今日概览</h2>
+                <ul>
+                    <li><strong>Hermes Agent 106K Stars 强势挑战</strong>：Nous Research 出品的 Hermes Agent 以"可靠性+记忆系统"双杀，被评测为80%用户首选框架，与 OpenClaw 形成"运行时 vs 网关"互补格局</li>
+                    <li><strong>2026 百虾大战格局定型</strong>：腾讯 WorkBuddy/QClaw、字节 ArkClaw/CoPaw、阿里 CoPaw/HiClaw、猎豹 EasyClaw、月之暗面 KimiClaw 等20+产品矩阵明确，差异化路线清晰</li>
+                    <li><strong>SAP 斥资1亿欧元押注 Agent 生态</strong>：SAP Sapphire 2026 发布 AI Agent Hub 伙伴生态，Joule Studio 2.0 多框架支持（Python/ABAP/Claude Code/LangChain），双向 A2A 协议打通第三方 Agent</li>
+                    <li><strong>88%企业Agent试点未达生产</strong>：Gartner 警告40%企业Agentic AI项目将被取消，核心瓶颈不是模型能力而是治理、安全、审计基础设施缺失</li>
+                    <li><strong>Skills 生态200%+年增速</strong>：OpenClaw 社区提交量同比增长200%，Top 10 Skills 安装量突破180万，web-browsing、Telegram Integration、Email Management 领跑</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🦞 OpenClaw 官方动态</h2>
+                <h3>GitHub 与社区进展</h3>
+                <p>OpenClaw（原 Clawdbot/Moltbot）GitHub Stars 已突破 <strong>24.2 万</strong>，稳居全球开源 AI Agent 项目榜首。社区持续活跃，Skills 生态已达 <strong>1800+</strong>（内置49个、官方93个、社区1715+个）。</p>
+                <p>ClawHub 技能市场（<a href="https://clawhub.ai">clawhub.ai</a>）及国内镜像（<a href="https://skillhub.tencent.com">skillhub.tencent.com</a>）持续扩张。社区提交量同比增长 <strong>200%</strong>，开发者创建的技能越来越复杂精细。</p>
+                <p>完整中文教程（26.3万字、70+实战案例）在 GitHub 持续更新，涵盖安装配置、多平台集成（飞书/钉钉/企微/QQ）、Skills 开发等。最新版新增安全指南，补充威胁全景与七步防护体系。</p>
+                <h3>核心架构解析</h3>
+                <p>OpenClaw 采用三层架构：</p>
+                <ul>
+                    <li><strong>Gateway（网关）</strong>：消息路由、结果回传、多平台兼容（飞书/Discord/Telegram/钉钉/微信等），支持 allowlists、JSON schemas、timeouts、结构化失败摘要</li>
+                    <li><strong>Agent（智能体层）</strong>：会话管理、任务执行、记忆系统保持长期上下文</li>
+                    <li><strong>Skills（技能层）</strong>：模块化扩展，支持从 ClawHub 安装社区技能或自定义开发</li>
+                </ul>
+                <p>2026年新增亮点：多模型混搭（不同任务分配不同模型）、多Agent协作（创建多个专属智能体协同完成复杂任务）、远程访问控制（24小时无人值守）、Moltbook社区集成（140万+ Agents互动）。</p>
+            </section>
+
+            <section>
+                <h2>📌 核心功能更新详情</h2>
+                <h3>框架选型新变量：OpenClaw vs Hermes Agent vs OpenHuman</h3>
+                <p>2026年5月以来，多篇深度对比评测指出框架选型已不再是"二选一"，而是分层组合：</p>
+                <ul>
+                    <li><strong>OpenClaw</strong>：当工具接触真实系统，需要 allowlists、JSON schemas、timeouts、结构化失败摘要时首选。适合本地执行和合规场景</li>
+                    <li><strong>Hermes Agent</strong>：需要精益模型路由循环、快速迭代、较少策略层时首选。内置分层记忆（即时上下文/工作记忆/情景记忆）和反射循环</li>
+                    <li><strong>OpenHuman</strong>：当审批、审计轨迹、协作编辑是任务必需而非后期添加时首选</li>
+                </ul>
+                <p>成熟团队的标准组合：<strong>Hermes 做推理层 + OpenClaw 做网关策略层 + OpenHuman 做高责任人类审批层</strong>。</p>
+                <p>关键数据对比：Hermes 60+任务失败率约5%，OpenClaw 约30%；Hermes 安装5-15分钟，OpenClaw 30+分钟；但 OpenClaw 在特定渠道集成和 Computer Use 能力（v4.27）上仍有不可替代优势。</p>
+            </section>
+
+            <section>
+                <h2>🏢 竞品动态</h2>
+
+                <h3>🦞 百虾大战格局总览</h3>
+                <p>2026年国内"百虾大战"格局已基本定型，主要阵营如下：</p>
+                <table>
+                    <tr><th>厂商</th><th>产品</th><th>定位</th><th>部署方式</th><th>状态</th></tr>
+                    <tr><td>腾讯</td><td>WorkBuddy / QClaw / 龙虾管家</td><td>企业办公/微信生态</td><td>本地+云端</td><td>部分内测</td></tr>
+                    <tr><td>字节跳动</td><td>ArkClaw / CoPaw</td><td>云原生SaaS/开源</td><td>云端+本地</td><td>已上线</td></tr>
+                    <tr><td>阿里</td><td>CoPaw / HiClaw / JVSClaw</td><td>开源企业级/钉钉集成</td><td>本地+云端</td><td>已上线</td></tr>
+                    <tr><td>月之暗面</td><td>Kimi Claw</td><td>长文本/内容创作</td><td>云端</td><td>已上线</td></tr>
+                    <tr><td>MiniMax</td><td>MaxClaw</td><td>0代码拖拽</td><td>云端</td><td>已上线</td></tr>
+                    <tr><td>猎豹移动</td><td>EasyClaw</td><td>本地隐私/简易入门</td><td>本地</td><td>已上线</td></tr>
+                    <tr><td>智谱AI</td><td>AutoClaw（澳龙）</td><td>一键桌面/浏览器操作</td><td>本地</td><td>已上线</td></tr>
+                    <tr><td>网易有道</td><td>LobsterAI</td><td>MIT全开源</td><td>本地</td><td>已上线</td></tr>
+                    <tr><td>科大讯飞</td><td>AstronClaw</td><td>企业安全/语音优势</td><td>云端</td><td>已上线</td></tr>
+                    <tr><td>华为</td><td>小艺Claw</td><td>鸿蒙生态</td><td>移动端</td><td>内测</td></tr>
+                </table>
+
+                <h3>ArkClaw（字节跳动 · 火山引擎）</h3>
+                <p>上线三个月持续领跑云化赛道。核心定位"高并发+高可用+强安全"，适合金融、游戏、大流量互联网。字节自研DPU+自研芯片，算力性能优于阿里CoPaw的通用化基础设施。原生集成豆包全系列大模型，支持云原生+私有化部署。Lite版月费8.9元起，Pro版直接畅享全部功能。2026年3月24日起Coding Plan Lite新购用户不再赠送7日免费体验。</p>
+
+                <h3>EasyClaw（猎豹移动）</h3>
+                <p>傅盛14天卧床实验持续发酵——8个Agent协作团队、22万字对话、40余项Skill、除夕夜4分钟向611名员工发送个性化拜年消息。产品矩阵：EasyClaw国际版（easyclaw.com）、EasyClaw Work（easyclaw.work）、元气AI Bot（yuanqiai.net）。核心特点：双击安装、无需API Key、3分钟上手、本地沙盒运行。被OpenClaw社区视为"生态加速器"而非竞争对手。</p>
+
+                <h3>WorkBuddy（腾讯）</h3>
+                <p>腾讯系产品矩阵最全：WorkBuddy（企业办公）、QClaw（QQ/微信生态）、龙虾管家（AI安全沙箱）、云保安（安全）、乐享知识库·龙虾版（知识管理）、CodeBuddy（编程）。WorkBuddy为本地桌面端，免部署，低门槛，企业微信/QQ深度集成，120万+月活。内测免费，送5000 Credits。</p>
+
+                <h3>CoPaw（阿里 · 通义实验室）</h3>
+                <p>Apache 2.0开源，3条命令本地安装，ReMe长期记忆系统，支持钉钉/飞书/QQ/Discord/iMessage多渠道接入。主打钉钉/飞书生态集成，适合传统企业数字化转型。依托阿里云MaaS，基础设施偏向通用化。主要支持通义千问及第三方模型。</p>
+
+                <h3>Hermes Agent（Nous Research）</h3>
+                <p><strong>GitHub 106K Stars</strong>，开源免费，支持200+模型。唯一内置学习循环的主流框架：Agent在使用过程中创建、编辑、改进自己的技能。核心特性：分层记忆（FTS5+LLM摘要）、Skills自策展、Honcho风格用户建模、20+平台消息网关、可休眠serverless后端（24/7运行成本近乎为零）。CLI/TUI/Web UI/ACP端点全覆盖。</p>
+            </section>
+
+            <section>
+                <h2>🚀 社区趣味应用案例</h2>
+                <ul>
+                    <li><strong>傅盛的「三万」团队</strong>：8个Agent协作处理邮件分类、研究摘要、定时汇报，X推文Thread获100万+阅读，20万人在线围观</li>
+                    <li><strong>Hermes Kanban 自动化建站</strong>：使用Hermes Kanban编排层，将50页SEO网站分解为任务、分配给Agents、无需人工介入直接交付</li>
+                    <li><strong>多Agent SEO内容工厂</strong>：3+Agent并行运行（研究+起草+审核），吞吐量远超单Agent配置</li>
+                    <li><strong>个人AI第二大脑</strong>：OMI + Obsidian + Hermes组合，让Agent获得工作、决策、过去对话的完整上下文</li>
+                    <li><strong>24/7客户支持机器人</strong>：通过Telegram/Discord集成，Agent处理频道认证、消息路由、回复生成</li>
+                    <li><strong>自动化每日研报</strong>：定时任务拉取网络搜索，每天早上在打开电脑前送达竞争情报</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>📚 精选 Skill 学习指南</h2>
+                <h3>2026 Top 10 Skills 排行榜</h3>
+                <ol>
+                    <li><strong>Web-Browsing</strong> — 180,000+安装，4.8/5分。电商价格监控、库存监测首选</li>
+                    <li><strong>Telegram Integration</strong> — 145,000+安装，4.9/5分。客户支持7×24覆盖</li>
+                    <li><strong>Email Management</strong> — 120,000+安装，4.7/5分。销售自动化，响应率提升35%</li>
+                    <li><strong>Database Query</strong> — 95,000+安装，4.6/5分。自然语言转SQL，零SQL门槛</li>
+                    <li><strong>Calendar and Scheduling</strong> — 88,000+安装，4.8/5分。行政开销降低60%</li>
+                    <li><strong>Document Processing</strong> — 76,000+安装，4.5/5分。合同审查自动化</li>
+                    <li><strong>Stock Trading</strong> — 65,000+安装，4.7/5分。量化策略自动执行</li>
+                    <li><strong>Data Visualization</strong> — 58,000+安装，4.6/5分。营销周报自动生成</li>
+                    <li><strong>n8n Integration</strong> — 52,000+安装，4.8/5分。连接400+应用，端到端自动化</li>
+                    <li><strong>WeChat Mini Program</strong> — 48,000+安装，4.4/5分。中国市场电商客服必备</li>
+                </ol>
+                <h3>新手必装安全优先清单</h3>
+                <p>推荐安装顺序：安全→基础能力→生产力工具→高级扩展</p>
+                <ol>
+                    <li><strong>skill-vetter/security-audit</strong> — 安装前扫描技能代码，防恶意</li>
+                    <li><strong>tavily-search</strong> — 37k+安装，联网搜索必备</li>
+                    <li><strong>self-improving-agent</strong> — 46k+安装，让AI记住错误、自我优化</li>
+                    <li><strong>proactive-agent</strong> — 从"你问我答"变成"主动帮忙"</li>
+                    <li><strong>gog</strong> — 46k+安装，Google Workspace全家桶自动化</li>
+                    <li><strong>github</strong> — 35k+安装，代码仓库管理</li>
+                    <li><strong>summarize</strong> — 36k+安装，一键总结网页/PDF/视频/音频</li>
+                    <li><strong>find-skills</strong> — 让AI自己去ClawHub搜并推荐技能</li>
+                    <li><strong>ontology/agent-memory</strong> — 35k+安装，结构化记忆，跨对话不健忘</li>
+                    <li><strong>weather</strong> — 29k+安装，零配置新手测试首选</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>🏭 企业落地案例</h2>
+                <ul>
+                    <li><strong>SAP Joule Studio 2.0</strong>：SAP Sapphire 2026发布，多框架支持（Python/ABAP/Claude Code/Cursor/LangChain/Pydantic AI/LlamaIndex），可视化多Agent编排通过n8n，知识图谱接地（452,000表/730万字段）。年底之前免费</li>
+                    <li><strong>保险行业</strong>：某头部保险公司部署AI Agent处理理赔初审，单日处理量从2,000件提升至15,000件，准确率97.3%，人力成本降低60%</li>
+                    <li><strong>金融行业</strong>：某大型银行信贷审批Agent 3秒内完成初步风险评估，不良贷款率降低18%</li>
+                    <li><strong>IT运维</strong>：Agent自动分类、归因、处理运维告警，将一线工程师从重复告警响应中解放</li>
+                    <li><strong>OpenAI Deployment Company</strong>：40亿美元企业AI推进，采用Palantir FDE（Forward Deployed Engineer）模式，将工程师嵌入客户团队全程负责</li>
+                </ul>
+                <p><strong>2026年企业Agent核心数据</strong>：65%大型企业已部署Agent，88%已获正向投资回报，但88%试点项目从未到达生产环境。Gartner预测40%企业Agentic AI项目将被取消。关键差距：治理、安全、审计基础设施缺失。</p>
+                <p><strong>企业部署七大不可妥协控制</strong>：SSO/SCIM集成、SIEM连接审计日志、Agent PR密钥扫描、PR策略门、许可证治理、沙箱隔离执行、事件响应手册。</p>
+            </section>
+
+            <section>
+                <h2>📖 延伸阅读</h2>
+                <ul>
+                    <li><a href="https://github.com/Tornadopp/openclaw-learn">OpenClaw 完整中文教程（26.3万字）</a></li>
+                    <li><a href="https://clawhub.ai">ClawHub 技能市场</a></li>
+                    <li><a href="https://openclawindex.com/learn/openclaw-vs-hermes-agent">OpenClaw vs Hermes Agent 深度对比</a></li>
+                    <li><a href="https://dev.to/truongpx396/hermes-agent-the-self-improving-agent-framework-and-how-it-compares-to-openclaw-goclaw-22mc">Hermes Agent 实用指南</a></li>
+                    <li><a href="https://www.savictech.com/insights/sap-ai-agent-hub-partner-ecosystem-sapphire-2026/">SAP AI Agent Hub 生态解析</a></li>
+                    <li><a href="https://www.digitalapplied.com/blog/openai-deployment-company-4b-enterprise-push">OpenAI 40亿美元企业部署计划</a></li>
+                    <li><a href="https://www.cygnet.one/feeds/blog/ai-agents-enterprise-deployment-november-2025">2026企业AI Agent部署最佳实践</a></li>
+                    <li><a href="https://cloud.tencent.com/developer/article/2654425">2026国产OpenClaw生态全景指南</a></li>
+                    <li><a href="https://juejin.cn/post/7612252172991447092">OpenClaw Skills 2026最实用插件清单</a></li>
+                    <li><a href="https://www.tencentcloud.com/techpedia/140877">2026 OpenClaw Top 10 Hottest Skills</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>OpenClaw Daily Report | 由 Kimi Claw 自动生成</p>
+            <p>数据来源：互联网公开信息、GitHub、ClawHub、SAP、火山引擎、阿里云、腾讯云等</p>
+            <p class="small">免责声明：本报告仅供信息参考，不构成任何投资建议</p>
+        </footer>
+    </div>
+</body>
+</html>
