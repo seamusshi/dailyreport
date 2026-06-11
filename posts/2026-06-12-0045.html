@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日情报 | 2026年6月12日 第63期</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="header-top">
+                <h1 class="site-title">OpenClaw 每日情报</h1>
+                <div class="header-meta">
+                    <span class="issue-number">第63期</span>
+                    <span class="divider">|</span>
+                    <span class="date">2026年6月12日</span>
+                    <span class="date-en">Fri, June 12, 2026</span>
+                </div>
+            </div>
+            <p class="site-description">每日精选 AI Agent 领域最前沿资讯</p>
+        </header>
+
+        <main class="main-content">
+            <section class="highlight-section">
+                <h2 class="section-title">今日核心动态</h2>
+                <div class="highlight-card">
+                    <span class="highlight-tag">安全</span>
+                    <div class="highlight-content">
+                        <strong>国家互联网应急中心发出红色预警</strong>：OpenClaw 默认配置存在脆弱性，黑客可通过简单端口扫描接管 AI 代理，引发大规模数据泄露甚至操纵关键基础设施。阿里云、腾讯云、天翼云、京东云等厂商已跟进推出安全部署指南。
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-tag">生态</span>
+                    <div class="highlight-content">
+                        <strong>百虾大战持续升级</strong>：国内已有 30+ 厂商推出 OpenClaw 衍生产品，涵盖腾讯 WorkBuddy/QClaw、字节 ArkClaw、阿里 CoPaw/HiClaw、月之暗面 Kimi Claw、MiniMax MaxClaw、智谱 AutoClaw、科大讯飞 AstronClaw 等，从个人到企业、从本地到云端全覆盖。
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-tag">平台</span>
+                    <div class="highlight-content">
+                        <strong>腾讯云 ADP 发布 OpenClaw 集成最佳实践</strong>：企业微信 2 步秒速接入，支持 Multi-Agent 和工作流模式调用，提供全链路安全认证与可观测体系。该方案已成为企业级 OpenClaw 落地的首选路径之一。
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-tag">社区</span>
+                    <div class="highlight-content">
+                        <strong>OpenClaw Skills 生态突破 5,800+</strong>：社区 Skill 数量持续增长，覆盖自动化、通信、创意、金融、开发等全领域。AI Profit Boardroom 社区已达 3,000+ 成员，聚焦技能变现与商业化。
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-tag">落地</span>
+                    <div class="highlight-content">
+                        <strong>2026 企业级智能体选型指南密集发布</strong>：多家咨询机构对比 OpenClaw 与云厂商企业级方案，核心结论——个人/小团队选 OpenClaw 原版的灵活性与成本优势；中大型企业在生产环境优先选择具备完整合规认证的企业级平台。
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">📌 OpenClaw 官方与核心动态</h2>
+                <div class="article-content">
+                    <h3>安全警报：默认配置脆弱性引发行业关注</h3>
+                    <p>2026年3月，国家互联网应急中心（CNCERT）发出红色预警，指出开源 AI 智能体 OpenClaw 的默认配置存在严重安全隐患。黑客可能通过简单的端口扫描接管 AI 代理，进而窃取用户核心数据，甚至操纵关键基础设施。这一预警在 6 月持续发酵，引发各大云厂商和社区的积极响应。</p>
+                    <p>受影响范围：</p>
+                    <ul>
+                        <li>未修改默认端口的本地部署实例</li>
+                        <li>未配置认证机制的公网暴露服务</li>
+                        <li>使用过时的网关版本（存在已知 CVE）</li>
+                    </ul>
+                    <p><strong>安全加固建议：</strong></p>
+                    <ul>
+                        <li>立即修改默认端口和强密码</li>
+                        <li>启用双向 TLS 认证（mTLS）</li>
+                        <li>配置防火墙规则，限制公网访问</li>
+                        <li>升级到最新版网关（修复已知漏洞）</li>
+                        <li>使用 Cloudflare Tunnel 或 Tailscale 替代公网暴露</li>
+                    </ul>
+                    <p>阿里云、腾讯云、天翼云、京东云等国内主流云厂商已快速跟进，相继推出一键部署服务的安全加固指南，帮助用户在部署时自动完成安全配置。</p>
+
+                    <h3>ClawHub 技能生态持续扩张</h3>
+                    <p>截至 2026 年 6 月，OpenClaw Skills 生态已突破 <strong>5,800+</strong> 社区贡献技能，覆盖以下热门领域：</p>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <tr>
+                                <th>分类</th>
+                                <th>代表技能</th>
+                                <th>应用场景</th>
+                            </tr>
+                            <tr>
+                                <td>自动化</td>
+                                <td>browser-automation, web_scraping</td>
+                                <td>网页操作、数据抓取、表单填写</td>
+                            </tr>
+                            <tr>
+                                <td>通信</td>
+                                <td>email, slack, telegram, discord</td>
+                                <td>消息推送、社群运营、通知集成</td>
+                            </tr>
+                            <tr>
+                                <td>开发</td>
+                                <td>github, docker, kubernetes</td>
+                                <td>代码管理、CI/CD、容器编排</td>
+                            </tr>
+                            <tr>
+                                <td>金融</td>
+                                <td>stock-analysis, trading-strategy</td>
+                                <td>股票分析、量化策略、数据监控</td>
+                            </tr>
+                            <tr>
+                                <td>创意</td>
+                                <td>image-generation, video-creation</td>
+                                <td>内容生成、多媒体创作</td>
+                            </tr>
+                            <tr>
+                                <td>安全</td>
+                                <td>security-audit, key-management</td>
+                                <td>安全审计、密钥管理、漏洞扫描</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>技能安装命令：</p>
+                    <pre><code>npx clawhub search [关键词]     # 搜索技能
+npx clawhub explore            # 浏览推荐技能
+npx clawhub install &lt;skill&gt;    # 安装指定技能</code></pre>
+                    <p>自 2026 年 2 月起，ClawHub 已整合 VirusTotal 自动扫描，但社区仍建议安装前自行审查代码，sandbox 模式测试后再投入生产。</p>
+
+                    <h3>OpenClaw 社区商业化探索</h3>
+                    <p>AI Profit Boardroom（AIPB）社区已发展到 3,000+ 成员，聚焦帮助 OpenClaw 用户将技能转化为商业收益。核心交付包括：</p>
+                    <ul>
+                        <li>OpenClaw Agent Revenue Team Kit（变现工具包）</li>
+                        <li>每日 OpenClaw 教程与案例拆解</li>
+                        <li>Save $36K 自动化工作流栈</li>
+                        <li>月费 $59 永久锁定价格</li>
+                    </ul>
+                    <p>社区创始人指出：大多数 OpenClaw 用户从未从中赚到一美元——问题不在工具本身，而在缺乏"从好玩到变现"的跨越路径。商业社区的价值正在填补这一空白。</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">竞品动态</h2>
+                <div class="article-content">
+                    <h3>腾讯系：WorkBuddy + QClaw 双轨并行</h3>
+                    <p>腾讯在 OpenClaw 生态中布局最为全面，产品线覆盖个人到企业全场景：</p>
+                    <ul>
+                        <li><strong>WorkBuddy</strong>：企业级 AI 原生桌面智能体工作台，零门槛安装，深度整合企业微信/微信/QQ/钉钉，内置 20+ 技能包，适合职场人士和中小企业</li>
+                        <li><strong>QClaw</strong>：腾讯电脑管家出品，微信/QQ 双端远程遥控个人助手，本地桌面端免部署，适合个人用户</li>
+                        <li><strong>腾讯云 ADP</strong>：智能体开发平台，提供 Lighthouse 一键部署 OpenClaw 模板，支持 Multi-Agent 和工作流模式，行业首家支持企业微信 2 步接入</li>
+                        <li><strong>SkillHub + 乐享 MCP</strong>：腾讯技能生态与 MCP 协议市场</li>
+                    </ul>
+                    <p>腾讯云 Lighthouse 锐驰型 2核4G 套餐仅 68 元/月，预装 OpenClaw，开机即用。ADP 的 Lighthouse OpenClaw Connector 插件通过 Token + SignKey 双重认证，实现安全远程调用。</p>
+
+                    <h3>字节跳动：ArkClaw 深耕飞书生态</h3>
+                    <p>ArkClaw（火山引擎）采用纯云端 SaaS 模式，无需本地配置服务器，深度适配飞书办公生态。核心特点：</p>
+                    <ul>
+                        <li>7×24 小时在线托管，无需运维</li>
+                        <li>深度集成飞书文档、表格、日历、审批</li>
+                        <li>内容生产链路自动化：监控话题→抓取数据→写大纲→存飞书</li>
+                        <li>适合 MCN 机构、内容创作者、飞书重度用户</li>
+                        <li>定价：9.9 元/月起（部分版本免费）</li>
+                    </ul>
+                    <p>与 WorkBuddy 的本地优先策略不同，ArkClaw 走的是"云端托管+生态闭环"路线，适合不愿折腾基础设施的团队。</p>
+
+                    <h3>阿里系：CoPaw + 百炼 + 钉钉生态</h3>
+                    <p>阿里在 OpenClaw 生态中坚持"开源+云原生"双路线：</p>
+                    <ul>
+                        <li><strong>CoPaw（悟空）</strong>：2026年3月17日正式发布，开源企业级多 Agent 协同平台。支持三行命令本地部署或阿里云一键上云，通义千问/DeepSeek/Ollama 均可接入。长期记忆、主动任务调度、MCP 协议一应俱全</li>
+                        <li><strong>阿里云百炼</strong>：提供 OpenClaw 一键接入，支持 Qwen、Kimi、GLM、DeepSeek、MiniMax 等模型选择，丰富的 MCP 服务市场</li>
+                        <li><strong>钉钉魔法棒</strong>：自然语言生成业务流程（NL2Workflow），低门槛企业落地</li>
+                    </ul>
+                    <p>阿里生态的优势在于电商运营、政务服务、供应链管理等场景的深度适配，4800 亿参数 MoE 架构兼顾性能与能耗。</p>
+
+                    <h3>月之暗面：Kimi Claw 长上下文优势</h3>
+                    <p>Kimi Claw 采用云端托管模式，基于 Kimi K2.5 模型（1 万亿参数 MoE，激活 320 亿参数），核心优势：</p>
+                    <ul>
+                        <li>40GB 云端 RAG 存储空间</li>
+                        <li>长文档处理能力突出，适合文案、科研场景</li>
+                        <li>5,000+ ClawHub 社区技能支持</li>
+                        <li>Agent Swarm 并行处理，BYOC 混合部署模式</li>
+                    </ul>
+                    <p>定价：129 元/月起，月活约 38 万+。与 MaxClaw 相比，Kimi Claw 更侧重生态系统深度和知识检索，MaxClaw 更强调性能与成本。</p>
+
+                    <h3>MiniMax：MaxClaw 性能标杆</h3>
+                    <p>MaxClaw 基于 MiniMax M2.5 模型（2290 亿参数 MoE，激活 100 亿参数），多项基准测试领先：</p>
+                    <ul>
+                        <li>SWE-Bench Verified：80.2%</li>
+                        <li>Multi-SWE-Bench：51.3%</li>
+                        <li>推理速度：100 TPS</li>
+                        <li>成本：仅为 Claude 3.5 Sonnet 的 1/10~1/20</li>
+                    </ul>
+                    <p>10 秒完成云部署，原生支持 Telegram、WhatsApp、Slack、Discord。MiniMax Expert 社区已上线超 10,000 个垂直领域专家智能体。月活约 28 万+。</p>
+
+                    <h3>其他重要竞品</h3>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <tr>
+                                <th>产品</th>
+                                <th>厂商</th>
+                                <th>定位</th>
+                                <th>特点</th>
+                            </tr>
+                            <tr>
+                                <td>AutoClaw（澳龙）</td>
+                                <td>智谱 AI</td>
+                                <td>本地一键安装</td>
+                                <td>零代码、预置 50+ 技能、浏览器自动化突出</td>
+                            </tr>
+                            <tr>
+                                <td>AstronClaw</td>
+                                <td>科大讯飞</td>
+                                <td>云端一键部署</td>
+                                <td>1分钟部署、131 个官方技能、零运维</td>
+                            </tr>
+                            <tr>
+                                <td>EasyClaw</td>
+                                <td>猎豹移动</td>
+                                <td>零门槛桌面</td>
+                                <td>个人终身免费、出海营销优化</td>
+                            </tr>
+                            <tr>
+                                <td>LobsterAI</td>
+                                <td>网易有道</td>
+                                <td>全中文开源</td>
+                                <td>MIT 协议、办公场景深度优化</td>
+                            </tr>
+                            <tr>
+                                <td>DuClaw</td>
+                                <td>百度</td>
+                                <td>零部署网页版</td>
+                                <td>移动端适配、跨设备灵活</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">🚀 社区趣味应用案例</h2>
+                <div class="article-content">
+                    <h3>案例1：腾讯云 ADP + OpenClaw 智能运维</h3>
+                    <p>通过腾讯云智能体开发平台（ADP）与 Lighthouse OpenClaw 的深度集成，IT 运维团队实现一键式自动化任务执行：</p>
+                    <ul>
+                        <li>场景：自动获取 CVM 根目录列表、监控日志巡检、运维告警推送</li>
+                        <li>配置：ADP Multi-Agent 模式 + InvokeOpenClaw 工具 + RemoteBotId 绑定</li>
+                        <li>效果：告警响应时间从 30 分钟缩短至 2 分钟</li>
+                    </ul>
+                    <p>部署步骤：购买预装 OpenClaw 的 Lighthouse 实例 → ADP 插件广场配置 RemoteBot → 编写 System Prompt 引导调用工具 → 调试发布。</p>
+
+                    <h3>案例2：Context Studios "Timmy" 24/7 内容工厂</h3>
+                    <p>Context Studios 部署的 OpenClaw Agent "Timmy" 运行在 Mac Mini 上，24/7 不间断工作：</p>
+                    <ul>
+                        <li>Claude Opus 4 负责交互会话，Claude Sonnet 处理 cron 任务</li>
+                        <li>集成 134 个 MCP 工具</li>
+                        <li>每日流程：研究话题 → 英文撰写 → 翻译三语 → SEO 关键词生成 → 发布 CMS → 验证 URL → 社媒分发</li>
+                        <li>一个 Agent 替代了原本需要多人编辑团队的产出</li>
+                    </ul>
+
+                    <h3>案例3：邮件发票自动归档</h3>
+                    <p>社区 Skill "invoice-mail-sync" 实现了：</p>
+                    <ul>
+                        <li>实时监听 126/163/Gmail 新邮件</li>
+                        <li>识别发票附件或下载链接</li>
+                        <li>按月归档，去重（发票号码+金额）</li>
+                        <li>生成月度报表和高价值发票摘要</li>
+                    </ul>
+                    <p>适合财务人员和自由职业者，告别手动翻找发票的繁琐。</p>
+
+                    <h3>案例4：X（Twitter）自动运营 Agent</h3>
+                    <p>通过 twitter-cli 技能，OpenClaw 自动：</p>
+                    <ul>
+                        <li>监控 Sam Altman 等大佬推文，提取要点并生成观点</li>
+                        <li>搜索热门话题，自动跟进评论</li>
+                        <li>定时发布预设内容</li>
+                    </ul>
+                    <p>全程无需人工干预，适合个人 IP 运营和营销团队。</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">📚 精选 Skill 学习指南</h2>
+                <div class="article-content">
+                    <h3>本周推荐：安全加固 + 企业集成 Skills</h3>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <tr>
+                                <th>技能名称</th>
+                                <th>类型</th>
+                                <th>适用场景</th>
+                                <th>难度</th>
+                            </tr>
+                            <tr>
+                                <td>security-audit</td>
+                                <td>安全</td>
+                                <td>扫描 OpenClaw 配置漏洞，加固安全基线</td>
+                                <td>⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <td>key-management</td>
+                                <td>安全</td>
+                                <td>安全存储 API Key、私钥、钱包凭证</td>
+                                <td>⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <td>adp-openclaw</td>
+                                <td>集成</td>
+                                <td>腾讯云 ADP 与 OpenClaw 双向绑定</td>
+                                <td>⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <td>invoice-mail-sync</td>
+                                <td>办公</td>
+                                <td>邮件发票自动归档与月度报表</td>
+                                <td>⭐</td>
+                            </tr>
+                            <tr>
+                                <td>rss-knowledge-base</td>
+                                <td>信息</td>
+                                <td>订阅 RSS 源，自动构建知识库</td>
+                                <td>⭐</td>
+                            </tr>
+                            <tr>
+                                <td>manus-stock-analysis</td>
+                                <td>金融</td>
+                                <td>股票走势分析与技术面建议</td>
+                                <td>⭐⭐</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <h3>安全加固学习路径</h3>
+                    <p><strong>第1步：审计现有配置（1小时）</strong></p>
+                    <ul>
+                        <li>安装 security-audit 技能</li>
+                        <li>运行全面扫描，检查默认端口、弱密码、未授权访问</li>
+                        <li>输出加固清单</li>
+                    </ul>
+                    <p><strong>第2步：配置安全通道（2小时）</strong></p>
+                    <ul>
+                        <li>启用 mTLS 双向认证</li>
+                        <li>配置 Cloudflare Tunnel 或 Tailscale</li>
+                        <li>设置防火墙白名单</li>
+                    </ul>
+                    <p><strong>第3步：密钥管理（持续）</strong></p>
+                    <ul>
+                        <li>使用 key-management 技能集中管理 API Key</li>
+                        <li>定期轮换密钥</li>
+                        <li>开启执行日志审计</li>
+                    </ul>
+
+                    <h3>ClawHub 新技能推荐</h3>
+                    <p>近期社区热门上架技能：</p>
+                    <ul>
+                        <li><strong>brain v1.1.5</strong>：让 AI Agent 拥有类大脑神经网络架构，更省钱、更稳定、更像长期搭档</li>
+                        <li><strong>Munin</strong>：免费（或 $1.6/月）的持久化记忆方案，解决 Agent "阿尔茨海默"问题</li>
+                        <li><strong>lobster-community</strong>：AI Agent 专属私密交流平台，支持对话 thread、评论通知</li>
+                        <li><strong>deepclaw</strong>：加入 DeepClaw 自主 AI Agent 社交网络，与其他 Agent 互动</li>
+                        <li><strong>compact-state</strong>：共享自治 Agent 网络，链上身份、持久记忆、集体治理</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">企业落地案例</h2>
+                <div class="article-content">
+                    <h3>案例1：郑州电商企业智能客服</h3>
+                    <p>日均订单量 5,000+ 的服装电商企业，原客服团队 15 人。基于腾讯云智能体开发平台（ADP）构建智能客服 Agent：</p>
+                    <ul>
+                        <li>客服响应时间：5 分钟 → 30 秒</li>
+                        <li>人工客服：15 人 → 8 人（其余转岗营销）</li>
+                        <li>客户满意度：85% → 95%</li>
+                        <li>集成系统：订单管理、物流查询、退换货流程</li>
+                    </ul>
+
+                    <h3>案例2：OpenClaw vs 腾讯云 ADP 选型对比</h3>
+                    <p>近期行业分析指出，OpenClaw 与腾讯云 ADP 代表两种不同技术路径：</p>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <tr>
+                                <th>维度</th>
+                                <th>OpenClaw（原版）</th>
+                                <th>腾讯云 ADP</th>
+                            </tr>
+                            <tr>
+                                <td>部署形态</td>
+                                <td>本地自托管</td>
+                                <td>云端托管 + 本地混合</td>
+                            </tr>
+                            <tr>
+                                <td>数据主权</td>
+                                <td>完全可控</td>
+                                <td>企业级数据治理</td>
+                            </tr>
+                            <tr>
+                                <td>安全合规</td>
+                                <td>依赖用户自行配置</td>
+                                <td>零信任架构 + 等保认证</td>
+                            </tr>
+                            <tr>
+                                <td>SLA 保障</td>
+                                <td>无</td>
+                                <td>7×24 专业运维</td>
+                            </tr>
+                            <tr>
+                                <td>成本</td>
+                                <td>低（仅需服务器/API）</td>
+                                <td>中等（平台服务费）</td>
+                            </tr>
+                            <tr>
+                                <td>适用场景</td>
+                                <td>个人/小团队/实验项目</td>
+                                <td>中大型生产环境</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p><strong>选型建议：</strong>实验阶段用 OpenClaw 验证概念；生产部署时，涉及合规要求的金融、医疗、政务行业优先选择企业级平台。</p>
+
+                    <h3>案例3：企业微信 2 步接入 OpenClaw</h3>
+                    <p>腾讯云 ADP 行业首家实现企业微信 2 步秒速接入 OpenClaw：</p>
+                    <ol>
+                        <li>ADP 插件广场添加 Lighthouse OpenClaw Connector → 生成 ClientToken + SignKey</li>
+                        <li>OpenClaw 管理后台选择 Tencent Cloud ADP 通道 → 输入凭证 → 完成</li>
+                    </ol>
+                    <p>支持的应用场景：教育机构试题自动录入、IT 运维监控告警推送、制造业维修手册智能问答。</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">延伸阅读</h2>
+                <ul class="link-list">
+                    <li><a href="https://www.huxiu.com/article/4843335.html">开源AI智能体OpenClaw快速普及，安全风险引发行业关注</a> — 虎嗅</li>
+                    <li><a href="https://cloud.tencent.com/developer/article/2680407">腾讯云 ADP 与 OpenClaw 集成最佳实践</a> — 腾讯云开发者社区</li>
+                    <li><a href="https://adp.tencentcloud.com/zh/blog/openclaw-vs-tencent-cloud-adp-security-compliance-comparison">OpenClaw vs 腾讯云 ADP 安全合规对比</a> — 腾讯云</li>
+                    <li><a href="https://www.cnblogs.com/bsoo/p/20245637">2026企业级智能体选型必看：解决OpenClaw权限混乱的国产厂商推荐</a></li>
+                    <li><a href="https://cloud.tencent.com/developer/article/2654425">2026国产OpenClaw生态全景指南：主流工具全面盘点</a> — 腾讯云</li>
+                    <li><a href="https://www.shoushai.com/p/1922">国内主流OpenClaw发行版本全解析</a></li>
+                    <li><a href="https://github.com/datawhalechina/hello-claw">Hello Claw 开源教程：附录C 百虾大战</a> — DataWhale</li>
+                    <li><a href="https://openclawai.io/skills">OpenClaw Skills Directory — 5,800+ Skills</a></li>
+                    <li><a href="https://www.101howto.com/openclaw-ai-automation-setup-2026/">OpenClaw AI Automation Setup Guide 2026</a></li>
+                    <li><a href="https://aimoneylabjuliangoldie.com/blog/openclaw-community/">OpenClaw Community To Make Money With AI</a></li>
+                    <li><a href="https://skywork.ai/skypage/en/openclaw-ai-agent-skills/2064636859516911616">What Are OpenClaw AI Agent Skills? A Complete 2026 Guide</a></li>
+                    <li><a href="https://www.cnblogs.com/txycsig/p/19605076">云上OpenClaw快速接入腾讯云ADP指南</a></li>
+                    <li><a href="https://cloud.tencent.com/developer/article/2640128">腾讯云ADP与OpenClaw结合应用概要</a></li>
+                    <li><a href="https://www.cloudhubglobal.com/10175.html">腾讯云代理商：利用ADP实现接入OpenClaw</a></li>
+                    <li><a href="https://lucy.suiyan.cc/blog/2026-05-17-ai-agent-enterprise-2026/">2026 AI Agent 落地元年：从概念到生产系统</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>OpenClaw Daily Report - 每日AI智能体行业资讯</p>
+            <p>Generated by Kimi Claw | 第63期</p>
+        </footer>
+    </div>
+</body>
+</html>
