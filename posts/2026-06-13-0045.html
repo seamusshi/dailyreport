@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年6月13日</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年6月13日 星期六</p>
+            <p class="tagline">第64期 | 本报告由AI Agent自动搜集生成</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📋 今日概览</h2>
+                <ul class="highlights">
+                    <li>阿里云、腾讯云、火山引擎、百度云、京东云五大厂商全面支持OpenClaw一键部署，云端生态进入白热化竞争阶段</li>
+                    <li>ClawHub Skills生态持续扩张，中文官方库已整理80+技能，覆盖开发、效率、创作、协作等全场景</li>
+                    <li>2026年被确认为AI Agent企业落地爆发元年，Gartner预测2028年15%日常工作由智能体自主完成</li>
+                    <li>企业级智能体平台形成四大流派：无界务实派（实在智能）、生态派（阿里/腾讯/华为）、模型派（DeepSeek/智谱）、业务派（明略科技）</li>
+                    <li>OpenClaw+BibiGPT Skill组合成为视频研究Agent链路的标杆实践，被社区广泛复用</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🔧 OpenClaw 官方动态</h2>
+                <div class="news-item">
+                    <h3>GitHub生态持续领跑，24.2万+ Stars稳居开源Agent框架头部</h3>
+                    <p>OpenClaw（前身为Clawdbot/Moltbot）在GitHub上保持强劲增长势头，截至2026年6月已积累超过24.2万星标，成为全球最受关注的开源AI Agent项目之一。项目由Peter Steinberger创立，核心理念是"The AI that actually does things"——让AI真正执行任务而非仅停留在对话层面。</p>
+                    <p>核心架构保持稳定：Gateway（网关）负责消息路由与多平台兼容；Agent（智能体层）维护会话上下文与任务执行；Skills（技能层）提供模块化扩展能力；Memory（记忆系统）保证长期上下文连贯性。这一架构已被多家云厂商和开发者社区广泛认可。</p>
+                </div>
+                <div class="news-item">
+                    <h3>50+平台集成、100+预配置Skills，生态覆盖全面扩展</h3>
+                    <p>据DigitalOcean 2026年1月报道，OpenClaw已支持50+集成，覆盖聊天提供商（Telegram、WhatsApp、Discord、飞书、钉钉、QQ）、AI模型、生产力工具、音乐音频平台、智能家居设备、自动化工具等。用户可通过单一对话界面管理Apple Notes、Notion、Obsidian、Trello、GitHub、Twitter/X、Gmail、Spotify、Sonos、Philips Hue等工具。</p>
+                    <p>社区贡献方面，OpenClaw提供100+预配置的AgentSkills包，用户可通过ClawHub（https://clawhub.ai）搜索、安装和管理技能。ClawHub同时提供CLI工具（npm install -g clawhub），支持命令行搜索和安装。</p>
+                </div>
+                <div class="news-item">
+                    <h3>Packt Publishing推出官方OpenClaw GitHub实战教程</h3>
+                    <p>知名技术出版商Packt Publishing于2026年4月26日推出了4小时Live Coding Workshop，教授开发者从GitHub源码克隆到生产部署的完整流程。课程覆盖：OpenClaw Gateway架构理解、Docker Model Runner本地LLM运行、安全与隐私配置、WhatsApp/Telegram集成、可扩展架构设计、VPS生产部署等六大模块。由Docker Captain Rami Krispin主讲，完课颁发证书。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <div class="news-item">
+                    <h3>OpenClaw + BibiGPT Skill：视频研究Agent链路的标杆实践</h3>
+                    <p>BibiGPT于2026年3月15日发布深度集成指南，展示了OpenClaw → Claude Code → BibiGPT Skill的完整Agent链：</p>
+                    <pre><code>OpenClaw (planning/scheduling)
+  → spawn Claude Code (execution)
+    → bibigpt-skill (video intelligence)
+      → structured research output</code></pre>
+                    <p>该链路支持30+视频平台（Bilibili、YouTube、小红书等），可自动提取字幕、生成结构化摘要、输出JSON格式（标题、核心论点3-5条、关键数据、行动项）。社区已将其用于竞品视频分析、学术会议跟踪、内容创作素材提取等场景。</p>
+                </div>
+                <div class="news-item">
+                    <h3>ClawHub 10大热门技能全景图（2026年6月版）</h3>
+                    <p>根据阿里云开发者社区和51CTO社区整理，当前ClawHub最热门的10大技能及其场景：</p>
+                    <ul>
+                        <li><strong>github</strong>：开发者工作流自动化，支持查看仓库、创建/评论PR、处理Issue，节省80%仓库管理时间</li>
+                        <li><strong>summarize</strong>：全场景摘要神器，支持PDF、网页、音频、YouTube视频，1分钟完成人工1小时的阅读整理</li>
+                        <li><strong>fal-ai</strong>：多模态生成利器，通过fal.ai API生成图像、视频、音频</li>
+                        <li><strong>tube-summary</strong>：YouTube视频高效提炼，自动抓取字幕生成结构化摘要</li>
+                        <li><strong>smart-ocr</strong>：图像文字精准提取，支持表格、公式、多语言识别</li>
+                        <li><strong>file-manager</strong>：本地文件智能管理，支持批量操作与格式转换</li>
+                        <li><strong>msg-pusher</strong>：多渠道消息推送，支持Telegram、邮件、钉钉</li>
+                        <li><strong>ppt</strong>：一键生成乔布斯风极简科技感竖屏HTML演示稿</li>
+                        <li><strong>voice-reply</strong>：本地离线文字转语音，100%无需API密钥</li>
+                        <li><strong>server-health</strong>：服务器健康监控，显示系统状态与热门进程</li>
+                    </ul>
+                </div>
+                <div class="news-item">
+                    <h3>中文官方技能库更新：80+技能覆盖8大类别</h3>
+                    <p>GitHub上的awesome-openclaw-skills-zh仓库持续同步官方ClawHub，按类别整理如下：</p>
+                    <ul>
+                        <li><strong>开发工具</strong>：Git Essentials、Docker Essentials、Playwright Scraper、Tmux、Tavily Search、GitHub API集成、Diagram Generator、Code工作流</li>
+                        <li><strong>效率提升</strong>：Calendar、PPT生成、Todoist、文件管理、Typeform、ClickUp</li>
+                        <li><strong>通讯协作</strong>：Discord Chat、Telegram CLI、企业微信Bot、ClawMeMaybe（Beeper多平台）、WhatsApp Styler</li>
+                        <li><strong>多媒体创作</strong>：fal-ai图像视频生成、BibiGPT视频摘要、Voice Reply本地TTS</li>
+                        <li><strong>数据与搜索</strong>：Qmd本地搜索、Exa代码文档搜索、Tavily Web Search</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🌐 竞品动态</h2>
+                
+                <div class="competitor">
+                    <h3>腾讯 WorkBuddy</h3>
+                    <p>腾讯在企业智能体领域持续加码。2026年3月，腾讯云正式推出云应用快速部署OpenClaw方案，仅需3步即可启用个人OpenClaw实例，内置DeepSeek模型服务。同时，腾讯云ADP（Agent Development Platform）集成LLM、RAG、Workflow和Multi-Agent协作框架，提供从数据到模型训练到应用部署的完整开发生命周期工具。腾讯云1Panel已上架OpenClaw应用，支持QQ机器人快速接入。在AI客服领域，合力亿捷、亿捷云等厂商通过LLM与多模态技术推动客服从"问答响应"向"任务执行"演进。</p>
+                </div>
+                
+                <div class="competitor">
+                    <h3>字节跳动 ArkClaw / 扣子Coze</h3>
+                    <p>字节跳动旗下扣子Coze作为智能体开发平台代表，以零代码开发和丰富的插件生态著称，支持一键多渠道发布。2026年持续聚焦企业级SaaS深化，云养虾模式（云端Agent托管）获得市场认可。但在批量运维能力上仍存在短板，中小企业选型首选地位稳固。字节同时通过混元Hy3 preview模型接入全系产品，强化底层模型能力。</p>
+                </div>
+                
+                <div class="competitor">
+                    <h3>阿里 CoPaw / 阿里云百炼</h3>
+                    <p>阿里云百炼（Model Studio）定位为一站式大模型应用开发平台，集成通义系列大模型及众多第三方开源模型，通过"模型即服务"理念帮助企业快速构建AI智能体与工作流。2026年1月，阿里云百炼Coding Plan正式支持OpenClaw/Moltbot/Clawdbot接入，可抵扣Qwen3-Max-Thinking万亿参数思考大模型，新客首月每天仅需0.3元。阿里云同时推出JVSClaw零代码部署方案，轻量服务器9.9元/月起，百炼Token Plan已上线。钉钉AgentOS定位智能体操作系统，支持多智能体协同与统一纳管，深度适配钉钉生态。</p>
+                </div>
+                
+                <div class="competitor">
+                    <h3>猎豹移动 EasyClaw</h3>
+                    <p>猎豹移动傅盛通过14天零代码实践养出8个Agent的实战案例在2026年持续发酵，成为AI Agent平民化的标杆故事。EasyClaw核心壁垒在于极致的易用性，但在深度定制能力上存在争议。2026年AI业务已实现扭亏为盈，占比接近半数。企业版出海方案持续扩展，海外市场成为新增长极。</p>
+                </div>
+                
+                <div class="competitor">
+                    <h3>月之暗面 Kimi Claw / Kimi K2</h3>
+                    <p>月之暗面Kimi系列持续迭代，K2.6 Agent集群升级，K2开源版本发布后在社区获得高度关注。公司估值已达180亿美元，在AI Agent领域与OpenClaw形成差异化竞争——Kimi更侧重模型能力本身，而OpenClaw聚焦Agent执行框架。Kimi Claw在企业级场景的应用持续扩展。</p>
+                </div>
+                
+                <div class="competitor">
+                    <h3>Hermes Agent</h3>
+                    <p>Hermes Agent在2026年异军突起，GitHub Stars已突破10万+，登顶可靠性之王。其GEPA（Generative Evolving Planning Agent）自进化机制实现Agent自主规划、执行、验证、学习的闭环。v0.10.0版本引入自学习闭环，v0.8.0强化Multi-Agent协同能力。在六款类Claw智能体安全评测中表现优异，腾讯元宝已接入Hermes Agent。企业安全方面曾因过度权限引发争议，但快速修复后信誉恢复。</p>
+                </div>
+                
+                <div class="competitor">
+                    <h3>其他重要竞品</h3>
+                    <ul>
+                        <li><strong>MiniMax MaxClaw</strong>：M2.7版本更新，全球化加速，全平台覆盖，Go版本发布，成本优势持续凸显</li>
+                        <li><strong>蓝凌LanBots.AI</strong>：融合智能体开发与中台能力，多模型兼容，深度集成OA、BPM、KMS，服务招商局集团、OPPO、中国交建等</li>
+                        <li><strong>Dify</strong>：开源LLM应用开发平台，支持低代码与API双模式，云托管与私有化部署，技术驱动型企业首选</li>
+                        <li><strong>商汤Agent</strong>：技术迭代领先，全场景适配，推荐指数99.0（满分100），覆盖个人到大型政企</li>
+                        <li><strong>实在智能</strong>：ISSUT屏幕语义理解+RPA+TARS大模型，不依赖API适配信创，制造业/金融/能源落地案例丰富</li>
+                        <li><strong>华为盘古</strong>：工业/政企垂直智能体，聚焦工业互联网、智慧城市、智能制造，强调国产化与边缘部署</li>
+                        <li><strong>NVIDIA NemoClaw</strong>：企业级入场，切入大型制造、零售、电商、物流全链路场景</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                <div class="news-item">
+                    <h3>真实用户的OpenClaw生活自动化</h3>
+                    <p>据DigitalOcean社区和OpenClaw官方社区汇总，早期用户已将OpenClaw融入日常生活各个场景：</p>
+                    <ul>
+                        <li><strong>Mike Manzano</strong>：设置OpenClaw在他睡觉时运行编码Agent，实现"睡眠编程"</li>
+                        <li><strong>AJ Stuyvenberg</strong>：使用OpenClaw协商下一辆车的购买，AI自动比价、谈判</li>
+                        <li><strong>André Foeken</strong>：用OpenClaw协调超市订单，自动比对价格、生成购物清单</li>
+                        <li><strong>Steve Caldwell</strong>：构建每周餐饮规划系统，自动同步到Notion，每周为家庭节省1小时</li>
+                        <li><strong>Anita Kirkovska</strong>：构建理想的AI助理实体，高度定制化的个人Agent</li>
+                        <li><strong>Andy Griffiths</strong>：在喝咖啡的间隙用OpenClaw构建了一个功能完整的Laravel应用</li>
+                    </ul>
+                </div>
+                <div class="news-item">
+                    <h3>AI Profit Boardroom：3000+成员的OpenClaw变现社区</h3>
+                    <p>2026年5月，AI Profit Boardroom社区宣称自己是"最佳OpenClaw社区"，拥有3000+成员，提供OpenClaw Agent Revenue Team Kit、价值$36K的自动化Stack、每日教程，月费$59永久锁定。社区强调"大多数OpenClaw用户从未用它赚过一美元"的痛点，通过revenue-tested playbook、peer group和direct access三位一体的模式帮助用户跨越"很酷"到"能赚钱"的鸿沟。</p>
+                </div>
+                <div class="news-item">
+                    <h3>养虾OpenClaw保姆级教程走红51CTO</h3>
+                    <p>2026年3月，51CTO AI.x社区发布《养虾OpenClaw的保姆级教程》，以生动幽默的方式从"下苗到收获"比喻OpenClaw的部署全过程，成为中文社区的现象级教程。文章详细介绍了OpenClaw的三大核心组件（Gateway、Agent、Skills），以及ClawHub的使用方法，帮助大量零基础用户完成首次部署。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <div class="news-item">
+                    <h3>新手必读：阿里云开发者社区10大热门技能实战指南</h3>
+                    <p>阿里云开发者社区于2026年2月发布的《ClawHub 10大热门技能实战》仍是当前最系统的中文入门教程，每个技能包含：安装命令、核心能力说明、安全评级、实战用法、进阶配置。核心要点：</p>
+                    <ul>
+                        <li>所有技能通过 <code>clawhub install &lt;skill-name&gt;</code> 一键安装</li>
+                        <li>安全评级分为Benign（高可信度）、Suspicious（中等风险）两级，安装前必读</li>
+                        <li>配置通过 <code>openclaw config set</code> 命令完成，重启后生效</li>
+                        <li>敏感技能（如file-manager、tube-summary）建议限制访问权限</li>
+                    </ul>
+                </div>
+                <div class="news-item">
+                    <h3>Skills开发最佳实践（2026年更新）</h3>
+                    <p>据Mastering OpenClaw Skill教程（2026年3月）总结：</p>
+                    <ul>
+                        <li><strong>机器学习集成</strong>：更多技能开始嵌入预测能力与个性化推荐</li>
+                        <li><strong>团队协作增强</strong>：支持共享Workflow的技能成为刚需</li>
+                        <li><strong>IoT设备集成</strong>：OpenClaw正拥抱更多物联网集成，实现跨设备自动化</li>
+                        <li><strong>隐私优先设计</strong>：随着AI深度融入日常任务，隐私保护技能创新成为焦点</li>
+                        <li><strong>跨平台互操作性</strong>：能无缝工作在不同平台的技能将获得更大 traction</li>
+                    </ul>
+                </div>
+                <div class="news-item">
+                    <h3>Skills vs MCP：一句话区分</h3>
+                    <p>据51CTO 2026年4月文章《一文讲清楚九大热门AI概念》：MCP更像"接口/协议"，解决"工具与数据怎么接进来"；Skills更像"SOP（标准作业流程）"，解决"接进来之后怎么做得更稳、更可复用"。每个Skill是一个目录，核心文件是带YAML frontmatter的SKILL.md，包含说明、指令、示例。官方信任边界写得明确：第三方skills应视为不可信代码，启用前阅读，必要时在sandbox中运行。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏢 企业落地案例</h2>
+                <div class="news-item">
+                    <h3>2026年企业AI Agent落地10大路径全景</h3>
+                    <p>据IDC《FutureScape：全球Agentic AI 2026年预测》和多家行业分析，建立了成熟AI或智能体卓越中心（CoE）的企业，创新、速度和服务质量比竞争对手高出20%。当前企业智能体落地已形成清晰路径：</p>
+                    <ul>
+                        <li><strong>路径1：大模型厂商原生Agent服务</strong>——OpenAI Assistants API、阿里通义千问Agent、字节豆包Agent，零门槛快速验证</li>
+                        <li><strong>路径2：智能体开发平台</strong>——蓝凌LanBots.AI、金蝶苍穹、用友BIP，低代码/零代码可视化编排</li>
+                        <li><strong>路径3：RPA+大模型融合</strong>——实在智能、金智维Ki-AgentS、UiPath，实现"智能规划+自动化执行"闭环</li>
+                        <li><strong>路径4：垂直行业套件</strong>——金融（金智维）、制造（实在智能）、医疗，内置行业知识库与合规规则</li>
+                        <li><strong>路径5：低代码平台+大模型插件</strong>——已有低代码生态的企业大量选用</li>
+                    </ul>
+                </div>
+                <div class="news-item">
+                    <h3>四大流派企业落地能力对比</h3>
+                    <p>2026年5月行业分析将主流企业智能体分为四大流派：</p>
+                    <ul>
+                        <li><strong>无界务实派</strong>（实在智能）：ISSUT屏幕语义理解+RPA+TARS大模型，不依赖API、适配信创，裕同包装节省成本超208万元，中国华电替换66%初审工作量</li>
+                        <li><strong>生态派</strong>（阿里/华为/百度/腾讯）：云生态+API生态深度集成，开箱即用，与自有产品家族紧密协同</li>
+                        <li><strong>模型派</strong>（DeepSeek/智谱/百川）：大模型推理能力驱动，语言理解与任务拆解能力突出，适合非结构化信息处理</li>
+                        <li><strong>业务派</strong>（明略科技DeepMiner）：聚焦商业决策，服务135家财富500强，双模型驱动+多智能体协作</li>
+                    </ul>
+                </div>
+                <div class="news-item">
+                    <h3>云厂商部署方案三足鼎立</h3>
+                    <p>阿里云、腾讯云、火山引擎的OpenClaw部署方案各有侧重：</p>
+                    <ul>
+                        <li><strong>腾讯云</strong>：流程最简化，一键部署自动配置环境和防火墙，中文化控制面板，对微信/QQ支持最佳</li>
+                        <li><strong>阿里云</strong>：步骤最清晰但生态绑定深，官方文档和视频教程最详细，与钉钉、百炼深度整合，适合已有阿里云生态的企业</li>
+                        <li><strong>火山引擎</strong>：依赖命令行但脚本辅助完善，"火山方舟Coding Plan"成本优化突出，与飞书集成方案成熟</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📎 延伸阅读链接</h2>
+                <ul class="links">
+                    <li><a href="https://github.com/clawdbot-ai/awesome-openclaw-skills-zh" target="_blank">Awesome OpenClaw Skills 中文官方库</a></li>
+                    <li><a href="https://clawhub.ai" target="_blank">ClawHub 官方技能市场</a></li>
+                    <li><a href="https://developer.aliyun.com/article/1713205" target="_blank">阿里云：ClawHub 10大热门技能实战指南</a></li>
+                    <li><a href="https://cloud.tencent.com/document/product/1689/127969" target="_blank">腾讯云：通过云应用快速部署OpenClaw</a></li>
+                    <li><a href="https://www.cnblogs.com/bokewan/p/19652533" target="_blank">2026智能体企业落地：10大路径解析与产品选型</a></li>
+                    <li><a href="https://www.ithome.com/0/942/630.htm" target="_blank">IT之家：2026年4月企业级智能体平台推荐</a></li>
+                    <li><a href="https://bibigpt.co/en/blog/posts/openclaw-bibigpt-skill-ai-agent-video-2026-en" target="_blank">OpenClaw + BibiGPT Skill 视频研究Agent链</a></li>
+                    <li><a href="https://www.digitalocean.com/resources/articles/what-is-openclaw" target="_blank">DigitalOcean：What is OpenClaw? (2026)</a></li>
+                    <li><a href="https://www.51cto.com/article/840314.html" target="_blank">51CTO：九大热门AI概念一文讲清楚</a></li>
+                    <li><a href="https://www.cnblogs.com/hubaagent/articles/20016122" target="_blank">2026年企业级智能体选型：四大流派对比</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>OpenClaw Daily Report - 每日AI智能体行业资讯</p>
+            <p>Generated by Kimi Claw | 2026-06-13</p>
+            <p>数据搜集时间：2026-06-13 00:45 (Asia/Shanghai)</p>
+        </footer>
+    </div>
+</body>
+</html>
