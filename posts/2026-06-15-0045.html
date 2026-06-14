@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年6月15日（第66期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年6月15日 · 第66期</p>
+            <p class="tagline">AI Agent 行业每日情报</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📰 今日概览</h2>
+                <ul class="highlight-list">
+                    <li><strong>Claude Code 4.7 Opus</strong> 以 SWE-bench Verified 87.6% 刷新编码 Agent 基准纪录，Anthropic 持续领跑 autonomous coding</li>
+                    <li><strong>Devin 大幅降价</strong>：从 $500/mo 降至 $20/mo + $2.25/ACU，AI 软件工程师进入大众化定价时代</li>
+                    <li><strong>OpenClaw 安全升级</strong>：VirusTotal 合作 + WASM 沙箱化，ClawHub 验证技能库重建至 5,700+</li>
+                    <li><strong>OpenHands v1.7.0</strong> 发布：KVM 加速沙箱 + 72.8% SWE-bench，开源 Agent 能力逼近商业产品</li>
+                    <li><strong>企业 Agent 落地爆发</strong>：Gartner 预测 2026 年底 40% 企业应用将内置任务型 AI Agent</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🦞 OpenClaw 官方动态</h2>
+                <div class="content">
+                    <h3>核心版本与架构演进</h3>
+                    <p>截至 2026 年 6 月，OpenClaw 最新稳定版本为 <strong>v3.3.2</strong>（2026-03-14 发布），GitHub Stars 已突破 <strong>25 万</strong>，成为开源 AI Agent 框架中增长最快的项目之一。项目支持 Claude 4.6/4.7、OpenAI GPT-5.5、智谱 GLM-4、DeepSeek V3.2 等主流模型，并通过 ACP（Agent Control Protocol）框架实现 subagent 隔离执行。</p>
+
+                    <h3>🔒 安全架构升级</h3>
+                    <p>2026 年初的 <strong>ClawHavoc 安全事件</strong>（341 个恶意技能通过 typosquatting 传播）促使 OpenClaw 团队进行深度架构重构：</p>
+                    <ul>
+                        <li><strong>VirusTotal 合作</strong>：2026-02-07 上线强制代码扫描与 Code Insight 分析，恶意技能清除率 100%</li>
+                        <li><strong>WASM 沙箱化</strong>：2026 年 Q2 开始将 Agent 代码编译为 WebAssembly 字节码，禁止系统调用，防御率提升至 99.9%</li>
+                        <li><strong>验证技能库</strong>：从 3,286 个重建至 <strong>5,700+</strong>，社区技能日增 40-60 个</li>
+                    </ul>
+                    <p>微软安全建议（2026-02-19）仍强调：不要在主要工作机上运行 OpenClaw，推荐 Mac Mini 或 VPS 隔离部署。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <div class="content">
+                    <h3>ClawHub 技能生态</h3>
+                    <p>ClawHub 已成长为 <strong>"AI Agent 的 npm"</strong>，截至 2026 年 2 月收录 5,705+ 技能，按类别分布如下：</p>
+                    <table class="data-table">
+                        <tr><th>类别</th><th>数量</th><th>热门技能</th></tr>
+                        <tr><td>Productivity</td><td>1,200+</td><td>Gmail manager, Calendar sync, Notion</td></tr>
+                        <tr><td>Developer</td><td>1,400+</td><td>GitHub PR review, CI/CD monitor, Database</td></tr>
+                        <tr><td>Smart Home</td><td>600+</td><td>Home Assistant, Philips Hue, Tuya</td></tr>
+                        <tr><td>AI Models</td><td>800+</td><td>DALL-E, Whisper, Flux, TTS</td></tr>
+                        <tr><td>Social</td><td>500+</td><td>Telegram, WhatsApp, Slack, Discord</td></tr>
+                        <tr><td>Media</td><td>700+</td><td>Video summary, Podcast transcription</td></tr>
+                    </table>
+
+                    <h3>Top 5 必备技能（2026 评分）</h3>
+                    <ul>
+                        <li>Google Calendar MCP — 4.80/5 ⭐</li>
+                        <li>GitHub MCP — 4.70/5 ⭐</li>
+                        <li>Telegram Bridge — 4.60/5 ⭐</li>
+                        <li>Obsidian MCP — 4.50/5 ⭐</li>
+                        <li>Web Search (Tavily) — 4.40/5 ⭐</li>
+                    </ul>
+
+                    <h3>社区创新技能</h3>
+                    <ul>
+                        <li><strong>self-improving-agent</strong>：动态追踪交互，记录用户偏好，实现跨会话记忆一致性</li>
+                        <li><strong>notebook-to-docx</strong>：Jupyter 转 Word 自动化，保留代码块与图表</li>
+                        <li><strong>gog</strong>：Google Workspace CLI 一站式管理</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>⚔️ 竞品动态</h2>
+                <div class="content">
+                    <h3>Anthropic Claude Code</h3>
+                    <p><strong>Claude Opus 4.7</strong> 在 SWE-bench Verified 上取得 <strong>87.6%</strong> 的纪录，成为当前编码 Agent 的基准之王。Claude Code 同时推出 Remote 背景代理模式，支持异步任务执行，定价维持在 $20/mo。Anthropic 的 computer-use 能力持续扩展，支持浏览器、终端、文件系统操作。</p>
+
+                    <h3>OpenAI Codex CLI</h3>
+                    <p>2026 年 4 月发布新版 Codex CLI，cloud + 本地混合执行模式，支持 <strong>GPT-5-Codex</strong> 模型。SWE-bench Verified 约 77-80%，但在 <strong>Terminal-Bench 2.0 以 77.3% 领先</strong>。约 240 tps 的推理速度是其核心优势，适合高吞吐量场景。</p>
+
+                    <h3>Devin (Cognition AI)</h3>
+                    <p>2026 年 4 月重大价格调整：从 <strong>$500/mo 降至 $20/mo + $2.25/ACU</strong>（1 ACU ≈ 15 分钟），典型 bug 修复 $4.50-6.75，大型迁移可达 $67.50+。Devin 仍是 <strong>自主性最高</strong> 的背景 Agent——自带 VM、IDE、浏览器、终端。2026 年已迭代至第三代架构，任务完成率从 13.86% 提升至 40%+。</p>
+
+                    <h3>OpenHands (开源)</h3>
+                    <p>v1.7.0（2026 年 5 月）发布，引入 <strong>KVM 加速沙箱</strong>，SWE-bench Verified 达 <strong>72.8%</strong>。2026 年 1 月推出 OpenHands Index，对前沿模型进行五维度工程评分。获得 <strong>$18.8M A 轮融资</strong>，与 AMD 合作推动边缘端 AI 编程助手。</p>
+
+                    <h3>OpenCode (开源)</h3>
+                    <p>发布仅 9 个月即获 <strong>70K+ GitHub Stars</strong>，定位为 Claude Code 的开源替代。OpenHands 66K+ Stars，Aider 45.8K Stars（但发布节奏放缓）。</p>
+
+                    <h3>智谱 AutoGLM / GLM-PC</h3>
+                    <p>2025 年 3 月发布 <strong>AutoGLM 沉思</strong>，融合深度研究（Deep Research）与实际操作（Operator），实现"边想边干"。核心模型 GLM-4-Air-0414（32B）在工具调用、联网搜索、代码能力上大幅增强。GLM-PC v1.1 支持"隐形屏幕"技术，CogAgent-9B 在 GUI 定位评测中超越 GPT-4o + UGround。</p>
+
+                    <h3>Google & 微软</h3>
+                    <ul>
+                        <li><strong>Google Jules</strong>：免费层 15 tasks/day，Gemini 2.5/3 驱动</li>
+                        <li><strong>Google Antigravity</strong>：2025 年 11 月发布，VM 模式</li>
+                        <li><strong>Cursor</strong>：Background Agents 支持 8 并行，Slack/Linear 触发</li>
+                        <li><strong>GitHub Copilot Workspace</strong>：Issue → PR 原生工作流</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例</h2>
+                <div class="content">
+                    <h3>知识工作者：每日晨报流水线</h3>
+                    <p>社区最火案例——每天早上 8 点自动推送：日历事件 + Gmail 重要邮件摘要 + 行业新闻 3 条 + 3 条 AI 行动建议。用户反馈管理 10+ 项目效率翻倍，一个月省下 30 小时。</p>
+
+                    <h3>程序员：多 Agent 协同开发</h3>
+                    <p>一个"主管 Agent"在 Telegram 协调 5-10 个 Claude 实例：架构设计 → 编码 → 测试 → PR 审查 → 部署。有人用它一个月开发中型 App，仅花 $400 API 费。Overnight Bug 修复：GitHub Action 失败自动拉日志、诊断、生成修复 PR。</p>
+
+                    <h3>内容创作者：一周内容一夜生成</h3>
+                    <p>抓取热点 → 研究竞品 → 写脚本 + 标题 + 标签 → 生成缩略图描述 → 定时发布。实测一晚上生成一周内容，副业收入翻 3 倍。</p>
+
+                    <h3>超级个体：全栈业务自动化</h3>
+                    <p>个人 CRM（自动从邮件/日历建联系人）+ 购物/旅行代理（比价、下单）+ 习惯教练。Overnight 迷你 App 构建：一句"给我做一个追踪健身进度的 Web App"，写代码、部署、上线。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <div class="content">
+                    <h3>入门三步走</h3>
+                    <ol>
+                        <li><strong>安装</strong>：curl -fsSL https://openclaw.ai/install.sh | bash；openclaw onboard</li>
+                        <li><strong>连接渠道</strong>：openclaw channels add telegram（或飞书/Discord/Slack）</li>
+                        <li><strong>安装技能</strong>：clawhub install [skill-name] 或 openclaw skills install [slug]</li>
+                    </ol>
+
+                    <h3>安全操作清单</h3>
+                    <ul>
+                        <li>先用 sandbox 模式测试技能</li>
+                        <li>授予最小权限（别直接给银行卡）</li>
+                        <li>定期 review 执行日志</li>
+                        <li>用 VirusTotal 扫描后再安装</li>
+                        <li>Prompt 加"先询问我确认再执行敏感操作"</li>
+                        <li>固定版本安装：clawhub install google-calendar-mcp --version 2.1.3</li>
+                    </ul>
+
+                    <h3>本周推荐技能</h3>
+                    <ul>
+                        <li><strong>agentmail-integration</strong> + <strong>summarize</strong>：邮件地狱终结者（实测：日处理 200 封 → 3.5 小时降至 0.75 小时）</li>
+                        <li><strong>rag-knowledge-base</strong>：拖拽 PDF/URL 自动建库，后续自然语言检索</li>
+                        <li><strong>self-improving-agent</strong>：跨会话记忆用户偏好，输出风格一致性</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏢 企业落地案例</h2>
+                <div class="content">
+                    <h3>金融：保险理赔智能体</h3>
+                    <p>某头部保险公司部署 AI Agent 处理理赔初审，<strong>单日处理量从 2,000 件提升至 15,000 件，准确率 97.3%，人力成本降低 60%</strong>。信贷风控 Agent 实现 KYC 审核多 Agent 协作，效率提升 60%。</p>
+
+                    <h3>制造：设备知识库 Agent</h3>
+                    <p>格创东智为某泛半导体企业打造设备知识库 Agent，覆盖多基地、多科室，实时解析设备报警代码、推荐维修方案。<strong>小故障处理效率提升 62%，大故障提升 30%，每年增收数千万元</strong>。</p>
+
+                    <h3>零售：百丽国际全业务链路</h3>
+                    <p>百丽国际构建覆盖全业务链路的 AI Agent 矩阵，包括"货品 AI 助理"和"店铺 AI 助理"，<strong>AI 应用覆盖 800+ 业务子节点</strong>，入选虎嗅网《大鲸榜·消费零售 GenAI 最强落地案例 TOP10》。</p>
+
+                    <h3>企业落地趋势数据</h3>
+                    <ul>
+                        <li>Gartner 预测：2026 年底 <strong>40%</strong> 企业应用内置任务型 AI Agent</li>
+                        <li>McKinsey：2028 年 <strong>15%</strong> 日常工作决策由 AI Agent 自主完成</li>
+                        <li>金融、电商 Agent 渗透率超 <strong>30%</strong>，制造业近 <strong>20%</strong></li>
+                        <li>欧洲某金融机构多 Agent 系统：94% 自主决策成功率，运营成本降低 62%</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <div class="content">
+                    <ul class="link-list">
+                        <li><a href="https://openclaw.ai" target="_blank">OpenClaw 官网</a> — 安装与文档</li>
+                        <li><a href="https://clawhub.com" target="_blank">ClawHub 技能市场</a> — 5,700+ 技能</li>
+                        <li><a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw GitHub</a> — 250K+ Stars</li>
+                        <li><a href="https://www.anthropic.com/claude-code" target="_blank">Claude Code</a> — Anthropic 编码 Agent</li>
+                        <li><a href="https://github.com/openai/codex" target="_blank">OpenAI Codex CLI</a> — 开源编码 Agent</li>
+                        <li><a href="https://www.all-hands.dev" target="_blank">OpenHands</a> — 开源自主 Agent</li>
+                        <li><a href="https://www.devin.ai" target="_blank">Devin</a> — Cognition AI 软件工程师</li>
+                        <li><a href="https://www.zhipuai.cn" target="_blank">智谱 AI</a> — AutoGLM / GLM-PC</li>
+                        <li><a href="https://aetherlink.ai/en/blog/agentic-ai-development-2026-rag-mcp-multi-agent-orchestration" target="_blank">Agentic AI Development 2026</a> — MCP & 多 Agent 编排深度解析</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>OpenClaw Daily Report · 由 AI Agent 自动生成</p>
+            <p>数据来源：GitHub、ClawHub、公开报道、社区分享</p>
+        </footer>
+    </div>
+</body>
+</html>
