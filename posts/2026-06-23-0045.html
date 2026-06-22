@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日动态 - 2026年6月23日</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>OpenClaw 每日动态</h1>
+        <p class="date">2026年6月23日 星期二</p>
+    </header>
+
+    <main class="container">
+        <!-- 今日概览 -->
+        <section class="overview">
+            <h2>今日概览</h2>
+            <ul class="overview-list">
+                <li><strong>OpenClaw v2026.6.9</strong> 正式发布，Telegram 富消息与 Agent 恢复大幅增强</li>
+                <li><strong>WorkBuddy 企业版</strong> 6月5日登场，腾讯全面布局企业级 Agent 生态</li>
+                <li><strong>MCP 协议</strong> 获 OpenAI 与 Google 联合背书，成为 Agent 生态事实标准</li>
+                <li><strong>ArkClaw</strong> 入驻首钢园 OPC 孵化空间，字节探索 B 端企业场景</li>
+                <li><strong>Kimi Claw</strong> 发布 24/7 Benchmark，企业级持续工作评估体系成型</li>
+            </ul>
+        </section>
+
+        <!-- 官方动态 -->
+        <section class="section" id="official">
+            <h2>OpenClaw 官方动态</h2>
+            <div class="news-card">
+                <div class="news-item">
+                    <h3>v2026.6.9 正式发布：Telegram 与 Agent 恢复双升级</h3>
+                    <p class="news-source">来源：GitHub Release | 2026-06-21</p>
+                    <p>最新稳定版 v2026.6.9 已发布，核心亮点：</p>
+                    <ul>
+                        <li><strong>Telegram 富消息交付：</strong>支持 HTML 渲染、Markdown 保留、表格安全规范化、进度草稿更忠实展示，提及与分流处理更加精准。</li>
+                        <li><strong>Agent 恢复更可靠：</strong>重试机制、终端结果、会话压缩后恢复、历史修复与回复协调，让中断或部分完成的回合更顺滑地走向最终结果。</li>
+                        <li><strong>Codex 集成增强：</strong>自动插件审批、GPT-5.3 Spark OAuth 路由、远程节点 exec 作为动态工具，App Server 终止更可靠。</li>
+                        <li><strong>官方 Provider 插件独立发布：</strong>外部通道插件在 Gateway 启动时自动加载，StepFun 已可从 npm 和 ClawHub 安装。</li>
+                    </ul>
+                    <p class="news-link"><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.6.9" target="_blank">查看 Release 详情 →</a></p>
+                </div>
+                <div class="news-item">
+                    <h3>v2026.6.10-beta.2 预发布</h3>
+                    <p class="news-source">来源：GitHub Release | 2026-06-22</p>
+                    <p>6月22日发布 beta 预览版，持续修复 v2026.6.9 的边界问题，并引入依赖证据（dependency-evidence）导出机制，提升合规审计能力。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心功能更新 -->
+        <section class="section" id="features">
+            <h2>核心功能更新详情</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Telegram 富消息支持</h3>
+                    <p>v2026.6.9 大幅提升了 Telegram 频道中的消息质量。现在 OpenClaw 可以保留原始 Markdown 格式，安全渲染 HTML 表格，并在进度草稿中更精确地展示命令输出。贴纸路径和@提及机制也得到了正确维护，让 Telegram 成为更可靠的即时交互通道。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Agent 恢复与容错</h3>
+                    <p>当 Agent 回合被中断（如网络波动、模型超时）时，新的重试和终端处理机制会确保任务继续推进，而非卡在中途。会话历史修复功能在数据压缩或意外崩溃后，能更好地还原对话状态，减少"重新开始"的尴尬。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Codex 集成深化</h3>
+                    <p>在 Codex 工作流中，插件安装不再需要手动确认，SecretRefs 自动管理密钥。远程节点的 exec 能力被正式注册为动态工具，这意味着子 Agent 可以直接在远端服务器上执行命令并获取结果。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>ClawHub 安全溯源</h3>
+                    <p>Skill 安装现在保留已验证的源代码溯源（provenance），确保从 ClawHub 下载的插件可追溯到原始提交，降低供应链攻击风险。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 竞品动态 -->
+        <section class="section" id="competitors">
+            <h2>竞品动态</h2>
+            <div class="competitor-section">
+                <h3>ArkClaw（字节跳动）</h3>
+                <div class="news-item">
+                    <p>6月，火山引擎将 <strong>ArkClaw 部署于首钢园"头号星系"OPC 孵化空间</strong>，为游戏、科幻等领域的创业者提供技术平台与算力支持。不过，ArkClaw 的商业模式正在调整：自5月18日起，Coding Plan Pro 赠送 ArkClaw 正式下线；3月24日起，Lite 新购用户不再赠送 7 日体验。这暗示字节正在从"免费获客"转向"付费变现"。</p>
+                    <p>第三方评测显示，ArkClaw 在响应速度和可用性方面仍有短板，用户常需 2-3 次询问才能获得一次有效回复。B 端客户结构偏浅（以开发者和 AI 创业公司为主），进入金融、制造、政府等重型企业客户的能力有限。</p>
+                    <p class="news-link"><a href="https://baike.baidu.com/item/ArkClaw/67462483" target="_blank">ArkClaw 百科详情 →</a></p>
+                </div>
+            </div>
+            <div class="competitor-section">
+                <h3>Kimi Claw（月之暗面）</h3>
+                <div class="news-item">
+                    <p>6月 17 日，Moonshot AI 发布 <strong>Kimi Claw 24/7 Benchmark</strong>——一套内部长期 Agent 评测体系，覆盖 17 个专业场景、610 个评估点，涵盖软件工程、ML 研究、招聘、交易和营销。该基准每季度更新，用于衡量 Kimi Claw 在持续工作环境中的真实表现。</p>
+                    <p>5月，Moonshot 还推出了 <strong>Kimi WebBridge</strong>——一个浏览器扩展，让 Kimi Claw 能够像真人一样操作网页。定价方面，Allegretto 计划 $39/月 起解锁 Kimi Claw，Vivace 计划提供 Agent Swarm 能力（最多 300 个并行子 Agent）。Moonshot 估值已飙升至 180 亿美元，Stripe 数据显示 Kimi Claw 发布后支付订单增长 8280%。</p>
+                    <p class="news-link"><a href="https://benchlm.ai/benchmarks/kimiClaw247" target="_blank">Kimi Claw 24/7 Benchmark →</a></p>
+                </div>
+            </div>
+            <div class="competitor-section">
+                <h3>WorkBuddy（腾讯）</h3>
+                <div class="news-item">
+                    <p>6月5日，在 2026 腾讯云 AI 产业应用大会上，腾讯正式发布 <strong>WorkBuddy 企业版（WorkBuddy Enterprise）</strong>，提供 7×24 专家数字员工、基于"项目"的员工与 AI 协作团队管理、企业级管理后台三大能力。同时发布的办公智能体套件 <strong>Agent Suite</strong> 通过 One ID 将腾讯文档、腾讯网盘和腾讯乐享原生集成到 WorkBuddy 工作台。</p>
+                    <p>腾讯还同步升级了企业智能体管控平台 <strong>ClawPro</strong> 和智能体开发平台 <strong>ADP 4.0</strong>，完整覆盖 Agent 构建、连接、分发与治理全生命周期。WorkBuddy 内测始于 2月6日，核心卖点是原生兼容 OpenClaw Skills 生态，采用 MCP 架构支持跨平台任务编排。</p>
+                    <p>行业分析认为，<strong>WorkBuddy + 企业微信 + 微信小程序的联动</strong>将成为2026年下半年的主战场。微信生态的天然优势，让 WorkBuddy 在 C 端渗透和 B 端落地之间拥有独特的桥梁价值。</p>
+                    <p class="news-link"><a href="https://finance.sina.com.cn/roll/2026-06-05/doc-iniaiyys8458606.shtml" target="_blank">WorkBuddy 企业版发布报道 →</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社区应用 -->
+        <section class="section" id="community">
+            <h2>社区趣味应用案例</h2>
+            <div class="news-card">
+                <div class="news-item">
+                    <h3>飞书 + OpenClaw 的 7 天自动化周报</h3>
+                    <p class="news-source">来源：CSDN 社区 | 2026-06</p>
+                    <p>有用户利用 OpenClaw 的飞书通道 + Cron 定时任务，搭建了一套"全自动周报系统"：每周五下午 5 点，Agent 自动汇总本周钉钉/飞书消息、GitHub 提交、Jira 任务进度，生成 Markdown 周报并推送到指定群聊。核心用到的 Skill 包括：tavily-search（获取外部数据）、file-manager（文档生成）、feishu-im（消息推送）。这套方案已被多家初创公司采纳，替代了原本需要 1 人/周的运维工作。</p>
+                </div>
+                <div class="news-item">
+                    <h3>ArkClaw 入驻首钢园 OPC 孵化空间</h3>
+                    <p class="news-source">来源：百度百科 | 2026-06</p>
+                    <p>火山引擎将 ArkClaw 部署于北京首钢园"头号星系"OPC 超级个体社区（星火社区），为入驻的游戏、科幻、AIGC 创业者提供免费的算力支持和 Agent 开发环境。这是国内首个"物理空间 + AI Agent"的孵化模式，开发者可以在园区内直接调用豆包 Seed 2.0、Kimi 2.5 等模型，快速验证产品原型。</p>
+                </div>
+                <div class="news-item">
+                    <h3>腾讯 WorkBuddy 投研助手实战</h3>
+                    <p class="news-source">来源：搜狐科技 | 2026-04</p>
+                    <p>有投资者用 WorkBuddy 搭建了"智能投研助理"：设置自选股实时监控，股价异动时自动通过微信推送提醒；每日早晨自动生成晨报（汇总昨夜美股、今日 A 股盘前信息）；晚间自动复盘并推送邮件。整个过程零代码，完全通过自然语言配置。目前 WorkBuddy 在投研场景中的 DAU 位居国内第一。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill 学习 -->
+        <section class="section" id="skills">
+            <h2>精选 Skill 学习指南</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h3>新手必装：tavily-search</h3>
+                    <p><strong>作用：</strong>为 OpenClaw 添加实时联网搜索能力，打破模型知识截止日期限制。</p>
+                    <p><strong>安装：</strong><code>clawhub install tavily-search</code></p>
+                    <p><strong>场景：</strong>查询最新新闻、竞品动态、价格数据、技术文档。支持带来源链接的结构化结果返回。</p>
+                </div>
+                <div class="skill-card">
+                    <h3>办公自动化：file-manager</h3>
+                    <p><strong>作用：</strong>本地文件管理、文档生成、批量重命名、格式转换。</p>
+                    <p><strong>场景：</strong>"帮我创建一个名为 test 的文档，内容为 OpenClaw 新手教程""批量将 /tmp 下的 .png 转为 .jpg"。</p>
+                </div>
+                <div class="skill-card">
+                    <h3>系统监控：system-info</h3>
+                    <p><strong>作用：</strong>实时查看系统资源占用、进程状态、磁盘空间。</p>
+                    <p><strong>场景：</strong>"帮我查看系统资源占用""列出占用内存最高的 5 个进程""检查磁盘空间是否不足"。</p>
+                </div>
+                <div class="skill-card">
+                    <h3>安全提醒：Skill 来源审查</h3>
+                    <p>CocoLoop 等平台对 Skill 进行 S/A/B/C/D 安全评级，并支持 VM 级隔离。建议新手优先安装 ClawHub 官方推荐或高评分社区 Skill，避免安装来源不明的插件。v2026.6.9 新增了 Skill 溯源验证，确保安装包可追溯到原始 Git 提交。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 企业落地 -->
+        <section class="section" id="enterprise">
+            <h2>企业落地案例</h2>
+            <div class="news-card">
+                <div class="news-item">
+                    <h3>WorkBuddy 企业版：从"超级个人"到"超级团队"</h3>
+                    <p class="news-source">来源：腾讯云 AI 产业应用大会 | 2026-06-05</p>
+                    <p>WorkBuddy Enterprise 的发布标志着腾讯 AI Agent 战略从个人效率工具向企业级生产力平台的跃迁。核心能力包括：</p>
+                    <ul>
+                        <li><strong>7×24 专家数字员工：</strong>云端部署，持续运行，多个专家 Agent 并行协作。</li>
+                        <li><strong>项目化团队管理：</strong>员工与 AI 基于项目协作，任务分配、进度追踪、知识沉淀一体化。</li>
+                        <li><strong>One ID 内容创作链路：</strong>腾讯文档 → 腾讯网盘 → 腾讯乐享，原生集成到 WorkBuddy 工作台。</li>
+                    </ul>
+                    <p>腾讯云智能体开发平台 ADP 4.0 的升级，意味着企业可以基于 WorkBuddy 快速构建自定义 Agent，并通过 ClawPro 进行全生命周期管控。</p>
+                </div>
+                <div class="news-item">
+                    <h3>2026 下半年趋势：AI Agent 从"尝鲜"到"标配"</h3>
+                    <p class="news-source">来源：CSDN 深度分析 | 2026-06-17</p>
+                    <p>行业分析认为，2026 年下半年将出现以下确定性趋势：</p>
+                    <ul>
+                        <li><strong>AI Agent 企业标配化：</strong>6 个月内，AI Agent 将从少数技术团队的玩具变成企业标准配置。</li>
+                        <li><strong>微信生态融合加速：</strong>WorkBuddy + 企业微信 + 微信小程序的联动成为主战场。</li>
+                        <li><strong>垂直化 > 通用化：</strong>通用 Agent 市场被巨头占据，创业机会在垂直行业深耕。</li>
+                        <li><strong>合规趋严：</strong>涉及数据安全和隐私的 Agent 操作权限监管将逐步出台，合规能力成为护城河。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 延伸阅读 -->
+        <section class="section" id="links">
+            <h2>延伸阅读</h2>
+            <ul class="link-list">
+                <li><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.6.9" target="_blank">OpenClaw v2026.6.9 Release Notes</a></li>
+                <li><a href="https://finance.sina.com.cn/roll/2026-06-05/doc-iniaiyys8458606.shtml" target="_blank">腾讯发布 WorkBuddy 企业版（上海证券报）</a></li>
+                <li><a href="https://benchlm.ai/benchmarks/kimiClaw247" target="_blank">Kimi Claw 24/7 Benchmark（BenchLM）</a></li>
+                <li><a href="https://www.volcengine.com/docs/87732/2254722" target="_blank">ArkClaw 官方文档（火山引擎）</a></li>
+                <li><a href="https://agent.csdn.net/6a31f6f310ee7a33f27e3224.html" target="_blank">WorkBuddy 从入门到精通：2026 热点透视</a></li>
+                <li><a href="https://www.larksuite.com/zh_tw/blog/openclaw" target="_blank">飞书官方：OpenClaw 核心组件架构解析</a></li>
+                <li><a href="https://openclaw.github.io/openclaw/" target="_blank">OpenClaw 官方文档（openclaw.github.io）</a></li>
+                <li><a href="https://www.clawhub.com/" target="_blank">ClawHub 技能市场</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>OpenClaw 每日动态 | 数据来源：GitHub、BenchLM、CSDN、上海证券报、新浪财经等</p>
+        <p>生成时间：2026-06-23 00:45 CST</p>
+        <p><a href="index.html">返回首页</a> | <a href="archive.html">往期归档</a></p>
+    </footer>
+</body>
+</html>
