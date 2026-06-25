@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年6月26日（第77期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年6月26日 星期五</p>
+            <p class="tagline">第77期 | 全球框架选型白热化·Rasa企业级登顶·Skills生态持续井喷</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a> |
+            <a href="../archive.html">浏览归档</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📰 今日概览</h2>
+                <div class="highlights">
+                    <ul>
+                        <li><strong>1. 全球AI Agent框架企业选型进入白热化阶段：</strong> xpay.sh、LangChain、Rasa、10Pearls 等多家机构在6月密集发布企业级框架评测。Rasa CALM 以「自托管+确定性治理+原生语音」登顶企业级榜首，LangChain 以2500万+下载量保持社区第一，Microsoft Agent Framework 作为 AutoGen 与 Semantic Kernel 的统一继任者获微软全力投入。</li>
+                        <li><strong>2. Microsoft Agent Framework 1.0 GA 发布：</strong> 微软正式将 AutoGen 和 Semantic Kernel 合并为统一的 Microsoft Agent Framework，支持 Python + .NET 双运行时，内置会话状态管理、OpenTelemetry 遥测、Azure AI Foundry 负责任AI护栏。AutoGen 和 SK 转入维护模式，新功能投资全部转向 MAF。</li>
+                        <li><strong>3. OpenClaw Skills 生态教程持续井喷：</strong> DataCamp 德文/英文双版教程、SlackClaw 企业级 Skill 开发指南、Skywork AI 命令教程、腾讯云「喂虾级」指南本周集中发布。ClawHub 注册包数量突破 13,729，Skills 从「小众极客玩具」向「企业级开发技能」加速进化。</li>
+                        <li><strong>4. 企业Agent落地数据刷新行业预期：</strong> Google Cloud 调研 3,466 位决策者，超半数先行企业已将 Agent 投入生产；Capgemini 数据显示 82% 组织计划在 2026 年集成 Agent；88% 已部署企业获得正向 ROI，平均回本周期 6-18 个月。Swisscom 使用 Rasa 20 周从原型到生产，自动化率翻倍，运营成本削减 50%。</li>
+                        <li><strong>5. 国产「百虾大战」与全球框架形成镜像格局：</strong> 国内 OpenClaw / CoPaw / EasyClaw / ArkClaw / WorkBuddy 五强并立，与全球 OpenClaw vs Rasa vs LangChain vs Microsoft 的框架竞争形成呼应。企业级需求（安全、合规、审计）成为中外共同的第一门槛。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🎯 OpenClaw 官方动态</h2>
+                <div class="article">
+                    <h3>GitHub 生态：370K Stars 与 ClawHub 13,729+ 注册包</h3>
+                    <p>截至 2026 年 6 月，OpenClaw 在 GitHub 上的星标数稳定在 37 万+，Skills 市场（ClawHub）注册包数量突破 13,729。社区近期核心动向：</p>
+                    <ul>
+                        <li><strong>Skills 安装命令优化：</strong> <code>openclaw skills install</code> 支持自然语言触发，自动查询 ClawHub、解析依赖（Node.js/Homebrew/APT/DNF）、验证 SKILL.md 结构完整性。安装流程从「手动复制文件」进化为「一句话自动化」。</li>
+                        <li><strong>安全检查层强化：</strong> ClawHub 所有新上传包通过 VirusTotal 风险扫描，但供应链安全仍是最大挑战。Skills 市场曾发现 341 个恶意技能，发布者门槛仅为一周旧 GitHub 账户。企业用户建议仅安装已验证（✅）技能。</li>
+                        <li><strong>多 Agent 架构（ACP）持续迭代：</strong> ACP 协议实现跨 Agent 协作流水线，支持 OpenClaw 与 Hermes Agent 的混合编排。成为生态互通的关键基础设施。</li>
+                    </ul>
+                    <p><strong>来源：</strong> OpenClaw GitHub 仓库、ClawHub 市场统计、Skywork AI</p>
+                </div>
+
+                <div class="article">
+                    <h3>v2026.6.9 后续：浏览器技能与 Heartbeat 增强</h3>
+                    <p>最新补丁持续推送，重点改进：</p>
+                    <ul>
+                        <li><strong>agent-browser v0.2.0：</strong> 已集成到腾讯云 OpenClaw 最新模板。AI Agent 可执行网页打开、点击、文本输入、页面快照等结构化操作。成为社区使用频率最高的默认技能之一。</li>
+                        <li><strong>Heartbeat 状态持久化：</strong> 运行状态写入 SQLite，Agent 中断后自动恢复任务，避免「重启丢上下文」。</li>
+                        <li><strong>Telegram 富消息优化：</strong> Markdown 表格、代码块、引用链接渲染效果大幅提升。</li>
+                        <li><strong>Claude Opus 4.8 / NVIDIA MiniMax 适配：</strong> 新供应商接入完成，模型选择更灵活。</li>
+                    </ul>
+                    <p><strong>来源：</strong> OpenClaw 官方 Release Notes、腾讯云开发者社区</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <div class="article">
+                    <h3>全球企业级 AI Agent 框架横评：Rasa 登顶，LangChain 社区称王</h3>
+                    <p>2026 年 6 月，xpay.sh、LangChain、Rasa、10Pearls 等多家机构密集发布企业级框架对比。核心结论收敛如下：</p>
+                    <table>
+                        <tr>
+                            <th>框架</th>
+                            <th>企业级评分</th>
+                            <th>核心优势</th>
+                            <th>最佳场景</th>
+                        </tr>
+                        <tr>
+                            <td>Rasa CALM</td>
+                            <td>★★★★★</td>
+                            <td>自托管、确定性治理、原生语音、审计完备</td>
+                            <td>金融/医疗/电信等合规行业</td>
+                        </tr>
+                        <tr>
+                            <td>LangChain / LangGraph</td>
+                            <td>★★★★☆</td>
+                            <td>2500万+下载、最大生态、最快原型</td>
+                            <td>快速原型、多模型集成</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Agent Framework</td>
+                            <td>★★★★☆</td>
+                            <td>Azure 原生、AutoGen+SK 统一、Python+.NET</td>
+                            <td>微软云生态企业</td>
+                        </tr>
+                        <tr>
+                            <td>Azure AI Agent Service</td>
+                            <td>★★★★☆</td>
+                            <td>托管服务、自动扩缩容、内置治理</td>
+                            <td>Azure 重度用户</td>
+                        </tr>
+                        <tr>
+                            <td>AWS Bedrock Agents</td>
+                            <td>★★★★☆</td>
+                            <td>AWS 原生、多模型、安全合规</td>
+                            <td>AWS 云生态企业</td>
+                        </tr>
+                        <tr>
+                            <td>OpenClaw</td>
+                            <td>★★★☆☆</td>
+                            <td>370K Stars、50+平台、Skills生态</td>
+                            <td>个人开发者、平台集成</td>
+                        </tr>
+                        <tr>
+                            <td>CrewAI</td>
+                            <td>★★★☆☆</td>
+                            <td>角色化多 Agent、可视化编排</td>
+                            <td>多角色协作原型</td>
+                        </tr>
+                        <tr>
+                            <td>Mastra</td>
+                            <td>★★★☆☆</td>
+                            <td>TypeScript 原生、Studio 环境</td>
+                            <td>TS 团队生产部署</td>
+                        </tr>
+                    </table>
+                    <p><strong>关键洞察：</strong> 企业级选型第一问题从「功能够不够用」变成「数据能不能留在自己环境」。Rasa 的「自托管从第一天起」策略，Swisscom 20 周生产案例，N26 银行监管合规案例，正在重新定义企业级 Agent 的标准。</p>
+                    <p><strong>来源：</strong> xpay.sh、LangChain 官方、Rasa 官方、10Pearls</p>
+                </div>
+
+                <div class="article">
+                    <h3>Microsoft Agent Framework：AutoGen 与 Semantic Kernel 的「统一大婚」</h3>
+                    <p>2025 年 10 月微软宣布的 Agent Framework 于 2026 年 6 月进入 1.0 GA。核心变化：</p>
+                    <ul>
+                        <li><strong>统一继承：</strong> 合并 AutoGen 的 conversational multi-agent 抽象与 Semantic Kernel 的 enterprise features（session-based state、middleware、telemetry、type safety）。</li>
+                        <li><strong>双运行时：</strong> Python (<code>pip install agent-framework</code>) 和 .NET (<code>Microsoft.Agents.AI</code>)。</li>
+                        <li><strong>模型支持：</strong> Microsoft Foundry、Azure OpenAI、OpenAI、Anthropic、Amazon Bedrock、Google Gemini、Ollama 开箱即用。</li>
+                        <li><strong>负责任 AI：</strong> 通过 Azure AI Foundry 集成任务合规、PII 保护、prompt injection 防御。</li>
+                        <li><strong>迁移保障：</strong> AutoGen 和 Semantic Kernel v1.x 转入维护模式，至少维护一年并提供迁移工具。</li>
+                    </ul>
+                    <p>对于已投资微软云生态的企业，MAF 是「不用重新选型」的最安全路径。对于多云用户，其跨云模型支持能力也是加分项。</p>
+                    <p><strong>来源：</strong> Microsoft 官方、LangChain 资源博客</p>
+                </div>
+
+                <div class="article">
+                    <h3>阿里云百炼 × OpenClaw：部署教程从「喂饭」到「量产」</h3>
+                    <p>阿里云开发者社区本周密集更新，将 OpenClaw 部署从「个人折腾」推向「团队标准化」：</p>
+                    <ul>
+                        <li><strong>轻量服务器镜像：</strong> 选择「OpenClaw(Moltbot) 专属镜像」，3-5 分钟完成环境配置，无需手动安装依赖。</li>
+                        <li><strong>百炼 API 一键绑定：</strong> 在「应用详情」页粘贴 API-Key，系统自动写入配置并重启网关。</li>
+                        <li><strong>Coding Plan 固定月费：</strong> 提供月度请求额度，超出部分报错但不额外计费，彻底避免「Token 刺客」。</li>
+                        <li><strong>新用户福利：</strong> 百炼新用户免费额度 7,000 万 Token（90 天有效）。</li>
+                        <li><strong>推荐配置：</strong> 2 核 4GB + 40GB ESSD + 5Mbps 带宽，北京地域延迟最低。</li>
+                    </ul>
+                    <p><strong>来源：</strong> 阿里云开发者社区、腾讯云开发者社区</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🚀 竞品动态</h2>
+                <div class="article">
+                    <h3>Rasa CALM：企业级 Agent 框架的新标杆</h3>
+                    <p>Rasa 在 2026 年 4 月的评测中被多家机构评为「最佳企业级 AI Agent 框架」。其 CALM（Conversational AI with Language Models）架构的核心差异：</p>
+                    <ul>
+                        <li><strong>确定性治理：</strong> Guided Skills 控制高 stakes 工作流，Prompt-driven Skills 处理灵活对话。LLM 理解业务规则，但不直接执行——你定义边界，Agent 留在里面。</li>
+                        <li><strong>原生语音：</strong> 内置 Twilio、Jambonz、AudioCodes、Genesys Cloud 连接器，同一套策略跨语音和文本渠道。</li>
+                        <li><strong>自托管默认：</strong> 从第一天起就在本地环境运行，Rasa 不托管任何客户数据。</li>
+                        <li><strong>Swisscom 案例：</strong> 瑞士电信 20 周从原型到生产，自动化率翻倍，运营成本削减 50%。</li>
+                        <li><strong>N26 案例：</strong> 欧洲数字银行使用 Rasa 处理监管合规客服。</li>
+                    </ul>
+                    <p>Rasa 的定价基于年度对话量，不按用户或座位收费。社区版免费，企业版定制报价。</p>
+                    <p><strong>来源：</strong> Rasa 官方、Rasa Blog、Swisscom 案例</p>
+                </div>
+
+                <div class="article">
+                    <h3>EasyClaw（猎豹移动）— 14 天 8 个 Agent 的「傅盛速度」</h3>
+                    <p>傅盛在 14 天内零代码搭建 8 个 Agent 的实战案例持续成为行业热议。EasyClaw 当前三条路线：</p>
+                    <ul>
+                        <li><strong>C 端：</strong> easyclaw.com 提供 Windows / macOS 一键安装，目标个人效率用户。</li>
+                        <li><strong>B 端：</strong> easyclaw.work 面向企业团队，支持飞书 / 微信 / WhatsApp 远程控制。</li>
+                        <li><strong>国内版：</strong> 元气 AI Bot（yuanqiai.net）专注中文场景和本地模型适配。</li>
+                    </ul>
+                    <p>猎豹移动 2026 年 Q1 财报显示 AI 业务占比近半，EasyClaw 已成为核心增长引擎。傅盛本人公开表态：「不开源、不加入社区，可能很快被淘汰」。</p>
+                    <p><strong>来源：</strong> 猎豹移动财报、EasyClaw 官网、傅盛公开分享</p>
+                </div>
+
+                <div class="article">
+                    <h3>ArkClaw（字节火山引擎）— 云养虾 8.9 元/月持续扩张</h3>
+                    <p>ArkClaw 作为字节跳动的云端 SaaS 版 OpenClaw，近期更新：</p>
+                    <ul>
+                        <li><strong>定价：</strong> Lite 版月费 8.9 元，Pro 版提供更多并发和模型选择。</li>
+                        <li><strong>定位：</strong> 解决环境配置复杂、Token 消耗不可控、进程易中断三大痛点。</li>
+                        <li><strong>与 Coze 差异：</strong> ArkClaw 是「执行型 Agent」（像 OpenClaw），Coze 是「低代码搭建平台」（像 Dify）。</li>
+                        <li><strong>企业级：</strong> 金融行业 Multi-Agent 协作案例已上线，入驻首钢园后持续迭代。</li>
+                    </ul>
+                    <p><strong>来源：</strong> 字节火山引擎、ArkClaw 官方文档</p>
+                </div>
+
+                <div class="article">
+                    <h3>WorkBuddy（腾讯）— 1.2 万内部日活的规模化验证</h3>
+                    <p>腾讯 WorkBuddy 近期动态：</p>
+                    <ul>
+                        <li>季末已有 1.2 万内部员工日常使用，成为中国日活最高的 AI 智能体平台。</li>
+                        <li>WorkBuddy 5.15 商业化新阶梯定价已执行，企业版功能持续扩展。</li>
+                        <li>AI 编辑部 7 人协作流水线成为企业 Agent 落地标杆。</li>
+                        <li>微信 AI Agent 概念引爆资本市场，腾讯股价单日暴涨 10.46%。</li>
+                    </ul>
+                    <p><strong>来源：</strong> 腾讯官方、WorkBuddy 产品公告、财联社</p>
+                </div>
+
+                <div class="article">
+                    <h3>CoPaw（阿里通义实验室）— 开源多平台接入持续推进</h3>
+                    <p>CoPaw 于 2026 年 2 月 28 日正式开源，定位为「开源的 Agent 部署解决方案」：</p>
+                    <ul>
+                        <li><strong>多平台：</strong> 钉钉、飞书、QQ、Discord、iMessage 等 IM 平台均支持。</li>
+                        <li><strong>部署灵活：</strong> 本地运行和云端部署均可，阿里云百炼、腾讯云已提供预置镜像。</li>
+                        <li><strong>模型兼容：</strong> 默认通义千问，同时支持 OpenAI、Claude、Kimi 等。</li>
+                    </ul>
+                    <p>与阿里内部 HiClaw（阿里妈妈团队）形成「开源+内部」双轨布局。</p>
+                    <p><strong>来源：</strong> 阿里通义实验室、GitHub CoPaw 仓库</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                <div class="article">
+                    <h3>案例 1：Seekdb Agent Skill — 数据库文档助手</h3>
+                    <p>SegmentFault 社区用户分享了一个完整的 seekdb Skill 集成案例：通过 <code>pip install seekdb-agent-skills</code> 安装后，运行交互式安装器选择 OpenClaw 平台，即可将数据库文档查询能力注入 Agent。适合需要频繁查询表结构、字段注释的开发和 DBA 团队。</p>
+                    <p><strong>来源：</strong> SegmentFault、PyPI</p>
+                </div>
+
+                <div class="article">
+                    <h3>案例 2：DataCamp 双语言 Skill 开发教程</h3>
+                    <p>DataCamp 本周同时发布了英文和德文版的「Building Open Claw Skills」教程，涵盖两个实战 Skill：</p>
+                    <ul>
+                        <li><strong>Jupyter → Word 转换 Skill：</strong> 将手动导出变成一条 slash 命令。</li>
+                        <li><strong>图像生成 Skill：</strong> 通过 Replicate API 调用 Nano Banana Pro，支持环境变量管理和 Docker 沙箱。</li>
+                    </ul>
+                    <p>教程还深入讲解了 Docker sandboxing、metadata gating 和 ClawHub 发布流程。</p>
+                    <p><strong>来源：</strong> DataCamp</p>
+                </div>
+
+                <div class="article">
+                    <h3>案例 3：SlackClaw 企业级 on-call 轮换 Skill</h3>
+                    <p>SlackClaw 团队发布了一个生产级 Skill 开发案例：从内部 API 获取 on-call 排班表，自动格式化为 Slack 消息并推送。展示了 Skill 的三要素——函数签名、docstring（Agent 决定何时调用）、返回值（结构化数据融入回复）。</p>
+                    <p><strong>来源：</strong> SlackClaw 官方博客</p>
+                </div>
+
+                <div class="article">
+                    <h3>案例 4：OpenClaw 企业级安全巡检</h3>
+                    <p>积墨 AI 推出的「安全隐患巡检系统」基于 OpenClaw 架构：任务一键下达 → 隐患 AI 识别 → 整改全程留痕 → 报告一键生成。安全巡检从「人工填表」进化为「AI 闭环」，实现「看得见、管得住、能闭环」。</p>
+                    <p><strong>来源：</strong> Jimo Studio</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <div class="article">
+                    <h3>OpenClaw 官方 Skills 创建指南</h3>
+                    <p>docs.openclaw.ai 更新了完整的 Skills 创建文档，核心流程：</p>
+                    <ul>
+                        <li><strong>创建目录：</strong> <code>mkdir -p ~/.openclaw/workspace/skills/hello-world</code></li>
+                        <li><strong>编写 SKILL.md：</strong> YAML frontmatter 定义元数据，Markdown body 给 Agent 指令</li>
+                        <li><strong>命名规则：</strong> 小写字母、数字、连字符；目录名与 frontmatter name 对齐</li>
+                        <li><strong>测试：</strong> <code>openclaw agent --message "give me a greeting"</code> 或 <code>/skill hello-world</code></li>
+                    </ul>
+                    <p>官方文档强调：Skills 的本质是「教 Agent 何时以及如何使用工具」，不是代码插件，而是运行时指令。</p>
+                    <p><strong>来源：</strong> docs.openclaw.ai</p>
+                </div>
+
+                <div class="article">
+                    <h3>Skywork AI：openclaw skills 命令深度教程</h3>
+                    <p>Skywork AI 发布了两篇命令深度教程：</p>
+                    <ul>
+                        <li><strong>skills list：</strong> 使用 <code>--eligible</code> 过滤仅显示依赖就绪的技能，避免上下文膨胀。配合 <code>skills info &lt;skill&gt;</code> 深度检查缺失的二进制或环境变量。</li>
+                        <li><strong>skills install：</strong> 自然语言触发（如「请帮我安装 ClawHub 上的 mcd Skill」），自动完成注册查询、依赖解析、结构验证、激活注入四步流程。</li>
+                    </ul>
+                    <p><strong>来源：</strong> Skywork AI</p>
+                </div>
+
+                <div class="article">
+                    <h3>腾讯云：Skills 八大场景实战</h3>
+                    <p>腾讯云开发者社区将 OpenClaw Skills 归纳为八大实战场景：</p>
+                    <ul>
+                        <li><strong>开发：</strong> 代码生成（Python/Java/JS）</li>
+                        <li><strong>办公：</strong> 周报生成、日程规划</li>
+                        <li><strong>生活：</strong> 天气提醒、文案创作</li>
+                        <li><strong>运营：</strong> 标题生成（抖音/小红书/公众号）、数据分析（Excel/CSV）</li>
+                        <li><strong>跨平台：</strong> 钉钉/飞书/iMessage 渠道对接</li>
+                    </ul>
+                    <p><strong>来源：</strong> 腾讯云开发者社区</p>
+                </div>
+
+                <div class="article">
+                    <h3>Skill 风险分级清单（最新版）</h3>
+                    <p>技术博主整理的风险分级建议：</p>
+                    <ul>
+                        <li><strong>🟢 低风险必装：</strong> github（gh CLI）、tmux（多终端）、session-logs（对话搜索）、weather（天气）、apple-notes / obsidian（笔记）</li>
+                        <li><strong>🟡 中风险按需：</strong> slack / discord（团队通讯）、notion / trello（项目管理）</li>
+                        <li><strong>🔴 高风险慎开：</strong> bird（X/Twitter 发布）、wacli（WhatsApp）、bluebubbles（iMessage 外部）、food-order（外卖）</li>
+                    </ul>
+                    <p><strong>来源：</strong> yu-wenhao.com</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏢 企业落地案例</h2>
+                <div class="article">
+                    <h3>Swisscom：Rasa CALM 20 周生产案例</h3>
+                    <p>瑞士电信（Swisscom）使用 Rasa CALM 重建客服 Agent「Sam」：</p>
+                    <ul>
+                        <li><strong>时间线：</strong> 20 周从原型到生产</li>
+                        <li><strong>成果：</strong> 自动化率翻倍，运营成本削减 50%</li>
+                        <li><strong>技术亮点：</strong> Zero-shot intent recognition 使开发速度提升 1.6 倍</li>
+                        <li><strong>关键决策：</strong> 选择自托管部署，所有患者数据留在本地环境</li>
+                    </ul>
+                    <p>这一案例成为欧洲电信行业 Agent 落地的标杆参考。</p>
+                    <p><strong>来源：</strong> Rasa 官方案例、Swisscom</p>
+                </div>
+
+                <div class="article">
+                    <h3>N26：数字银行的监管合规 Agent</h3>
+                    <p>欧洲数字银行 N26 使用 Rasa 处理受监管的客户服务场景。核心需求：</p>
+                    <ul>
+                        <li><strong>数据主权：</strong> 客户数据不出本地环境</li>
+                        <li><strong>审计完备：</strong> 每次决策可追溯，非 buried in logs</li>
+                        <li><strong>确定性：</strong> 高 stakes 工作流由业务规则驱动，非 LLM 自由发挥</li>
+                    </ul>
+                    <p>Rasa 的「自托管 + 确定性治理 + 审计追踪」三角恰好覆盖这些需求。</p>
+                    <p><strong>来源：</strong> Rasa Blog、N26</p>
+                </div>
+
+                <div class="article">
+                    <h3>Capgemini 全球调研：82% 计划集成，88% 已获正向 ROI</h3>
+                    <p>Capgemini 2026 年调研数据刷新行业预期：</p>
+                    <ul>
+                        <li>82% 的组织计划在 2026 年集成 AI Agent</li>
+                        <li>88% 已部署 Agent 的企业获得正向 ROI</li>
+                        <li>平均回本周期：6-18 个月</li>
+                        <li>先行企业（early adopters）超过半数已将 Agent 投入生产</li>
+                    </ul>
+                    <p>Agent 从「概念验证」正式步入「规模生产」阶段。</p>
+                    <p><strong>来源：</strong> Capgemini、Google Cloud 调研</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <div class="links">
+                    <ul>
+                        <li><a href="https://www.xpay.sh/resources/agentic-frameworks/best-for/enterprise">Best AI Agent Framework for Enterprise (2026) — xpay.sh</a></li>
+                        <li><a href="https://www.langchain.com/resources/ai-agent-frameworks">The best AI agent frameworks in 2026 — LangChain</a></li>
+                        <li><a href="https://rasa.com/blog/best-ai-agent-framework">8 Best AI Agent Frameworks for Enterprise in 2026 — Rasa</a></li>
+                        <li><a href="https://10pearls.com/blog/building-enterprise-ai-agent-frameworks/">Orchestrating Enterprise AI Agent Frameworks — 10Pearls</a></li>
+                        <li><a href="https://docs.openclaw.ai/tools/creating-skills">Creating skills — OpenClaw Docs</a></li>
+                        <li><a href="https://www.datacamp.com/tutorial/building-open-claw-skills">Building OpenClaw Skills — DataCamp</a></li>
+                        <li><a href="https://www.slackclaw.ai/news/openclaw-custom-skills-a-complete-tutorial">OpenClaw Custom Skills: A Complete Tutorial — SlackClaw</a></li>
+                        <li><a href="https://github.com/datawhalechina/openclaw-tutorial">Datawhale「一周掌握 OpenClaw」— GitHub</a></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>🦞 OpenClaw Daily Report — AI Agent 行业每日情报</p>
+            <p>Generated by Kimi Claw ❤️‍🔥 | 2026年6月26日</p>
+            <p><a href="../index.html">返回首页</a> | <a href="../archive.html">浏览归档</a></p>
+        </footer>
+    </div>
+</body>
+</html>
