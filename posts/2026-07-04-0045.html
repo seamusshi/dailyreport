@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年7月4日（第83期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年7月4日 星期六</p>
+            <p class="tagline">第83期 | AI Agent 行业每日情报</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>🎯 今日概览</h2>
+                <ul class="highlights">
+                    <li>国产 AI Agent 三强（QClaw / CoPaw / ArkClaw）深度实测对比引发社区热议，生产力工具选型进入白热化</li>
+                    <li>Claw 生态五强格局稳固：OpenClaw（21.5万+ Stars）、Kimi Claw、MaxClaw、ZeroClaw、PicoClaw 各司其职</li>
+                    <li>Hermes Agent 自进化学习闭环获 ICLR 2026 Oral 认可，企业级安全治理仍是最大短板</li>
+                    <li>阿里云 Agent Skills 门户持续扩展，百炼平台支持 OpenClaw、Qoder、Claude Code 等 9+ 工具接入</li>
+                    <li>2026 年国产 OpenClaw 生态全景指南发布，40+ 款"龙虾"产品横评覆盖互联网全阵营</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🦞 OpenClaw 官方动态</h2>
+                <p>近期 OpenClaw 核心框架保持稳定节奏，社区焦点转向生态扩展与竞品对比。GitHub Stars 已突破 21.5 万，仍是全球增速最快的开源 AI Agent 项目之一。</p>
+                <p>值得关注的是，<strong>2026 年国产 OpenClaw 生态全景指南</strong>于 4 月发布并持续更新，系统梳理了从模型厂商到互联网大厂的全阵营布局。该指南将 OpenClaw 定位为"开源王座"，认为其自托管+持久记忆+多平台集成的架构仍是企业落地的首选基座。</p>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <div class="news-item">
+                    <h3>阿里云 Agent Skills 门户：云资源管理全面 Agent 化</h3>
+                    <p>阿里云 Agent Skills 门户已上线超过 150 个官方技能，覆盖计算、数据库、安全、大数据、媒体服务等 18 大类别。最新动态：</p>
+                    <ul>
+                        <li><strong>安全类技能</strong>持续更新：SAS 安全运营 Skill、WAF Bot 管理、DDoS 拦截查询、云防火墙诊断等</li>
+                        <li><strong>数据库智能运维</strong>：PolarDB AI 助手、PolarDB-X 分布式运维、Tair AI 助手、AnalyticDB MySQL Copilot</li>
+                        <li><strong>AI 视频创作</strong>：百炼视频创作 Skill（支持文生视频、图生视频、视频编辑），基于 wan2.6-t2v、qwen3.5-plus 等模型</li>
+                        <li><strong>多工具接入</strong>：支持 OpenClaw、Qoder、Claude Code、Codex、Cursor、GitHub Copilot 等 9 款主流工具</li>
+                    </ul>
+                    <p class="source">来源：skills.aliyun.com | 2026-06-28 前更新</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>Hermes Agent：自进化学习闭环获学术认可</h3>
+                    <p>Nous Research 的 Hermes Agent 自进化研究项目已被 ICLR 2026 接收为 Oral 论文。核心突破：</p>
+                    <ul>
+                        <li>三层学习循环：任务完成后自动蒸馏为结构化 Skill 文件，下次复用并迭代优化</li>
+                        <li>社区基准测试：在熟悉任务上比无 Skill 积累的新 Agent 效率提升约 40%</li>
+                        <li>模型无关：支持 200+ 提供商 via OpenRouter，包括本地模型</li>
+                        <li>安全加固：只读 root 文件系统、命令预执行扫描、内存注入防护</li>
+                    </ul>
+                    <p>但仍存在企业级短板：无 RBAC、无签名 Skill 注册表、无合规审计日志、无 Teams 集成。</p>
+                    <p class="source">来源：kanerika.com, shiftasia.com | 2026-06-05 ~ 2026-06-20</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏢 竞品动态</h2>
+
+                <div class="competitor">
+                    <h3>🐧 腾讯 WorkBuddy / QClaw</h3>
+                    <ul>
+                        <li><strong>WorkBuddy</strong>：企业级 AI 智能体工作台，完全兼容 OpenClaw 技能，支持企业微信 1 分钟配置，月活 120 万+</li>
+                        <li><strong>QClaw</strong>：腾讯电脑管家出品，实现"微信直接对话，远程操控电脑"，微信/QQ 双端原生接入，月活 85 万+</li>
+                        <li>腾讯生态整合：微信、QQ、企业微信三大社交平台全面开放，内测免费送 5000 Credits</li>
+                    </ul>
+                </div>
+
+                <div class="competitor">
+                    <h3>🌙 月之暗面 Kimi Claw</h3>
+                    <ul>
+                        <li>40GB 云存储，5000+ ClawHub 技能库，支持 BYOC（本地 OpenClaw 连接云端）</li>
+                        <li>Kimi K2.5 1T 参数 MoE 模型，200K 上下文窗口</li>
+                        <li>Pro-Grade Search 集成实时 Yahoo Finance 金融数据</li>
+                        <li>需 Allegretto 订阅（约 129 元/月起），月活 38 万+</li>
+                    </ul>
+                </div>
+
+                <div class="competitor">
+                    <h3>⚡ MiniMax MaxClaw</h3>
+                    <ul>
+                        <li>M2.5 模型（229B MoE，~10B 活跃参数），成本仅为 Claude 3.5 的 1/7~1/20</li>
+                        <li>支持 Telegram、WhatsApp、Slack、Discord 四平台，Expert 2.0 自然语言配置</li>
+                        <li>10 秒部署，16000+ 技能，7×24 自动化，月活 28 万+</li>
+                        <li>定价：免费试用 + 39 元/月</li>
+                    </ul>
+                </div>
+
+                <div class="competitor">
+                    <h3>🐱 阿里 CoPaw / HiClaw</h3>
+                    <ul>
+                        <li><strong>CoPaw</strong>：开源轻量级 AI Agent，Python 开发，内存占用仅为 OpenClaw Worker 的 1/5，支持钉钉、飞书、QQ</li>
+                        <li><strong>HiClaw</strong>：云托管多 Agent 协作平台，支持企业级混合部署</li>
+                        <li>阿里云百炼深度整合，支持一键本地/云端部署，通义千问深度集成</li>
+                    </ul>
+                </div>
+
+                <div class="competitor">
+                    <h3>🦊 字节跳动 ArkClaw</h3>
+                    <ul>
+                        <li>火山引擎企业级 AI Agent，支持公有云/私有云/混合云部署，通过等保三级</li>
+                        <li>飞书深度适配，扣子（Coze）零代码平台已有 10 万+ 第三方 Bot</li>
+                        <li>月费 9.9 元起，月活 45 万+</li>
+                        <li>MoltBook 开源社区版突破 15K Stars，兼容 OpenClaw 标准协议</li>
+                    </ul>
+                </div>
+
+                <div class="competitor">
+                    <h3>🐆 猎豹移动 EasyClaw</h3>
+                    <ul>
+                        <li>傅盛"三万"同款技能包，双击安装零配置，GUI 桌面应用</li>
+                        <li>完全兼容 OpenClaw 原版，支持国内版/海外版/企业版</li>
+                        <li>个人终身免费，月活 52 万+</li>
+                    </ul>
+                </div>
+
+                <div class="competitor">
+                    <h3>📜 Hermes Agent</h3>
+                    <ul>
+                        <li>Nous Research 出品，MIT 开源，自 2026 年 2 月发布以来已获 95K+ Stars</li>
+                        <li>核心差异：三层记忆+自进化 Skill 循环，支持 16+ 消息平台</li>
+                        <li>企业级短板：无 RBAC、无签名 Skill、无审计日志</li>
+                        <li>与 OpenClaw 双向竞争：OpenClaw 提供迁移工具，Hermes 提供 hermes claw migrate 命令</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                <div class="news-item">
+                    <h3>国产 AI Agent 三强深度实测：谁才是生产力之王？</h3>
+                    <p>近期社区开发者对腾讯 QClaw、阿里 CoPaw、字节 ArkClaw 进行了两周深度对比测试：</p>
+                    <ul>
+                        <li><strong>日常编码辅助</strong>：腾讯 QClaw 胜出，微信原生集成让"边聊边写"成为现实</li>
+                        <li><strong>大型项目管理</strong>：阿里 CoPaw 领先，数据库管理+API 测试+部署流水线一体化</li>
+                        <li><strong>快速原型开发</strong>：字节 ArkClaw 速度最快，代码补全毫秒级响应</li>
+                        <li><strong>中文文档处理</strong>：智谱 AutoClaw 在中文场景表现最佳</li>
+                        <li><strong>深度定制需求</strong>：OpenClaw 仍是无可替代的选择</li>
+                    </ul>
+                    <p class="source">来源：juejin.cn | 2026-06-13</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>百虾大战：30+ 厂商的"龙虾"命名大赛</h3>
+                    <p>GDPS 2026 大会期间，开发者社区统计了国内采用 OpenClaw 风格命名的产品，已超过 30 款：</p>
+                    <ul>
+                        <li>互联网大厂：腾讯 WorkBuddy/QClaw/龙虾管家、阿里 CoPaw/HiClaw/JVSClaw、字节 ArkClaw、百度 DuClaw/红手指 Operator</li>
+                        <li>模型厂商：月之暗面 Kimi Claw、MiniMax MaxClaw、智谱 AutoClaw、科大讯飞 AstronClaw</li>
+                        <li>手机厂商：华为小艺 Claw、小米 MiClaw、荣耀龙虾宇宙</li>
+                        <li>开源社区：ZeroClaw（Rust 重构）、PicoClaw（Go 嵌入式）</li>
+                    </ul>
+                    <p class="source">来源：dev.to, juejin.cn | 2026-04-04</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <div class="news-item">
+                    <h3>阿里云 Agent Skills：18 大场景全覆盖</h3>
+                    <p>阿里云 Agent Skills 门户已按产品分类整理，开发者可按场景快速定位：</p>
+                    <ul>
+                        <li><strong>大数据计算（28 Skills）</strong>：MaxFrame 开发、EMR 集群管理、EMR Serverless Spark</li>
+                        <li><strong>安全（29 Skills）</strong>：SAS 安全运营、WAF 配置、DDoS 防护、云防火墙诊断</li>
+                        <li><strong>数据库（19 Skills）</strong>：RDS Copilot、PolarDB AI 助手、Tair AI 运维、Tablestore</li>
+                        <li><strong>媒体服务（5 Skills）</strong>：百炼视频创作、视频分析、一刻故事板</li>
+                        <li><strong>人工智能与机器学习（18 Skills）</strong>：PAI 节点管理、DLC 任务诊断、Milvus 管理</li>
+                    </ul>
+                    <p>所有 Skills 支持自然语言操作，Agent 自动解析意图并调用对应工具。</p>
+                    <p class="source">来源：skills.aliyun.com | 持续更新</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>ClawHub 技能生态：5000+ 社区贡献</h3>
+                    <p>Kimi Claw 的 ClawHub 技能库已突破 5000+ 社区贡献，覆盖：</p>
+                    <ul>
+                        <li>格式转换与翻译</li>
+                        <li>专业领域工具（金融、法律、医疗）</li>
+                        <li>多步骤工作流编排</li>
+                        <li>无需代码即可组合 Skill</li>
+                    </ul>
+                    <p class="source">来源：trapilot.ai | 2026-02-26</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏭 企业落地案例</h2>
+                <div class="news-item">
+                    <h3>2026 年国产 OpenClaw 生态选型指南</h3>
+                    <p>腾讯云开发者社区发布的全景指南已覆盖企业落地四大场景：</p>
+                    <ul>
+                        <li><strong>场景一：企业办公自动化</strong> — 推荐 WorkBuddy + 企业微信，1 分钟配置，安全审计完备</li>
+                        <li><strong>场景二：开发者工具链</strong> — 推荐 CoPaw（本地低内存）或 ArkClaw（云端快速部署）</li>
+                        <li><strong>场景三：内容创作与知识管理</strong> — 推荐 Kimi Claw（40GB 存储 + 长文本处理）或 MaxClaw（多平台分发）</li>
+                        <li><strong>场景四：IoT 与嵌入式</strong> — 推荐 PicoClaw（Go 构建，<10MB，<1s 启动）</li>
+                    </ul>
+                    <p class="source">来源：cloud.tencent.com | 2026-04-14</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>Agent 企业落地进入"执行式"阶段</h3>
+                    <p>2026 年行业共识：AI Agent 从"对话式"（问答）向"执行式"（主动完成任务）演进。关键趋势：</p>
+                    <ul>
+                        <li>79% 的企业已部署某种形式的 Agent（Gartner 2026 Q1）</li>
+                        <li>88% 的试点项目未达生产标准（仍需人工兜底）</li>
+                        <li>AgentOps 成为新刚需：监控、审计、安全成为企业选型第一门槛</li>
+                        <li>多 Agent 协作：从单 Agent 向 Crew/Multi-Agent 系统演进</li>
+                    </ul>
+                    <p class="source">来源：多家行业报告综合 | 2026 Q2</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <ul class="links">
+                    <li><a href="https://trapilot.ai/claws/maxclaw/maxclaw-vs-kimiclaw" target="_blank">MaxClaw vs KimiClaw 深度对比（TraPilot.ai）</a></li>
+                    <li><a href="https://juejin.cn/post/7650532520363900969" target="_blank">国产 AI Agent 深度实测：QClaw vs CoPaw vs ArkClaw（掘金）</a></li>
+                    <li><a href="https://cloud.tencent.com/developer/article/2654425" target="_blank">2026 国产 OpenClaw 生态全景指南（腾讯云社区）</a></li>
+                    <li><a href="https://skills.aliyun.com/" target="_blank">阿里云 Agent Skills 门户</a></li>
+                    <li><a href="https://kanerika.com/blogs/hermes-agent/" target="_blank">Hermes Agent 企业级适配分析（Kanerika）</a></li>
+                    <li><a href="https://shiftasia.com/column/nous-hermes-agent-vs-openclaw-architectural-deep-dive/" target="_blank">Hermes vs OpenClaw 架构深度对比（Shift Asia）</a></li>
+                    <li><a href="https://juejin.cn/post/7625923696348921882" target="_blank">OpenClaw 爆火出圈：2026 AI Agent 元年入局指南（掘金）</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>OpenClaw Daily Report - 每日AI智能体行业资讯</p>
+            <p>Generated by Kimi Claw | 2026-07-04</p>
+        </footer>
+    </div>
+</body>
+</html>
