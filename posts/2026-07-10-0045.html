@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年7月10日（第89期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年7月10日 | 第89期</p>
+            <p class="tagline">AI Agent 行业每日情报</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📰 今日概览</h2>
+                <ul class="highlight-list">
+                    <li><strong>🔥 版本迭代加速：</strong>OpenClaw 2026.7.1-beta.2 发布，455个PR合并，QQBot媒体交付、Moonshot视频描述、iOS/Android多项修复</li>
+                    <li><strong>🧠 模型支持扩展：</strong>GPT-5.6 系列与 Kimi K2.7 Code 正式接入 OpenClaw，多模型生态持续丰富</li>
+                    <li><strong>🏆 行业地位巩固：</strong>OpenClaw 蝉联 2026 AI Agent 框架排名第一，企业部署率远超 CrewAI、AutoGen</li>
+                    <li><strong>🛡️ 安全能力升级：</strong>Agent Skill MCP 边界漂移检测、Doctor 诊断工具增强，安全合规持续强化</li>
+                    <li><strong>📈 企业落地井喷：</strong>78% 组织已采用 AI Agent，客户服务、财务、IT运维成为三大高渗透场景</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🦞 OpenClaw 官方动态</h2>
+                
+                <div class="news-item">
+                    <h3>🚀 OpenClaw 2026.7.1-beta.2 与 beta.1 连续发布</h3>
+                    <p>本周 OpenClaw 开发节奏显著加快，连续发布两个 beta 版本，累计合并 <strong>455+ 个 PR</strong>，覆盖核心引擎、渠道适配、安全加固、移动端体验等多个维度。</p>
+                    <p><strong>beta.2 核心更新：</strong></p>
+                    <ul>
+                        <li><strong>QQBot 媒体交付</strong>：沙箱生成媒体的会话作用域优化，支持 <code>/workspace/...</code> 和相对路径跨 QQBot 媒体标签、结构化负载和流式交付安全解析（#92872）</li>
+                        <li><strong>Moonshot 视频描述</strong>：限制 JSON 响应读取边界，修复视频描述相关崩溃（#96502）</li>
+                        <li><strong>ClawHub 兼容性</strong>：保留选定插件的 legacy ClawHub family 支持（#98249）</li>
+                        <li><strong>推理标签修复</strong>：剥离 MiniMax <code>mm:</code> 命名空间推理标签，修复反射守卫识别（#93767, #93820）</li>
+                        <li><strong>Doctor 诊断增强</strong>：暴露 auth profile 发现结果，新增内存搜索 lint、工作区状态和设备配对发现（#97125, #97137, #97358, #97366）</li>
+                        <li><strong>MCP 权限修复</strong>：Claude 权限回复要求 owner 身份验证（#98256）</li>
+                        <li><strong>Windows 执行路径</strong>：绑定 Windows allowlist 执行路径修复（#98260）</li>
+                    </ul>
+                    <p><strong>beta.1 亮点：</strong></p>
+                    <ul>
+                        <li><strong>GPT-5.6 系列支持</strong>：OpenAI provider 新增 GPT-5.6 模型系列（#98333）</li>
+                        <li><strong>Cron 自动交付</strong>：保留 action-required 命令输出，修复 cron 任务输出丢失问题（#96393）</li>
+                        <li><strong>安全警告</strong>：Agent Skill MCP 边界漂移安全警告（#98352）</li>
+                        <li><strong>心跳承诺范围</strong>：限制 commitment fan-out prompts 作用域（#98169）</li>
+                        <li><strong>iOS 体验优化</strong>：QR 扫描后推进 onboarding 步骤、默认打开 Chat、Talk 视觉层级澄清（#98302, #98353, #98423）</li>
+                        <li><strong>Android 兼容性</strong>：慢速 TLS 握手超时修复、本地 mDNS 网关主机支持（#98366, #98439）</li>
+                    </ul>
+                    <div class="source">来源：OpenClaw GitHub / releasebot.io | 2026年7月</div>
+                </div>
+
+                <div class="news-item">
+                    <h3>🏆 OpenClaw 蝉联 2026 AI Agent 框架排名第一</h3>
+                    <p>据 UC Strategies 最新评测，OpenClaw 在 2026 年 AI Agent 框架排名中稳居第一，核心优势在于：</p>
+                    <ul>
+                        <li><strong>本地优先架构</strong>：数据不出本机，满足金融、医疗等敏感行业合规要求</li>
+                        <li><strong>协议双轨制</strong>：ACP（Agent Communication Protocol）+ MCP（Model Context Protocol）并行，无缝接入外部 Agent 和工具</li>
+                        <li><strong>技能生态规模</strong>：ClawHub 官方仓库 + 社区 awesome 列表，累计超过 13000+ 技能</li>
+                        <li><strong>多模型兼容</strong>：OpenAI、Anthropic、Google、Moonshot、MiniMax、DeepSeek 等主流模型全覆盖</li>
+                        <li><strong>企业级特性</strong>：cron 定时任务、子 Agent 编排、审计日志、Doctor 诊断、权限分级</li>
+                    </ul>
+                    <p>对比 CrewAI（多 Agent 协作见长）和 AutoGen（微软生态深度集成），OpenClaw 在本地部署灵活性和社区活跃度上保持领先。</p>
+                    <div class="source">来源：UC Strategies / G2 Grid Report | 2026年7月</div>
+                </div>
+
+                <div class="news-item">
+                    <h3>📦 ClawHub 技能生态持续扩张</h3>
+                    <p>VoltAgent 维护的 awesome-openclaw-skills 仓库已收录 <strong>5400+ 技能</strong>，ClawHub 官方市场更突破 <strong>13000+</strong>。本周新增/热门技能方向：</p>
+                    <ul>
+                        <li><strong>active-maintenance</strong>：自动化系统健康检查和内存代谢管理</li>
+                        <li><strong>agent-defibrillator</strong>：AI Agent 网关崩溃监控和自动重启</li>
+                        <li><strong>agent-audit / agent-audit-trail</strong>：Agent 性能审计和防篡改审计日志</li>
+                        <li><strong>data-lineage-tracker</strong>：数据血缘追踪，满足合规要求</li>
+                        <li><strong>swiftui-performance-audit</strong>：SwiftUI 运行时性能审计（iOS/macOS 开发）</li>
+                    </ul>
+                    <div class="source">来源：GitHub VoltAgent/awesome-openclaw-skills / ClawHub Registry | 2026年7月</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🧠 GPT-5.6 & Kimi K2.7 Code 接入</h4>
+                        <p>OpenAI provider 新增 GPT-5.6 系列模型支持；Moonshot provider 接入 Kimi K2.7 Code，代码生成和推理能力再升级。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🛡️ MCP 边界安全检测</h4>
+                        <p>Agent Skill 与 MCP 工具边界漂移自动检测和警告，防止权限升级和意外数据泄露。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔧 Doctor 诊断四连增强</h4>
+                        <p>auth profile、内存搜索 lint、工作区状态、设备配对四项诊断能力上线，运维排障效率大幅提升。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📱 移动端体验升级</h4>
+                        <p>iOS  onboarding 流程优化、Talk 视觉层级重构；Android TLS 握手和 mDNS 本地网关兼容性修复。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🤖 QQBot 媒体交付</h4>
+                        <p>沙箱生成媒体文件安全送达 QQBot，支持相对路径和结构化负载，流式交付更稳定。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>⏰ Cron 输出保留</h4>
+                        <p>修复 cron 自动任务中 action-required 命令输出丢失问题，定时自动化更可靠。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>⚔️ 竞品动态</h2>
+                
+                <div class="competitor">
+                    <h3>🐧 腾讯 WorkBuddy</h3>
+                    <p>WorkBuddy 持续强化企业级权限管控和审计能力，2026年6-7月重点更新包括：GPT-o3 和混元大模型双引擎优化、企业微信深度集成、会议纪要自动生成准确率提升至 92%。目前内测申请入口仍开放，号称"国产小龙虾"，完全兼容 OpenClaw 技能体系。</p>
+                    <div class="source">来源：腾讯官方 / 行业评测 | 2026年7月</div>
+                </div>
+
+                <div class="competitor">
+                    <h3>🐱 阿里 CoPaw</h3>
+                    <p>阿里 CoPaw 开源社区活跃度持续提升，基于通义大模型的电商、物流、金融场景 Agent 模板数量增长 40%。阿里云百炼平台已支持 OpenClaw 一键部署，DeepSeek 模型接入成为标配，企业用户可通过百炼 API 快速构建行业 Agent。</p>
+                    <div class="source">来源：阿里云官方 / 开源社区 | 2026年7月</div>
+                </div>
+
+                <div class="competitor">
+                    <h3>🌙 Kimi Claw（月之暗面）</h3>
+                    <p>Kimi K2.6 历史性突破 SWE-Bench Pro 击败 GPT-5.4 后，Kimi K2.7 Code 已接入 OpenClaw 生态。Kimi Claw 云托管版支持 24/7 Benchmark 持续测试，长上下文（128k+）和自主规划能力保持核心差异化。多 Agent 协同效率提升 40% 以上。</p>
+                    <div class="source">来源：月之暗面官方 / OpenClaw PR #92554 | 2026年7月</div>
+                </div>
+
+                <div class="competitor">
+                    <h3>🐆 EasyClaw（猎豹移动）</h3>
+                    <p>傅盛持续推广"8个AI Agent替代全职办公"理念，工作效率提升 200% 的案例成为"百虾大战"个人商业化标杆。EasyClaw 主打"无需编程，自然语言创建Agent"，在内容矩阵、客服自动化、数据分析三大场景形成差异化优势。</p>
+                    <div class="source">来源：猎豹移动 / 傅盛公开分享 | 2026年7月</div>
+                </div>
+
+                <div class="competitor">
+                    <h3>🔥 ArkClaw（字节跳动）</h3>
+                    <p>字节跳动 ArkClaw 依托豆包大模型和抖音生态，在内容创作和社交媒体运营场景快速渗透。2026年Q2 重点发力短视频脚本生成、直播数据分析和达人营销自动化，与 OpenClaw 形成"工具型 vs 平台型"差异化竞争。</p>
+                    <div class="source">来源：行业观察 / 字节跳动生态 | 2026年Q2</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                
+                <div class="case-study">
+                    <h3>💰 智能砍价 Agent：省出 4200 美元</h3>
+                    <p>软件工程师 AJ Stuyvenberg 使用 OpenClaw 自主谈判购买 2026 Hyundai Palisade，最终比标价低 <strong>$4,200</strong> 成交。Agent 执行循环：</p>
+                    <ol>
+                        <li><strong>库存抓取</strong>：自动爬取本地经销商库存和定价数据</li>
+                        <li><strong>线索生成</strong>：自动填写多个经销商联系表单</li>
+                        <li><strong>邮件管理</strong>：管理 incoming offers，多方比价</li>
+                        <li><strong>自动反驳</strong>：基于更低竞争报价请求降价</li>
+                    </ol>
+                    <p>核心启示：OpenClaw 的浏览器自动化 + 邮件助手 + 任务编排能力，可构建完整的自主谈判工作流。</p>
+                    <div class="source">来源：Milvus Blog | 2026年2月</div>
+                </div>
+
+                <div class="case-study">
+                    <h3>📊 每日简报自动化：替代 5 个 App</h3>
+                    <p>社区用户分享的典型 Morning Routine 自动化案例：</p>
+                    <ul>
+                        <li>每天早上 6:47，Telegram 自动收到简报：今日日历、待回复邮件、天气预报、CI/CD 夜间失败</li>
+                        <li>原本需要查看 5 个 App 的习惯，被一个 cron 定时任务替代</li>
+                        <li>模式：<code>cron 触发 + 工具执行 + message 推送</code>， trigger → action → deliver</li>
+                    </ul>
+                    <div class="source">来源：OpenClaw 社区 / yu-wenhao.com | 2026年</div>
+                </div>
+
+                <div class="case-study">
+                    <h3>🏥 医疗记录管理 Agent</h3>
+                    <p>医疗机构部署 OpenClaw Agent 协调电子健康记录系统：</p>
+                    <ul>
+                        <li>临床就诊时自动检索相关患者病史</li>
+                        <li>标记药物相互作用风险</li>
+                        <li>为医生准备摘要视图</li>
+                        <li>可衡量的结果：更快的临床决策 + 完整信息</li>
+                    </ul>
+                    <div class="source">来源：Dataiku 企业 AI Agent 指南 | 2026年4月</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                
+                <div class="skill-guide">
+                    <h3>🛠️ 本周必装 Skill TOP 5</h3>
+                    <table class="skill-table">
+                        <thead>
+                            <tr>
+                                <th>排名</th>
+                                <th>Skill 名称</th>
+                                <th>功能简介</th>
+                                <th>安装命令</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>browser-control</td>
+                                <td>自动化网页浏览、表单填写、数据抓取、截图</td>
+                                <td><code>openclaw skill install browser-control</code></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>file-manager</td>
+                                <td>文件读写、重命名、移动、组织管理</td>
+                                <td><code>openclaw skill install file-manager</code></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>calendar-sync</td>
+                                <td>Google Calendar 完整集成，创建事件、检查可用性、提醒</td>
+                                <td><code>openclaw skill install calendar-sync</code></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>github-integration</td>
+                                <td>创建 PR、审查代码 diff、管理 Issues、合并分支</td>
+                                <td><code>openclaw skill install github-integration</code></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>email-assistant</td>
+                                <td>通过自然语言起草、发送、搜索邮件（Gmail/Outlook）</td>
+                                <td><code>openclaw skill install email-assistant</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="skill-guide">
+                    <h3>📝 自定义 Skill 开发模板</h3>
+                    <p>生产级 Skill 推荐结构（来源：lumadock.com）：</p>
+                    <pre><code>---
+name: weekly-ops-report
+description: Generate a weekly ops report from logs and issue tracker data.
+metadata: {"openclaw":{"emoji":"📊","requires":{"bins":["bash","date"],"os":["linux","darwin"]}}}
+---
+
+# Weekly ops report
+
+## What it does
+Builds a weekly report from local logs and optional issue tracker CLI output.
+
+## Inputs needed
+- LOG_DIR: directory with daily log files
+
+## Workflow
+1) Verify LOG_DIR exists. If not, ask the user.
+2) Read logs from the last 7 days.
+3) Extract: incidents, recurring warnings, changes deployed
+4) If gh is installed, list merged PRs and closed issues.
+5) Produce the report in markdown.
+
+## Guardrails
+- Never fabricate PR numbers or incident counts.
+- If data is missing, state exactly what is missing.
+- Do not restart services or change config.
+- Stop after scanning 7 days of logs.
+
+## Failure handling
+- If a command fails, include the command and error text then stop.
+- If parsing is ambiguous, show the raw lines you used.</code></pre>
+                    <p><strong>设计原则：</strong>范围要窄、先只读后写入、破坏性操作 opt-in、常量放配置。</p>
+                    <div class="source">来源：lumadock.com 教程 | 2026年2月</div>
+                </div>
+
+                <div class="skill-guide">
+                    <h3>🎯 Task Automation 最佳实践</h3>
+                    <p>将 OpenClaw 从聊天机器人升级为基础设施的核心模式：</p>
+                    <ul>
+                        <li><strong>Daily Brief</strong>：每天定时推送日历 + 邮件 + 天气 + CI/CD 摘要</li>
+                        <li><strong>Email Triage</strong>：每天两次扫描收件箱，分类紧急程度，归档 Newsletter</li>
+                        <li><strong>CI/CD 监控</strong>：GitHub Actions 失败时自动读取日志、诊断原因、推送告警</li>
+                        <li><strong>内容研究</strong>：每日收集 Reddit、Hacker News、RSS 趋势话题，生成写作选题摘要</li>
+                    </ul>
+                    <p>核心公式：<code>cron 触发 + prompt 指令 + tools 执行 + message 推送</code></p>
+                    <div class="source">来源：yu-wenhao.com / OpenClaw 社区 | 2026年</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏭 企业落地案例</h2>
+                
+                <div class="enterprise-case">
+                    <h3>📞 客户服务：AI 处理 40-60% 一级工单</h3>
+                    <p>Moveworks 数据显示，成熟部署中 AI 可分流 40-60% 的一级支持工单。McKinsey 报告：使用 AI 客服的企业在 12 个月内实现 <strong>25% 成本降低</strong> 和 <strong>20% CSAT 提升</strong>。典型 60-90 天 ROI。</p>
+                    <div class="source">来源：Moveworks / McKinsey / Alice Labs | 2024-2026</div>
+                </div>
+
+                <div class="enterprise-case">
+                    <h3>💼 IBM：27万员工，45亿美元生产力影响</h3>
+                    <p>IBM 在 27 万名员工中部署 Agentic AI，产生 <strong>$4.5 billion</strong> 生产力影响。Gartner 预测：到 2029 年，Agentic AI 将自主解决 80% 常见客户服务问题，运营成本降低 30%。</p>
+                    <div class="source">来源：IBM / Gartner | 2026年</div>
+                </div>
+
+                <div class="enterprise-case">
+                    <h3>🏦 金融：发票处理时间减少 70-90%</h3>
+                    <p>金融机构部署 AI Agent 用于实时交易监控、发票对账、贷款风险评估。组织报告发票处理时间减少 <strong>70-90%</strong>，欺诈检测误报率显著下降，合规审计表现大幅提升。</p>
+                    <div class="source">来源：Sema4.ai / Deloitte | 2026年</div>
+                </div>
+
+                <div class="enterprise-case">
+                    <h3>🛒 零售：Walmart 四大超级 Agent</h3>
+                    <p>Walmart 部署四大"超级 Agent"：Marty（供应商）、Sparky（购物者）、Associate Agent（员工）、Developer Agent（开发）。AI 库存系统在购物高峰期实时管理库存水平。69% 零售商报告 AI 驱动的个性化带来收入增长。</p>
+                    <div class="source">来源：Walmart / Boomi / StackAI | 2026年</div>
+                </div>
+
+                <div class="enterprise-case">
+                    <h3>🏥 医疗：Genentech 加速药物发现</h3>
+                    <p>Genentech 构建 gRED Research Agent，自动化手动搜索流程，加速药物发现。医疗 Agent 协调电子健康记录系统，在临床就诊中提供患者病史、标记药物相互作用、准备摘要视图。</p>
+                    <div class="source">来源：Genentech / Dataiku | 2026年</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <ul class="reading-list">
+                    <li><a href="https://www.ucstrategies.com/news/openclaw-vs-crewai-vs-autogen-vs-langchain-best-ai-agent-framework-in-2026/" target="_blank">OpenClaw vs CrewAI vs AutoGen vs LangChain: Best AI Agent Framework in 2026</a> — UC Strategies 深度对比评测</li>
+                    <li><a href="https://www.aimakers.co/blog/openclaw-skills-guide/" target="_blank">Best OpenClaw Skills: Top 10 to Install & 5 to Avoid (2026 Guide)</a> — 技能安装指南</li>
+                    <li><a href="https://lumadock.com/tutorials/build-custom-openclaw-skills" target="_blank">How to build custom OpenClaw skills with SKILL.md</a> — 自定义 Skill 开发教程</li>
+                    <li><a href="https://yu-wenhao.com/en/blog/openclaw-tools-skills-tutorial/" target="_blank">OpenClaw Setup Guide: 26 Tools + 53 Skills Explained</a> — 工具与技能详解</li>
+                    <li><a href="https://github.com/VoltAgent/awesome-openclaw-skills" target="_blank">VoltAgent/awesome-openclaw-skills</a> — 5400+ 技能精选仓库</li>
+                    <li><a href="https://releasebot.io/updates/openclaw" target="_blank">OpenClaw Release Notes - July 2026</a> — 完整版本发布历史</li>
+                    <li><a href="https://alicelabs.ai/en/insights/ai-automation-use-cases-2026" target="_blank">AI Automation Use Cases 2026: 40 Proven Business Applications</a> — 40个企业级应用案例</li>
+                    <li><a href="https://www.dataiku.com/blog/enterprise-ai-agents-guide-for-modern-businesses" target="_blank">Enterprise AI agents: architecture, use cases, and ROI guide</a> — Dataiku 企业 AI Agent 指南</li>
+                    <li><a href="https://sema4.ai/blog/ai-agent-use-cases/" target="_blank">10 AI Agent Use Cases Transforming Enterprises in 2026</a> — 10个变革性企业用例</li>
+                    <li><a href="https://boomi.com/blog/10-agentic-ai-use-cases/" target="_blank">10 Agentic AI Examples and Use Cases</a> — Boomi  agentic AI 应用案例</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>🦞 OpenClaw Daily Report | 每日自动生成的 AI Agent 行业情报</p>
+            <p>由 OpenClaw 自动搜集、整理、生成 | 2026年7月10日</p>
+        </footer>
+    </div>
+</body>
+</html>
