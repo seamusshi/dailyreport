@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年7月15日（第93期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年7月15日（第93期）</p>
+            <p class="tagline">Agent 每日情报追踪</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📰 今日概览</h2>
+                <ul class="highlights">
+                    <li><strong>OpenClaw v2026.7.1正式版</strong>发布，涵盖GPT-5.6、Claude Sonnet 5、Mythos 5等12+新模型接入，原生macOS App上线会话优先导航</li>
+                    <li><strong>ClawRouter</strong>新路由系统上线，支持动态模型发现、OpenAI/Anthropic/Gemini原生传输，实现预算管理</li>
+                    <li><strong>对话式安装向导</strong>Crestodian全面重构，支持CLI、Web、macOS三端AI引导设置，实现精确操作绑定</li>
+                    <li><strong>移动端大升级</strong>：iOS/Android离线缓存、Apple Watch完整语音对话、Gateway TTS语音播放</li>
+                    <li><strong>竞品方面</strong>：ArkClaw企业合规版获BestClaw 7.5分，火山引擎加大飞书集成推广；阿里云30+教程持续霸榜</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🦞 OpenClaw 官方动态</h2>
+                <h3>v2026.7.1 正式版发布（7月1日）</h3>
+                <p>2026年7月1日，OpenClaw 正式版发布，这是自v2026.6.9以来的重大版本更新，包含超过20个核心功能升级和大量修复。以下是核心亮点：</p>
+
+                <h4>🧠 新模型与供应商（12+项更新）</h4>
+                <ul>
+                    <li><strong>GPT-5.6</strong> 成为新安装默认模型，支持 /think ultra 深度推理模式</li>
+                    <li>新增 <strong>Featherless</strong>、<strong>Claude Sonnet 5</strong>、<strong>Mythos 5</strong>、<strong>Meta Muse Spark 1.1</strong> 等模型支持</li>
+                    <li>全新 <strong>ClawRouter</strong> 路由系统上线，支持凭据级别的动态模型发现</li>
+                    <li>支持 OpenAI 兼容和原生 Anthropic/Gemini 传输协议</li>
+                    <li>实现跨 OpenClaw 使用界面的预算管理报告</li>
+                    <li>OAuth 续期后自动刷新模型可用性</li>
+                </ul>
+
+                <h4>🖥️ Control UI 全面升级</h4>
+                <ul>
+                    <li><strong>会话优先</strong>：新会话在侧边栏前端常驻，最小化可搜索侧边栏</li>
+                    <li>新增紧凑上下文环、推理力度滑块、更简洁的仪表板</li>
+                    <li><strong>原生 macOS 应用</strong>：会话浏览器支持模型选择、推理模式、斜杠命令、转录导出</li>
+                    <li>支持自动生成的会话标题（基于首条消息智能命名）</li>
+                    <li>每消息 token 消耗、上下文详情、模型信息悬停展示</li>
+                </ul>
+
+                <h4>🤖 Crestodian 对话式安装向导</h4>
+                <ul>
+                    <li>真正运行 agent-loop 的 AI 引导安装流程</li>
+                    <li>支持 CLI、Web 安装、macOS 应用三端</li>
+                    <li>AI 引导的供应商配置、模型判断的精确操作绑定</li>
+                    <li>掩码凭据提示、无可用模型时的确定性降级</li>
+                </ul>
+
+                <h4>📱 移动端离线 + 语音</h4>
+                <ul>
+                    <li>iOS/Android 预绘制有界会话和转录缓存，支持离线模式</li>
+                    <li>Apple Watch 完整语音对话：口述消息 + 收听回复</li>
+                    <li>Gateway TTS 支持内联全段音频播放，设备降级兜底</li>
+                    <li>新增 iMessage 原生投票、Telegram 多线程进度摘要</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <h3>ClawRouter：下一代智能路由系统</h3>
+                <p>ClawRouter 是 v2026.7.1 最重磅的新功能之一。作为一个<strong>打包的供应商插件</strong>，它提供：</p>
+                <ul>
+                    <li><strong>凭据级别的动态模型发现</strong>：自动检测可用模型</li>
+                    <li><strong>OpenAI 兼容 + 原生 Anthropic/Gemini 传输</strong>：多协议支持</li>
+                    <li><strong>管理预算报告</strong>：跨 OpenClaw 所有使用界面的统一消费追踪</li>
+                </ul>
+                <p>这意味着用户可以在一个入口管理多个模型供应商，实现成本可控的模型路由。</p>
+
+                <h3>会话管理与生成标题</h3>
+                <p>新增 Gateway 支持的<strong>会话分组</strong>、未读状态、重命名、Fork、归档、删除控制。Web、iOS、Android 三端同步。</p>
+                <p>支持通过默认/每Agent 的 <strong>utilityModel</strong> 路由，以低成本方式生成会话、话题、线程标题。</p>
+
+                <h3>Cron 与用量管理</h3>
+                <ul>
+                    <li>新增退出触发计划、分离会话目标运行</li>
+                    <li>飞行中任务医生警告机制</li>
+                    <li>Telegram 用量页脚更易于换行</li>
+                </ul>
+
+                <h3>本地推理与聊天控制</h3>
+                <ul>
+                    <li>自动发现 Ollama 推理节点</li>
+                    <li>Control UI 会话优先导航</li>
+                    <li>推理力度控制、命令选择器</li>
+                    <li>延迟工具搜索选错工具家族时保持 OpenClaw 控制工具可用</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🌟 竞品动态</h2>
+                <h3>ArkClaw（字节跳动 / 火山引擎）</h3>
+                <ul>
+                    <li><strong>BestClaw 评分7.5/10</strong>，企业采购适配度4.3/5</li>
+                    <li>定位：中大型企业、政府、金融、平台互联网合规落地</li>
+                    <li>核心优势：火山引擎云 + 企业合规 + 字节模型生态</li>
+                    <li>支持飞书、钉钉、企业微信等 IM 渠道一键对接</li>
+                    <li>提供 Lite/标准/高级三版，Coding Plan 订阅制</li>
+                    <li>最佳适配：有数据驻留、审计、SSO、合规采购需求的企业</li>
+                </ul>
+
+                <h3>腾讯 WorkBuddy</h3>
+                <ul>
+                    <li>月活885万，中国市场PC端智能体排名第一</li>
+                    <li>企业版持续深耕，1.2万内部员工日常使用</li>
+                    <li>AI 编辑部 7 人协作流水线验证</li>
+                    <li>企业微信 2 步接入能力</li>
+                </ul>
+
+                <h3>阿里 CoPaw</h3>
+                <ul>
+                    <li>开源生态持续扩大，模块化重构</li>
+                    <li>百炼平台深度整合，Skills 生态持续扩展</li>
+                    <li>30+ 阿里云部署教程持续霸榜开发者社区</li>
+                </ul>
+
+                <h3>其他竞品</h3>
+                <ul>
+                    <li><strong>Hermes Agent</strong>：140K+ GitHub Stars，自进化架构成熟</li>
+                    <li><strong>Kimi Claw</strong>：云托管版上线，24/7 Benchmark 发布</li>
+                    <li><strong>MaxClaw</strong>：MiniMax 生态，M2.7 更新，成本优势</li>
+                    <li><strong>EasyClaw</strong>：傅盛 8 Agent 案例持续发酵，出海企业版</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例</h2>
+                <h3>案例1：躺床上用 Telegram 重建个人网站</h3>
+                <p>@davekiss 在 Netflix 时通过 Telegram 指令完成网站迁移：Notion 内容迁到 Astro 框架，18 篇文章批量搬家，DNS 切换到 Cloudflare，全程未碰电脑。效率提升 80%+。</p>
+                <p>技能组合：domain-dns-ops + frontend-design + cloudflare</p>
+
+                <h3>案例2：买车砍价省 $4200</h3>
+                <p>AJ Stuyvenberg 通过 OpenClaw 自动谈判，最终省 $4200，API 成本仅 $5，ROI 达 84000%。</p>
+                <p>技能组合：tavily-search（价格检索） + email-automation（邮件自动化）</p>
+                <p>执行流程：检索成交价 → 收集10家经销商 → 生成个性化谈判邮件 → 监控回复 → 筛选最优报价</p>
+
+                <h3>案例3：深夜自动修复生产环境 Bug</h3>
+                <p>@henrymascot 配置 Slack 联动后，凌晨生产环境 Bug 自动检测、定位、修复，团队次日上班问题已解决。</p>
+                <p>技能组合：proactive-agent + code-debugger + github-sync</p>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <h3>必装技能组合（办公自动化）</h3>
+                <ul>
+                    <li><strong>meeting-minute-taker</strong>：录音转文字 + Action Items 提取</li>
+                    <li><strong>email-triager</strong>：邮件分类 + 自动草拟回复</li>
+                    <li><strong>pdf-chat</strong>：对话式提取 PDF 信息</li>
+                    <li><strong>file-organizer</strong>：按规则归档下载文件夹</li>
+                    <li><strong>invoice-extractor</strong>：PDF 发票 → Excel</li>
+                    <li><strong>data-cleaner</strong>：Excel/CSV 去重 + 格式统一</li>
+                </ul>
+
+                <h3>搜索技能对比</h3>
+                <ul>
+                    <li><strong>Tavily Search</strong>：快速精准信息，AI 优化结果，结构化呈现</li>
+                    <li><strong>Multi Search Engine</strong>：17 引擎全覆盖，多源对比验证，隐私保护（DuckDuckGo）</li>
+                    <li><strong>WolframAlpha</strong>：知识计算，数学公式、单位转换</li>
+                </ul>
+
+                <h3>30 天学习路线</h3>
+                <ul>
+                    <li><strong>Week 1</strong>：基础搭建（部署、人设配置、3大必装技能）</li>
+                    <li><strong>Week 2</strong>：技能探索（文件管理、自动化任务）</li>
+                    <li><strong>Week 3</strong>：高级应用（网络深化、开发辅助）</li>
+                    <li><strong>Week 4</strong>：实战落地（选择项目、优化技能组合）</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🏢 企业落地案例</h2>
+                <h3>ArkClaw 企业合规落地</h3>
+                <p>火山引擎 ArkClaw 适配 2026 企业场景三大实践：</p>
+                <ul>
+                    <li><strong>轻量办公自动化</strong>：周报生成、文档整理、会议预约</li>
+                    <li><strong>一人公司（OPC）</strong>：多并发步骤推理、工具交互，相当于虚拟员工</li>
+                    <li><strong>个人事务智能管理</strong>：定时提醒、文件整理、票务预订</li>
+                </ul>
+
+                <h3>阿里云部署方案</h3>
+                <ul>
+                    <li>专属应用镜像，20 分钟完成部署</li>
+                    <li>集成 OpenClaw 主程序、全部依赖及常用 Skills</li>
+                    <li>支持轻量应用服务器、ECS 云服务器</li>
+                    <li>配合百炼 Coding Plan，按次计费</li>
+                </ul>
+
+                <h3>腾讯云部署方案</h3>
+                <ul>
+                    <li>无影云桌面预装 OpenClaw</li>
+                    <li>企业微信 2 步接入</li>
+                    <li>ADP 企业智能体全矩阵</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📎 延伸阅读</h2>
+                <ul>
+                    <li><a href="https://releasebot.io/updates/openclaw">OpenClaw Release Notes - July 2026</a></li>
+                    <li><a href="https://www.npmjs.com/package/openclaw/v/2026.7.1">npm 包 v2026.7.1</a></li>
+                    <li><a href="https://github.com/openclaw/openclaw/actions/runs/29269577304">GitHub Release CI</a></li>
+                    <li><a href="https://bestclaw.io/agents/arkclaw">ArkClaw Review 2026 - BestClaw</a></li>
+                    <li><a href="https://developer.aliyun.com/article/1712045">阿里云 OpenClaw 从入门到精通</a></li>
+                    <li><a href="https://developer.aliyun.com/article/1713246">100个高赞 Skills 实用指南</a></li>
+                    <li><a href="https://www.volcengine.com/article/36918">ArkClaw 企业级落地全流程</a></li>
+                    <li><a href="https://github.com/razhang/llm-ai-agent-2026">GitHub: AI Agent 框架 2026 精选</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Generated by Kimi Claw · 2026-07-15</p>
+        </footer>
+    </div>
+</body>
+</html>
