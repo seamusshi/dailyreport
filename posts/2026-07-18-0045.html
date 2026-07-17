@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年7月18日（第96期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年7月18日（第96期）</p>
+            <p class="tagline">Agent 每日情报追踪</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📰 今日概览</h2>
+                <ul class="highlights">
+                    <li><strong>WAIC 2026 世界人工智能大会今日开幕</strong>：7月17日-20日上海举办，主题为"智能伙伴 共创未来"，超300款AI产品全球首发，1100余家企业参展</li>
+                    <li><strong>百虾大战格局持续分化</strong>：OpenClaw 270K+ GitHub Stars 保持开源领先，腾讯WorkBuddy、字节ArkClaw、阿里CoPaw、Hermes Agent 等国产Agent各有生态打法</li>
+                    <li><strong>AgentOps 成为企业落地刚需</strong>：82%组织计划2026年集成AI Agent，88%已部署企业获正向ROI，金融/医疗/制造三大垂直行业率先规模化</li>
+                    <li><strong>Markdown驱动多Agent协作架构受关注</strong>：文件系统即协议，零依赖、人类可审计、松散耦合，在企业AgentOps场景中吸引力独特</li>
+                    <li><strong>国产AI Agent生态竞争白热化</strong>：阶跃星辰将发布AI智能体手机，字节引入前DeepSeek核心研究员郭达雅加码Agent赛道，MiniMax市值超百度</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🦞 OpenClaw 官方动态</h2>
+                <h3>v2026.7.1 持续迭代与生态扩展</h3>
+                <p>OpenClaw v2026.7.1 发布以来持续获得社区贡献：</p>
+                <ul>
+                    <li><strong>GitHub 270,000+ Stars</strong>，超越React和Linux登顶全球开源项目榜首，单周访问量突破200万</li>
+                    <li><strong>ClawRouter</strong> 动态模型发现功能支持 GPT-5.6、Kimi K2.7 Code、Tencent Hy3 等模型自动适配，降低新用户配置门槛</li>
+                    <li><strong>Crestodian</strong> 对话式安装向导持续优化，macOS原生App会话优先导航获用户好评</li>
+                    <li><strong>安全性升级</strong>：ClawHub 安全审计机制强化，应对社区对技能市场安全性的担忧</li>
+                    <li><strong>企业微信插件</strong> 2026.7.2 更新：待办MCP和文档MCP（在线表格）上线，办公流程自动化再进一步</li>
+                </ul>
+
+                <h3>GitHub 最新动态</h3>
+                <ul>
+                    <li>官方插件持续外部化，生态进一步解耦，降低核心代码库复杂度</li>
+                    <li>社区贡献者活跃，Skills生态持续增长，ClawHub 平台技能数量稳步增加</li>
+                    <li>安全性修复持续推进，加强凭据存储加密和沙箱执行策略</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <h3>Markdown驱动多Agent协作：文件即协议</h3>
+                <p>社区近期涌现的Markdown驱动多Agent架构引发广泛讨论。用多个Agent组建协作团队，协调机制不是API调用、不是消息队列、不是编排框架——而是<strong>文件系统上的Markdown文件</strong>。</p>
+                <p>架构核心优势：</p>
+                <ul>
+                    <li><strong>零依赖高可靠</strong>：文件没有认证问题、没有API速率限制、没有服务崩溃风险</li>
+                    <li><strong>人类可审计</strong>：Markdown既是机器协作协议，也是人类可读的工作日志</li>
+                    <li><strong>松散耦合</strong>：各Agent通过读写共享文件完成协作，流水线自然形成</li>
+                </ul>
+
+                <h3>心跳自愈机制：Cron任务的保险丝</h3>
+                <p>定时任务失败的原因多样：机器重启、任务卡住、网络断开、API超时。社区最佳实践在HEARTBEAT.md中设置安全网关：</p>
+                <ul>
+                    <li>每次心跳检查各定时任务lastRunAtMs是否超过26小时</li>
+                    <li>过期则通过CLI强制触发：<code>openclaw cron run &lt;jobId&gt; --force</code></li>
+                    <li>完全自动修复，无需人工干预，已在多个生产环境验证</li>
+                </ul>
+
+                <h3>AgentOps：从可选项到必选项</h3>
+                <p>随着82%的组织计划在2026年内集成AI Agent，AgentOps（Agent运维）正从边缘概念演变为核心基础设施：</p>
+                <ul>
+                    <li><strong>实时监控</strong>：Agent执行状态、token消耗、响应延迟全链路可观测</li>
+                    <li><strong>决策链路审计</strong>：每个决策的上下文、推理过程、工具调用全程记录</li>
+                    <li><strong>权限管控</strong>：基于角色的工具访问控制，防止Agent越权操作</li>
+                    <li><strong>异常处置</strong>：自动熔断、人工介入、回滚机制三位一体</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🔥 竞品动态</h2>
+                
+                <h3>腾讯 WorkBuddy — 企业级零门槛路线</h3>
+                <p>腾讯旗下全场景AI智能体WorkBuddy持续迭代：</p>
+                <ul>
+                    <li>完全兼容OpenClaw全部技能，内置超20种技能包</li>
+                    <li>支持企微、微信、QQ、飞书、钉钉五大即时通讯平台接入</li>
+                    <li>基于腾讯CodeBuddy成熟的Agent智能体架构，闭源部署，安全防护机制较强</li>
+                    <li>主打零门槛：官网下载安装后最快1分钟即可完成配置</li>
+                </ul>
+
+                <h3>字节 ArkClaw — 云端SaaS+飞书生态</h3>
+                <p>字节跳动火山引擎ArkClaw定位云端开箱即用：</p>
+                <ul>
+                    <li>无需下载，打开网页即可使用，7×24小时在线不中断</li>
+                    <li>深度集成飞书生态，在飞书文档、抖音和头条后台数据抓取体验极佳</li>
+                    <li>2026年4月，字节引入前DeepSeek核心研究员郭达雅，方向为Agent，加码AI Agent与Coding赛道</li>
+                    <li>豆包月活3.15亿，中国AI应用排名第一，C端对话式AI优势明显</li>
+                </ul>
+
+                <h3>阿里 CoPaw — 开源+高度可定制化</h3>
+                <p>阿里云通义实验室CoPaw强调差异化设计：</p>
+                <ul>
+                    <li>Apache 2.0协议开源，2026年2月28日发布，技术栈Python 72.8% + TypeScript 22.2%</li>
+                    <li>ReMe主动记忆系统：AI自动从对话中提取信息，无需提醒即记录偏好、决定、待办</li>
+                    <li>兼容ClawHub，可直接运行OpenClaw生态技能</li>
+                    <li>支持本地模型（Ollama、llama.cpp、MLX）和云模型（DashScope/通义千问）</li>
+                </ul>
+
+                <h3>Hermes Agent — 自生成技能零供应链风险</h3>
+                <p>Nous Research开发的Hermes Agent是OpenClaw最强劲的挑战者：</p>
+                <ul>
+                    <li>2026年2月发布，v0.18.0于7月1日发布，193K GitHub Stars</li>
+                    <li>自生成技能：Agent解决问题时自动写入新技能，无需外部Skill仓库</li>
+                    <li>支持OpenRouter访问200+模型，本地vLLM完全本地化运行</li>
+                    <li>零遥测、无数据收集，所有记忆存储在本地 ~/.hermes/ 目录</li>
+                </ul>
+
+                <h3>猎豹 EasyClaw — 开箱即用的本地化封装</h3>
+                <p>猎豹移动CEO傅盛参与验证和打样：</p>
+                <ul>
+                    <li>定位降低OpenClaw使用门槛，让普通用户无需技术背景即可使用</li>
+                    <li>下载→双击安装→启动，无需配置API Key</li>
+                    <li>支持Windows与macOS，通过WhatsApp、Telegram、飞书远程控制电脑</li>
+                    <li>国内版"元气 Bot"，海外版"EasyClaw"</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                <h3>家庭助手：一个AI管理整个家</h3>
+                <p>聚合全家人的日历、待办、库存，每天发送家庭简报，提醒重要事项，管理家庭采购：</p>
+                <ul>
+                    <li><code>openclaw skills install family-assistant</code> 安装家庭助手技能</li>
+                    <li>配置家庭成员与日历，设置家庭简报发送时间</li>
+                    <li>添加家庭库存管理，设置库存阈值自动提醒补货</li>
+                </ul>
+
+                <h3>第二大脑：零摩擦记录与语义搜索</h3>
+                <p>随时记录想法、链接、推荐等信息，支持语义搜索，永久保存：</p>
+                <ul>
+                    <li><code>openclaw memory add</code> 添加任意文本、URL、推荐信息</li>
+                    <li><code>openclaw memory search</code> 语义搜索，模糊匹配也能精准召回</li>
+                    <li><code>openclaw memory export</code> 导出为Markdown个人知识库</li>
+                </ul>
+
+                <h3>内容创作者流水线：从选题到发布全自动</h3>
+                <p>自动监控竞品频道→挖掘热点→研究资料→写脚本+缩略图idea→自动发帖：</p>
+                <ul>
+                    <li>安装browser、rss、social-posting技能</li>
+                    <li>设置每周一生成下周内容计划的Cron任务</li>
+                    <li>社区用户实测每周产10条爆款，副业收入翻3倍</li>
+                </ul>
+
+                <h3>Overnight Bug修复：凌晨自愈服务器</h3>
+                <p>凌晨GitHub Action失败，自动拉日志、诊断、生成修复PR：</p>
+                <ul>
+                    <li>安装coding技能（browser、shell、github、todoist）</li>
+                    <li>配置多Agent：架构Agent→编码Agent→测试Agent→PR审查Agent</li>
+                    <li>设置自动触发规则，全程无需人工干预</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <h3>SkillHub 与 ClawHub 双平台技能获取</h3>
+                <p>腾讯云推出的SkillHub是国内首个OpenClaw技能本土化平台：</p>
+                <ul>
+                    <li>1.3万+ AI技能高速下载，全中文适配和安全审计</li>
+                    <li>支持中文关键词搜索，按8大分类浏览技能</li>
+                    <li>腾讯特色Skills：腾讯文档、QQ浏览器、腾讯地图、腾讯云语音等</li>
+                </ul>
+
+                <h3>必备Skill清单（官方内置，安全等级⭐⭐⭐⭐⭐）</h3>
+                <ul>
+                    <li><strong>brave-search</strong>：网页搜索，基于Brave独立索引，每月免费2000次搜索额度</li>
+                    <li><strong>blogwatcher</strong>：RSS/博客监控，内置定时推送功能，适合内容创作者追踪前沿动态</li>
+                    <li><strong>obsidian</strong>：本地Markdown笔记操作，直接操作本地文件</li>
+                    <li><strong>notion</strong>：云端原生笔记，无需本地文件限制</li>
+                </ul>
+
+                <h3>Skill安全最佳实践</h3>
+                <ul>
+                    <li>每周执行一次Skill更新：<code>npx clawhub@latest update --all</code></li>
+                    <li>每月审计已安装Skill，卸载长期未使用的插件</li>
+                    <li>高权限Skill在Docker容器中隔离运行</li>
+                    <li>配置权限白名单，限制Skill可访问的目录和资源</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🏢 企业落地案例</h2>
+                <h3>AI Agent 企业落地进入深水区</h3>
+                <p>据最新行业数据，AI Agent企业落地呈现以下趋势：</p>
+                <ul>
+                    <li><strong>88%已部署企业获正向ROI</strong>，金融/医疗/制造三大垂直行业率先规模化</li>
+                    <li><strong>82%组织计划2026年集成AI Agent</strong>，从试点走向全面部署</li>
+                    <li><strong>AgentOps成为基础设施</strong>：实时监控、决策链路审计、权限管控、异常处置</li>
+                    <li><strong>安全与合规成核心考量</strong>：沙箱执行、权限最小化、审计日志、人工审批节点</li>
+                </ul>
+
+                <h3>WAIC 2026 企业级展示</h3>
+                <p>世界人工智能大会企业参展亮点：</p>
+                <ul>
+                    <li>超300款AI产品全球首发，1100余家企业参展</li>
+                    <li>首次设置OPC专属展览区，180家企业展示Agent成果</li>
+                    <li>阿里发布全球首个企业级AI原生Agent平台"悟空"</li>
+                    <li>阶跃星辰将发布AI智能体手机，抢先落地AI终端</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📖 延伸阅读链接</h2>
+                <ul>
+                    <li><a href="https://www.worldaic.com.cn/">WAIC 2026 世界人工智能大会官网</a> — 7月17-20日，上海</li>
+                    <li><a href="https://openclaw.ai">OpenClaw 官方</a> — 开源AI Agent框架</li>
+                    <li><a href="https://hermes-agent.org">Hermes Agent</a> — Nous Research开源Agent</li>
+                    <li><a href="https://copaw.agentscope.io">CoPaw</a> — 阿里开源个人AI助手</li>
+                    <li><a href="https://easyclaw.com">EasyClaw</a> — 猎豹移动本地化封装版</li>
+                    <li><a href="https://developer.aliyun.com/article/1713592">OpenClaw 实战宝典</a> — 阿里云开发者社区</li>
+                    <li><a href="https://docs.openclaw.ai/zh-CN/start/showcase">OpenClaw 展示案例</a> — 官方社区案例集</li>
+                    <li><a href="https://juejin.cn/post/7653060452369580073">国产AI Agent横评</a> — 深度对比OpenClaw vs国产替代</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>🦞 OpenClaw Daily Report | 每日自动更新 | 由 OpenClaw 智能体生成</p>
+            <p>生成时间: 2026-07-18 00:45 (Asia/Shanghai)</p>
+        </footer>
+    </div>
+</body>
+</html>
