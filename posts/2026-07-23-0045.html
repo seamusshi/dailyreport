@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年7月23日（第98期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年7月23日（第98期）</p>
+            <p class="tagline">Agent 每日情报追踪</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+        </nav>
+
+        <article class="report">
+            <section class="summary">
+                <h2>📋 今日概览</h2>
+                <ul>
+                    <li><strong>OpenClaw v2026.7.1-beta.6 发布</strong>（7月13日）——beta 通道持续活跃，带来插件更新可靠性修复、browser proxy 审批权限收紧及 Codex/MCP 绑定迁移安全加固</li>
+                    <li><strong>v2026.7.2 beta 预览</strong>——远程编码会话、Cloud Workers、Paired-node coding agents、Skill Workshop 等重磅功能进入 beta 验证阶段</li>
+                    <li><strong>全球 AI Agent 市场达 $10.9B</strong>（2026年）——同比增长 43%，79% 组织报告采用但仅 11% 在生产环境运行，"采用不等于落地"成年度关键词</li>
+                    <li><strong>ClawHub 技能生态突破 5700+</strong>——Skill Workshop 可扫描会话历史自动生成技能建议，GitHub-backed 技能安装已合并入主分支</li>
+                    <li><strong>MCP/A2A 协议标准之争升温</strong>——OpenClaw 推出 Skills MCP Bridge，将技能暴露为可寻址工具；GitHub MCP Registry 推进加速</li>
+                </ul>
+            </section>
+
+            <section class="official">
+                <h2>🔵 OpenClaw 官方动态</h2>
+                
+                <h3>Release 速递：beta 持续迭代，stable 保持稳健</h3>
+                <p>OpenClaw 的发布节奏在七月保持高频：stable 通道仍停留在 <strong>v2026.6.11</strong>（6月30日发布），而 beta 通道已快速推进至 <strong>v2026.7.1-beta.6</strong>（7月13日）。这意味着当前是一个典型的"验证通道活跃、生产基线稳健"的阶段——建议生产环境继续留守 stable，但密切关注 beta 中的新功能信号。</p>
+
+                <p>七月 beta 系列的核心主题可以概括为三个词：<strong>可靠性、治理、开发者体验</strong>。</p>
+
+                <h3>v2026.7.1-beta.6（7月13日）—— 可靠性补丁批次</h3>
+                <ul>
+                    <li><strong>插件更新防重复处理</strong>：已切换过 ClawHub 的插件更新将被保留，避免冗余瞬态失败后导致插件被禁用</li>
+                    <li><strong>Browser proxy 节点审批权限收紧</strong>：现在需要 <code>operator.admin</code> 权限才能批准 advertise browser-proxy 能力的节点，与 invoke-time 门控保持一致</li>
+                    <li><strong>Codex & MCP 绑定迁移更安全</strong>：绑定 dynamic 和 legacy fingerprint 边界，保留 retained rows，并记录 invariant，降低 0.144 时代迁移的 breakage 风险</li>
+                    <li><strong>Provider 边界继续收紧</strong>：修复 OpenAI image routing（catalog load 前）、OpenRouter model ID 边界处理、Feishu streaming-card timeout、tool-call stream 修复、UTF-16-safe agent output chunks</li>
+                </ul>
+
+                <h3>v2026.7.1-beta.1 ~ beta.5（7月2日 ~ 7月11日）—— 开发者体验升级</h3>
+                <ul>
+                    <li><strong>GPT-5.6 catalog/runtime 识别</strong>：最新模型家族得到原生支持</li>
+                    <li><strong><code>openclaw attach</code></strong>：支持外部 harness attachment，为远程编码场景铺路</li>
+                    <li><strong>会话优先 Control UI</strong>：将 Control UI 的交互重心从"工具面板"转向"会话工作区"</li>
+                    <li><strong>离线移动聊天</strong>：iOS/Android 客户端在断网时仍可浏览历史会话</li>
+                    <li><strong>Telegram Codex 连续性</strong>：Telegram 中的 Codex 会话可在设备切换后保持状态</li>
+                    <li><strong>ClawRouter 治理面</strong>：bundled routing、dynamic model discovery、credential-scoped catalogs、quota 和 budget reporting，将模型选择从随意配置升级为可审计的运营基础设施</li>
+                </ul>
+
+                <h3>v2026.7.2 beta 预览——远程编码与云工作线程</h3>
+                <p>据 releasebot.io 披露，v2026.7.2 beta 正在验证一批"改变游戏边界"的功能：</p>
+                <ul>
+                    <li><strong>Cloud Workers</strong>（#106332）：远程会话执行——会话放置、分派和 worker-turn 路由</li>
+                    <li><strong>Paired-node coding agents</strong>（#106941, #106927）：发现并继续 OpenCode / Pi 会话，以及 Codex / Claude catalog 会话的流式 CLI agent 运行</li>
+                    <li><strong>Catalog sessions</strong>（#105810）：直接从 Control UI 侧边栏创建 eligible catalog 会话</li>
+                    <li><strong>Skill Workshop</strong>（#106766）：扫描历史会话，保守地、可 review 地生成技能建议</li>
+                    <li><strong>Cron history</strong>（#106392）：从任务账本 serve 定时运行历史</li>
+                    <li><strong>Coding-agent memory</strong>（#106406）：将 Codex / Claude Code 记忆导入 Control UI</li>
+                    <li><strong>MCP isolation</strong>（#106359）：MCP 服务器连接按请求会话 scope，感谢 @obviyus</li>
+                    <li><strong>Discord voice 通知</strong>（#107004）：语音频道参与者变化时通知 agent</li>
+                    <li><strong>Task previews</strong>（#107297）：在 running-tasks 状态行显示最新任务</li>
+                    <li><strong>Session changes</strong>（#106835）：在 Control UI 会话中显示 active branch 和本地 changed-file 状态</li>
+                </ul>
+            </section>
+
+            <section class="features">
+                <h2>📌 核心功能更新详情</h2>
+
+                <h3>Skill Workshop：AI 自动为你写技能</h3>
+                <p>这是 v2026.7.2 中最令人兴奋的功能之一。Skill Workshop 会扫描你的历史会话，识别重复出现的模式（比如"每天早上检查邮件、日历、天气并发送摘要"），然后生成一个保守的、可 review 的技能草稿。</p>
+                <p>它不是盲目地复制粘贴，而是会：识别触发条件 → 提取工具链 → 生成 SKILL.md → 标记需要人工确认的参数。这意味着你的 agent 可以从"执行者"进化为"学习者"——它观察你的工作流，然后把它固化成可复用的技能。</p>
+
+                <h3>Cloud Workers：从个人电脑到分布式云</h3>
+                <p>Cloud Workers 将 OpenClaw 的会话执行从本地 Node.js 进程扩展到远程 worker 集群。这意味着：</p>
+                <ul>
+                    <li>重度计算任务（如代码编译、大规模数据分析）可以 offload 到云端</li>
+                    <li>多个 agent 可以并行运行在不同 worker 上，互不干扰</li>
+                    <li>会话状态仍然保留在 gateway，但执行发生在"最近的"worker</li>
+                </ul>
+                <p>这对企业部署尤其重要——IT 部门可以在内部 Kubernetes 集群上部署 workers，而开发者无感知地使用 <code>sessions_spawn</code> 等 API。</p>
+
+                <h3>Paired-node Coding Agents：打破设备边界</h3>
+                <p>这个功能让 OpenClaw 可以"发现"并连接到运行在其他设备上的编码会话——无论是你的另一台电脑上的 OpenCode、Pi，还是云端的 Codex / Claude Code 会话。然后，它可以通过流式 CLI agent 运行继续这些会话。</p>
+                <p>想象这个场景：你在办公室用 Claude Code 写了一半的功能，回家后在 OpenClaw 上说"继续我办公室那台电脑上的 session"——它会自动找到、连接、并继续。这不是科幻，是 v2026.7.2 beta 正在验证的功能。</p>
+
+                <h3>Skills MCP Bridge：技能即工具</h3>
+                <p>PR #94400（以及后续的 #106359 MCP isolation）正在将 OpenClaw 的技能体系与 MCP（Model Context Protocol）标准对接。核心变化：</p>
+                <ul>
+                    <li>每个 Skill 可以通过 JSON-RPC handler 暴露为 MCP tool</li>
+                    <li>Lazy HTTP server loading：只有被调用时才启动 skill 的 MCP server</li>
+                    <li>Optional <code>/mcp</code> endpoint：让外部 MCP client 也能调用 OpenClaw skills</li>
+                </ul>
+                <p>这意味着 OpenClaw 的 5700+ 社区技能正在变成整个 MCP 生态的工具库。一个 Cursor 或 Claude Desktop 用户，理论上可以直接调用你在 OpenClaw 里安装的 <code>weather</code> 或 <code>stock_finance_data</code> skill。</p>
+            </section>
+
+            <section class="competitors">
+                <h2>🟠 竞品动态</h2>
+
+                <h3>Hermes Agent（Nous Research）~140K ⭐</h3>
+                <p>依然是开源 Agent 领域的明星项目。2026 年 Q2 的核心方向是"自改进"（Self-Improving）——agent 可以分析自己的执行轨迹，生成改进建议，并自动更新自己的 prompt 和工具配置。零遥测、完全本地运行的定位吸引了大量隐私敏感用户。</p>
+
+                <h3>CrewAI ~28K ⭐</h3>
+                <p>Python 多 Agent 框架的领头羊。v0.112 引入了异步编排支持，允许多个 agent 并行执行任务并通过消息总线协调。与 OpenClaw 的 subagent 模型相比，CrewAI 更强调"角色定义"（Role-based）的协作模式，适合需要严格分工的企业工作流。</p>
+
+                <h3>Dify ~75K ⭐</h3>
+                <p>可视化 Agent 构建平台的标杆。v1.4.0 推出 AI Workflow Marketplace，允许用户分享和复用工作流模板。与 OpenClaw 的"代码优先"哲学不同，Dify 坚持"低代码"路线，目标用户是业务分析师而非开发者。</p>
+
+                <h3>阿里 CoPaw / QwenPaw</h3>
+                <p>开源桌面 Agent 平台，深度集成通义千问模型。2026 年 Q2 的更新重点是企业级部署——支持私有云、SSO 集成、审计日志。与 OpenClaw 的"去中心化"模型相比，CoPaw 更像是一个"阿里全家桶"的入口。</p>
+
+                <h3>字节 ArkClaw</h3>
+                <p>飞书原生适配的 Agent 平台，主打"零配置企业落地"。最近更新了飞书多维表格和日历的深度集成，支持通过自然语言操作飞书文档和表格。与 OpenClaw 的 Feishu 插件相比，ArkClaw 的集成更浅但开箱即用。</p>
+
+                <h3>Kimi Claw</h3>
+                <p>月之暗面推出的一键云端部署方案，核心卖点是"5 分钟从 0 到可用"。2026 年 7 月更新了模型路由优化，支持根据任务复杂度自动在 Kimi k1.5、k2 和 k2.5 之间切换。</p>
+
+                <h3>小米 miclaw</h3>
+                <p>端侧 AI 智能体，隐私优先。2026 年 Q2 发布手机端 SDK，允许第三方 app 嵌入 miclaw 的 agent 能力。核心优势是"数据不出设备"——所有推理在本地 NPU 完成。</p>
+            </section>
+
+            <section class="community">
+                <h2>🚀 社区趣味应用案例分享</h2>
+
+                <h3>案例 1：全自动"早安简报"机器人</h3>
+                <p>社区用户 @skywork.ai 分享的典型工作流：每天早上 7:00，agent 自动检查 Gmail 收件箱（删除垃圾邮件、标记紧急邮件）、读取 Google Calendar（提取今日会议）、搜索 AI 行业新闻（取 Top 3 头条）、查询本地天气，然后将所有内容汇总成一份 Telegram 消息发送给用户。用户报告每天节省 3.5 小时的邮件处理时间。</p>
+                <p><strong>关键技能</strong>：cron + gmail + google-search + weather + telegram</p>
+
+                <h3>案例 2：竞品价格监控 Agent</h3>
+                <p>电商运营团队使用 OpenClaw 的 browser skill 每天定时抓取 3 个竞品网站的价格数据。Agent 会自动登录、导航到价格页面、提取数据、与昨日数据对比，如果发现价格变动超过 5%，立即通过 Slack 通知团队。实现 95% 人工工作量减少，数据准确率 100%。</p>
+                <p><strong>关键技能</strong>：browser + cron + slack + csv/数据对比</p>
+
+                <h3>案例 3：Codex 远程接力编码</h3>
+                <p>开发者 @fuller-stack-dev 分享：在办公室用 Claude Code 启动了一个复杂的重构任务，中途需要下班。通过 OpenClaw 的 paired-node 功能，他在手机上发送"继续我办公室电脑的 session"，agent 自动连接到办公室的 OpenClaw 实例，继续执行重构，并在完成后发送 Slack 通知。整个过程中他不需要 SSH 或 VPN。</p>
+                <p><strong>关键技能</strong>：paired-node + codex + slack（v2026.7.2 beta）</p>
+            </section>
+
+            <section class="skills">
+                <h2>📚 精选 Skill 学习指南</h2>
+
+                <h3>Skill 1：browser（浏览器自动化）</h3>
+                <p>OpenClaw 的浏览器 skill 是基于 Chrome DevTools Protocol (CDP) 实现的，支持后台无头浏览器操作。安装命令：</p>
+                <pre><code>/skill install browser</code></pre>
+                <p><strong>典型用法</strong>："Go to Amazon.com, search for 'ergonomic office chairs under $200', extract the top 5 results with prices and ratings, and save to a CSV."</p>
+                <p><strong>Pro Tip</strong>：配合 cron 使用可实现定时监控。注意设置 realistic delays（2-5 秒）和 rotate user agents 以避免被封。</p>
+
+                <h3>Skill 2：cron（定时任务）</h3>
+                <p>原生定时任务支持，无需外部调度器。在 HEARTBEAT.md 或 openclaw.json 中配置：</p>
+                <pre><code>cron:
+  - schedule: "0 8 * * *"
+    action: "summarize_news"
+    channel: "#daily-briefing"</code></pre>
+                <p><strong>最佳实践</strong>：stagger cron jobs（错开执行时间），实现 retry logic with exponential backoff，并定义明确的 failure notification path。</p>
+
+                <h3>Skill 3：Skill Workshop（自动生成技能）</h3>
+                <p>v2026.7.2 beta 新功能。使用方式：</p>
+                <pre><code>/skill workshop scan --sessions 30 --conservative</code></pre>
+                <p>它会分析最近 30 个会话，识别重复模式，并生成可 review 的技能草稿。默认启用自动 approval handling，但建议首次使用时手动 review 每个生成的 skill。</p>
+
+                <h3>Skill 4：mcp-bridge（MCP 协议桥接）</h3>
+                <p>实验性功能（PR #94400）。配置后，OpenClaw skills 可通过 MCP protocol 被外部客户端调用：</p>
+                <pre><code>{
+  "skillsMcpBridge": {
+    "enabled": true,
+    "endpoint": "/mcp",
+    "lazyLoad": true
+  }
+}</code></pre>
+                <p>这让 OpenClaw 成为 MCP 生态的"技能服务器"，Cursor、Claude Desktop 等工具可以直接调用你已安装的 skills。</p>
+            </section>
+
+            <section class="enterprise">
+                <h2>🏢 企业落地案例</h2>
+
+                <h3>数据点：AI Agent 市场正在爆发，但落地率仍然很低</h3>
+                <ul>
+                    <li><strong>市场规模</strong>：全球 AI Agent 市场 2026 年达 <strong>$10.9B</strong>，同比 +43%（Grand View Research）</li>
+                    <li><strong>远期预测</strong>：预计 2033 年达 <strong>$182.97B</strong>，CAGR 49.6%</li>
+                    <li><strong>采用率</strong>：<strong>79%</strong> 的组织报告某种形式的 AI agent 采用（McKinsey）</li>
+                    <li><strong>生产 gap</strong>：仅 <strong>11%</strong>（1 in 9）在生产环境运行 agent（Joget/Gartner）</li>
+                    <li><strong>Gartner 预测</strong>：2026 年底 <strong>40%</strong> 企业应用将嵌入 task-specific AI agent</li>
+                    <li><strong>取消风险</strong>：<strong>40%+</strong> 的 agentic AI 项目可能在 2027 年底前被取消（Gartner）</li>
+                    <li><strong>中国工业级市场</strong>：2026 年预计超 <strong>1000 亿元</strong>（中国商业产业研究院）</li>
+                    <li><strong>投资回报</strong>：80% 报告经济回报，但仅 23% 实现显著 ROI（Writer 2026）</li>
+                </ul>
+
+                <h3>关键洞察</h3>
+                <p>2026 年的 AI Agent 市场呈现典型的"早期爆发"特征：预算投入快、采用率高，但生产落地和 ROI 兑现严重滞后。Gartner 的警告尤其值得关注——40%+ 项目面临取消风险，主要原因是价值不明确、成本失控、风险管控不足。</p>
+                <p>这对 OpenClaw 生态的启示：<strong>从"炫技 demo"转向"可治理的运营基础设施"</strong>。OpenClaw 近半年在 approval gates、compaction timeout、cron reliability、skill provenance 等方面的投入，正是瞄准了这个"治理缺口"。</p>
+            </section>
+
+            <section class="further-reading">
+                <h2>📖 延伸阅读链接</h2>
+                <ul>
+                    <li><a href="https://openclaw.com.au/updates">OpenClaw 官方 Updates</a> - 最新功能与发布说明</li>
+                    <li><a href="https://github.com/openclaw/openclaw">OpenClaw GitHub</a> - 源码、Issues、PR</li>
+                    <li><a href="https://www.contextstudios.ai/blog/the-complete-openclaw-guide-how-we-run-an-ai-agent-in-production-2026">The Complete OpenClaw Guide: Production Best Practices</a> - 生产环境运行指南</li>
+                    <li><a href="https://www.mindstudio.ai/blog/openclaw-best-practices-power-users-200-hours">OpenClaw Best Practices: 14 Tips After 200+ Hours</a> - 高级用户技巧</li>
+                    <li><a href="https://thestacc.com/blog/ai-agent-adoption-statistics/">AI Agent Adoption Statistics 2026</a> - 市场数据与采用统计</li>
+                    <li><a href="https://unicoconnect.com/blogs/agentic-ai-statistics-2026">Agentic AI Statistics 2026</a> - ROI 与部署趋势</li>
+                    <li><a href="https://baike.baidu.com/en/item/2026%20China%20AI%20Agent%20Industry%20Chain%20Map%20and%20Investment%20Layout%20Analysis/3489406">2026 中国 AI Agent 产业链图谱</a> - 中国市场深度分析</li>
+                </ul>
+            </section>
+        </article>
+
+        <footer>
+            <p>OpenClaw Daily Report - 每日 00:45 更新</p>
+            <p>数据来源：GitHub / 官方 Blog / 社区论坛 / 行业报告</p>
+        </footer>
+    </div>
+</body>
+</html>
