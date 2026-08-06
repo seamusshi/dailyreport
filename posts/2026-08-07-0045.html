@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年8月7日（第110期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年8月7日（第110期）· 周五</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">📁 归档</a>
+            <span class="meta">OpenClaw GitHub Stars: 373,000+</span>
+        </nav>
+
+        <!-- 今日概览 -->
+        <section class="section">
+            <h2>🎯 今日概览</h2>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="overview-number">🏢</div>
+                    <div class="overview-text">
+                        <strong>腾讯 WorkBuddy 企业版发布</strong>：6月正式推出企业版（CodeBuddy + WorkBuddy + Managed Agents），采用专家/助理/团队三层架构，已服务5000+家企业，月访问量突破885万。
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-number">🔗</div>
+                    <div class="overview-text">
+                        <strong>扣子 Coze 3.0 重磅接入 OpenClaw</strong>：字节跳动扣子3.0正式支持接入 Claude Code、Codex CLI、OpenClaw 等本地 Agent，标志着国产 Agent 平台与国际开源生态的深度互通。
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-number">☁️</div>
+                    <div class="overview-text">
+                        <strong>阿里云百炼 Agent 2.0 统一工具架构</strong>：将知识库与 MCP 服务统一为工具调用，由智能体自主规划调用顺序，并完整展示"规划-执行-反思"全链路过程。
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-number">📊</div>
+                    <div class="overview-text">
+                        <strong>企业 Agent 落地数据出炉</strong>：57%企业已入局AI Agent，仅38%成功落地。Multi-Agent架构+协议标准化（MCP+A2A+AG-UI）成为从Demo到规模化部署的核心分水岭。
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-number">🚀</div>
+                    <div class="overview-text">
+                        <strong>开源生态持续爆发</strong>：字节DeerFlow 2.0冲上GitHub Trending第一；Coze Studio/Loop正式开源；Nous Research Hermes Agent达73.2k星；LangChain Deep Agents支持3行代码构建Agent。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OpenClaw官方动态 -->
+        <section class="section">
+            <h2>🦞 OpenClaw 官方动态</h2>
+
+            <div class="article">
+                <h3>OpenClaw 2026：开源 AI 智能体框架持续领跑</h3>
+                <div class="meta">来源：GitHub / Skywork AI 分析 | 2026年</div>
+                <p>OpenClaw 作为 GitHub 上最受欢迎的 AI Agent 开源框架之一，持续保持强劲增长态势：</p>
+                <ul>
+                    <li><strong>GitHub Stars 355K+</strong>，社区 Skills 数量突破 13,000+</li>
+                    <li><strong>50+ 消息平台</strong>覆盖，包括 iMessage、Teams、Matrix 等独有渠道</li>
+                    <li><strong>MIT 许可证</strong>完全开源，支持自托管和数据主权</li>
+                    <li><strong>多模型支持</strong>：Claude、DeepSeek、Kimi、Qwen 等主流模型无缝切换</li>
+                    <li><strong>企业级特性</strong>：NemoClaw 安全层、ClawRouter 预算管理、持久化消息投递</li>
+                </ul>
+                <p>最新发布的 v2026.7.2-beta.7 聚焦可靠性升级，包含隔离存储、崩溃恢复、会话回退与分支等关键能力，进一步巩固其企业就绪度优势。</p>
+            </div>
+
+            <div class="article">
+                <h3>Hermes Agent vs OpenClaw：两大框架对比持续发酵</h3>
+                <div class="meta">来源：第三方评测机构 | 2026年4-8月</div>
+                <p>多家评测机构发布深度对比报告，结论呈现明显差异化：</p>
+                <ul>
+                    <li><strong>记忆系统</strong>：Hermes 多层体系（紧凑内存+SQLite历史+技能记忆+用户建模）⭐⭐⭐⭐⭐ vs OpenClaw Markdown文件基础记忆 ⭐⭐⭐</li>
+                    <li><strong>技能生态</strong>：OpenClaw 人工编写、生态成熟、数量多 ⭐⭐⭐⭐⭐ vs Hermes 自动生成+自动改进 ⭐⭐⭐⭐</li>
+                    <li><strong>安全机制</strong>：Hermes 默认沙盒+危险命令审批+容器隔离 ⭐⭐⭐⭐⭐ vs OpenClaw 需手动配置 ⭐⭐⭐</li>
+                    <li><strong>多平台接入</strong>：OpenClaw 20+平台（含iMessage、Teams、Matrix）⭐⭐⭐⭐⭐ vs Hermes 6个平台 ⭐⭐⭐</li>
+                    <li><strong>终端体验</strong>：Hermes 完整TUI（多行编辑、斜杠命令补全、流式输出）⭐⭐⭐⭐⭐ vs OpenClaw 基础终端 ⭐⭐⭐</li>
+                    <li><strong>运行成本</strong>：Hermes 预算VPS $5/月 vs OpenClaw $24/月起</li>
+                </ul>
+                <p>核心结论：<strong>OpenClaw 胜在生态广度与企业就绪度，Hermes 胜在自进化能力与运行成本</strong>。</p>
+            </div>
+        </section>
+
+        <!-- 核心功能更新详情 -->
+        <section class="section">
+            <h2>📌 核心功能更新详情</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🔐 隔离存储与崩溃恢复</h4>
+                    <p>v2026.7.2-beta.7 引入 quarantine store 保护持久化数据，SQLite 快照支持崩溃恢复，文件系统发布具备崩溃耐久性。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🔄 会话回退与分支</h4>
+                    <p>支持从任意消息回退或分叉对话，跨 Web/iOS/Android/macOS 切换分支，Codex 会话也可分叉。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🎥 会议三平台覆盖</h4>
+                    <p>Teams + Zoom + Google Meet 默认启用，Agent 可作为嘉宾加入会议，自动收集耐久会议记录。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📱 Wear OS 伴侣应用</h4>
+                    <p>手表主屏幕选择 Agent/会话/模型，实时 Talk 控制，音频响应播放，即时对话 Tile。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🧠 记忆主动召回</h4>
+                    <p>快速活跃记忆召回 + 默认跨会话召回 + 引导式历史导入（Claude Code/Codex/Hermes）+ 专用 Memory 设置页。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🔧 MCP Apps 仪表板</h4>
+                    <p>托管带票据的 MCP Apps，支持工具/资源/上下文绑定，可固定到持久化仪表板，从渠道回复中打开。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 竞品动态 -->
+        <section class="section">
+            <h2>🔍 竞品动态</h2>
+
+            <div class="competitor-grid">
+                <div class="competitor-card">
+                    <h4>📱 腾讯 WorkBuddy</h4>
+                    <p><strong>定位：</strong>企业微信生态 AI 助手 | <strong>月访问量：</strong>885万</p>
+                    <ul>
+                        <li><strong>企业版发布</strong>：2026年6月推出 WorkBuddy 企业版（CodeBuddy + WorkBuddy + Managed Agents）</li>
+                        <li><strong>三层架构</strong>：专家(Expert)、助理(Assistant)、团队(Team)三层Agent架构，支持MCP协议、多模型兼容</li>
+                        <li><strong>SkillHub生态</strong>：已收录7万+Skills，两个月下载量超3000万；2025年注册用户数突破70万</li>
+                        <li><strong>企业客户</strong>：已服务5000+家企业，深度集成企业微信办公场景</li>
+                        <li><strong>商业化</strong>：2026年7月正式推出 SkillPay 开发者商业化平台</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h4>🚀 字节跳动 Coze / 扣子</h4>
+                    <p><strong>定位：</strong>一站式 AI Agent 开发平台 | <strong>Stars：</strong>Coze Studio 开源</p>
+                    <ul>
+                        <li><strong>Coze 3.0 发布</strong>：2026年6月1日发布，支持多人多Agent协作、手机电脑跨端同步，可授权Agent处理本地文件</li>
+                        <li><strong>接入 OpenClaw</strong>：扣子3.0正式支持接入 Claude Code、Codex CLI、OpenClaw 等本地Agent</li>
+                        <li><strong>DeerFlow 2.0 开源</strong>：2026年2月底开源，24小时冲上GitHub Trending第一，星星数超35k</li>
+                        <li><strong>Coze Studio / Loop 开源</strong>：2025年7月开源核心项目，Apache 2.0协议，基于Golang+React微服务架构</li>
+                        <li><strong>M3-Agent-Control</strong>：字节Seed团队开源多智能体协作框架，支撑内部1200+业务场景</li>
+                        <li><strong>扣子空间</strong>：处于内测阶段，支持探索模式和规划模式，内置专家级Agent</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h4>☁️ 阿里云百炼 / 千问云</h4>
+                    <p><strong>定位：</strong>云全栈 Agent 化平台</p>
+                    <ul>
+                        <li><strong>Agent 2.0 升级</strong>：将知识库、MCP统一为工具，由智能体自主规划调用顺序，完整展示"规划-执行-反思"链路</li>
+                        <li><strong>三种应用模式</strong>：智能体(Agent)适合开放式对话、工作流(Workflow)适合固定流程自动化、高代码应用面向专业开发者</li>
+                        <li><strong>官方MCP服务</strong>：上线Amap Maps等云部署MCP服务，限时免费试用</li>
+                        <li><strong>多渠道发布</strong>：支持魔笔、钉钉、微信、API等多种发布方式</li>
+                        <li><strong>零代码+低代码</strong>：电商客服、旅行规划等场景提供完整实践教程</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h4>🧠 Hermes Agent（Nous Research）</h4>
+                    <p><strong>定位：</strong>自进化 AI Agent | <strong>Stars：</strong>73.2K+</p>
+                    <ul>
+                        <li><strong>自进化能力</strong>：自动生成Skills、持续自我改进，兼容agentskills.io标准</li>
+                        <li><strong>多层记忆体系</strong>：紧凑内存+SQLite历史+技能记忆+用户建模</li>
+                        <li><strong>六后端容器沙箱</strong>：本地/VPS/Docker/SSH/Daytona/Singularity/Modal</li>
+                        <li><strong>成本优势</strong>：预算VPS $5/月即可运行</li>
+                        <li><strong>完整TUI</strong>：多行编辑、斜杠命令补全、流式输出</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h4>🐆 猎豹移动 EasyClaw</h4>
+                    <p><strong>定位：</strong>出海版 AI Agent</p>
+                    <ul>
+                        <li>出海版正式上线，面向海外市场</li>
+                        <li>企业级部署方案持续完善</li>
+                        <li>与 OpenClaw 生态形成互补</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-card">
+                    <h4>🔷 其他框架与平台</h4>
+                    <ul>
+                        <li><strong>Kimi Claw / MaxClaw</strong>：月之暗面/MiniMax社区持续活跃，教程丰富</li>
+                        <li><strong>CoPaw</strong>：2026年首个开源个人AI助手框架，强调数据主权和隐私保护</li>
+                        <li><strong>Deep Agents（LangChain）</strong>：2026年5月发布，3行代码构建Agent，内置规划系统和文件系统</li>
+                        <li><strong>Hello-Agents（Datawhale）</strong>：5700+ Stars，从零构建Agent框架的硬核教程</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社区趣味应用案例 -->
+        <section class="section">
+            <h2>🚀 社区趣味应用案例分享</h2>
+
+            <div class="article">
+                <h3>案例一：智能买车助手节省 $4,200</h3>
+                <div class="meta">来源：OpenClaw 社区 | 2026年</div>
+                <p>社区用户部署 OpenClaw 作为汽车购买助手，通过自动化比价、经销商报价分析和谈判策略生成，最终<strong>节省 $4,200</strong>。核心 Skills 包括网页抓取、价格监控、邮件自动化和文档生成。</p>
+            </div>
+
+            <div class="article">
+                <h3>案例二：会议自动化流水线</h3>
+                <div class="meta">来源：OpenClaw 企业用户 | 2026年8月</div>
+                <p>结合 Teams/Zoom/Google Meet 默认插件 + 耐久会议记录 + 记忆主动召回，企业用户构建了完整的会议自动化流水线：Agent 参加会议 → 自动转录 → 生成摘要 → 提取 Action Items → 同步到任务管理工具 → 跨会话追踪执行进度。</p>
+            </div>
+
+            <div class="article">
+                <h3>案例三：扣子 + OpenClaw 混合工作流</h3>
+                <div class="meta">来源：扣子社区 | 2026年6月</div>
+                <p>开发者利用扣子3.0接入 OpenClaw 的能力，构建混合工作流：扣子负责可视化工作流编排和前端交互，OpenClaw 负责后端复杂任务执行和跨平台消息推送。实现"低代码前端 + 强能力后端"的组合方案。</p>
+            </div>
+
+            <div class="article">
+                <h3>案例四：百炼 + OpenClaw 企业客服升级</h3>
+                <div class="meta">来源：阿里云百炼社区 | 2026年</div>
+                <p>企业基于百炼平台构建电商客服智能体，结合 OpenClaw 的消息渠道能力，将客服机器人部署到企业微信、钉钉、网页等多个渠道。百炼负责核心对话逻辑和知识库检索，OpenClaw 负责消息路由、定时任务和跨渠道状态同步。</p>
+            </div>
+        </section>
+
+        <!-- 精选 Skill 学习指南 -->
+        <section class="section">
+            <h2>📚 精选 Skill 学习指南</h2>
+
+            <div class="skill-card">
+                <h4>🔧 MCP App 开发指南（v2026.7.2-beta.7 新增）</h4>
+                <p><strong>难度：</strong>中级 | <strong>适用：</strong>开发者</p>
+                <p>新版本的交互式 MCP Apps 允许开发者构建带票据的安全应用：</p>
+                <ol>
+                    <li>理解 MCP App 清单格式（manifest-declared MCP Apps）</li>
+                    <li>配置工具绑定和资源范围</li>
+                    <li>通过 Control UI 桥接托管</li>
+                    <li>将 App 固定到持久化仪表板</li>
+                </ol>
+                <p><strong>参考文档：</strong> <a href="https://docs.openclaw.ai" target="_blank">docs.openclaw.ai</a></p>
+            </div>
+
+            <div class="skill-card">
+                <h4>🧠 记忆系统深度配置</h4>
+                <p><strong>难度：</strong>初级 | <strong>适用：</strong>所有用户</p>
+                <p>新版本记忆系统升级后的配置要点：</p>
+                <ol>
+                    <li>启用"跨会话召回"（个人安装默认开启）</li>
+                    <li>从 Claude Code / Codex / Hermes 导入历史记忆</li>
+                    <li>配置记忆存储上限和召回阈值</li>
+                    <li>使用 <code>/memory</code> 命令查看和管理记忆</li>
+                </ol>
+            </div>
+
+            <div class="skill-card">
+                <h4>🎥 会议插件配置指南</h4>
+                <p><strong>难度：</strong>初级 | <strong>适用：</strong>企业用户</p>
+                <p>Teams/Zoom/Google Meet 三平台配置：</p>
+                <ol>
+                    <li>v2026.7.2-beta.7 起默认启用，无需手动开启</li>
+                    <li>配置会议嘉宾身份和权限</li>
+                    <li>设置自动转录和记录持久化</li>
+                    <li>结合记忆系统实现跨会议上下文追踪</li>
+                </ol>
+            </div>
+
+            <div class="skill-card">
+                <h4>🔐 数据安全最佳实践</h4>
+                <p><strong>难度：</strong>中级 | <strong>适用：</strong>运维/安全团队</p>
+                <p>新版本安全架构的配置建议：</p>
+                <ol>
+                    <li>启用隔离存储（quarantine store）备份策略</li>
+                    <li>配置 SQLite 快照频率和保留策略</li>
+                    <li>设置模式升级前的自动备份</li>
+                    <li>远程访问启用 token 鉴权（auth.mode: token）</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 企业落地案例 -->
+        <section class="section">
+            <h2>🏭 企业落地案例</h2>
+
+            <div class="article">
+                <h3>企业 Agent 落地现状：57%入局，38%成功</h3>
+                <div class="meta">来源：MultiAgent Survey / Enterprise AI Report | 2026年</div>
+                <p>最新调研数据显示企业 AI Agent 落地呈现"高参与率低成功率"特征：</p>
+                <ul>
+                    <li><strong>57%</strong> 的企业已启动 AI Agent 项目或试点</li>
+                    <li><strong>38%</strong> 的企业实现成功落地并产生可量化的业务价值</li>
+                    <li><strong>关键分水岭</strong>：Multi-Agent 架构 + 协议标准化（MCP + A2A + AG-UI）</li>
+                    <li><strong>主要障碍</strong>：安全合规（42%）、与现有系统集成复杂度（31%）、缺乏专业人才（27%）</li>
+                </ul>
+                <p><strong>OpenClaw 企业优势</strong>：50+ 消息渠道覆盖降低集成门槛、NemoClaw 企业安全层、ClawRouter 预算管理、持久化消息投递确保可靠性。</p>
+            </div>
+
+            <div class="article">
+                <h3>金融行业：合规驱动的 Agent 部署</h3>
+                <div class="meta">来源：行业观察 | 2026年</div>
+                <p>金融行业因监管要求严格，成为 OpenClaw NemoClaw 企业安全层的重要应用场景：</p>
+                <ul>
+                    <li>命令审批系统满足"人机协同"合规要求</li>
+                    <li>隔离存储和崩溃恢复确保交易数据零丢失</li>
+                    <li>Token 鉴权模式支持零信任架构</li>
+                    <li>审计日志完整记录 Agent 所有操作</li>
+                </ul>
+            </div>
+
+            <div class="article">
+                <h3>制造业：Multi-Agent 生产流程自动化</h3>
+                <div class="meta">来源：行业观察 | 2026年</div>
+                <p>制造业企业采用 Multi-Agent 架构实现生产流程自动化：</p>
+                <ul>
+                    <li>需求分析 Agent → 设计 Agent → 供应链 Agent → 质检 Agent 的流水线协作</li>
+                    <li>MCP 协议标准化工具调用接口</li>
+                    <li>会话回退功能支持异常流程的人工干预和快速回滚</li>
+                    <li>记忆主动召回实现跨批次生产的经验复用</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 延伸阅读链接 -->
+        <section class="section">
+            <h2>📖 延伸阅读链接</h2>
+            <div class="links-grid">
+                <div class="link-card">
+                    <h4>官方资源</h4>
+                    <ul>
+                        <li><a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw GitHub</a></li>
+                        <li><a href="https://docs.openclaw.ai" target="_blank">OpenClaw 官方文档</a></li>
+                        <li><a href="https://clawhub.ai" target="_blank">ClawHub 技能市场</a></li>
+                        <li><a href="https://github.com/openclaw/openclaw/releases" target="_blank">Release Notes</a></li>
+                    </ul>
+                </div>
+                <div class="link-card">
+                    <h4>竞品与生态</h4>
+                    <ul>
+                        <li><a href="https://www.coze.cn" target="_blank">扣子 Coze 官网</a></li>
+                        <li><a href="https://github.com/coze-dev/coze-studio" target="_blank">Coze Studio GitHub</a></li>
+                        <li><a href="https://help.aliyun.com/zh/model-studio/" target="_blank">阿里云百炼文档</a></li>
+                        <li><a href="https://cloud.tencent.com/product/workbuddy" target="_blank">腾讯 WorkBuddy</a></li>
+                    </ul>
+                </div>
+                <div class="link-card">
+                    <h4>社区教程</h4>
+                    <ul>
+                        <li><a href="https://github.com/datawhalechina/hello-agents" target="_blank">Hello-Agents 教程</a></li>
+                        <li><a href="https://github.com/huggingface/agents-course" target="_blank">Hugging Face Agents Course</a></li>
+                        <li><a href="https://developer.cloud.tencent.com/article/2719225" target="_blank">Hermes Agent 小白教程</a></li>
+                        <li><a href="https://skywork.ai/slide/en/openclaw-ai-framework-2049428634306818049" target="_blank">OpenClaw 2026 全解析</a></li>
+                    </ul>
+                </div>
+                <div class="link-card">
+                    <h4>行业报告</h4>
+                    <ul>
+                        <li><a href="https://skywork.ai/skypage/en/openclaw-release-notes-features/2036755193062330368" target="_blank">OpenClaw Release Notes 完整指南</a></li>
+                        <li><a href="https://www.betteryeah.com/blog/mainstream-ai-agent-platforms-comparison-enterprise-guide-2026" target="_blank">2026年主流智能体平台深度对比</a></li>
+                        <li><a href="https://www.tixiaolu.com/posts/ai-agent-frameworks/" target="_blank">AI Agent 框架对比指南</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>🦞 OpenClaw Daily Report | 第110期 | 2026年8月7日</p>
+            <p>由 OpenClaw Agent 自动生成 | 数据截至 2026-08-07 00:45 CST</p>
+        </footer>
+    </div>
+</body>
+</html>
