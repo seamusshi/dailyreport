@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw 每日情报日报 - 2026年8月10日</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="logo">
+        <span class="logo-icon">🦞</span>
+        <span class="logo-text">OpenClaw Daily Intel</span>
+      </div>
+      <nav class="main-nav">
+        <a href="../index.html">首页</a>
+        <a href="../archive.html">归档</a>
+        <a href="https://github.com/openclaw/openclaw" target="_blank">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="report">
+      <div class="report-meta">
+        <span class="report-date">2026年8月10日 · 星期一</span>
+        <span class="report-issue">第 1 期</span>
+      </div>
+
+      <h1 class="report-title">OpenClaw 每日情报日报</h1>
+      <p class="report-subtitle">追踪开源智能体生态的前沿动态与企业落地实践</p>
+
+      <!-- 今日概览 -->
+      <section class="section overview">
+        <h2>📋 今日概览</h2>
+        <ul class="overview-list">
+          <li><strong>GitHub Star 突破 386K</strong>：OpenClaw 主仓库累计获星 386,000+，稳居全球开源 AI Agent 框架榜首</li>
+          <li><strong>v2026.7.2 Beta 冲刺</strong>：7.2-beta.7 已发布，会话回退/分支、MCP 应用仪表盘、会议实时 Talk 等重磅功能进入测试尾声</li>
+          <li><strong>字节 ArkClaw 生态扩张</strong>：火山引擎 Pro 订阅免费送 ArkClaw 云实例，接入 MiniMax M2.7 / Kimi K2.6 / GLM-5.1 等 11 款顶尖模型</li>
+          <li><strong>企业落地白皮书发布</strong>：《2026 OpenClaw 自主智能体发展白皮书》显示，工业企业智能体应用比例已达 47.5%</li>
+          <li><strong>腾讯云深度集成</strong>：OpenClaw 依托腾讯云 Lighthouse 实现一键部署，2-3 分钟完成搭建</li>
+        </ul>
+      </section>
+
+      <!-- 官方动态 -->
+      <section class="section">
+        <h2>🏢 OpenClaw 官方动态</h2>
+        
+        <article class="news-item">
+          <h3>🔖 版本发布节奏</h3>
+          <div class="release-grid">
+            <div class="release-card latest">
+              <span class="badge badge-latest">Latest</span>
+              <code class="version">v2026.7.1-2</code>
+              <span class="release-date">2026-08-04</span>
+              <p class="release-desc">修复 npm 插件元数据兼容性问题，支持新版 npm 客户端的单例数组元数据</p>
+            </div>
+            <div class="release-card stable">
+              <span class="badge badge-stable">Extended Stable</span>
+              <code class="version">v2026.6.34</code>
+              <span class="release-date">2026-08-08</span>
+              <p class="release-desc">安全与可靠性加固：浏览器/网络边界隔离、Agent 运行容错、频道恢复增强、本地运行时状态修复等 25 项 PR</p>
+            </div>
+            <div class="release-card beta">
+              <span class="badge badge-beta">Beta</span>
+              <code class="version">v2026.7.2-beta.7</code>
+              <span class="release-date">2026-08-02</span>
+              <p class="release-desc">2026.7.2 系列第 7 个 Beta，接近 GA 质量</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <h3>📌 核心功能更新详情（v2026.7.2 系列）</h3>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🔄</div>
+              <h4>会话回退与分支</h4>
+              <p>支持从任意消息回退或分叉对话，跨 Web/原生应用切换转录分支，分叉上游 Codex 会话，保留分支安全的队列发送</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+              <h4>交互式 MCP 应用与仪表盘</h4>
+              <p>托管带票证的 MCP 应用，绑定工具、资源和有界上下文更新；可从频道回复中打开，固定到持久仪表盘</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">❓</div>
+              <h4>全平台结构化问答</h4>
+              <p>Agent 可在 Web、频道、macOS 和原生应用中通过选项卡片提出结构化问题；审批支持推送通知、历史记录、公平队列</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎥</div>
+              <h4>会议与实时 Talk</h4>
+              <p>默认启用 Teams、Zoom、Google Meet 会议插件，支持持久会议转录收集；实时 Talk 新增 OpenAI 和 Gemini 视频</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⌚</div>
+              <h4>Wear OS 伴侣应用</h4>
+              <p>新增手机代理 Wear 伴侣，支持主屏幕 Agent/会话/模型选择、实时 Talk 控制、音频响应播放和即时通话磁贴</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🧠</div>
+              <h4>快速活跃记忆召回</h4>
+              <p>新增快速活跃记忆召回功能，个人安装默认启用跨对话召回，支持从 Claude Code/Codex/Hermes 导入记忆</p>
+            </div>
+          </div>
+          
+          <div class="model-updates">
+            <h4>🤖 模型与提供商更新</h4>
+            <ul>
+              <li><strong>Claude Opus 5</strong>：已加入目录和运行时支持</li>
+              <li><strong>Kimi K3</strong>：月之暗面最新模型接入</li>
+              <li><strong>GPT Live</strong>：实时对话支持，需使用支持的 Platform API 认证路径</li>
+              <li><strong>本地推理</strong>： onboarding 时检测本地推理提供商，新增进程内 llama.cpp GGUF 推理和 Baseten Model API 支持</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- 竞品动态 -->
+      <section class="section">
+        <h2>⚔️ 竞品动态</h2>
+        
+        <div class="competitor-grid">
+          <div class="competitor-card tencent">
+            <div class="competitor-header">
+              <span class="competitor-icon">🐧</span>
+              <h3>腾讯 WorkBuddy</h3>
+              <span class="competitor-tag">本地+云端</span>
+            </div>
+            <div class="competitor-body">
+              <ul>
+                <li>支持企业微信、微信、钉钉、飞书四大平台</li>
+                <li>微信发句话即可远程操控电脑，40秒整理上百个文档</li>
+                <li>自带私有知识库，上传公司资料即可精准回答</li>
+                <li>本地运行依赖电脑配置，关机后无法使用</li>
+                <li>2026 年 1 月新增 CodeBuddy AI 编程助手</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="competitor-card bytedance">
+            <div class="competitor-header">
+              <span class="competitor-icon">🌋</span>
+              <h3>字节 ArkClaw</h3>
+              <span class="competitor-tag">云端 SaaS</span>
+            </div>
+            <div class="competitor-body">
+              <ul>
+                <li>2026 年 3 月 9 日正式推出，定位"开箱即用的云上 SaaS 版 OpenClaw"</li>
+                <li>Pro 订阅免费送 ArkClaw + 专属 ECS 服务器，7×24 小时在线</li>
+                <li>接入 11 款顶尖模型：Doubao-Seed-2.0、Kimi 2.5、MiniMax 2.5、GLM-5.1 等</li>
+                <li>原生适配飞书：智能会议纪要、任务追踪、多维表格管理</li>
+                <li>与自家 Doubao-Seed 2.0 Pro 协同处理复杂任务效果突出</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="competitor-card alibaba">
+            <div class="competitor-header">
+              <span class="competitor-icon">☁️</span>
+              <h3>阿里 QwenPaw</h3>
+              <span class="competitor-tag">阿里云生态</span>
+            </div>
+            <div class="competitor-body">
+              <ul>
+                <li>原 CoPaw，现已更名为 QwenPaw，基于通义千问</li>
+                <li>阿里云百炼平台提供 OpenClaw 一键部署服务</li>
+                <li>旗下还有 JVSClaw（低代码平台）、QoderWork（编程工作流）、HiClaw（智能客服）</li>
+                <li>阿里云 GPU 云服务器（8核16GB+H100）月成本约 500 元</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="competitor-card baidu">
+            <div class="competitor-header">
+              <span class="competitor-icon">🤖</span>
+              <h3>百度红手指 Operator</h3>
+              <span class="competitor-tag">浏览器自动化</span>
+            </div>
+            <div class="competitor-body">
+              <ul>
+                <li>浏览器自动化 AI Agent，对标 OpenClaw 的 browser 能力</li>
+                <li>旗下还有 DuClaw 通用对话 AI Agent</li>
+                <li>侧重搜索和网页操作场景</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="competitor-card others">
+            <div class="competitor-header">
+              <span class="competitor-icon">🌟</span>
+              <h3>AI 新势力</h3>
+              <span class="competitor-tag">垂直特色</span>
+            </div>
+            <div class="competitor-body">
+              <ul>
+                <li><strong>月之暗面 Kimi Claw</strong>：长文本处理王者，K3 模型已接入 OpenClaw 运行时</li>
+                <li><strong>MiniMax MaxClaw</strong>：多模态 AI Agent，M2.7 在 Agent 领域表现突出</li>
+                <li><strong>智谱 AutoClaw</strong>：GLM-5.1 跨代旗舰，Auto 模式自动匹配最优模型</li>
+                <li><strong>科大讯飞 AstronClaw</strong>：语音交互 AI Agent，侧重语音场景</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="competitor-chart">
+          <h4>📊 2026 国产 AI Agent 工具全景对比</h4>
+          <p>据 CSDN 2026 年 4 月盘点，国内已涌现 <strong>40+ 款</strong>基于/对标 OpenClaw 的 AI Agent 工具。大厂布局如下：</p>
+          <div class="chart-bars">
+            <div class="chart-bar"><span class="chart-label">腾讯系</span><div class="chart-fill" style="width:15%"></div><span class="chart-count">6 款</span></div>
+            <div class="chart-bar"><span class="chart-label">阿里系</span><div class="chart-fill" style="width:10%"></div><span class="chart-count">4 款</span></div>
+            <div class="chart-bar"><span class="chart-label">字节系</span><div class="chart-fill" style="width:7.5%"></div><span class="chart-count">3 款</span></div>
+            <div class="chart-bar"><span class="chart-label">百度系</span><div class="chart-fill" style="width:5%"></div><span class="chart-count">2 款</span></div>
+            <div class="chart-bar"><span class="chart-label">其他</span><div class="chart-fill" style="width:62.5%"></div><span class="chart-count">25+ 款</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 社区趣味应用 -->
+      <section class="section">
+        <h2>🚀 社区趣味应用案例分享</h2>
+        
+        <div class="case-grid">
+          <div class="case-card">
+            <div class="case-emoji">🎬</div>
+            <h4>跨境电商多语言视频量产</h4>
+            <p>某跨境电商企业部署 OpenClaw + HappyHorse，实现多语言视频批量生成。切换至阿里云 GPU 云服务器后，跨境节点延迟降低，视频生成速度提升 <strong>2 倍</strong>，年成本从 6 万元降至 6,000 元。</p>
+          </div>
+          <div class="case-card">
+            <div class="case-emoji">🏭</div>
+            <h4>制造企业生产流程自动化</h4>
+            <p>大型制造企业采用"云+本地"混合部署：核心数据存储在本地确保安全，日常自动化任务运行在云服务器。硬件成本降低 <strong>75%</strong>，响应速度提升 3 倍。</p>
+          </div>
+          <div class="case-card">
+            <div class="case-emoji">📱</div>
+            <h4>飞书智能办公助手</h4>
+            <p>社区用户分享：利用 OpenClaw 飞书插件，实现"早上自动拉取昨日数据 → 生成日报 → 发送到指定群 → 创建今日待办"的全自动化流程，节省日均 <strong>2.3 小时</strong>。</p>
+          </div>
+          <div class="case-card">
+            <div class="case-emoji">🎮</div>
+            <h4>Wear OS 即时通话</h4>
+            <p>v2026.7.2 新增 Wear OS 伴侣，开发者已尝试在智能手表上实现"抬腕即问"的 AI 助手体验，支持音频响应播放和即时通话磁贴。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skill 学习指南 -->
+      <section class="section">
+        <h2>📚 精选 Skill 学习指南</h2>
+        
+        <div class="skill-guide">
+          <div class="skill-item">
+            <h4>🔧 Skill Workshop 使用指南</h4>
+            <p>新版 Skill Workshop 支持扫描历史会话自动生成 Skill 建议，即使关闭自主学习的用户也能获得最多 3 条保守的 Skill 提案。建议配置：<code>skills.workshop.approvalPolicy: "pending"</code> 作为可选审批门控。</p>
+            <a href="https://docs.openclaw.ai/skills/workshop" class="skill-link" target="_blank">查看文档 →</a>
+          </div>
+          <div class="skill-item">
+            <h4>🌐 Browser Copilot 安全使用</h4>
+            <p>v2026.6.34 强化了浏览器安全边界：沙箱化浏览器路由、可信 DNS 目标、自定义浏览器源、环回提供商端点现在会拒绝不安全访问路径。建议企业用户开启 <code>browser.sandbox.enabled</code>。</p>
+            <a href="https://docs.openclaw.ai/capabilities/browser" class="skill-link" target="_blank">查看文档 →</a>
+          </div>
+          <div class="skill-item">
+            <h4>⏰ Automations 定时任务</h4>
+            <p>v2026.7.2 新增 per-job 动态频率、门控脚本负载、持久调度源流、cron 支持的 heartbeat 监控、<code>/loop</code> 命令。可将心跳任务转换为定时任务，实现主动推送提醒。</p>
+            <a href="https://docs.openclaw.ai/capabilities/automations" class="skill-link" target="_blank">查看文档 →</a>
+          </div>
+          <div class="skill-item">
+            <h4>🧠 Memory 记忆管理</h4>
+            <p>新版 Memory 支持快速活跃记忆召回，个人安装默认启用跨对话召回。支持从 Claude Code / Codex / Hermes 导入记忆，并有专属 Memory 设置页面。</p>
+            <a href="https://docs.openclaw.ai/capabilities/memory" class="skill-link" target="_blank">查看文档 →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 企业落地案例 -->
+      <section class="section">
+        <h2>🏭 企业落地案例</h2>
+        
+        <div class="enterprise-case">
+          <h3>数商云 OpenClaw 一站式落地实录</h3>
+          <div class="case-metrics">
+            <div class="metric">
+              <span class="metric-value">2.3h</span>
+              <span class="metric-label">日均节省工时</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">75%</span>
+              <span class="metric-label">硬件成本降低</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">3×</span>
+              <span class="metric-label">响应速度提升</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">47.5%</span>
+              <span class="metric-label">工业企业应用比例</span>
+            </div>
+          </div>
+          <p class="case-desc">数商云提供全栈式技术支撑，包括私有化部署、安全合规、7×24 运维服务。实施路径：需求分析 → 私有化部署方案设计 → 环境搭建与系统配置 → 培训赋能与持续运维。</p>
+        </div>
+
+        <div class="deployment-options">
+          <h4>部署方式对比</h4>
+          <table class="deploy-table">
+            <thead>
+              <tr>
+                <th>维度</th>
+                <th>云服务器</th>
+                <th>本地服务器</th>
+                <th>混合部署</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>成本</td>
+                <td>月费 32-600 元，无硬件投入</td>
+                <td>一次性 3,000-50,000 元 + 年运维 1 万</td>
+                <td>中等</td>
+              </tr>
+              <tr>
+                <td>运维</td>
+                <td>免运维</td>
+                <td>需专业团队</td>
+                <td>部分运维</td>
+              </tr>
+              <tr>
+                <td>安全</td>
+                <td>等保 2.0 三级认证</td>
+                <td>完全可控</td>
+                <td>核心数据本地，日常任务云端</td>
+              </tr>
+              <tr>
+                <td>适用</td>
+                <td>中小企业、个人</td>
+                <td>大型企业、敏感数据</td>
+                <td>大型制造企业</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 延伸阅读 -->
+      <section class="section">
+        <h2>🔗 延伸阅读</h2>
+        <ul class="reading-list">
+          <li><a href="https://github.com/openclaw/openclaw/releases" target="_blank">OpenClaw GitHub Releases</a> — 官方版本发布页</li>
+          <li><a href="https://docs.openclaw.ai/releases" target="_blank">OpenClaw 官方文档 - Release Notes</a> — 产品级发布说明</li>
+          <li><a href="https://juejin.cn/post/7644367780076716084" target="_blank">2026 OpenClaw 自主智能体发展白皮书</a> — 技术、生态与落地全景</li>
+          <li><a href="https://blog.csdn.net/qq_44866828/article/details/160622087" target="_blank">2026 国产 AI Agent 工具全景盘点</a> — 40 款龙虾工具横向对比</li>
+          <li><a href="https://www.sohu.com/a/998095024_120800396" target="_blank">当"小龙虾"遇上企业业务：OpenClaw 2026 最新落地指南</a></li>
+          <li><a href="https://onyx.app/insights/best-enterprise-openclaw-options-2026" target="_blank">8 Best Enterprise OpenClaw Options for 2026</a> — 企业级选型指南</li>
+          <li><a href="https://www.tencentcloud.com/techpedia/140976" target="_blank">OpenClaw 详细介绍 - 腾讯云</a> — 腾讯云专属部署指南</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>OpenClaw Daily Intel · 每日追踪开源智能体生态</p>
+      <p class="footer-meta">数据来源：GitHub、官方文档、社区资讯、行业报告 · 生成时间：2026-08-10 00:45 CST</p>
+    </footer>
+  </div>
+</body>
+</html>
