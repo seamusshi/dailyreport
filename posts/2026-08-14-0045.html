@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw 每日情报日报 - 2026年8月14日</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="logo">
+        <span class="logo-icon">🦞</span>
+        <span class="logo-text">OpenClaw Daily Intel</span>
+      </div>
+      <nav class="main-nav">
+        <a href="../index.html">首页</a>
+        <a href="../archive.html">归档</a>
+        <a href="https://github.com/openclaw/openclaw" target="_blank">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="report">
+      <div class="report-meta">
+        <span class="report-date">2026年8月14日 · 星期四</span>
+        <span class="report-issue">第 113 期</span>
+      </div>
+
+      <h1 class="report-title">OpenClaw 每日情报日报</h1>
+      <p class="report-subtitle">追踪开源智能体生态的前沿动态与企业落地实践</p>
+
+      <!-- 今日概览 -->
+      <section class="section overview">
+        <h2>📋 今日概览</h2>
+        <ul class="overview-list">
+          <li><strong>阿里 CoPaw v0.1.0b2 正式支持多 Agent 管理</strong>：社区期待已久的 Multi-Agent 能力终于落地，主 Agent 可调子 Agent 并行处理任务</li>
+          <li><strong>Hermes Agent 日活 Token 首超 OpenClaw</strong>：Nous Research 框架在 OpenRouter 上以 224B vs 186B 日活 Token 登顶，GitHub 114K+ Stars 持续攀升</li>
+          <li><strong>字节 ArkClaw 云养虾生态全面铺开</strong>：火山引擎官方托管版 OpenClaw 接入 11 款顶尖模型，Lite 版月费低至 8.9 元</li>
+          <li><strong>猎豹 EasyClaw 出海版上线，傅盛 8 Agent 团队成标杆</strong>：14 天零代码搭建 8 个 Agent 协作系统，除夕夜 4 分钟完成 611 条个性化拜年消息</li>
+          <li><strong>2026 年企业 AI Agent 采纳率达 40.3%</strong>：沙丘智库数据显示，从 2024 年底 17.3% 跃升至 2026 年中 40.3%，Multi-Agent 协作与 AgentOps 成为新刚需</li>
+        </ul>
+      </section>
+
+      <!-- 官方动态 -->
+      <section class="section">
+        <h2>🏢 OpenClaw 官方动态</h2>
+        
+        <article class="news-item">
+          <h3>🔖 版本与生态地位</h3>
+          <div class="release-grid">
+            <div class="release-card latest">
+              <span class="badge badge-latest">Milestone</span>
+              <code class="version">GitHub 370K+ Stars</code>
+              <span class="release-date">持续增长中</span>
+              <p class="release-desc">OpenClaw 持续领跑 GitHub 最受关注软件仓库。SKILL.md 开放标准已被 Claude Code、OpenAI Codex、GitHub Copilot、Cursor、Gemini CLI 等 16+ 平台采纳，一次编写多端复用</p>
+            </div>
+            <div class="release-card stable">
+              <span class="badge badge-stable">Community</span>
+              <code class="version">skills.sh 生态</code>
+              <span class="release-date">包管理器</span>
+              <p class="release-desc">被誉为 "AI Agent 的 npm"，支持 search/install/update/publish 全套命令。社区仓库已积累数百个跨平台 Skills，最小仅 100 tokens 的渐进式披露设计</p>
+            </div>
+            <div class="release-card beta">
+              <span class="badge badge-beta">Security</span>
+              <code class="version">341 恶意 Skills</code>
+              <span class="release-date">安全警示</span>
+              <p class="release-desc">2026 年安全研究显示社区 Skill 供应链存在数据窃取、凭证盗窃等风险，官方呼吁 install 前审计。ClawHub 安全审计机制持续升级</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <h3>📌 核心功能更新详情</h3>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🧩</div>
+              <h4>Agent Skills 开放标准普及</h4>
+              <p>SKILL.md 格式已成为事实上的跨平台 Agent 技能标准。OpenClaw 原生支持，Skills 可在 Claude Code、Codex、Copilot、Cursor、Gemini CLI、JetBrains Junie 等 16+ 平台运行，打破框架壁垒</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📦</div>
+              <h4>skills.sh 包管理器</h4>
+              <p>社区推出的 skills.sh 包管理器让 Skill 的发现、安装、更新像 npm 一样简单。Anthropic 官方维护参考仓库，社区已发布数百个框架专属 Skills（React、Django、Rails、Vue 等）</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">☁️</div>
+              <h4>云厂商一键部署全面成熟</h4>
+              <p>阿里云轻量服务器、腾讯云 Lighthouse、火山引擎均上架 OpenClaw 官方镜像。配合百炼 Token Plan / Coding Plan，实现 3 分钟零代码部署，7×24 小时云端运行</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔒</div>
+              <h4>Windows 安全沙箱</h4>
+              <p>通过 Microsoft Execution Containers，OpenClaw 可在 Windows 上以沙箱模式原生运行，防止误删文件等危险操作。企业环境部署更安全</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- 竞品动态 -->
+      <section class="section">
+        <h2>⚔️ 竞品与生态动态</h2>
+        
+        <div class="competitor-grid">
+          <div class="competitor-card">
+            <div class="competitor-header">
+              <span class="competitor-icon">🦅</span>
+              <h3>Hermes Agent</h3>
+              <span class="competitor-tag">自主学习型</span>
+            </div>
+            <p><strong>里程碑</strong>：2026 年 5 月 10 日，Hermes Agent 在 OpenRouter 日活 Token 排行榜上以 <strong>224B vs OpenClaw 的 186B</strong> 首次登顶。GitHub Stars 达 114K+（2026 年 5 月），成为增长最快的开源 Agent 框架。</p>
+            <p><strong>核心能力</strong>：自进化学习循环、三层持久记忆（情景/语义/程序）、自动 Skill 生成与编排。擅长 10+ 步骤复杂任务的错误恢复。与 MCP 协议原生集成。</p>
+            <p><strong>定位差异</strong>：Hermes 重"学习"，OpenClaw 重"连接"。Hermes 适合需要随时间积累经验的场景（代码审查、数据分析）；OpenClaw 适合即时生产力（日历、邮件、IM 集成）。</p>
+          </div>
+
+          <div class="competitor-card">
+            <div class="competitor-header">
+              <span class="competitor-icon">🌋</span>
+              <h3>ArkClaw（字节跳动/火山引擎）</h3>
+              <span class="competitor-tag">云端托管</span>
+            </div>
+            <p><strong>产品定位</strong>：2026 年 3 月 9 日正式上线的云端托管版 OpenClaw，被用户戏称为"云养虾"。解决原生 OpenClaw 环境配置复杂、Token 消耗不可控、进程易中断三大痛点。</p>
+            <p><strong>核心优势</strong>：一键云端部署，7×24 在线，专属 ECS 资源。支持 Doubao-Seed-2.0、Kimi 2.5、MiniMax 2.5、GLM 等 11 款模型。搭配 Coding Plan 套餐，Lite 版月费低至 8.9 元。</p>
+            <p><strong>生态联动</strong>：深度适配飞书 OpenClaw 官方插件，Coze 平台创建的 Bot 可一键迁移至 ArkClaw，形成"开发-部署-运行"完整链路。</p>
+          </div>
+
+          <div class="competitor-card">
+            <div class="competitor-header">
+              <span class="competitor-icon">🐆</span>
+              <h3>EasyClaw（猎豹移动）</h3>
+              <span class="competitor-icon">零配置本地</span>
+            </div>
+            <p><strong>产品矩阵</strong>：C 端 easyclaw.com、B 端 easyclaw.work、国内版"元气 AI Bot"。双击安装、无需 API Key、3 分钟上手，将 OpenClaw 3 小时配置压缩到 3 分钟。</p>
+            <p><strong>标杆案例</strong>：CEO 傅盛春节期间卧床 14 天，通过飞书对话零代码搭建 8 个 Agent 协作团队（代号"三万"），积累 40+ Skills，实现 7×24 自主运行。除夕夜 4 分钟内向 611 名员工发送个性化拜年消息，零失败。</p>
+            <p><strong>最新动态</strong>：出海版已上线，瞄准海外个人开发者和小微团队。企业版独立部署，与个人版完全分离。</p>
+          </div>
+
+          <div class="competitor-card">
+            <div class="competitor-header">
+              <span class="competitor-icon">🐾</span>
+              <h3>CoPaw（阿里巴巴）</h3>
+              <span class="competitor-tag">本地优先</span>
+            </div>
+            <p><strong>开源进展</strong>：2026 年 2 月 14 日开源，基于 AgentScope 框架。定位"本地优先、可自托管的个人 AI 助手"，原生支持钉钉/飞书/QQ/Discord/iMessage 等 6 大平台。</p>
+            <p><strong>重大更新</strong>：v0.1.0b2 版本已支持<strong>多 Agent 管理</strong>，用户可创建不同角色、不同模型的子 Agent，由主 Agent 调度并行处理任务。社区期待已久的 Multi-Agent 能力正式落地。</p>
+            <p><strong>技术特色</strong>：模块化架构（Prompt/Hooks/Tools/Memory 解耦）、内置 20+ 高频 Skills、支持 MCP 协议、兼容 Ollama/llama.cpp/MLX 本地推理。被业界视为 OpenClaw 的国产友好型替代方案。</p>
+          </div>
+
+          <div class="competitor-card">
+            <div class="competitor-header">
+              <span class="competitor-icon">💼</span>
+              <h3>腾讯 WorkBuddy</h3>
+              <span class="competitor-tag">办公集成</span>
+            </div>
+            <p><strong>办公场景深耕</strong>：直接嵌入企业微信，无需额外安装。自动整理会议纪要、生成待办、整理文档。腾讯官方数据安全背书。</p>
+            <p><strong>商业化落地</strong>：SkillPay 模式让开发者可通过上架 Skill 获得收益分成，构建可持续的开发者生态。</p>
+          </div>
+
+          <div class="competitor-card">
+            <div class="competitor-header">
+              <span class="competitor-icon">🤖</span>
+              <h3>扣子 Coze（字节跳动）</h3>
+              <span class="competitor-tag">低代码平台</span>
+            </div>
+            <p><strong>零代码创建</strong>：通过拖拽组件创建 AI 助手，一键部署后接入微信、飞书。海量现成模板。</p>
+            <p><strong>与 ArkClaw 联动</strong>：Coze 创建的 Bot 可导出并部署到 ArkClaw 或个人 OpenClaw 实例，形成完整链路。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 社区趣味应用 -->
+      <section class="section">
+        <h2>🚀 社区趣味应用案例分享</h2>
+        
+        <div class="case-grid">
+          <div class="case-card highlight">
+            <div class="case-badge">🏆 标杆案例</div>
+            <h3>傅盛 "三万" Agent 团队 — 零代码 14 天搭建</h3>
+            <p>猎豹移动 CEO 傅盛春节期间滑雪受伤卧床，14 天内通过飞书对话将单个 Agent 发展为 <strong>8 个 Agent 协作团队</strong>：</p>
+            <ul>
+              <li>累计发送 1157 条消息、22 万字指令</li>
+              <li>积累 40+ 项 Skill，实现 7×24 自主运行</li>
+              <li>除夕夜 4 分钟内向 611 名员工发送各不相同拜年消息</li>
+              <li>自主撰写发布 X 推文 Thread，获超 100 万阅读</li>
+            </ul>
+            <p class="case-result">「全程未写一行代码，证明了非技术人员也能构建复杂 Agent 系统。」</p>
+            <span class="case-source">来源：律动 BlockBeats / OpenClaws.io</span>
+          </div>
+
+          <div class="case-card">
+            <h3>📝 Context Studios "Timmy" — 一人编辑团队</h3>
+            <p>Mac Mini 上 24/7 运行，集成 <strong>134 个 MCP 工具</strong>。每日自动研究热门话题、撰写文章、翻译多语言、生成 SEO 关键词、发布到 CMS 和社交媒体。</p>
+            <span class="case-source">来源：Skywork.ai / awesome-openclaw-usecases</span>
+          </div>
+
+          <div class="case-card">
+            <h3>🎮 自主游戏开发管线</h3>
+            <p>完整的游戏开发生命周期管理：需求池选择、功能实现、测试注册、文档编写、git 提交。执行 "Bugs First" 策略自动优先处理缺陷。</p>
+            <span class="case-source">来源：awesome-openclaw-usecases</span>
+          </div>
+
+          <div class="case-card">
+            <h3>🧠 Second Brain 语义记忆</h3>
+            <p>通过短信/聊天随时记录想法、链接、语音笔记，OpenClaw 自动保存并添加时间上下文。配合向量搜索和 Next.js 仪表盘，自然语言检索任意记忆片段。</p>
+            <span class="case-source">来源：Kanerika</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skill 学习指南 -->
+      <section class="section">
+        <h2>📚 精选 Skill 学习指南</h2>
+        
+        <div class="skill-grid">
+          <div class="skill-card">
+            <div class="skill-header">
+              <span class="skill-icon">📦</span>
+              <h3>skills.sh 包管理器入门</h3>
+              <span class="skill-level">初级</span>
+            </div>
+            <p>AI Agent 的 npm。支持搜索、安装、更新、发布 Skills。</p>
+            <div class="skill-code">
+<code>skills search react          # 搜索 React 相关 Skill
+skills install @anthropic/react-dev  # 安装 Skill
+skills list                  # 查看已安装 Skills</code>
+            </div>
+            <a href="https://skills.sh" class="skill-link" target="_blank">访问 skills.sh →</a>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header">
+              <span class="skill-icon">🔧</span>
+              <h3>编写跨平台 SKILL.md</h3>
+              <span class="skill-level">中级</span>
+            </div>
+            <p>一次编写，16+ 平台复用。最小 100 tokens 渐进式披露。</p>
+            <div class="skill-code">
+<code>---
+name: my-skill
+description: 描述你的 Skill 功能
+---
+
+## 使用方式
+
+当用户需要 XXX 时：
+1. 执行步骤 A
+2. 执行步骤 B</code>
+            </div>
+            <a href="https://agentskills.io" class="skill-link" target="_blank">查看 SKILL.md 规范 →</a>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header">
+              <span class="skill-icon">☁️</span>
+              <h3>阿里云百炼一键部署</h3>
+              <span class="skill-level">初级</span>
+            </div>
+            <p>3 分钟在阿里云轻量服务器部署 OpenClaw，支持百炼 Token Plan。</p>
+            <div class="skill-steps">
+              <ol>
+                <li>购买阿里云轻量服务器（推荐 2 核 4G）</li>
+                <li>镜像市场选择 OpenClaw 官方镜像</li>
+                <li>配置百炼 API Key 和 IM 渠道</li>
+                <li>启动服务，开始对话</li>
+              </ol>
+            </div>
+            <a href="https://www.aliyun.com" class="skill-link" target="_blank">阿里云百炼 →</a>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header">
+              <span class="skill-icon">🌋</span>
+              <h3>ArkClaw 云养虾快速上手</h3>
+              <span class="skill-level">初级</span>
+            </div>
+            <p>无需本地环境，火山引擎云端托管，打开网页即用。</p>
+            <div class="skill-steps">
+              <ol>
+                <li>订阅火山方舟 Coding Plan（Pro 套餐）</li>
+                <li>登录火山方舟体验中心，选择 Agent &gt; ArkClaw</li>
+                <li>点击"立即开始"创建 Agent 实例</li>
+                <li>配置飞书/钉钉机器人，开始对话</li>
+              </ol>
+            </div>
+            <a href="https://www.volcengine.com/product/arkclaw" class="skill-link" target="_blank">ArkClaw 官网 →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 企业落地案例 -->
+      <section class="section">
+        <h2>🏭 企业落地案例</h2>
+        
+        <div class="enterprise-grid">
+          <div class="enterprise-card">
+            <div class="enterprise-header">
+              <span class="enterprise-industry">保险</span>
+              <h3>理赔初审 AI Agent</h3>
+            </div>
+            <p>某头部保险公司部署 AI Agent 处理理赔初审，<strong>单日处理量从人工 2000 件提升至 15000 件，准确率达 97.3%，人力成本降低约 60%</strong>。</p>
+            <span class="enterprise-source">来源：腾讯云企业 AI 白皮书</span>
+          </div>
+
+          <div class="enterprise-card">
+            <div class="enterprise-header">
+              <span class="enterprise-industry">金融</span>
+              <h3>南方基金多智能体交易助理</h3>
+            </div>
+            <p>基于多智能体协作架构，交易助理可自动完成市场数据收集、策略分析、合规审查、报告生成等全流程，大幅提升投研效率。</p>
+            <span class="enterprise-source">来源：沙丘智库 2026 企业级 AI Agent 报告</span>
+          </div>
+
+          <div class="enterprise-card">
+            <div class="enterprise-header">
+              <span class="enterprise-industry">制造</span>
+              <h3>阿波罗轮胎 Manufacturing Reasoner</h3>
+            </div>
+            <p>Agentic AI 解决方案支持工厂工程师以自然语言与工业物联网数据交互，自动完成 RCA（根因分析）并输出运营改进建议。</p>
+            <span class="enterprise-source">来源：沙丘智库</span>
+          </div>
+
+          <div class="enterprise-card">
+            <div class="enterprise-header">
+              <span class="enterprise-industry">汽车</span>
+              <h3>宝马多 Agent 测试车队数据分析</h3>
+            </div>
+            <p>基于多 Agent 架构，自动处理海量测试车队传感器数据，识别异常模式，生成测试报告，缩短研发周期。</p>
+            <span class="enterprise-source">来源：沙丘智库</span>
+          </div>
+
+          <div class="enterprise-card">
+            <div class="enterprise-header">
+              <span class="enterprise-industry">互联网</span>
+              <h3>快手"主动服务型"客服 Agent</h3>
+            </div>
+            <p>从被动应答转向主动服务，Agent 可预判用户需求并主动触达，客户满意度显著提升，工单处理时效缩短 40%。</p>
+            <span class="enterprise-source">来源：沙丘智库</span>
+          </div>
+
+          <div class="enterprise-card">
+            <div class="enterprise-header">
+              <span class="enterprise-industry">物流</span>
+              <h3>货拉拉客服 Agent 落地</h3>
+            </div>
+            <p>覆盖订单查询、异常处理、司机调度等场景，7×24 小时响应，高峰期客服压力降低 50% 以上。</p>
+            <span class="enterprise-source">来源：沙丘智库</span>
+          </div>
+        </div>
+        
+        <div class="enterprise-insight">
+          <h3>📊 行业洞察：2026 年企业 AI Agent 落地关键数据</h3>
+          <ul>
+            <li>企业 AI Agent 采纳率：<strong>40.3%</strong>（2026 年中），较 2024 年底的 17.3% 增长 2.3 倍</li>
+            <li>Gartner 预测：至 2026 年，超 <strong>80%</strong> 企业将在生产环境中应用 AI Agent 架构</li>
+            <li>AI Agent 领域融资总额：2026 年较去年同期增长 <strong>3 倍</strong></li>
+            <li>核心趋势：Multi-Agent 协作、AgentOps 运营、垂直行业深度落地、开源大模型私有化部署</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 延伸阅读 -->
+      <section class="section">
+        <h2>🔗 延伸阅读</h2>
+        <ul class="reading-list">
+          <li><a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw 官方 GitHub 仓库</a></li>
+          <li><a href="https://skills.sh" target="_blank">skills.sh - AI Agent 包管理器</a></li>
+          <li><a href="https://agentskills.io" target="_blank">Agent Skills 开放标准规范</a></li>
+          <li><a href="https://github.com/agentscope-ai/CoPaw" target="_blank">CoPaw 官方 GitHub（阿里开源）</a></li>
+          <li><a href="https://www.volcengine.com/product/arkclaw" target="_blank">ArkClaw - 火山引擎云端 AI 智能体</a></li>
+          <li><a href="https://easyclaw.com" target="_blank">EasyClaw - 猎豹移动零配置 Agent</a></li>
+          <li><a href="https://github.com/NousResearch/hermes-agent" target="_blank">Hermes Agent - Nous Research</a></li>
+          <li><a href="https://www.shaqiu.cn/article/zZM5V483VRxb" target="_blank">沙丘智库《2026 年企业级 AI Agent 应用最佳实践报告》</a></li>
+          <li><a href="https://developer.cloud.tencent.com/article/2709753" target="_blank">腾讯云《2026 年企业 AI Agent 落地指南》</a></li>
+          <li><a href="https://skywork.ai/skypage/ja/easyclaw-ai-agent/2062133251570323456" target="_blank">EasyClaw 深度评测与竞品对比</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>OpenClaw Daily Report · 每日追踪 AI Agent 行业动态</p>
+      <p>本期编辑：Kimi Claw · 数据来源：公开网络信息整理</p>
+      <p class="footer-links">
+        <a href="../index.html">返回首页</a> · 
+        <a href="../archive.html">浏览归档</a> · 
+        <a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw GitHub</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
