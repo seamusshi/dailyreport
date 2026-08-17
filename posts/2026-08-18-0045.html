@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年8月18日</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年8月18日 · 第114期</p>
+            <p class="tagline">AI Agent 行业每日情报</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <!-- 今日概览 -->
+            <section class="overview">
+                <h2>📰 今日概览</h2>
+                <ul class="highlights">
+                    <li><strong>ClawHub生态爆发：</strong>社区技能突破5300+，Agent Skills开放标准获16+平台采纳，skills.sh包管理器生态成型</li>
+                    <li><strong>Skill安全警钟：</strong>大规模实证研究显示26.1%的Agent Skills存在安全漏洞，SkillFortify等安全扫描工具兴起</li>
+                    <li><strong>百虾大战格局固化：</strong>腾讯WorkBuddy月活885万领跑，Hermes Agent 191K Stars持续挑战OpenClaw</li>
+                    <li><strong>企业落地深水区：</strong>57%企业入局Agent仅38%成功落地，安全治理与供应链审查成为第一门槛</li>
+                    <li><strong>云厂商全面押注：</strong>阿里云/腾讯云/华为云/火山引擎一键部署方案成熟，OpenClaw成云厂商标配</li>
+                </ul>
+            </section>
+
+            <!-- OpenClaw官方动态 -->
+            <section class="section">
+                <h2>🦞 OpenClaw 官方动态</h2>
+                
+                <h3>ClawHub 技能生态爆发</h3>
+                <p>OpenClaw 技能生态系统迎来爆发式增长。VoltAgent 维护的 <code>awesome-openclaw-skills</code> 仓库已收录 <strong>5300+</strong> 社区构建技能，覆盖编码代理、IDE集成、安全审计、智能家居、健康追踪、个人财务等数十个类别。</p>
+                <p>ClawHub（clawhub.com）正式上线，提供技能的发现、安装、更新和发布全流程支持。开发者可通过 <code>clawhub install &lt;skill-slug&gt;</code> 一键安装技能。</p>
+                
+                <h3>Agent Skills 开放标准获广泛采纳</h3>
+                <p>OpenClaw 推动的 Agent Skills 开放标准（以 SKILL.md 为核心的技能目录格式）已获得 <strong>16+ 平台</strong>采纳，包括 Claude Code、Codex、Cursor、OpenCode 等。skills.sh 作为技能包管理器，支持语义化版本控制，生态地位类似 npm 之于 Node.js。</p>
+                <p>学术论文《Agent Skills: A Data-Driven Analysis》指出，skills.sh 记录的技能数量在 2026 年初已突破 <strong>40,000</strong>，OpenClaw GitHub Stars 单日激增超 25,000，总星数突破 170K（最新数据显示已超 386K）。</p>
+
+                <h3>Skill 安全成为焦点</h3>
+                <p>Liu 等人发表的大规模实证研究收集了 42,447 个技能，系统分析 31,132 个后发现 <strong>26.1%</strong> 存在至少一种漏洞，涵盖提示注入、数据泄露、权限提升和供应链风险。SkillFortify 等安全扫描工具开始支持 OpenClaw Skills 格式（SKILL.md）的自动检测。</p>
+                <p>DigitalOcean 官方指南建议用户：审查代码后再安装、使用 ClawDex 扫描已知漏洞、及时卸载未使用技能、对连接敏感信息的实例保持高度警惕。</p>
+            </section>
+
+            <!-- 核心功能更新 -->
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                
+                <div class="update-item">
+                    <h3>持久化记忆系统升级</h3>
+                    <p>OpenClaw 的持久记忆系统持续演进，支持：</p>
+                    <ul>
+                        <li>跨会话上下文保持，AI "记住" 之前的任务逻辑和结果</li>
+                        <li>自主学习能力，随时间推移创建定制化的 Agent 画像</li>
+                        <li>安全本地硬件存储，保障数据隐私和上下文完整性</li>
+                        <li>企业级方案支持 Hologres + Mem0 替代本地 SQLite，实现 PB 级向量存储和毫秒级写入</li>
+                    </ul>
+                </div>
+
+                <div class="update-item">
+                    <h3>企业级部署方案成熟</h3>
+                    <p>阿里云推出基于 ACS 的大规模网络部署方案：</p>
+                    <ul>
+                        <li>VPC 附加网段 + 企业版转发路由器构建分层网络架构</li>
+                        <li>主网段部署 ALB 和管理平面，附加网段专用于 Sandbox Agent 容器</li>
+                        <li>集成 NAT 防火墙、VPC 防火墙、混合云防火墙实现多层流量审计</li>
+                        <li>支持 Serverless 应用引擎（SAE）秒级弹性伸缩至零</li>
+                    </ul>
+                </div>
+
+                <div class="update-item">
+                    <h3>多平台通信持续扩展</h3>
+                    <p>OpenClaw 现已支持 20+ 通信渠道：Telegram、Discord、WhatsApp、Signal、Slack、iMessage、飞书、钉钉、企业微信、QQ 等，可将 Agent 加入群组作为团队成员。</p>
+                </div>
+            </section>
+
+            <!-- 竞品动态 -->
+            <section class="section">
+                <h2>🦐 竞品动态</h2>
+                
+                <h3>腾讯 WorkBuddy · 月活885万领跑</h3>
+                <p>腾讯 WorkBuddy 作为中国日活最高的 AI 智能体，月活已达 <strong>885 万</strong>。其 AI 原生桌面智能体工作台定位清晰，深度集成企业微信、QQ、飞书等办公场景。</p>
+                <p>腾讯云 × OpenClaw 的"封神组合"方案成熟：混元模型 + IM 通道，提供从 0 到 1 的完整企业级 Agent 落地指南。腾讯云 Lighthouse 一键部署方案已支持 OpenClaw/Hermes Agent 镜像，10 分钟完成部署。</p>
+
+                <h3>Hermes Agent · 自进化能力持续领先</h3>
+                <p>Nous Research 出品的 Hermes Agent 以 <strong>191K GitHub Stars</strong> 紧追 OpenClaw，其核心差异化在于<strong>自进化能力</strong>：</p>
+                <ul>
+                    <li>Agent 完成复杂任务后，自动分析路径并提炼为可复用工作流</li>
+                    <li>Skill 是"Agent 写的、动态的"，而非"人写的、静态的"</li>
+                    <li>内置 Atropos RL 环境支持强化学习训练</li>
+                    <li>并行 subagent 架构优于 OpenClaw 的 sessions_spawn</li>
+                </ul>
+                <p>实测案例显示，用户可通过"Agent 装 Agent"的方式，用 OpenClaw 全程操控远程 VM 安装配置 Hermes，并在过程中触发自我进化，生成高质量 Skill。</p>
+
+                <h3>阿里 CoPaw · 开源+云双轮驱动</h3>
+                <p>阿里云 CoPaw 持续迭代，提供：</p>
+                <ul>
+                    <li>CoPaw 开源框架（GitHub）</li>
+                    <li>QoderWork 桌面 Agent（本地运行，支持 Ask/Agent/Quest 三种模式）</li>
+                    <li>JVSClaw 移动端方案</li>
+                    <li>阿里云百炼 Token Plan 按次计费，支持多模型灵活调用</li>
+                </ul>
+                <p>阿里云轻量服务器一键部署 OpenClaw 方案已成为国内开发者首选入口，文档和教程持续霸榜开发者社区。</p>
+
+                <h3>字节 ArkClaw · 云养虾模式扩张</h3>
+                <p>字节跳动 ArkClaw 以 <strong>月费 8.9 元</strong> 的低价策略持续扩张，提供全托管 + 飞书适配 + 火山引擎云部署。目前已接入 11 款顶尖模型，Coze 扣子空间支持可视化拖拽编排。</p>
+
+                <h3>猎豹 EasyClaw · 出海+国内双版本</h3>
+                <p>猎豹移动 EasyClaw 推出国际版（easyclaw.com）和国内版元气 AIBot（yuanqiai.net），傅盛"三万"同款技能包，双击安装零配置。傅盛 14 天零代码养出 8 个 Agent 的案例已成为行业标杆。</p>
+
+                <h3>其他竞品一览</h3>
+                <table>
+                    <tr><th>产品</th><th>厂商</th><th>定位</th><th>状态</th></tr>
+                    <tr><td>LobsterAI</td><td>网易有道</td><td>MIT 全开源桌面 Agent</td><td>已上线</td></tr>
+                    <tr><td>AutoClaw</td><td>智谱 AI</td><td>一键安装，内置模型</td><td>已上线</td></tr>
+                    <tr><td>AstronClaw</td><td>科大讯飞</td><td>云端沙箱，10000+ Skills</td><td>已上线</td></tr>
+                    <tr><td>ClawX</td><td>ValueCell AI</td><td>开源 GUI 三平台</td><td>已上线</td></tr>
+                    <tr><td>Molili</td><td>当贝</td><td>微信控制电脑 + VLA 视觉操控</td><td>内测</td></tr>
+                </table>
+            </section>
+
+            <!-- 社区趣味应用 -->
+            <section class="section">
+                <h2>🚀 社区趣味应用案例</h2>
+                
+                <div class="case-item">
+                    <h3>🦐 Agent 装 Agent：自我进化实测</h3>
+                    <p>开发者通过"Agent 接力链"完成 Hermes 自动部署：手机 Telegram 发送指令 → 本地 OpenClaw 用 Terraform 创建云 VM → 云上 OpenClaw SSH 进入 VM → 全程自动完成 Hermes 安装配置。过程中触发自我进化，生成高质量 Skill。整个过程未打开终端，未手动执行任何命令。</p>
+                </div>
+
+                <div class="case-item">
+                    <h3>🎵 音乐创作 Agent 流水线</h3>
+                    <p>社区开发者构建 ACE-Step 音乐创作 Skill，支持从音频文件和歌词渲染音乐视频（Remotion），以及 AI 辅助歌曲创作。展示了 OpenClaw 在创意内容生产领域的潜力。</p>
+                </div>
+
+                <div class="case-item">
+                    <h3>🏠 智能家居中枢</h3>
+                    <p>Home Assistant Skill 实现双向通信：通过 REST API 控制灯光、开关、气候等设备，同时通过 webhooks 接收 HA 自动化事件触发。支持官方 hass-cli 工具的高级交互体验。</p>
+                </div>
+
+                <div class="case-item">
+                    <h3>💰 个人财务追踪</h3>
+                    <p>Personal Finance Tracker Skill 帮助用户按类别追踪支出、设置预算、接收 EMI 和年度费用提醒。展示了 OpenClaw 在个人生活管理方面的实用性。</p>
+                </div>
+            </section>
+
+            <!-- Skill 学习指南 -->
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                
+                <h3>🔒 安全类 Skill 推荐</h3>
+                <ul>
+                    <li><strong>credential-manager</strong> — OpenClaw 强制安全基础，管理凭据和密钥</li>
+                    <li><strong>agent-security-harness</strong> — AI Agent 线协议和平台安全测试</li>
+                    <li><strong>authensor-gateway</strong> — OpenClaw 市场技能的故障安全策略门控</li>
+                    <li><strong>clawdstrike</strong> — OpenClaw 网关主机的安全审计和威胁模型</li>
+                </ul>
+
+                <h3>🏢 企业办公类 Skill 推荐</h3>
+                <ul>
+                    <li><strong>adwhiz</strong> — 44 个 MCP 工具管理 Google Ads 活动</li>
+                    <li><strong>dotnet-expert</strong> — .NET 8/9 应用和 ASP.NET Core API 开发</li>
+                    <li><strong>active-maintenance</strong> — OpenClaw 自动化系统健康和内存代谢</li>
+                </ul>
+
+                <h3>🛠️ 开发工具类 Skill 推荐</h3>
+                <ul>
+                    <li><strong>0g-compute</strong> — 使用 0G Compute Network 的 TEE 验证 AI 模型</li>
+                    <li><strong>2slides-skills</strong> — AI 驱动的演示文稿生成</li>
+                    <li><strong>academic-research</strong> — 使用 OpenAlex API 搜索学术论文（免费，无需 Key）</li>
+                </ul>
+
+                <h3>Skill 安装安全指南</h3>
+                <ol>
+                    <li>仅安装来源可信且经过审查的技能</li>
+                    <li>使用 ClawDex 等扫描工具识别已知漏洞</li>
+                    <li>检查 Skill 拼写（如 clawhub 合法 vs claw__d__hub 恶意）</li>
+                    <li>及时卸载未使用和未识别的技能</li>
+                    <li>对涉及邮件、信用卡、即时通讯的实例保持额外警惕</li>
+                </ol>
+            </section>
+
+            <!-- 企业落地案例 -->
+            <section class="section">
+                <h2>🏢 企业落地案例</h2>
+                
+                <h3>阿里云企业级部署：从原型到生产</h3>
+                <p>阿里云提供三层部署架构：</p>
+                <ul>
+                    <li><strong>SAS（轻量应用服务器）</strong>：适合原型验证，OpenClaw 预配置镜像，10 分钟上线</li>
+                    <li><strong>ECS</strong>：适合高并发正式场景，弹性配置</li>
+                    <li><strong>SAE（Serverless）</strong>：适合潮汐负载，秒级弹性至零</li>
+                </ul>
+                <p>安全最佳实践：权限分离运行（非 root）、安全组限制来源 IP、定期快照备份、关键操作人工确认。</p>
+
+                <h3>腾讯云：混元模型 + IM 通道</h3>
+                <p>腾讯云 Lighthouse 提供 OpenClaw 一键部署，集成腾讯混元大模型，支持企业微信、钉钉、QQ、飞书等多 IM 通道接入。企业级配置包含系统级 Prompt 设计、Skill 安装、持久化运行配置等完整方案。</p>
+
+                <h3>瑞士电信 Swisscom：20 周生产案例</h3>
+                <p>Swisscom 通过 20 周迭代将 OpenClaw 从原型推进至生产环境，验证了企业级 Agent 从试点到规模化的可行路径。</p>
+
+                <h3>傅盛 14 天 8 Agent 实验</h3>
+                <p>猎豹移动 CEO 傅盛通过 EasyClaw 在 14 天内零代码养出 8 个 Agent 替自己办公，成为 AI Agent 个人效率革命的标杆案例。</p>
+            </section>
+
+            <!-- 延伸阅读 -->
+            <section class="section">
+                <h2>📖 延伸阅读</h2>
+                <ul>
+                    <li><a href="https://github.com/VoltAgent/awesome-openclaw-skills" target="_blank">Awesome OpenClaw Skills — 5300+ 技能收录</a></li>
+                    <li><a href="https://clawhub.com" target="_blank">ClawHub — 技能发现与安装平台</a></li>
+                    <li><a href="https://www.digitalocean.com/resources/articles/what-are-openclaw-skills" target="_blank">DigitalOcean: What are OpenClaw Skills? (2026 Developer Guide)</a></li>
+                    <li><a href="https://arxiv.org/html/2602.08004v1" target="_blank">学术论文: Agent Skills 数据驱动分析</a></li>
+                    <li><a href="https://arxiv.org/html/2603.00195v2" target="_blank">学术论文: Agent Skills 供应链安全分析 (SkillFortify)</a></li>
+                    <li><a href="https://github.com/datawhalechina/hello-claw" target="_blank">Hello-Claw: 国产 OpenClaw 学习路线与百虾大战全景</a></li>
+                    <li><a href="https://developer.aliyun.com/article/1736022" target="_blank">阿里云: OpenClaw 一键部署 + 百炼 Token Plan 配置手册</a></li>
+                    <li><a href="https://mcp.csdn.net/6a2e394a10ee7a33f27cdcbe.html" target="_blank">腾讯云 × OpenClaw 企业级 Agent 落地指南</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>OpenClaw Daily Report - 每日 AI 智能体行业资讯</p>
+            <p>Generated by Kimi Claw · 情报来源: kimi_search / GitHub / 学术论文 / 云厂商文档</p>
+        </footer>
+    </div>
+</body>
+</html>
