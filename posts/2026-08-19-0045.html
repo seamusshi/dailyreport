@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年8月19日（第115期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年8月19日 星期三 | 第115期</p>
+            <p class="tagline">AI Agent 行业每日情报 — 追踪 OpenClaw 生态与竞品动态</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a> | <a href="../archive.html">浏览归档</a>
+        </nav>
+
+        <main>
+            <section class="section">
+                <h2>🔥 今日概览</h2>
+                <div class="highlight-box">
+                    <p><strong>1. OpenClaw 生态持续爆发</strong> — GitHub 星数突破 35.5 万+，月活用户达 320 万，ClawHub 技能市场超过 44,000 个技能。OpenAI 收购后项目已移至独立基金会运营，保持开源中立。</p>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>2. AI Agent 企业采用率达 79%</strong> — PwC 2025 调查显示，79% 企业已部署 AI Agent。客服（62%采用率）和软件开发（53%）为领先场景，SDR 外呼回本最快（3.4个月中位数）。</p>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>3. 竞品生态加速追赶</strong> — Kimi Claw、QwenPaw（阿里）、ArkClaw（字节）等国产 Agent 框架密集发布。腾讯 WorkBuddy 定位企业 AI 工作台，EasyClaw 深耕垂直场景。</p>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>4. MCP 协议成为行业标准</strong> — Model Context Protocol 公共服务器突破 9,400 个，三大 AI 厂商（Anthropic、OpenAI、Google）均已采纳。LangGraph 占企业框架使用 41%。</p>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>5. 安全与治理成为焦点</strong> — 2026 年 3 月密集披露 9 个 CVE，ClawHub 市场曾遭受恶意技能供应链攻击。NVIDIA NemoClaw、1claw HSM 等安全方案密集推出。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📢 OpenClaw 官方动态</h2>
+                <div class="news-item">
+                    <h4>v2026.4.24 重大版本发布：Google Meet 与实时语音</h4>
+                    <p>最新版本引入原生 Google Meet 集成和实时 AI 语音能力，将 OpenClaw 从文本机器人升级为会议参与者。同时新增 xAI 图像生成、DeepSeek V4 Flash 支持，启动时间优化 74%。</p>
+                    <p class="meta">来源：<a href="https://github.com/openclaw/openclaw/releases" target="_blank">GitHub Releases</a> | 2026年4月24日</p>
+                </div>
+                <div class="news-item">
+                    <h4>GitHub 星数突破 35.5 万，超越 React 成为增长最快仓库</h4>
+                    <p>OpenClaw 在不到 5 个月内从零增长到 35.5 万+ GitHub 星，于 2026 年 3 月 3 日超越 React（耗时 10 年达到 25 万星）。峰值增速达 48 小时 +34,168 星（710/小时）。</p>
+                    <p class="meta">来源：<a href="https://openclawvps.io/blog/openclaw-statistics" target="_blank">OpenClaw Statistics</a> | 2026年4月</p>
+                </div>
+                <div class="news-item">
+                    <h4>OpenAI 1160 万美元收购，创始人加入 OpenAI</h4>
+                    <p>2026 年 2 月 15 日，Sam Altman 宣布 OpenAI 收购 OpenClaw。创始人 Peter Steinberger 加入 OpenAI 领导 Agent 团队。项目本体移至独立基金会，保持开源和模型中立。</p>
+                    <p class="meta">来源：OpenClaw Foundation Announcement | 2026年2月</p>
+                </div>
+                <div class="news-item">
+                    <h4>500K+ 运行实例，覆盖 82 个国家</h4>
+                    <p>截至 2026 年 4 月，全球运行实例超过 50 万个，月访问量 3800 万+（环比增长 41%），平均会话时长 45 分钟。中国流量增长 1,436%，受腾讯和百度集成驱动。</p>
+                    <p class="meta">来源：SimilarWeb / gradually.ai | 2026年4月</p>
+                </div>
+                <div class="news-item">
+                    <h4>ClawHub 技能市场达 44,000+ 技能</h4>
+                    <p>技能市场从 3 月的 13,700 增长至 44,000+。生态内 180 家初创公司月收入合计超 32 万美元。同时出现安全事件：超过 1,184 个恶意技能被上传，Oasis Security 已披露。</p>
+                    <p class="meta">来源：<a href="https://openclaw-skillshub.com/" target="_blank">ClawSkills</a> | 2026年8月</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <h3>架构层面：Task Brain + Heartbeat 自主循环</h3>
+                <p>OpenClaw 的核心创新是 Task Brain 架构 —— 基于 SQLite 的任务账本，赋予 Agent 持久记忆和将复杂目标分解为可执行步骤的能力。配合每 30 分钟一次的 Heartbeat 定时任务，Agent 可持续监控数字环境、清理收件箱、执行 shell 命令，实现真正的 24/7 自主运行。</p>
+
+                <h3>多通道集成：50+ 平台覆盖</h3>
+                <p>支持 Telegram、WhatsApp、Slack、Discord、飞书、Google Meet 等 50+ 平台。最新版本新增 Gemini Live 语音桥接，实现从文本到语音交互的无缝切换。</p>
+
+                <h3>模型中立：GPT / Claude / Gemini / DeepSeek / 本地模型</h3>
+                <p>OpenClaw 不绑定单一模型提供商，支持 OpenAI GPT、Anthropic Claude、Google Gemini、xAI Grok、DeepSeek 以及通过 Ollama 运行的本地模型。用户可随时切换而无需重构核心逻辑。</p>
+
+                <h3>MCP 协议支持：9,400+ 公共服务器</h3>
+                <p>Model Context Protocol 已被三大 AI 厂商采纳，公共服务器超过 9,400 个，企业私有服务器估计为 3-4 倍。官方服务器覆盖 GitHub、Slack、Notion、Jira、Stripe、Shopify 及所有主流数据库。</p>
+            </section>
+
+            <section class="section">
+                <h2>🏢 竞品动态</h2>
+                <div class="competitor-grid">
+                    <div class="competitor-card">
+                        <h3>Kimi Claw <span class="badge">月之暗面</span></h3>
+                        <p>基于 Kimi K2.5 模型的 OpenClaw 衍生框架，深度集成 Moonshot AI API。定位中文开发者友好，支持长上下文处理（200万字符），在知识库问答和文档处理场景表现突出。</p>
+                        <ul>
+                            <li>长上下文优势：200万字符窗口</li>
+                            <li>中文原生优化，文档理解能力强</li>
+                            <li>与 OpenClaw 兼容的技能生态</li>
+                        </ul>
+                    </div>
+                    <div class="competitor-card">
+                        <h3>QwenPaw <span class="badge">阿里通义</span></h3>
+                        <p>阿里推出的 Agent 框架（前身为 CoPaw），基于通义千问大模型。聚焦电商、客服、办公等企业场景，与钉钉、阿里云深度集成。支持多模态 Agent，可处理图像、视频、语音。</p>
+                        <ul>
+                            <li>通义千问 3 模型驱动</li>
+                            <li>阿里云百炼平台原生支持</li>
+                            <li>电商场景专用技能丰富</li>
+                        </ul>
+                    </div>
+                    <div class="competitor-card">
+                        <h3>ArkClaw <span class="badge">字节跳动</span></h3>
+                        <p>字节跳动基于火山引擎推出的 Agent 框架，集成豆包大模型。主打低延迟、高并发，适合内容创作、直播互动、推荐系统等字节系场景。与飞书、抖音生态深度打通。</p>
+                        <ul>
+                            <li>豆包大模型原生支持</li>
+                            <li>火山引擎云原生部署</li>
+                            <li>内容创作和直播场景优化</li>
+                        </ul>
+                    </div>
+                    <div class="competitor-card">
+                        <h3>腾讯 WorkBuddy <span class="badge">腾讯</span></h3>
+                        <p>腾讯企业级 AI Agent 工作台，集成混元大模型。定位为企业员工的 AI 助手，覆盖文档处理、会议记录、日程管理、代码辅助等办公场景。与腾讯文档、企业微信、会议深度集成。</p>
+                        <ul>
+                            <li>企业微信原生集成</li>
+                            <li>混元大模型+开源模型双引擎</li>
+                            <li>企业级安全合规</li>
+                        </ul>
+                    </div>
+                    <div class="competitor-card">
+                        <h3>EasyClaw <span class="badge">猎豹移动</span></h3>
+                        <p>猎豹移动推出的 OpenClaw 企业版，聚焦垂直行业落地。提供预置的行业技能包（金融、医疗、教育），降低部署门槛。主打"开箱即用"的企业 Agent 解决方案。</p>
+                        <ul>
+                            <li>垂直行业预置技能包</li>
+                            <li>本地化部署支持</li>
+                            <li>企业级运维监控</li>
+                        </ul>
+                    </div>
+                    <div class="competitor-card">
+                        <h3>Hermes Agent <span class="badge">Nous Research</span></h3>
+                        <p>Nous Research 推出的开源 Agent 框架，强调去中心化和社区驱动。与 OpenClaw 不同，Hermes 更注重研究性质，支持自定义推理链和实验性 Agent 架构。</p>
+                        <ul>
+                            <li>完全去中心化架构</li>
+                            <li>社区驱动的技能市场</li>
+                            <li>实验性推理链支持</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例</h2>
+                <div class="news-item">
+                    <h4>Second Brain：AI 辅助知识管理</h4>
+                    <p>用户将 OpenClaw 与 Obsidian 本地知识库集成，AI 不仅搜索笔记，还能自主推理、更新每日日志、综合信息。实现真正的"第二大脑" —— 不是搜索工具，而是会思考的伙伴。</p>
+                    <p class="meta">来源：社区分享 | 标签：#知识管理 #Obsidian</p>
+                </div>
+                <div class="news-item">
+                    <h4>自动化餐饮规划：每周节省 1 小时</h4>
+                    <p>用户 Steve Caldwell 通过 OpenClaw 与 Notion 集成实现自动化餐饮规划，每周节省 1 小时的手动组织时间。Agent 根据库存、偏好和营养目标自动生成购物清单和食谱。</p>
+                    <p class="meta">来源：TED2026 演讲 | 标签：#生活自动化 #Notion</p>
+                </div>
+                <div class="news-item">
+                    <h4>300+ 小时自主执行：邮件与日历管理</h4>
+                    <p>一位高级用户记录到 OpenClaw 累计执行超过 300 小时的自主工作流，覆盖邮件分类、复杂日历管理、会议准备。实现"睡觉时也在工作"的愿景。</p>
+                    <p class="meta">来源：匿名用户报告 | 标签：#生产力 #自动化</p>
+                </div>
+                <div class="news-item">
+                    <h4>0xWork 去中心化任务市场</h4>
+                    <p>社区开发者创建了 0xWork skill，让 OpenClaw Agent 可以在去中心化市场上接取和完成任务（Base 链，USDC 托管）。AI Agent 开始赚取加密货币。</p>
+                    <p class="meta">来源：<a href="https://github.com/VoltAgent/awesome-openclaw-skills" target="_blank">Awesome OpenClaw Skills</a> | 标签：#Web3 #零工经济</p>
+                </div>
+                <div class="news-item">
+                    <h4>Agent 24/7 数字教堂</h4>
+                    <p>ACHURCH skill 创造了一个 24/7 的数字圣所，AI Agent 和人类可以"参加"虚拟仪式、冥想、交流。一个颇有趣味的社会实验，探索 AI 与灵性的交叉点。</p>
+                    <p class="meta">来源：社区创新 | 标签：#社会实验 #创意</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <div class="news-item">
+                    <h4>🛡️ credential-manager — Agent 安全基石</h4>
+                    <p>MANDATORY 级别的安全基础 skill。为 OpenClaw 提供凭证管理、密钥轮换和安全存储。任何生产环境部署的必备技能。</p>
+                    <p class="meta">安装：<code>npx clawhub@latest install credential-manager</code></p>
+                </div>
+                <div class="news-item">
+                    <h4>🔍 active-maintenance — 自动化系统健康检查</h4>
+                    <p>自动化的系统健康和记忆代谢管理。Agent 定期自检、清理过期记忆、优化性能。适合长期运行的生产实例。</p>
+                    <p class="meta">安装：<code>npx clawhub@latest install active-maintenance</code></p>
+                </div>
+                <div class="news-item">
+                    <h4>📊 agent-dashboard — 实时 Agent 监控面板</h4>
+                    <p>为 OpenClaw 提供实时仪表板，监控 Agent 状态、任务队列、资源使用。运维必备。</p>
+                    <p class="meta">安装：<code>npx clawhub@latest install agent-dashboard</code></p>
+                </div>
+                <div class="news-item">
+                    <h4>🧠 2nd-brain — 个人知识库</h4>
+                    <p>捕获和检索关于人、地点、餐厅、游戏、科技的信息。构建个人知识图谱，让 Agent 越用越懂你。</p>
+                    <p class="meta">安装：<code>npx clawhub@latest install 2nd-brain</code></p>
+                </div>
+                <div class="news-item">
+                    <h4>🌐 actionbook — 万能浏览器自动化</h4>
+                    <p>当用户需要与任何网站交互时激活 —— 浏览器自动化、网页抓取、截图、表单填写。一个 skill 覆盖所有 web 场景。</p>
+                    <p class="meta">安装：<code>npx clawhub@latest install actionbook</code></p>
+                </div>
+                <div class="news-item">
+                    <h4>📖 学习路径推荐</h4>
+                    <p>新手入门：<a href="https://docs.openclaw.ai/tools/skills" target="_blank">官方 Skills 文档</a> → <a href="https://openclawskill.ai/" target="_blank">OpenClaw Skill 创建指南</a> → <a href="https://openclaw-skillshub.com/" target="_blank">ClawSkills 技能目录</a></p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏭 企业落地案例</h2>
+                <div class="news-item">
+                    <h4>BDO Colombia：50% 工作量减少，78% 流程优化</h4>
+                    <p>专业服务公司在多个行政工作流中部署 Microsoft 生态系统 Agent，实现 50% 工作量减少和 78% 流程优化。90 天从试点到可衡量的影响。</p>
+                    <p class="meta">来源：Neontri 企业指南 | 行业：专业服务</p>
+                </div>
+                <div class="news-item">
+                    <h4>Salesforce Agentforce：70% 一级客服自动化</h4>
+                    <p>Salesforce 客户使用 Agentforce 实现 70% 一级客服查询的端到端自动化。这不是边际效率提升，而是支持团队架构的重构。</p>
+                    <p class="meta">来源：Salesforce 官方数据 | 行业：SaaS/CRM</p>
+                </div>
+                <div class="news-item">
+                    <h4>金融行业：实时欺诈检测 Agent</h4>
+                    <p>银行部署欺诈检测 Agent 实时监控交易，对低风险信号自动触发警报和初步调查 —— 将分析师注意力保留给真正需要人工干预的 5% 案例。</p>
+                    <p class="meta">来源：Gartner / 行业报告 | 行业：金融</p>
+                </div>
+                <div class="news-item">
+                    <h4>软件开发：18% PR 由 Agent 主导编写</h4>
+                    <p>在已部署编码 Agent 的企业中，18% 的合并 PR 由编码 Agent 作为主要作者或结对编程者。开发者每周平均节省 9.4 小时。</p>
+                    <p class="meta">来源：Stack Overflow 2026 开发者调查 | 行业：软件</p>
+                </div>
+                <div class="news-item">
+                    <h4>SDR 外呼：19% 新增管道来自 Agent</h4>
+                    <p>41% 的营销组织运行 SDR Agent，其 HITL 干预率仅 8%（所有功能中最低）。2026 年 Q1，企业报告 19% 的净新增管道来自 Agent 外呼。</p>
+                    <p class="meta">来源：PwC AI Agent Survey | 行业：营销/销售</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <ul class="links-list">
+                    <li>
+                        <a href="https://docs.openclaw.ai/" target="_blank">OpenClaw 官方文档 <span class="source">docs.openclaw.ai</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw GitHub 仓库 <span class="source">github.com/openclaw/openclaw</span></a>
+                    </li>
+                    <li>
+                        <a href="https://openclaw-skillshub.com/" target="_blank">ClawSkills 技能目录（5,700+ 技能）<span class="source">openclaw-skillshub.com</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/VoltAgent/awesome-openclaw-skills" target="_blank">Awesome OpenClaw Skills 精选集 <span class="source">github.com/VoltAgent/awesome-openclaw-skills</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.langchain.com/state-of-agent-engineering" target="_blank">LangChain State of Agent Engineering 2026 <span class="source">langchain.com</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.dataiku.com/blog/ai-agent-frameworks" target="_blank">Best AI Agent Frameworks 2026（企业级对比）<span class="source">dataiku.com</span></a>
+                    </li>
+                    <li>
+                        <a href="https://openclawvps.io/blog/openclaw-statistics" target="_blank">OpenClaw Statistics 2026：增长、用户、安全数据 <span class="source">openclawvps.io</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.digitalapplied.com/blog/ai-agent-adoption-2026-enterprise-data-points" target="_blank">AI Agent Adoption 2026: 120+ Enterprise Data Points <span class="source">digitalapplied.com</span></a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>OpenClaw Daily Report — 每日追踪 AI Agent 行业动态</p>
+            <p>由 Kimi Claw 自动生成 | 数据截止 2026-08-19 00:45 CST</p>
+            <p>📧 反馈或订阅：<a href="mailto:shixin@example.com">联系编者</a> | <a href="../index.html">返回首页</a></p>
+        </footer>
+    </div>
+</body>
+</html>
