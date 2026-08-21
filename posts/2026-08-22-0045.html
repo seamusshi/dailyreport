@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年8月22日（第116期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年8月22日 星期六 | 第116期</p>
+            <p class="tagline">AI Agent 行业每日情报 — 追踪 OpenClaw 生态与竞品动态</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a> | <a href="../archive.html">浏览归档</a>
+        </nav>
+
+        <main>
+            <section class="section">
+                <h2>🔥 今日概览</h2>
+                <div class="highlight-box">
+                    <p><strong>1. Hermes Agent 全面挑战 OpenClaw 霸主地位</strong> — Nous Research 推出的 Hermes Agent 以 60K+ GitHub stars（2个月内）和独特的自进化技能系统（Curator）强势崛起。实测数据显示其任务完成效率比 OpenClaw 基线高 40%，但延迟约 2.5 秒。两者已形成"高速路由器 vs 学习大脑"的差异化竞争格局。</p>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>2. OpenClaw 369K Stars 持续领跑，安全履历成隐忧</strong> — OpenClaw 保持 GitHub 星数第一（369K），v4.2 引入 ACP 协议支持子代理 spawning 和线程绑定会话。但 6 个 CVE 已披露（最高 CVSS 9.1），ClawHavoc 供应链攻击事件提醒生态安全不能松懈。创始人 Peter Steinberger 已加入 OpenAI。</p>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>3. 阿里云 / 腾讯云一键部署生态全面成熟</strong> — 阿里云百炼 Token Plan 全面兼容 OpenClaw 与 Hermes Agent，支持多模型自由切换；腾讯云 Lighthouse 提供 OpenClaw 预装镜像，30 分钟完成部署，独家支持企业微信 / QQ / 飞书 / 钉钉一键接入。国内 Agent 部署门槛大幅降低。</p>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>4. 全球 AI Agent 市场突破 $115 亿，企业落地进入深水区</strong> — 2026 年全球 AI Agent 市场规模达 $115.5 亿（+45.8% YoY），CAGR 43.6%。企业落地面临四大关键跨越：长时任务支持、多 Agent 协同（A2A/MCP 双协议）、GPU 弹性伸缩、全链路可观测性。Gartner 预测 80% 企业将在生产环境应用 AI Agent。</p>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>5. Agent Skills 成为 2026 年最火 AI 技术，标准持续演进</strong> — Anthropic 推出的 Agent Skills 开放标准已获 16+ 平台采纳，skill-creator 工具实现 AI 自动生成技能包。渐进式披露机制（三层加载）解决上下文窗口溢出难题。从"提示词工程"升级到"技能工程"，Agent 能力边界持续扩张。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📢 OpenClaw 官方动态</h2>
+                <div class="news-item">
+                    <h4>OpenClaw v4.0-v4.2 架构演进：从聊天机器人到 Agent OS</h4>
+                    <p>2026 年 2 月 20 日，OpenClaw 发布 v4.0 "The Agent OS"，完成架构重写：引入 gateway daemon、canvas 系统、15+ 消息平台、定时任务调度。v4.1（3月15日）上线 ClawHub 技能市场，支持 Claude Code 作为 ACP harness。v4.2（3月28日）推出 ACP（Agent Communication Protocol）协议，支持跨 Agent 通信和子代理 spawning。</p>
+                    <p class="meta">来源：<a href="https://github.com/openclaw/openclaw/releases" target="_blank">GitHub Releases</a> | 2026年2-3月</p>
+                </div>
+                <div class="news-item">
+                    <h4>369K GitHub Stars，但被 Hermes Agent 以效率挑战</h4>
+                    <p>OpenClaw 保持开源 Agent 框架星数第一（369K），但 Hermes Agent 的崛起带来实质性竞争。效率对比：OpenClaw 延迟 < 1.2 秒、每轮约 1,800 tokens；Hermes 延迟 ~2.5 秒、每轮 8,000+ tokens，但凭借自生成技能实现 140% 的任务完成效率。两者分别占据"实时响应"和"深度推理"两个生态位。</p>
+                    <p class="meta">来源：<a href="https://ipc.msi.com/blog_detail/let-the-data-speak-hermes-agents-challenge-to-the-ai-agent-throne" target="_blank">MSI IPC Blog</a> | 2026年5月</p>
+                </div>
+                <div class="news-item">
+                    <h4>安全履历：6 个 CVE + ClawHavoc 供应链攻击</h4>
+                    <p>截至 2026 年 5 月，OpenClaw 已披露 6 个 CVE：CVE-2026-25253（CVSS 9.1）、CVE-2026-25891（8.4）、CVE-2026-26102（7.8）、CVE-2026-24763（7.5）、CVE-2026-25157（7.5）、CVE-2026-35650。此外，ClawHub 技能市场遭受 ClawHavoc 恶意技能攻击和 MCP proxy 供应链攻击。微软、CrowdStrike、Palo Alto 等已发布企业安全通告。</p>
+                    <p class="meta">来源：<a href="https://innfactory.ai/en/blog/openclaw-vs-hermes-agent-comparison/" target="_blank">innfactory.ai</a> | 2026年5月</p>
+                </div>
+                <div class="news-item">
+                    <h4>OpenAI 收购后：项目移交独立基金会</h4>
+                    <p>2026 年 2 月，OpenAI 以 1,160 万美元收购 OpenClaw，创始人 Peter Steinberger 加入 OpenAI 领导 Agent 团队。项目本体已移至独立基金会运营，保持开源 MIT 许可和模型中立。同时运营商业 SaaS 版本 openclawai.io，为企业提供托管服务入口。</p>
+                    <p class="meta">来源：OpenClaw Foundation Announcement | 2026年2月</p>
+                </div>
+                <div class="news-item">
+                    <h4>2026.5.x-beta：Codex runtime、xAI、腾讯云支持</h4>
+                    <p>最新 beta 版本引入 Codex runtime 支持（AI 编码 harness）、xAI 图像生成、腾讯云集成，以及 sanitized diagnostic exports（安全诊断导出）。持续扩展模型提供商和云平台覆盖。</p>
+                    <p class="meta">来源：<a href="https://github.com/openclaw/openclaw/releases" target="_blank">GitHub Releases</a> | 2026年5月</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <h3>ACP 协议：Agent 之间的"通用语言"</h3>
+                <p>v4.2 引入的 Agent Communication Protocol（ACP）是 OpenClaw 的核心差异化能力。支持线程绑定会话、子代理 spawning、session_status 工具查询。这意味着一个 OpenClaw 实例可以派生多个子代理并行处理任务，并通过标准化协议与其他 Agent 框架通信。配合 canvas UI 系统，实现可视化 Agent 编排。</p>
+
+                <h3>Canvas 系统：Agent 的可视化工作台</h3>
+                <p>OpenClaw 的 canvas 系统在 Agent 框架中独树一帜。支持呈现、隐藏、导航、评估和快照捕获渲染 UI，让 Agent 不仅能处理文本，还能操作和展示图形化界面。这在数据可视化、仪表盘生成、交互式报告等场景具有独特优势。</p>
+
+                <h3>50+ 消息平台 + 语音桥接</h3>
+                <p>支持 Telegram、WhatsApp、Slack、Discord、Signal、iMessage、Google Chat、Microsoft Teams、Matrix、BlueBubbles、Zalo、WebChat、飞书、企业微信、QQ 等 50+ 平台。v3.5 引入 ElevenLabs / Edge TTS 语音和 Whisper STT，v4.x 新增 Gemini Live 语音桥接，实现从文本到语音的无缝切换。</p>
+
+                <h3>多模型中立：不绑定任何单一提供商</h3>
+                <p>支持 OpenAI GPT、Anthropic Claude、Google Gemini、xAI Grok、DeepSeek、Ollama 本地模型，以及阿里云百炼、腾讯云混元等国内模型。用户可随时切换模型而无需重构核心逻辑。阿里云百炼 Token Plan 更支持 qwen3.6-plus、glm-5、deepseek-v3.2、minimax-m2.5 等多模型统一计费。</p>
+            </section>
+
+            <section class="section">
+                <h2>🏢 竞品动态</h2>
+                <div class="competitor-grid">
+                    <div class="competitor-card">
+                        <h3>Hermes Agent <span class="badge">Nous Research</span></h3>
+                        <p>2026 年 3 月公开发布的最强挑战者。60K+ GitHub stars（2 个月内），七层安全模型，自进化 Curator 技能库管理。核心差异化：每次任务后自动生成可复用技能文件，随使用时间增长而变强。支持作为 MCP server 自身对外提供服务。</p>
+                        <ul>
+                            <li>持久多层记忆：语义记忆 + 工作记忆 + 情节日志</li>
+                            <li>Closed Learning Loop：自生成技能使效率提升 40%</li>
+                            <li>Camofox 反检测浏览器（替代 Playwright）</li>
+                            <li>腾讯云 Lighthouse 一键部署模板</li>
+                        </ul>
+                    </div>
+                    <div class="competitor-card">
+                        <h3>Kimi Claw <span class="badge">月之暗面</span></h3>
+                        <p>基于 Kimi K2.5 模型的 OpenClaw 衍生框架，深度集成 Moonshot AI API。2026 年推出 Kimi Claw 智能体，支持飞书、微信公众号等多渠道接入。长上下文（200万字符）是其核心优势，在知识库问答和文档处理场景表现突出。Kimi K2.5 多 Agent 系统将复杂项目完成效率提升 40%+。</p>
+                        <ul>
+                            <li>200万字符长上下文窗口</li>
+                            <li>中文原生优化，文档理解能力强</li>
+                            <li>与 OpenClaw 兼容的技能生态</li>
+                        </ul>
+                    </div>
+                    <div class="competitor-card">
+                        <h3>ArkClaw <span class="badge">字节跳动</span></h3>
+                        <p>字节基于火山引擎推出的 Agent 框架，集成豆包大模型。主打低延迟、高并发，适合内容创作、直播互动。与飞书、抖音生态深度打通。2026 年新增 CI/CD 技能和 Coze 迁移工具，"云养虾"生态持续扩张，接入 11 款顶尖模型。</p>
+                        <ul>
+                            <li>豆包大模型原生支持</li>
+                            <li>火山引擎云原生部署</li>
+                            <li>内容创作和直播场景优化</li>
+                        </ul>
+                    </div>
+                    <div class="competitor-card">
+                        <h3>QwenPaw <span class="badge">阿里通义</span></h3>
+                        <p>阿里推出的 Agent 框架（前身为 CoPaw），基于通义千问大模型。聚焦电商、客服、办公等企业场景，与钉钉、阿里云百炼深度集成。2026 年阿里云千问云宣布全栈 Agent 化，百炼平台文档持续更新，Token Plan 包月订阅模式解决计费复杂痛点。</p>
+                        <ul>
+                            <li>通义千问 3 模型驱动</li>
+                            <li>阿里云百炼平台原生支持</li>
+                            <li>电商场景专用技能丰富</li>
+                        </ul>
+                    </div>
+                    <div class="competitor-card">
+                        <h3>腾讯 WorkBuddy <span class="badge">腾讯</span></h3>
+                        <p>腾讯企业级 AI Agent 工作台，集成混元大模型。定位企业员工的 AI 助手，覆盖文档处理、会议记录、日程管理、代码辅助。腾讯云 Lighthouse 提供 OpenClaw 预装镜像，独家支持 QQ 渠道一键接入，企业微信与腾讯云服务器间几乎无延迟。</p>
+                        <ul>
+                            <li>企业微信 / QQ 原生集成</li>
+                            <li>混元大模型 + DeepSeek 双引擎</li>
+                            <li>企业级安全合规</li>
+                        </ul>
+                    </div>
+                    <div class="competitor-card">
+                        <h3>EasyClaw <span class="badge">猎豹移动</span></h3>
+                        <p>猎豹移动推出的 OpenClaw 企业版，聚焦垂直行业落地。提供预置行业技能包（金融、医疗、教育），降低部署门槛。2026 年上线出海版，主打"开箱即用"的企业 Agent 解决方案，本地化部署 + 企业级运维监控。</p>
+                        <ul>
+                            <li>垂直行业预置技能包</li>
+                            <li>本地化部署支持</li>
+                            <li>企业级运维监控</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例</h2>
+                <div class="news-item">
+                    <h4>Second Brain：AI 辅助知识管理</h4>
+                    <p>用户将 OpenClaw 与 Obsidian 本地知识库集成，AI 不仅搜索笔记，还能自主推理、更新每日日志、综合信息。实现真正的"第二大脑"——不是搜索工具，而是会思考的伙伴。</p>
+                    <p class="meta">来源：社区分享 | 标签：#知识管理 #Obsidian</p>
+                </div>
+                <div class="news-item">
+                    <h4>自动化投资研究 Agent</h4>
+                    <p>金融从业者部署 Hermes Agent 7×24 监控市场动态，自动收集财报、新闻、社交媒体情绪，生成每日投资简报。利用 Hermes 的自进化能力，Agent 在数周内学会了识别特定行业的关键指标模式，研究效率提升 3 倍。</p>
+                    <p class="meta">来源：社区分享 | 标签：#金融 #投资 #自动化</p>
+                </div>
+                <div class="news-item">
+                    <h4>阿里云 + 百炼 Token Plan：30 分钟搭建个人 AI 助手</h4>
+                    <p>开发者使用阿里云轻量服务器（预装 OpenClaw 镜像）+ 百炼 Token Plan，30 分钟内完成全流程部署。Token Plan 包月订阅模式实现多模型（qwen3.6-plus、deepseek-v3.2、glm-5）自由切换，统一 Credits 积分管理，大幅降低使用门槛。</p>
+                    <p class="meta">来源：阿里云开发者社区 | 标签：#阿里云 #百炼 #部署教程</p>
+                </div>
+                <div class="news-item">
+                    <h4>前端设计 Skill：告别蓝紫渐变</h4>
+                    <p>社区开发者分享使用 frontend-design Skill 后的体验：安装该技能后，让 AI 生成个人作品集网站，AI 主动询问是否需要调用设计技能，确认后生成具有独特风格的精美页面，彻底告别千篇一律的"AI 审美"。</p>
+                    <p class="meta">来源：程序员鱼皮博客 | 标签：#前端 #设计 #Skill</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <div class="news-item">
+                    <h4>Agent Skills 完全教程：从入门到用好</h4>
+                    <p>Agent Skills 本质上是 Context 工程，将垂直领域知识、脚本调用方法等挂载到 Agent 的上下文窗口。核心机制是渐进式披露（Progressive Disclosure）：第一层加载元数据判断相关性，第二层加载 SKILL.md 核心指令，第三层按需加载附属文件和脚本。</p>
+                    <p class="meta">来源：<a href="https://hub.baai.ac.cn/view/52082" target="_blank">智源社区</a> | 标签：#教程 #Skills</p>
+                </div>
+                <div class="news-item">
+                    <h4>skill-creator：让 AI 帮你写 Skill</h4>
+                    <p>Anthropic 官方提供的 skill-creator 工具，可以自动创建所需 Skill。只需描述需求（如"创建一个能按照我的行文风格写文章的 skill"），AI 自动编写 SKILL.md 和配套脚本，输出 .skill 压缩包格式，直接安装使用。</p>
+                    <p class="meta">来源：<a href="https://github.com/anthropics/skills/tree/main/skills/skill-creator" target="_blank">GitHub - skill-creator</a> | 标签：#工具 #自动化</p>
+                </div>
+                <div class="news-item">
+                    <h4>SKILL.md 规范速查</h4>
+                    <p>最小 Skill 结构：一个包含 SKILL.md 的目录。元数据字段包括 name（显示名称）、description（使用场景，AI 据此判断是否自动触发）、argument-hint（参数提示）、allowed-tools（授权工具列表）。支持动态变量：$ARGUMENTS、$N、${CLAUDE_SESSION_ID}。</p>
+                    <p class="meta">来源：<a href="https://agentskills.io/specification" target="_blank">agentskills.io</a> | 标签：#规范 #参考</p>
+                </div>
+                <div class="news-item">
+                    <h4>企业级 SQL 分析 Skill 工程实践</h4>
+                    <p>阿里云开发者社区分享的实战案例：将数据库背景、允许查询的表、模型需遵守的边界和规则封装为 Skill，实现"理解问题 → 生成 SQL → 执行查询 → 编写分析报告"的闭环。对于复杂问题（如"谁的话语权最高"），AI 自主拆解为多条查询逐步获取信息。</p>
+                    <p class="meta">来源：<a href="https://developer.aliyun.com/article/1693119" target="_blank">阿里云开发者社区</a> | 标签：#企业 #SQL #实战</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏭 企业落地案例</h2>
+                <div class="news-item">
+                    <h4>企业 AI Agent 从 Demo 到生产的四大跨越</h4>
+                    <p>2026 年企业 Agent 落地的核心挑战已不是"能不能做"，而是"怎么做好"。四大关键跨越：① 长时任务支持（避免上下文爆炸）；② 多 Agent 协同（A2A 协议做 Agent 间通信，MCP 做工具集成）；③ GPU 弹性伸缩（应对推理成本波动）；④ 全链路可观测性（监控、日志、审计）。</p>
+                    <p class="meta">来源：<a href="https://developer.aliyun.com/article/1736133" target="_blank">阿里云开发者社区</a> | 2026年5月</p>
+                </div>
+                <div class="news-item">
+                    <h4>Multi-Agent 架构：从"单 Agent 全能"到"分工协作"</h4>
+                    <p>企业级场景普遍采用 Multi-Agent 架构：每个 Agent 只负责擅长的事——数据分析 Agent 负责 SQL 查询和报表，知识库 Agent 负责 RAG 检索和问答，编码 Agent 负责代码生成和测试，编排 Agent 负责工作流调度和审批。这样准确率更高，维护也更方便。</p>
+                    <p class="meta">来源：<a href="https://developer.cloud.tencent.com/article/2709753" target="_blank">腾讯云开发者社区</a> | 2026年7月</p>
+                </div>
+                <div class="news-item">
+                    <h4>分层记忆架构：降低推理成本的关键</h4>
+                    <p>生产环境推荐三层记忆：① 短期记忆（最近几轮对话）；② 中期记忆（向量数据库保存用户偏好、历史摘要）；③ 长期记忆（PostgreSQL/MySQL/Neo4j 保存客户、订单、合同等核心业务实体）。推荐构建"记忆图谱"，Agent 决策时只加载相关实体，而非全部历史。</p>
+                    <p class="meta">来源：<a href="https://developer.cloud.tencent.com/article/2709753" target="_blank">腾讯云开发者社区</a> | 2026年7月</p>
+                </div>
+                <div class="news-item">
+                    <h4>模型路由：降低 50%+ 推理成本的实战策略</h4>
+                    <p>企业落地中的成本优化方案：简单任务（FAQ、状态查询）走轻量模型，复杂任务（方案设计、长文生成）走大模型。结合 Prompt 缓存、结果缓存、批量推理，能够有效降低整体成本。部分企业实现推理费用降低 50% 以上。</p>
+                    <p class="meta">来源：企业落地白皮书 | 2026年</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <ul class="links-list">
+                    <li>
+                        <a href="https://innfactory.ai/en/blog/openclaw-vs-hermes-agent-comparison/" target="_blank">
+                            OpenClaw vs Hermes Agent：2026 年最诚实的深度对比
+                            <span class="source">innfactory.ai</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ipc.msi.com/blog_detail/let-the-data-speak-hermes-agents-challenge-to-the-ai-agent-throne" target="_blank">
+                            让数据说话：Hermes Agent 对 AI Agent 王座的挑战
+                            <span class="source">MSI IPC Blog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tencentcloud.com/techpedia/144032?lang=en" target="_blank">
+                            2026 年最佳开源 AI Agent 开发者诚实对比
+                            <span class="source">腾讯云 Techpedia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://developer.aliyun.com/article/1736133" target="_blank">
+                            2026 年企业 AI Agent 落地：从 Demo 到生产的四个关键跨越
+                            <span class="source">阿里云开发者社区</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://developer.cloud.tencent.com/article/2709753" target="_blank">
+                            2026 年企业 AI Agent 落地指南：从 PoC 到生产环境的架构方法论
+                            <span class="source">腾讯云开发者社区</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://cloud.tencent.com/developer/article/2656530" target="_blank">
+                            阿里云 / 腾讯云一键部署 OpenClaw 保姆级教程
+                            <span class="source">腾讯云开发者社区</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://hub.baai.ac.cn/view/52082" target="_blank">
+                            从入门到用好 Agent Skills，看这一篇就足够了
+                            <span class="source">智源社区</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://agent.csdn.net/6a41e477662f9a54cb857574.html" target="_blank">
+                            2026 年企业级 AI Agent 选型实录：六大主流框架横评
+                            <span class="source">CSDN AI Agent 技术社区</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bixuebihui.com/content/2026-nian-ai-agent-kuang-jia-quan-jing-12-da-zhu-liu-kuang-jia-shen-du-heng-ping" target="_blank">
+                            2026 年 AI Agent 框架全景：12 大主流框架深度横评
+                            <span class="source">必学必会</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aitouzijie.com/insights/openclaw-china-ai-agent-war" target="_blank">
+                            OpenClaw 引爆国产 AI 变局：Kimi、MiniMax 与腾讯阿里的 Agent 争夺战
+                            <span class="source">AI 投资界</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>🦞 OpenClaw Daily Report | 每日自动生成的 AI Agent 行业情报</p>
+            <p>Generated by OpenClaw Agent | 2026年8月22日</p>
+        </footer>
+    </div>
+</body>
+</html>
