@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年8月25日（第118期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年8月25日 星期一 | 第118期</p>
+            <p class="tagline">全面追踪 OpenClaw 及 AI Agent 竞品生态</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>📰 今日概览</h2>
+                <ul class="highlights">
+                    <li><strong>🦞 OpenClaw 生态里程碑：</strong>GitHub Stars 持续刷新纪录，ClawHub 技能市场突破 13,000+，项目已移交独立开源基金会持续演进</li>
+                    <li><strong>⚡ Hermes Agent 强势崛起：</strong>191K+ Stars 挑战 OpenClaw 霸主地位，自进化架构与可靠性口碑持续发酵</li>
+                    <li><strong>🏢 企业落地进入深水区：</strong>79% 企业已部署 AI Agent，但仅 38% 真正跑通，跨部门流程自动化成 B 端价值标杆</li>
+                    <li><strong>☁️ 云厂商生态全面成熟：</strong>阿里云百炼、腾讯云 Lighthouse、字节火山引擎均支持 OpenClaw 一键部署，"百虾大战"格局固化</li>
+                    <li><strong>🔒 安全治理成新焦点：</strong>CVE-2026-25253 等漏洞警示后，企业级安全加固、WASM 沙箱、技能审计成为刚需</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>🦞 OpenClaw 官方动态</h2>
+                <div class="news-item">
+                    <h3>项目演进与里程碑</h3>
+                    <p>OpenClaw（前身为 ClawdBot → Moltbot）自 2025 年 11 月诞生以来，已成为 GitHub 史上增长最快的开源项目之一。截至 2026 年 8 月，GitHub Stars 已突破 <strong>385,000+</strong>，fork 数超过 20,000。</p>
+                    <p>项目创始人 Peter Steinberger（前 PSPDFKit 创始人）已于 2026 年 2 月 14 日加入 OpenAI，OpenClaw 正式移交至<strong>独立开源基金会</strong>治理，社区驱动持续迭代。最新稳定版本为 v3.22（2026 年 3 月发布），新增 Matrix 插件支持、Anthropic Vertex AI 集成等能力。</p>
+                </div>
+                <div class="news-item">
+                    <h3>ClawHub 技能生态爆发</h3>
+                    <p>官方技能市场 ClawHub 已汇聚超过 <strong>13,000 个社区 Skills</strong>，覆盖天气查询、GitHub 集成、Gmail 绑定、智能家居控制等全场景。OpenClaw 自带 50+ 基础 Skills，用户亦可基于 Markdown 格式自定义编写技能。</p>
+                    <p>值得警惕的是，安全研究人员曾在 ClawHub 中发现 1,467 个恶意技能（ClawHavoc 事件），目前社区已加强安全审计机制。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+                <div class="news-item">
+                    <h3>v3.22 关键更新（2026.3）</h3>
+                    <ul>
+                        <li>新增 <strong>Matrix 协议</strong>支持，扩展去中心化通讯能力</li>
+                        <li>集成 <strong>Anthropic Vertex AI</strong>，支持通过 Google Cloud 调用 Claude 模型</li>
+                        <li>支持 10+ 即时通讯平台：WhatsApp、Telegram、Slack、Discord、Signal、iMessage、Google Chat、Teams、Mattermost、WebChat</li>
+                        <li>Docker 沙箱强化，支持工具与 Agent 在隔离容器中运行</li>
+                    </ul>
+                </div>
+                <div class="news-item">
+                    <h3>安全补丁与治理</h3>
+                    <ul>
+                        <li>CVE-2026-25253（CVSS 8.8）零点击 WebSocket 劫持漏洞已在 v0.5.0 修复</li>
+                        <li>CVE-2026-24763、CVE-2026-25157 命令注入漏洞已披露并修补</li>
+                        <li>企业版引入 WASM 沙箱、RBAC 权限控制、全链路操作审计</li>
+                        <li>社区建议：关闭 360/腾讯管家等安全软件后再部署，避免误拦截</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🔥 竞品动态</h2>
+                
+                <div class="news-item">
+                    <h3>Hermes Agent — 可靠性之王</h3>
+                    <p>Hermes Agent 以 <strong>191K+ GitHub Stars</strong> 强势挑战 OpenClaw，核心优势在于自进化架构与碾压级可靠性。其 GEPA（Generative Evolutionary Policy Adaptation）机制实现 42 天自主进化，ICLR 2026 获得认可。</p>
+                    <p>与 OpenClaw 的定位差异：Hermes 更强调企业级安全与自治能力，OpenClaw 更侧重个人生产力与消息平台集成。两者并非零和竞争，而是共同推动 Agent 标准成熟。</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>腾讯 WorkBuddy — 中国日活最高</h3>
+                    <p>WorkBuddy 以 <strong>885 万月活</strong>稳居中国 PC 端智能体市场第一。2026 年 6 月重大更新后，企业微信插件 7.2 版本落地，支持 2 步接入 OpenClaw。</p>
+                    <p>最新商业化动态：2026.5.15 起执行阶梯定价，AI 编辑部 7 人协作流水线成为内部标杆案例。</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>阿里 CoPaw / QwenPaw — 开源桌面 Agent</h3>
+                    <p>阿里云于 2026 年 2 月 28 日开源桌面 Agent 平台 <strong>CoPaw</strong>，支持 OpenClaw 一键本地/云端部署与二次开发。3 月 13 日再推 <strong>JVSClaw</strong>，声称无需代码即可在手机、网页、iPad 上三步部署。</p>
+                    <p>阿里云百炼 Token Plan 采用包月订阅模式，统一 Credits 积分实现多模型切换，解决按量计费焦虑。</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>字节 ArkClaw — 云养虾低价策略</h3>
+                    <p>字节跳动旗下火山引擎 <strong>ArkClaw</strong> 以 "云养虾" 模式快速扩张，月费低至 <strong>8.9 元</strong>。2026 年 1 月 24 日 Coding Plan 率先支持 OpenClaw 部署，25 日推出云服务器方案，随后扣子编程和飞书陆续加入。</p>
+                    <p>最新进展：新增 CI/CD 与 Coze 迁移能力，Multi-Agent 协作能力上线，入驻首钢园。</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>猎豹 EasyClaw — 扭亏为盈标杆</h3>
+                    <p>猎豹移动 CEO 傅盛以 <strong>14 天零代码养出 8 个 Agent</strong> 的实验走红全网，成为国产 Agent 落地标杆。EasyClaw 出海企业版已上线，AI 业务助力公司扭亏为盈，收入占比近半。</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>月之暗面 Kimi Claw / MiniMax MaxClaw</h3>
+                    <p>Kimi Claw 云托管版上线，24/7 Benchmark 发布；MiniMax MaxClaw 持续迭代 M2.7 版本，成本优势显著，Token 消耗增长 6 倍。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+                <div class="news-item">
+                    <h3>「全民养虾」现象级破圈</h3>
+                    <p>2026 年 3 月 6 日，腾讯深圳总部楼下排起长队，腾讯云工程师现场 "摆摊" 免费帮用户完成 OpenClaw 云端安装。当日近千名开发者到场，预约号码一小时内发放完毕。</p>
+                    <p>增长黑盒联合网易智企调研 2,100 位用户与企业，发布《全民养虾》报告，揭示五种用户画像分层、C 端标杆场景（数据处理与报表）、B 端标杆场景（跨部门自动化与行政办公）。</p>
+                </div>
+                <div class="news-item">
+                    <h3>买车砍价：Icarus 省了 $4,200</h3>
+                    <p>2025 年 12 月 3 日，OpenClaw 用户 "Icarus" 演示让 Agent 自动协商汽车折扣，成功砍下 <strong>$4,200</strong> 的视频在社交媒体疯传，成为项目早期破圈关键事件。</p>
+                </div>
+                <div class="news-item">
+                    <h3>国寿海外知识库飞轮</h3>
+                    <p>国寿海外将网易智企智能向量库与现有知识库对接，8 周内承保业务准确率从 60% 提升至 90%，客服业务从 79% 提升至 96%，累计 10,242 条案例，整体解决率 96.2%。</p>
+                </div>
+                <div class="news-item">
+                    <h3>网易智企产研流程重构</h3>
+                    <p>传统 "PRD → 交互 → 视觉 → 前端" 四节点串行流程，被压缩为 "MRD → AI 直出可交互 HTML 原型 → 人做判断微调" 三节点闭环。全栈工程师占比从接近 0 升至 18%。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+                <div class="news-item">
+                    <h3>新手必装 Top 5 Skills</h3>
+                    <ul>
+                        <li><strong>weather</strong> — 天气查询，无 API Key 需求，开箱即用</li>
+                        <li><strong>github</strong> — GitHub 集成，issue/PR 管理自动化</li>
+                        <li><strong>daily-report</strong> — 自动生成行业情报日报（就是本报告的来源 Skill）</li>
+                        <li><strong>multi-search-engine</strong> — 17 引擎聚合搜索，支持高级语法与时间过滤</li>
+                        <li><strong>healthcheck</strong> — 主机安全加固与风险评估</li>
+                    </ul>
+                </div>
+                <div class="news-item">
+                    <h3>进阶推荐</h3>
+                    <ul>
+                        <li><strong>skill-creator</strong> — 创建与打包自定义 Agent Skills</li>
+                        <li><strong>tmux</strong> — 远程控制 tmux 会话，适合运维场景</li>
+                        <li><strong>channels-setup</strong> — 配置 Telegram/Discord/Slack/飞书/钉钉等 IM 渠道</li>
+                        <li><strong>md-to-pdf</strong> — Markdown 转 PDF，报告导出必备</li>
+                    </ul>
+                </div>
+                <div class="news-item">
+                    <h3>Skill 开发入门</h3>
+                    <p>OpenClaw Skills 以 Markdown 格式编写，门槛极低。一个基础 Skill 只需定义名称、描述、触发词和对应的功能脚本。进阶 Skill 可调用外部 API、操作浏览器、执行 Shell 命令。</p>
+                    <p>推荐从 <a href="https://clawhub.com">ClawHub</a> 克隆现有 Skill 进行改造学习，或阅读官方 <code>skill-creator</code> Skill 的 SKILL.md 文档。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏢 企业落地案例</h2>
+                <div class="news-item">
+                    <h3>OpenClaw 企业部署五大赛道</h3>
+                    <ol>
+                        <li><strong>客户支持与工单分诊</strong> — 自动分类、路由、回复 Zendesk/Freshdesk/ServiceNow 工单，处理大量 L1 重复问题</li>
+                        <li><strong>销售运营与 CRM 自动化</strong> — 通话后自动同步 CRM 笔记、生成销售报告、跟进提醒</li>
+                        <li><strong>DevOps 与 IT 运维</strong> — CI 失败首响、日志摘要、预批准 Runbook 执行、监控告警分析</li>
+                        <li><strong>内容生产与 SEO 流水线</strong> — 批量内容生成、关键词研究、发布排期</li>
+                        <li><strong>跨部门流程自动化</strong> — 行政办公、报销审批、数据报表自动生成</li>
+                    </ol>
+                </div>
+                <div class="news-item">
+                    <h3>企业选型关键数据</h3>
+                    <ul>
+                        <li>79% 企业已部署生成式 AI / Agent</li>
+                        <li>57% 企业已入局 AI Agent，但仅 38% 成功跑通</li>
+                        <li>47.7% 企业月支出在 5,000 元以下，18.2% 超过 20,000 元</li>
+                        <li>员工入口：企业微信 58.0%、钉钉 43.2%、飞书 28.4%</li>
+                        <li>典型效率提升：员工日均节省 2.3 小时，硬件成本降低 75%</li>
+                    </ul>
+                </div>
+                <div class="news-item">
+                    <h3>企业级安全部署建议</h3>
+                    <p>专家建议采用 "开源验证 + 企业级平台融合" 双阶段策略：先用 OpenClaw 快速验证场景可行性，再通过 OpenOcta 等企业级平台实现规模化落地。</p>
+                    <p>关键安全措施：RBAC 权限控制、网络隔离、WASM 沙箱、操作审计、最小权限原则、定期技能安全扫描。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <ul class="links">
+                    <li><a href="https://github.com/openclaw/openclaw">OpenClaw 官方 GitHub</a></li>
+                    <li><a href="https://docs.openclaw.ai">OpenClaw 官方文档</a></li>
+                    <li><a href="https://clawhub.com">ClawHub 技能市场</a></li>
+                    <li><a href="https://growthbox.net/openclaw-china-user-enterprise-adoption-survey-2026/">《全民养虾》中国用户调研报告</a></li>
+                    <li><a href="https://weekly.caixin.com/2026-03-14/102422837.html">财新周刊《爆炒"龙虾"》</a></li>
+                    <li><a href="https://www.cnblogs.com/bsoo/p/20072379">OpenClaw 企业版选型指南</a></li>
+                    <li><a href="https://greennode.ai/blog/openclaw-use-cases-for-business">OpenClaw 企业用例深度解析</a></li>
+                    <li><a href="https://developer.aliyun.com/article/1733613">阿里云 OpenClaw 部署教程</a></li>
+                    <li><a href="https://cloud.tencent.com/developer/article/2656530">腾讯云 OpenClaw 一键部署教程</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>OpenClaw Daily Report - 每日AI智能体行业资讯</p>
+            <p>Generated by Kimi Claw | 数据来源：kimi_search 实时检索</p>
+        </footer>
+    </div>
+</body>
+</html>
