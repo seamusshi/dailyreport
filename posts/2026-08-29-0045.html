@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026年8月29日（第119期）</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 OpenClaw Daily Report</h1>
+            <p class="date">2026年8月29日 星期六 | 第119期</p>
+            <p class="tagline">AI Agent 行业每日情报</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../archive.html">浏览归档 →</a>
+        </nav>
+
+        <main>
+            <section class="overview">
+                <h2>🔥 今日概览</h2>
+                <ul class="highlight-list">
+                    <li><strong>OpenClaw v2026.8.1-beta.3 发布</strong>：全面支持 GPT-5.6 Sol/Terra/Luna/Ultra 推理模型，Puppeteer CDP 中继、SQLite 备份恢复等重磅功能落地</li>
+                    <li><strong>Hermes Agent 强势崛起</strong>：v0.20.3 推出 Bot Mode，GitHub 突破 23 万星；OpenRouter 日消耗 2240 亿 token 首次超越 OpenClaw 的 1860 亿</li>
+                    <li><strong>ClickClack 生态升级</strong>：命令菜单自动发布至 ClickClack 作曲家、Bot 协作 opt-in 机制上线，Skill Workshop 审批流程简化</li>
+                    <li><strong>远程编码会话成熟</strong>：Control UI 云工作者会话、Codex/Claude 终端恢复、OpenCode/Pi 直接终端接入全面可用</li>
+                    <li><strong>国产"百虾大战"格局演变</strong>：腾讯 WorkBuddy 本地安全路线 vs 字节 ArkClaw 云端普惠 vs 阿里 CoPaw 开源双部署，三大路径竞争白热化</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>📰 OpenClaw 官方动态</h2>
+
+                <article class="news-item">
+                    <h3>v2026.8.1-beta.3 发布：GPT-5.6 全系列支持 + 多项基础设施升级</h3>
+                    <p class="meta">发布日期：2026-08-24 | <a href="https://github.com/openclaw/openclaw/releases" target="_blank">GitHub Releases</a></p>
+                    <p>OpenClaw 团队于 8 月 24 日推送了 v2026.8.1-beta.3 版本，这是 2026.8.x 系列的第三个 beta，累计第 120 个正式发布。核心更新包括：</p>
+                    <ul>
+                        <li><strong>GPT-5.6 全系列模型支持</strong>：Sol、Terra、Luna、Ultra 四个推理层级全面接入 OpenClaw 及 Codex runtime，新安装默认使用 GPT-5.6</li>
+                        <li><strong>ClickClack 命令菜单</strong>：Gateway 启动时自动将各 Bot 原生命令发布至 ClickClack 作曲家自动补全，支持按账户 opt-out</li>
+                        <li><strong>ClickClack Bot 协作</strong>：新增 opt-in 的 Bot 撰写入站调度，含显式发送者授权、提及门控、重试安全循环保护和独立线程预算</li>
+                        <li><strong>Skill Workshop 审批简化</strong>：Agent 发起的 apply/reject/quarantine 操作默认无需额外审批提示，保留 <code>skills.workshop.approvalPolicy: "pending"</code> 作为可选门控</li>
+                        <li><strong>TUI 模糊选择器</strong>：列表匹配委托给 pi-tui，新增斜杠分词和字母数字匹配</li>
+                        <li><strong>macOS 配对节点终端</strong>：嵌入式节点主机支持双工 Codex 和 Claude 终端恢复命令，通过原生应用桥接转发交互输入和取消信号</li>
+                    </ul>
+                </article>
+
+                <article class="news-item">
+                    <h3>v2026.7.2 系列回顾：远程会话 + 原生自动化 + 数据持久化</h3>
+                    <p class="meta">7-8月合并发布</p>
+                    <p>从 7 月中旬到 8 月初，OpenClaw 密集推送了 v2026.7.1 和 v2026.7.2 多个 beta/稳定版本，奠定了下半年产品基调：</p>
+                    <ul>
+                        <li><strong>远程编码会话</strong>：Control UI 会话可在云工作者上运行，支持 Codex/Claude 目录会话在所属主机终端打开，OpenCode 和 Pi 会话直接终端恢复</li>
+                        <li><strong>原生自动化与节点</strong>：Automations 达到移动端功能对等，Android 前景 Voice Wake 上线，无头 Linux 节点暴露摄像头、位置和通知能力</li>
+                        <li><strong>数据持久化革命</strong>：隔离存储（quarantine store）在核心数据库损坏时存活，崩溃可恢复的 SQLite 快照，回滚写入恢复，Gateway 重启后 Telegram/Signal/Slack 消息持久可恢复</li>
+                        <li><strong>会话管理增强</strong>：支持从单条消息回退或分叉会话，跨分支切换；MCP Apps 支持票据化工具和有限上下文更新</li>
+                        <li><strong>Wear OS 伴侣</strong>：新增 Agent 选择、Talk 控制和音频响应播放</li>
+                        <li><strong>新模型接入</strong>：Featherless、Claude Sonnet 5、Mythos 5、Meta Muse Spark 1.1、ClawRouter、Kimi K2.7 Code、GLM-5.2、Gemma 4 等</li>
+                    </ul>
+                </article>
+
+                <article class="news-item">
+                    <h3>GitHub 星标持续领跑</h3>
+                    <p>OpenClaw 主仓库星标已稳定在 <strong>38.5 万+</strong>，仍是开源 AI Agent 领域无可争议的头号项目。2026 年累计发布 120 个版本，平均不到 3 天一个迭代，开发节奏惊人。</p>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2>📌 核心功能更新详情</h2>
+
+                <article class="feature-item">
+                    <h3>🖥️ 远程编码会话（Remote Coding Sessions）</h3>
+                    <p>这是 v2026.7.2 系列最重要的功能升级。用户现在可以：</p>
+                    <ul>
+                        <li>在<strong>云工作者</strong>上运行 Control UI 会话，彻底摆脱本地机器资源限制</li>
+                        <li>在<strong>终端</strong>中直接恢复 Codex 和 Claude 目录会话，实现"IDE 体验终端化"</li>
+                        <li>OpenCode 和 Pi 会话支持<strong>直接终端接入</strong>，无需跳转 Web UI</li>
+                    </ul>
+                    <p>对开发者而言，这意味着可以在任何 SSH 终端里拥有一套完整的 AI 编码环境，无需安装 Docker、无需配置 GUI。</p>
+                </article>
+
+                <article class="feature-item">
+                    <h3>🤖 ClickClack Bot 协作</h3>
+                    <p>Bot 间协作从"禁止默认"进化为"opt-in 授权"：</p>
+                    <ul>
+                        <li>每个 Bot 的配置文件独立定义是否允许被其他 Bot 调用</li>
+                        <li>提及门控（mention gating）确保 Bot 不会被动卷入无关对话</li>
+                        <li>重试安全循环保护防止 Bot A 调用 Bot B、Bot B 又调用 Bot A 的死循环</li>
+                        <li>独立线程预算避免单个 Bot 协作耗尽全局资源</li>
+                    </ul>
+                    <p>这一机制为多 Agent 协作打开了安全通道，让企业级多 Bot 编排成为可能。</p>
+                </article>
+
+                <article class="feature-item">
+                    <h3>🛡️ 安全边界强化</h3>
+                    <p>v2026.6.34 及后续版本持续加固 Gateway 边界：</p>
+                    <ul>
+                        <li>沙盒化浏览器路由、可信 DNS 目标、自定义浏览器源和回环提供者端点拒绝不安全访问路径</li>
+                        <li>提供者流、Discord REST 响应、浏览器 fetch、OAuth 路径和日志对恶意响应大小设限</li>
+                        <li>Telegram 凭证不再进入诊断日志</li>
+                        <li>保留会话写入、提供者回退、流进度处理和 stdio 故障的弹性恢复</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2>⚔️ 竞品动态</h2>
+
+                <article class="competitor-item">
+                    <h3>🥇 Hermes Agent — OpenClaw 最强挑战者</h3>
+                    <p class="meta">Nous Research | MIT 开源 | <a href="https://github.com/NousResearch/hermes-agent" target="_blank">GitHub</a></p>
+                    <p>Hermes Agent 在 2026 年完成了从"小众开源项目"到"OpenRouter 日消耗冠军"的蜕变：</p>
+                    <ul>
+                        <li><strong>OpenRouter 排名 #1</strong>：日消耗约 2240 亿 token，超越 OpenClaw 的约 1860 亿（截至 5 月数据，趋势仍在持续）</li>
+                        <li><strong>GitHub 23 万+ 星</strong>：6 月刚突破 19.1 万，8 月已达 23 万，增速超过同期 OpenClaw</li>
+                        <li><strong>v0.20.3 Bot Mode</strong>（8 月 17 日）：每个 profile 变身为独立命名 Bot，拥有独立聊天、记忆和模型；Bot 间通过真实 CLI 交接进入持久 Agent Inbox 通信；支持 2-6 个 Bot 的群聊协调，最多三轮串行对话</li>
+                        <li><strong>自进化闭环</strong>：do-learn-improve 循环让 Agent 从经验中自动生成 skill 文件；三层记忆系统（身份快照 + SQLite 全文数据库 + 过程化 skill）</li>
+                        <li><strong>模型无关</strong>：支持 200+ 模型，覆盖 OpenRouter、NVIDIA NIM、Amazon Bedrock、本地 Ollama</li>
+                    </ul>
+                    <p><strong>业内评价</strong>："Hermes for the engineer, OpenClaw for everyone else" —— 工程师首选 Hermes，大众市场仍是 OpenClaw 的天下。</p>
+                </article>
+
+                <article class="competitor-item">
+                    <h3>🐧 腾讯 WorkBuddy — 本地安全路线</h3>
+                    <p class="meta">腾讯云 CodeBuddy 团队 | 闭源 | 企业微信/微信深度集成</p>
+                    <ul>
+                        <li>核心卖点：<strong>全程本地运行</strong>，敏感文件和数据不上云</li>
+                        <li>内置 20+ 技能包，兼容全部 OpenClaw Skills</li>
+                        <li>支持企微、微信、QQ、飞书、钉钉五大 IM 平台</li>
+                        <li>下载即送 5000 Credits，最快 1 分钟完成配置</li>
+                        <li>QClaw 一键启动包内测中，支持直连微信</li>
+                        <li>基于腾讯 CodeBuddy 成熟 Agent 架构，安全防护机制较强</li>
+                    </ul>
+                    <p><strong>适合</strong>：处理公司敏感文档、财务数据的普通打工人和中小企业。</p>
+                </article>
+
+                <article class="competitor-item">
+                    <h3>🌋 字节 ArkClaw — 云端普惠路线</h3>
+                    <p class="meta">火山引擎 | SaaS | 飞书深度集成</p>
+                    <ul>
+                        <li>纯云端 SaaS，打开网页即用，7×24 在线</li>
+                        <li>月费 9.9 元的极致低价策略</li>
+                        <li>飞书免费版 API 调用额度从每月 1 万次提升至 100 万次</li>
+                        <li>扣子（Coze）平台全面开源，InStreet 社区活跃</li>
+                        <li>MoltBook（字节社区版）GitHub Stars 突破 15K，兼容 AutoGPT、MetaGPT</li>
+                        <li>支持抖音、飞书、微信公众号、微信客服一键发布</li>
+                    </ul>
+                    <p><strong>适合</strong>：深度飞书用户、内容创作者、MCN 机构。</p>
+                </article>
+
+                <article class="competitor-item">
+                    <h3>🐱 阿里 CoPaw — 开源中立路线</h3>
+                    <p class="meta">阿里云通义实验室 | Apache 2.0 开源 | 多端部署</p>
+                    <ul>
+                        <li>三行命令本地部署，阿里云一键上云</li>
+                        <li>模型接入灵活：通义千问、DeepSeek、Ollama 均可接入</li>
+                        <li>长期记忆、主动任务调度、MCP 协议一应俱全</li>
+                        <li>原生支持钉钉、飞书、QQ、Discord、iMessage 等多平台</li>
+                        <li>2 月 14 日推出，是最接近 OpenClaw 原生架构的国产开源方案</li>
+                    </ul>
+                    <p><strong>适合</strong>：有技术能力的个人开发者和需要深度定制的企业。</p>
+                </article>
+
+                <article class="competitor-item">
+                    <h3>🦁 其他竞品一览</h3>
+                    <table class="competitor-table">
+                        <tr><th>产品</th><th>厂商</th><th>定位</th><th>状态</th></tr>
+                        <tr><td>Kimi Claw</td><td>月之暗面</td><td>浏览器端即开即用，K2.5 Thinking 驱动</td><td>✅ 已上线</td></tr>
+                        <tr><td>MaxClaw</td><td>MiniMax</td><td>云端托管 + 移动端，39 元/月</td><td>✅ 已上线</td></tr>
+                        <tr><td>EasyClaw</td><td>猎豹移动</td><td>零门槛图形化，双击安装</td><td>✅ 已上线</td></tr>
+                        <tr><td>AutoClaw / 澳龙</td><td>智谱 AI</td><td>本地一键安装，飞书深度集成</td><td>✅ 已上线</td></tr>
+                        <tr><td>StepClaw</td><td>阶跃星辰</td><td>Win/Mac 双端，无需 Docker</td><td>✅ 已上线</td></tr>
+                        <tr><td>LobsterAI</td><td>网易有道</td><td>MIT 全开源桌面 Agent</td><td>✅ 已上线</td></tr>
+                        <tr><td>AstronClaw</td><td>科大讯飞</td><td>语音交互，方言识别 98%+</td><td>✅ 已上线</td></tr>
+                        <tr><td>红手指 Operator</td><td>百度</td><td>浏览器自动化，Computer Use 路线</td><td>✅ 已上线</td></tr>
+                    </table>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2>🚀 社区趣味应用案例分享</h2>
+
+                <article class="case-item">
+                    <h3>📖 飞书妙搭 × OpenClaw：图书出版进度多维表</h3>
+                    <p>来自《hello-claw》开源教程的实战案例：利用 OpenClaw 的飞书妙搭 Skill，自动抓取图书出版流程数据，生成可视化的出版进度多维表格。只需一句"帮我整理最近出版的图书进度"，Agent 即自动完成数据抓取、字段映射、表格创建全流程。</p>
+                </article>
+
+                <article class="case-item">
+                    <h3>📊 读书博主书单自动搜集</h3>
+                    <p>Kimi Claw 用户分享的典型工作流：设定定时任务，每周自动搜集指定读书博主的新推荐书单，按"已读/想读/在读"分类整理，最终生成飞书文档推送。实现"人在睡觉，书单在更新"。</p>
+                </article>
+
+                <article class="case-item">
+                    <h3>🎬 爆款短剧逻辑拆解</h3>
+                    <p>飞书妙搭 OpenClaw 的热门应用场景：输入一部爆款短剧链接，Agent 自动分析剧情结构、高潮节点、情绪曲线，输出可复用的编剧模板。已有超过 300 名自媒体人将该 Skill 纳入日常工作流。</p>
+                </article>
+
+                <article class="case-item">
+                    <h3>🤖 Hermes Agent 自写研报</h3>
+                    <p>Nous Research 官方演示：Hermes Agent 运行自身框架，完成了一篇完整的自我介绍文章。Agent 自行决定结构、调用工具获取数据、验证事实，最终输出。这种"自我指涉"能力展示了真正的自主 Agent 潜力。</p>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2>📚 精选 Skill 学习指南</h2>
+
+                <article class="skill-item">
+                    <h3>飞书妙搭 OpenClaw 集成指南</h3>
+                    <p class="meta">难度：⭐⭐ | 来源：阿里云开发者社区</p>
+                    <p>2026 年最受欢迎的 OpenClaw 教程之一，覆盖：</p>
+                    <ol>
+                        <li>阿里云轻量服务器一键部署（预装镜像）</li>
+                        <li>百炼 Coding Plan API 配置（按次计费，成本极低）</li>
+                        <li>飞书企业自建应用创建与权限配置</li>
+                        <li>长连接建立与故障排查</li>
+                        <li>小红书话题整理、短剧拆解、文案生成等实战场景</li>
+                    </ol>
+                    <p><strong>关键提示</strong>：关闭大模型思考模式（<code>"reasoning": false</code>）可显著提升飞书交互响应速度。</p>
+                </article>
+
+                <article class="skill-item">
+                    <h3>自定义 Skill 开发完整步骤</h3>
+                    <p class="meta">难度：⭐⭐⭐ | 来源：脚本之家 / 官方文档</p>
+                    <p>OpenClaw 自定义 Skill 的核心优势在于"低门槛 + 高灵活"：</p>
+                    <ul>
+                        <li><strong>纯 SKILL.md</strong>：无需代码，仅用自然语言描述实现基础技能</li>
+                        <li><strong>Python 扩展</strong>：通过 <code>agent.py</code> 调用外部 API、本地设备操作</li>
+                        <li><strong>推荐路径</strong>：纯 SKILL.md → 带代码技能 → API 调用技能 → 发布到 ClawHub</li>
+                    </ul>
+                    <p>核心心法："把 AI 当作合作者"，描述越清楚，执行越精准。</p>
+                </article>
+
+                <article class="skill-item">
+                    <h3>ClawHub 安全指南</h3>
+                    <p class="meta">难度：⭐⭐ | 安全必读</p>
+                    <ul>
+                        <li>及时升级 OpenClaw 版本修复漏洞</li>
+                        <li>启用 Skill 沙箱隔离</li>
+                        <li>定期扫描恶意 Skill（社区报告恶意率约 3-5%）</li>
+                        <li>备份配置与数据</li>
+                        <li>避免敏感凭证硬编码</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2>🏢 企业落地案例</h2>
+
+                <article class="case-item">
+                    <h3>腾讯云 WorkBuddy 内部提效实践</h3>
+                    <p>腾讯内部已全面使用 WorkBuddy 提升办公效率。典型场景包括：</p>
+                    <ul>
+                        <li>企业微信群内 @WorkBuddy 自动生成会议纪要</li>
+                        <li>本地文件智能分类整理（按类型/日期/项目）</li>
+                        <li>周报/月报自动汇总多源数据</li>
+                        <li>安全沙箱隔离敏感操作</li>
+                    </ul>
+                    <p>腾讯内部反馈显示，WorkBuddy 在本地部署场景下数据零出域，满足了金融、政务类客户的合规要求。</p>
+                </article>
+
+                <article class="case-item">
+                    <h3>字节 MCN 机构内容生产流水线</h3>
+                    <p>多家头部 MCN 已接入 ArkClaw 实现内容生产自动化：</p>
+                    <ul>
+                        <li>自动监控抖音/头条热点话题</li>
+                        <li>抓取竞品爆款视频数据</li>
+                        <li>AI 生成内容大纲和脚本</li>
+                        <li>自动存入飞书文档供团队协作</li>
+                        <li>9.9 元/月的成本可覆盖一个小型内容团队的初稿需求</li>
+                    </ul>
+                </article>
+
+                <article class="case-item">
+                    <h3>阿里 CoPaw 开源社区生态</h3>
+                    <p>CoPaw 作为最接近 OpenClaw 原生架构的国产开源方案，已被多家科技公司采用：</p>
+                    <ul>
+                        <li>钉钉群内 AI 员工：整理邮件、生成周报、记录健身数据</li>
+                        <li>三行命令部署，运维成本极低</li>
+                        <li>支持私有化部署满足等保合规</li>
+                        <li>多模型接入避免厂商锁定</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2>🔗 延伸阅读</h2>
+                <ul class="link-list">
+                    <li><a href="https://github.com/openclaw/openclaw/releases" target="_blank">OpenClaw GitHub Releases</a> — 官方版本发布页</li>
+                    <li><a href="https://github.com/NousResearch/hermes-agent" target="_blank">Hermes Agent GitHub</a> — Nous Research 开源 Agent</li>
+                    <li><a href="https://clawhub.com" target="_blank">ClawHub</a> — OpenClaw 技能市场</li>
+                    <li><a href="https://docs.openclaw.ai/tools/skills" target="_blank">OpenClaw Skill 开发文档</a> — 官方开发指南</li>
+                    <li><a href="https://goclawai.com/" target="_blank">GoClawAI 生态图谱</a> — OpenClaw 及其衍生项目全景</li>
+                    <li><a href="https://developer.aliyun.com/article/1716671" target="_blank">阿里云 OpenClaw 部署教程</a> — 零基础保姆级指南</li>
+                    <li><a href="https://www.cnblogs.com/itech/p/22602922" target="_blank">Grok Bot vs Hermes Agent 深度对比</a> — 2026 年两条自主 Agent 路线交锋</li>
+                    <li><a href="https://kilo.ai/openclaw/vs-hermes" target="_blank">OpenClaw vs Hermes 1300+ Reddit 评论分析</a> — 社区真实声音</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p> OpenClaw Daily Report | 由 Kimi Claw 自动生成</p>
+            <p>数据来源：GitHub、OpenRouter、阿里云开发者社区、CSDN、SegmentFault、Kilo AI 等</p>
+        </footer>
+    </div>
+</body>
+</html>
