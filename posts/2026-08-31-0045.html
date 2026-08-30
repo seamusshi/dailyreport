@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026-08-31</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🦞 OpenClaw 每日情报</h1>
+            <p class="date">2026年8月31日 星期一</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 今日概览 -->
+        <section class="overview">
+            <h2>📋 今日概览</h2>
+            <div class="highlight-box">
+                <ul>
+                    <li><strong>🚀 OpenClaw 2026.9.1-beta.1 发布</strong> — 8月29日推送，重点修复 Gateway 重启恢复、Linux 安装器运行时选择等关键问题</li>
+                    <li><strong>📊 GitHub 生态数据</strong> — 388K Stars | 81K Forks | 24h 内 479 PR 合并 | 100 文档提交</li>
+                    <li><strong>🏢 企业级 AI Agent 加速落地</strong> — Gartner 预测 40% 企业应用将在2026年底集成任务特定 Agent</li>
+                    <li><strong>☁️ 阿里云百炼 × OpenClaw 深度整合</strong> — 一键部署、计算巢、轻量服务器预装镜像全面上线</li>
+                    <li><strong>⚠️ ClawHub 安全预警</strong> — 审计发现 12-36% 的第三方 Skill 存在漏洞或恶意载荷</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- OpenClaw 官方动态 -->
+        <section class="official">
+            <h2>🦞 OpenClaw 官方动态</h2>
+            
+            <article class="news-item">
+                <h3>🔖 最新版本：2026.9.1-beta.1（2026-08-29）</h3>
+                <div class="meta">发布时间：2026年8月29日 | 类型：预发布版本</div>
+                <p>本次 beta 版本聚焦<strong>稳定性修复</strong>，主要改进包括：</p>
+                <ul>
+                    <li><strong>Gateway 重启恢复</strong> — 保留已准入的重启安全运行状态，保留检查点和最终交付结果（#130491）</li>
+                    <li><strong>Gateway 配置观察器交接</strong> — 在观察器确认已提交版本前保留待处理配置写入，修复 config.patch 在同源交接时失败的问题（#131515）</li>
+                    <li><strong>Linux 安装器运行时选择</strong> — 使用稳定的 Node 24 LTS 配置，RPM 安装限定在 NodeSource，避免新 Linux 安装选择不兼容的预发布版本（#130369）</li>
+                    <li><strong>Worker 准入恢复</strong> — 在准入截止和终止后重新启动符合条件的启动，终止死亡 worker 的轮次（#130446）</li>
+                    <li><strong>Control UI 代理文件</strong> — 当较旧的读取或列表刷新稍后完成时，保持已确认的保存和文件元数据完整（#130468）</li>
+                    <li><strong>模型目录激活</strong> — 在自动 provider-plugin 激活后保留模型浏览能力（#130481）</li>
+                </ul>
+                <p><span class="tag warning">预发布提示</span> 建议在可丢弃或非关键环境中测试，确认稳定后再考虑生产部署。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>📈 仓库活跃度追踪（截至 2026-08-30）</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">388,014</div>
+                        <div class="stat-label">GitHub Stars</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">81,474</div>
+                        <div class="stat-label">Forks</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3,540</div>
+                        <div class="stat-label">Open Issues</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">479</div>
+                        <div class="stat-label">24h 合并 PR</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100</div>
+                        <div class="stat-label">24h 文档提交</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">13,700+</div>
+                        <div class="stat-label">ClawHub Skills</div>
+                    </div>
+                </div>
+                <p class="source">数据来源：OpenClaw Academy Repository Tracker</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🔒 安全公告：GHSA-4pqj-3c56-5fqq（高危）</h3>
+                <div class="meta">发布时间：2026年6月30日 | 严重程度：High</div>
+                <p><strong>问题描述</strong>：Workspace dotenv 文件可能覆盖 provider 凭证</p>
+                <p><strong>影响</strong>：攻击者可能通过篡改工作区 .env 文件来劫持 API 凭证</p>
+                <p><strong>建议</strong>：检查受影响版本、已启用集成和官方修复方案后再采取行动。详细信息查看 <a href="https://github.com/openclaw/openclaw/security/advisories" target="_blank">GitHub Security Advisories</a></p>
+            </article>
+        </section>
+
+        <!-- 核心功能更新详情 -->
+        <section class="core-updates">
+            <h2>📌 核心功能更新详情</h2>
+            
+            <article class="news-item">
+                <h3>🔄 Gateway 重启恢复机制（#130491）</h3>
+                <p>这是一个生产环境关键修复。此前 Gateway 重启时，正在运行的任务状态可能丢失，导致：</p>
+                <ul>
+                    <li>定时任务（cron）重复执行或丢失</li>
+                    <li>子代理（subagent）任务结果无法正确回传</li>
+                    <li>检查点（checkpoint）数据丢失</li>
+                </ul>
+                <p>新版本在清理和重复重启时<strong>保留已准入的重启安全运行</strong>，确保任务连续性。对于依赖 OpenClaw 运行关键业务自动化流程的团队，这是一项必升修复。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🐧 Linux 安装器稳定性改进（#130369）</h3>
+                <p>针对新用户的 onboarding 体验优化：</p>
+                <ul>
+                    <li>默认使用 Node 24 LTS（长期支持版），避免预发布版本的不兼容性</li>
+                    <li>RPM 包安装限定在 NodeSource 源，减少依赖冲突</li>
+                    <li>解决部分 Linux 发行版上安装失败的问题</li>
+                </ul>
+                <p>配合阿里云百炼的预装镜像，新用户现在可以在 <strong>5 分钟内</strong>完成从零到可用的部署。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🤖 Worker 准入与自愈能力（#130446）</h3>
+                <p>提升了分布式 worker 的鲁棒性：</p>
+                <ul>
+                    <li>worker 崩溃后自动重新启动符合条件的任务</li>
+                    <li>正确终止已死亡 worker 的未完成轮次</li>
+                    <li>避免"僵尸任务"导致的资源泄漏</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 竞品动态 -->
+        <section class="competitors">
+            <h2>🎯 竞品与生态动态</h2>
+            
+            <article class="news-item">
+                <h3>🔷 Hermes Agent（自我进化 AI 智能体框架）</h3>
+                <p>作为 OpenClaw 的姊妹项目，Hermes Agent 定位"能自我进化的 AI 智能体框架"。</p>
+                <ul>
+                    <li>与 OpenClaw 共享阿里云百炼生态整合</li>
+                    <li>支持计算巢、轻量服务器、无影云电脑三种部署方案</li>
+                    <li>最新动态：v0.13.0 发布后进入稳定化阶段，社区修复活跃</li>
+                </ul>
+                <p><strong>差异化</strong>：相比 OpenClaw 的多渠道 Hub 架构，Hermes 更强调自主学习和任务优化能力。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🔶 阿里云百炼 × OpenClaw 生态整合</h3>
+                <p>2026年阿里云对 OpenClaw 完成了全方位的生态整合：</p>
+                <ul>
+                    <li><strong>计算巢一键部署</strong>：零基础用户 30 分钟内部署完成</li>
+                    <li><strong>轻量应用服务器预装镜像</strong>：选择镜像即可，无需手动配置环境</li>
+                    <li><strong>百炼 Token Plan</strong>：兼容主流 AI 工具，支持多模型切换，额度共享与统一管理</li>
+                    <li><strong>推荐模型</strong>：qwen3-max-2026-01-23</li>
+                </ul>
+                <p>阿里云官方专题页面提供完整部署教程：<a href="https://www.aliyun.com/activity/ecs/clawdbot" target="_blank">阿里云 OpenClaw/Hermes 一键部署</a></p>
+            </article>
+
+            <article class="news-item">
+                <h3>🔷 腾讯云 Lighthouse 原生支持</h3>
+                <p>腾讯云提供四项关键能力：</p>
+                <ul>
+                    <li><strong>快速部署</strong>：控制台界面实现分钟级应用上线</li>
+                    <li><strong>AI 生态集成</strong>：原生支持 OpenClaw 等框架，兼容 GPT、Claude 及百炼等主流模型</li>
+                    <li><strong>成本控制</strong>：按量计费模式下，AI 推理成本可控制在 0.1 元/小时</li>
+                    <li><strong>自动化运维</strong>：内置健康监测与数据备份机制</li>
+                </ul>
+            </article>
+
+            <article class="news-item">
+                <h3>📊 AI Agent 框架企业落地全景</h3>
+                <p>2026年企业级 AI Agent 部署进入快车道，主要趋势：</p>
+                <ul>
+                    <li><strong>Gartner 预测</strong>：40% 企业应用将在2026年底集成任务特定 Agent（2025年不足5%）</li>
+                    <li><strong>LangChain 调研</strong>：51% 的 1300+ 专业人士已将 Agent 投入生产</li>
+                    <li><strong>EY 研究</strong>：主要企业预期 Agentic AI 将在2028年前重塑企业决策、运营和自动化</li>
+                    <li><strong>Gartner 警告</strong>：超过40%的 Agentic AI 项目可能在2027年底被取消——预算大但审查趋严</li>
+                </ul>
+                <p><strong>关键企业动态（2026年8月）</strong>：</p>
+                <ul>
+                    <li><strong>Oracle + PwC + Leah</strong>：扩展 Agentic OS 到更多地区和受监管行业，用于法律、合同、采购和财务工作流</li>
+                    <li><strong>AnyMind Group</strong>：推出 AnyAI Agent，自动化营销和电商运营</li>
+                    <li><strong>DXC Technology + Primary</strong>：提供 AI 原生 Zero Trust 平台，治理 Agent 数据访问</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 社区趣味应用案例 -->
+        <section class="community">
+            <h2>🚀 社区趣味应用案例分享</h2>
+            
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-icon">💰</div>
+                    <h4>AI 报价员 — 从不打烊</h4>
+                    <p>客户半夜发询价，OpenClaw 秒回。手机上随时查看，一个人搞定整个报价组的活。<span class="tag">电商/零售</span></p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">📱</div>
+                    <h4>公众号运营分身</h4>
+                    <p>自动回复粉丝消息、定时推送内容、关键词精准应答，一个人也能把公众号运营得像个团队。<span class="tag">自媒体</span></p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">🧾</div>
+                    <h4>发票管家</h4>
+                    <p>拍照扔给 OpenClaw，自动识别、分类、算金额，月底一键导出报表。从此报销再也不用加班。<span class="tag">财务</span></p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">🛍️</div>
+                    <h4>智能选品助手</h4>
+                    <p>让 OpenClaw 盯数据、筛竞品、算利润率，选品这件最费精力的事，交给它就够了。<span class="tag">跨境电商</span></p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">🎤</div>
+                    <h4>模拟面试官</h4>
+                    <p>OpenClaw 研究目标公司（爬虫抓新闻、财报、文化），分析 JD 和简历的 gap，模拟不同风格的面试官。<span class="tag">求职</span></p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">🌐</div>
+                    <h4>浏览器自动化侦察兵</h4>
+                    <p>自动浏览网页、填写表单、抓取数据、监控价格变化，跨网站信息整合与摘要。<span class="tag">数据采集</span></p>
+                </div>
+            </div>
+            <p class="source">来源：阿里云 OpenClaw 用户真实部署案例</p>
+        </section>
+
+        <!-- Skill 学习指南 -->
+        <section class="skills">
+            <h2>📚 精选 Skill 学习指南</h2>
+            
+            <article class="news-item">
+                <h3>🔥 ClawHub 热门 Skill 推荐（2026年8月）</h3>
+                <table class="skill-table">
+                    <thead>
+                        <tr>
+                            <th>Skill 名称</th>
+                            <th>功能描述</th>
+                            <th>安装命令</th>
+                            <th>下载量</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>AdaptlyPost</strong></td>
+                            <td>跨平台社交发布（Instagram、X、Bluesky、TikTok、LinkedIn 等）</td>
+                            <td><code>clawhub install adaptlypost</code></td>
+                            <td>Top 1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Flowsery</strong></td>
+                            <td>隐私优先的网站分析，无需打开仪表板即可查询流量、引荐来源</td>
+                            <td><code>clawhub install flowsery</code></td>
+                            <td>Top 2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SkillScan</strong></td>
+                            <td>Skill 安全门，安装新 Skill 时自动运行安全检查</td>
+                            <td><code>clawhub install skillscan</code></td>
+                            <td>166K+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Polymarket</strong></td>
+                            <td>预测市场查询，搜索事件、检查市场赔率、跟踪价格变动</td>
+                            <td><code>clawhub install polymarket-trade</code></td>
+                            <td>154K+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Proactive Agent</strong></td>
+                            <td>将 Agent 从任务跟随者转变为主动伙伴，支持自主 cron 和改进模式</td>
+                            <td><code>clawhub install proactive-agent</code></td>
+                            <td>152K+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>web-search</strong></td>
+                            <td>实时网络搜索 + AI 摘要</td>
+                            <td><code>openclaw skills install web-search</code></td>
+                            <td>官方推荐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>browser-auto</strong></td>
+                            <td>网页自动化操作</td>
+                            <td><code>openclaw skills install browser-auto</code></td>
+                            <td>官方推荐</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="news-item">
+                <h3>⚠️ Skill 安全使用指南</h3>
+                <div class="warning-box">
+                    <p><strong>重要警告</strong>：安全审计（Koi Security、Bitdefender、Snyk）发现 ClawHub 上 <strong>12-36%</strong> 的第三方 Skill 存在漏洞或恶意载荷。</p>
+                </div>
+                <p><strong>安装前审查清单</strong>：</p>
+                <ol>
+                    <li><strong>阅读 SKILL.md 源码</strong> — 不要信任 ClawHub 落地页，直接在 GitHub 仓库阅读实际 SKILL.md 和引用的脚本</li>
+                    <li><strong>检查发布者信誉</strong> — 一周新账号 + 一个 Skill = 风险信号；寻找有多月记录和真实社区审查的发布者</li>
+                    <li><strong>固定精确版本</strong> — 永远不要使用 <code>@latest</code>，固定到已审查的确切版本</li>
+                    <li><strong>避免 curl | bash</strong> — 如果 Skill 文档要求将远程脚本通过管道传给 shell，请远离</li>
+                    <li><strong>审查权限请求</strong> — 摘要 Skill 不需要 shell 执行权限，翻译 Skill 不需要浏览器控制权</li>
+                    <li><strong>沙盒测试</strong> — 在 NanoClaw 的强制容器隔离中先测试，观察几个会话后再考虑推广到主环境</li>
+                </ol>
+                <p><strong>安全规则</strong>：使用 100/3 法则 — 下载量 100+ 且上架 3 个月以上的 Skill 相对安全。</p>
+            </article>
+        </section>
+
+        <!-- 企业落地案例 -->
+        <section class="enterprise">
+            <h2>🏢 企业落地案例</h2>
+            
+            <article class="news-item">
+                <h3>📈 Oracle + PwC + Leah：Agentic OS 扩展</h3>
+                <p>Leah 与 Oracle 和 PwC 合作，将其 Agentic OS 扩展到更多地区和受监管行业。该平台使用 AI Agent 自主执行法律、合同、采购和财务工作流，内置治理、安全控制和人工监督。</p>
+                <p><strong>关键数据</strong>：AI 代理已在 79% 的公司中落地实际业务场景，88% 的高管计划增加 AI Agent 预算。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🛡️ DXC Technology：AI 原生 Zero Trust 平台</h3>
+                <p>DXC 与 Primary 合作提供 AI 原生 Zero Trust 平台，治理 AI Agent 和企业 AI 应用如何访问数据。重点关注身份、安全、合规和受控的 Agent 部署。</p>
+                <p><strong>信号</strong>：随着企业 Agent 进入生产环境，AI 治理的重要性日益凸显。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>⚡ Zapier：内部部署 800+ AI Agent</h3>
+                <p>Zapier 在整个组织内部署了 <strong>800+ AI Agent</strong>，实现 89% 的 AI 采用率。设计团队使用 Claude artifacts 在客户访谈期间快速原型设计，实时展示通常需要数周开发的设计概念。</p>
+                <p><strong>成果</strong>：将客户的招聘时间从数周缩短到 <strong>不到 72 小时</strong>。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🏗️  Fountain：多智能体编排</h3>
+                <p>Fountain 使用分层多智能体编排实现：</p>
+                <ul>
+                    <li>筛选速度提升 <strong>50%</strong></li>
+                    <li>入职速度提升 <strong>40%</strong></li>
+                    <li>候选人转化率提升 <strong>2 倍</strong></li>
+                </ul>
+                <p><strong>架构</strong>：编排器 Agent 协调专门的子 Agent，每个子 Agent 有专用上下文，并行工作。</p>
+            </article>
+        </section>
+
+        <!-- 延伸阅读 -->
+        <section class="reading">
+            <h2>📖 延伸阅读链接</h2>
+            <ul class="link-list">
+                <li><a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw 官方 GitHub 仓库</a> — 源码、Issue、PR</li>
+                <li><a href="https://github.com/openclaw/clawhub" target="_blank">ClawHub Skill 注册表</a> — 13,700+ 社区 Skill</li>
+                <li><a href="https://openclaw.academy/tracker/" target="_blank">OpenClaw Academy 仓库追踪器</a> — 实时活跃度数据</li>
+                <li><a href="https://www.aliyun.com/activity/ecs/clawdbot" target="_blank">阿里云 OpenClaw 一键部署专题</a> — 零基础部署教程</li>
+                <li><a href="https://clawhub.ai" target="_blank">ClawHub 官网</a> — 浏览和安装 Skill</li>
+                <li><a href="https://github.com/duanyytop/agents-radar" target="_blank">OpenClaw 生态日报</a> — 每日 GitHub 动态汇总</li>
+                <li><a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026" target="_blank">Gartner：40% 企业应用将集成 AI Agent</a></li>
+                <li><a href="https://www.firecrawl.dev/blog/agentic-ai-trends" target="_blank">2026年15大 Agentic AI 趋势</a> — Firecrawl 深度分析</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>🦞 OpenClaw Daily Report | 生成时间：2026-08-31 00:45 CST</p>
+            <p>数据来源：GitHub、阿里云、腾讯云、Gartner、Firecrawl 等公开渠道</p>
+        </div>
+    </footer>
+</body>
+</html>
