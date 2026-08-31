@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026-09-01</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🦞 OpenClaw 每日情报</h1>
+            <p class="date">2026年9月1日 星期二</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 今日概览 -->
+        <section class="overview">
+            <h2>📋 今日概览</h2>
+            <div class="highlight-box">
+                <ul>
+                    <li><strong>🔧 OpenClaw 2026.9.1-beta.1 持续迭代</strong> — 8月29日发布，重点修复 Gateway 重启恢复、配置观察器交接、Linux 安装器运行时选择等关键问题</li>
+                    <li><strong>📊 GitHub 生态高位运行</strong> — 388K+ Stars | 81K+ Forks | 13,700+ ClawHub Skills，持续领跑开源 Agent 框架</li>
+                    <li><strong>🦐 "百虾大战"格局白热化</strong> — 2026年国产桌面 Agent 排行榜发布，16款产品同台竞技，OpenClaw 衍生生态全面爆发</li>
+                    <li><strong>⚠️ 安全治理成行业焦点</strong> — ClawHub 审计显示 12-36% 第三方 Skill 存在漏洞，Cisco 发现数据外泄与提示注入风险</li>
+                    <li><strong>🏢 企业落地进入深水区</strong> — Gartner 预测 2026 年底 40% 企业应用将集成任务特定 Agent，从"交互"转向"执行"</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- OpenClaw 官方动态 -->
+        <section class="official">
+            <h2>🦞 OpenClaw 官方动态</h2>
+            
+            <article class="news-item">
+                <h3>🔖 最新版本：2026.9.1-beta.1（2026-08-29）</h3>
+                <div class="meta">发布时间：2026年8月29日 | 类型：预发布版本</div>
+                <p>本次 beta 版本聚焦<strong>稳定性修复与 Gateway 可靠性</strong>，主要改进包括：</p>
+                <ul>
+                    <li><strong>Gateway 重启恢复</strong> — 保留已准入的重启安全运行状态，保留检查点和最终交付结果（#130491）</li>
+                    <li><strong>Gateway 配置观察器交接</strong> — 在观察器确认已提交版本前保留待处理配置写入，修复 config.patch 在同源交接时失败的问题（#131515）</li>
+                    <li><strong>Linux 安装器运行时选择</strong> — 使用稳定的 Node 24 LTS 配置，避免新 Linux 安装选择不兼容的预发布版本（#130369）</li>
+                    <li><strong>Worker 准入恢复</strong> — 在准入截止和终止后重新启动符合条件的启动，终止死亡 worker 的轮次（#130446）</li>
+                    <li><strong>Control UI 代理文件</strong> — 当较旧的读取或列表刷新稍后完成时，保持已确认的保存和文件元数据完整（#130468）</li>
+                    <li><strong>模型目录激活</strong> — 在自动 provider-plugin 激活后保留模型浏览能力（#130481）</li>
+                </ul>
+                <p><span class="tag warning">预发布提示</span> 建议在可丢弃或非关键环境中测试，确认稳定后再考虑生产部署。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>📈 仓库活跃度追踪（截至 2026-09-01）</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">388,014</div>
+                        <div class="stat-label">GitHub Stars</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">81,474</div>
+                        <div class="stat-label">Forks</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3,540</div>
+                        <div class="stat-label">Open Issues</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">479</div>
+                        <div class="stat-label">24h 合并 PR</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100</div>
+                        <div class="stat-label">24h 文档提交</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">13,700+</div>
+                        <div class="stat-label">ClawHub Skills</div>
+                    </div>
+                </div>
+                <p class="source">数据来源：OpenClaw Academy Repository Tracker</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🌐 创始人动态：Peter Steinberger 与 OpenClaw 基金会</h3>
+                <p>OpenClaw 创始人 Peter Steinberger 于 2026 年 2 月 14 日加入 OpenAI，同时 OpenClaw Foundation 正式成立，标志着项目从个人开源项目向社区化治理转型。OpenClaw 最初于 2025 年 11 月以 "Warelay" 之名发布，后因 Anthropic 商标投诉更名为 "Moltbot"，最终于 2026 年 1 月 30 日定名为 "OpenClaw" 并引发病毒式传播。</p>
+                <p>从 2026 年 1 月的约 5 万 Stars 到 5 月的 37 万+，OpenClaw 创下 GitHub 历史上最快增长纪录，引发 Sam Altman、Mark Zuckerberg 等行业领袖关注。</p>
+            </article>
+        </section>
+
+        <!-- 核心功能更新 -->
+        <section class="features">
+            <h2>📌 核心功能更新详情</h2>
+            
+            <article class="news-item">
+                <h3>🛡️ Auto Mode 企业级执行防护（2026.05.31）</h3>
+                <p>OpenClaw 于 5 月 31 日推出 auto mode，引入企业主机执行防护机制。该模式在保持 Agent 自主执行能力的同时，增加了企业级的安全护栏，限制 Agent 的敏感操作范围，降低恶意 Skill 和提示注入攻击的风险。</p>
+                <p><span class="tag">企业级</span> <span class="tag">安全</span></p>
+            </article>
+
+            <article class="news-item">
+                <h3>🔌 MCP 协议支持深化</h3>
+                <p>OpenClaw 持续深化 MCP（Model Context Protocol）支持，通过 MCP Builder Skill 可快速将内部 REST API 包装为 MCP 服务器。社区已产出大量 MCP 相关教程和工具，包括 FastMCP（Python）和 TypeScript 脚手架支持。</p>
+                <p><strong>关键数据：</strong>截至 2026 年 8 月，MCP 协议已有 9,400+ 服务器实现，成为 Agent 互操作的事实标准。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🧠 记忆与个性化系统</h3>
+                <p>OpenClaw 支持持久化记忆（LanceDB 等向量存储）和 RL 个性化反馈机制，让 Agent "越用越懂你"。配合 SOUL.md 人格定制文件，用户可以为 Agent 定义独特的性格、偏好和行为模式。</p>
+            </article>
+        </section>
+
+        <!-- 竞品动态 -->
+        <section class="competitors">
+            <h2>🔥 竞品与生态动态</h2>
+
+            <article class="news-item">
+                <h3>🦅 Hermes Agent — OpenClaw 最强挑战者</h3>
+                <div class="meta">Nous Research | 191K GitHub Stars | 多模态 Agent</div>
+                <p><strong>Hermes Agent</strong> 由 Nous Research 开发，定位 "OpenClaw 的最强挑战者"，核心差异化在于<strong>多模态感知</strong>与<strong>GUI 控制</strong>：</p>
+                <ul>
+                    <li>支持图像、视频输入，具备屏幕感知与视觉理解能力</li>
+                    <li>原生 GUI 控制（鼠标点击、键盘输入、窗口管理）</li>
+                    <li>Bot Mode 破 23 万星，日调用量持续领先</li>
+                    <li>与 OpenClaw 生态深度融合，可互操作 Skills</li>
+                </ul>
+                <p><strong>关键里程碑：</strong>2026 年 8 月，Hermes Agent 推出 ClickClack Bot 协作模式，支持多 Agent 协同完成任务。</p>
+                <p><span class="tag">多模态</span> <span class="tag">GUI控制</span> <span class="tag">191K Stars</span></p>
+            </article>
+
+            <article class="news-item">
+                <h3>🌙 KimiClaw — 月之暗面的浏览器原生 Agent</h3>
+                <div class="meta">Moonshot AI | 2026.02.15 发布 | 浏览器原生</div>
+                <p>KimiClaw 是月之暗面推出的 OpenClaw 云端托管版本，直接嵌入 kimi.com 浏览器界面：</p>
+                <ul>
+                    <li><strong>零服务器部署</strong> — 打开浏览器标签页，点击 "Create"，约 1 分钟即可启动</li>
+                    <li><strong>Kimi K2.5 模型</strong> — 1 万亿参数 MoE 架构，32B 激活参数，20 万 Token 上下文</li>
+                    <li><strong>5,000+ ClawHub Skills</strong> + 40GB 云存储</li>
+                    <li><strong>多平台集成</strong> — Telegram、WhatsApp、飞书、微信</li>
+                    <li><strong>定价</strong> — Allegretto 计划 $39/月起（约 ¥280）</li>
+                </ul>
+                <p><span class="tag">浏览器原生</span> <span class="tag">K2.5模型</span> <span class="tag">5000+Skills</span></p>
+            </article>
+
+            <article class="news-item">
+                <h3>⚡ MaxClaw — MiniMax 的消息优先 Agent</h3>
+                <div class="meta">MiniMax (HKG: 0100) | 2026.02.24 发布 | 消息优先</div>
+                <p>MaxClaw 比 KimiClaw 晚 9 天发布，选择 "消息优先" 路线：</p>
+                <ul>
+                    <li><strong>MiniMax M2.5 模型</strong> — 2300 亿参数 MoE，100 亿激活参数，专为代码和结构化多步任务优化</li>
+                    <li><strong>消息平台原生</strong> — Telegram、Slack、WhatsApp、Discord 直接交互</li>
+                    <li><strong>Expert 生态系统</strong> — 预置办公、财务、编程专家 Agent</li>
+                    <li><strong>双模式</strong> — Lightning Mode 快速迭代 / Pro Mode 复杂推理</li>
+                    <li><strong>定价</strong> — 最低 $16/月，无额外 API 费用</li>
+                </ul>
+                <p><span class="tag">消息优先</span> <span class="tag">M2.5模型</span> <span class="tag">Expert生态</span></p>
+            </article>
+
+            <article class="news-item">
+                <h3>🐆 EasyClaw — 猎豹移动的零配置桌面 Agent</h3>
+                <div class="meta">猎豹移动 / 傅盛团队 | 2026.03.07 发布 | 零配置</div>
+                <p>EasyClaw 是猎豹移动 CEO 傅盛亲自验证和打样的 OpenClaw 本地化封装产品，核心卖点是 <strong>"下载 → 安装 → 对话" 三步即用</strong>：</p>
+                <ul>
+                    <li><strong>零配置部署</strong> — 无需 Node.js、Docker、API Key，双击安装包即可运行</li>
+                    <li><strong>本地沙箱运行</strong> — 数据不上传云端，隐私安全优先</li>
+                    <li><strong>手机远程控制</strong> — 支持飞书、QQ、钉钉、WhatsApp、Telegram 远程下达指令</li>
+                    <li><strong>技能商店 + 定时任务</strong> — 内置丰富 Skills，支持自动化编排</li>
+                    <li><strong>国内版</strong> — 元气 AI Bot（yuanqiai.net），针对中文场景深度优化</li>
+                </ul>
+                <p><strong>背景故事：</strong>2026 年春节，傅盛卧病在床 14 天，从零构建 8 个 AI Agent（代号"三万"），产生 22 万字对话记录。这次实验直接催生了 EasyClaw 的产品方向。</p>
+                <p><span class="tag">零配置</span> <span class="tag">本地沙箱</span> <span class="tag">手机遥控</span></p>
+            </article>
+
+            <article class="news-item">
+                <h3>🌋 ArkClaw — 字节跳动的云端 SaaS "龙虾"</h3>
+                <div class="meta">火山引擎 / 字节跳动 | 2026.03.09 发布 | 云端托管</div>
+                <p>ArkClaw 是字节跳动旗下火山引擎推出的 <strong>"开箱即用的云上 SaaS 版 OpenClaw"</strong>，彻底消除本地部署门槛：</p>
+                <ul>
+                    <li><strong>零门槛云端部署</strong> — 打开浏览器即可使用，无需代码、API Key 或服务器</li>
+                    <li><strong>7×24 在线</strong> — 关闭电脑后任务仍在后台执行，记忆不丢失</li>
+                    <li><strong>多模型支持</strong> — Doubao-Seed-2.0、Kimi2.5、MiniMax2.5、GLM 等</li>
+                    <li><strong>飞书深度集成</strong> — 化身飞书机器人，直接创建文档、安排日程、生成周报</li>
+                    <li><strong>计费</strong> — 火山方舟 Coding Plan 套餐制，告别 Token 焦虑</li>
+                </ul>
+                <p><strong>政策变动：</strong>2026 年 3 月 24 日起，Coding Plan Lite 新购用户不再赠送 7 日免费体验，需订阅 Pro 套餐。</p>
+                <p><span class="tag">云端SaaS</span> <span class="tag">飞书集成</span> <span class="tag">7×24在线</span></p>
+            </article>
+
+            <article class="news-item">
+                <h3>💬 腾讯 WorkBuddy / QClaw — 社交链上的 AI Agent</h3>
+                <div class="meta">腾讯 | 2026.03 上线 | 企业级</div>
+                <p>腾讯的 Agent 策略极其务实 —— <strong>把 AI Agent 塞进微信和 QQ</strong>：</p>
+                <ul>
+                    <li><strong>微信直连</strong> — 扫码绑定后手机发指令、电脑执行、结果回传</li>
+                    <li><strong>任务全程本地跑</strong> — 数据不上传，内置沙箱拦截危险操作</li>
+                    <li><strong>20+ 内置 Skills</strong> — 海报生成、自动化报表、MCP 协议支持</li>
+                    <li><strong>企业微信/QQ/飞书/钉钉</strong> — 1 分钟配好 IM 接入</li>
+                </ul>
+                <p><span class="tag">微信直连</span> <span class="tag">企业级</span> <span class="tag">本地执行</span></p>
+            </article>
+
+            <article class="news-item">
+                <h3>📊 2026 国产桌面 Agent 排行榜（16 款）</h3>
+                <p>2026 年 8 月，业界发布最新国产桌面 Agent 排行榜，竞争格局已清晰：</p>
+                <table class="data-table">
+                    <tr><th>排名</th><th>产品</th><th>厂商</th><th>核心定位</th></tr>
+                    <tr><td>1</td><td>OpenClaw</td><td>OpenClaw Foundation</td><td>开源框架，全功能，开发者首选</td></tr>
+                    <tr><td>2</td><td>QClaw 小龙虾</td><td>腾讯电脑管家</td><td>微信直连，本地执行</td></tr>
+                    <tr><td>3</td><td>EasyClaw</td><td>猎豹移动</td><td>三步即用，小白友好</td></tr>
+                    <tr><td>4</td><td>Kimi Work</td><td>月之暗面</td><td>知识工作，文档处理</td></tr>
+                    <tr><td>5</td><td>U2Claw</td><td>云知声</td><td>全职数字员工</td></tr>
+                    <tr><td>6</td><td>办公小浣熊</td><td>商汤</td><td>数据分析与文档</td></tr>
+                    <tr><td>16</td><td>牛马AI</td><td>小团队</td><td>完全离线，隐私极致</td></tr>
+                </table>
+                <p class="source">数据来源：CSDN / 人人都是产品经理 2026.08</p>
+            </article>
+        </section>
+
+        <!-- 社区趣味应用 -->
+        <section class="community">
+            <h2>🚀 社区趣味应用案例分享</h2>
+
+            <article class="news-item">
+                <h3>🦞 "养虾"文化出圈 — 从极客玩具到国民热词</h3>
+                <p>"养虾"（指搭建和训练 OpenClaw Agent）已从开发者圈黑话变成大众热词。B站、小红书、Threads 上涌现大量 "龙虾短剧""龙虾帮我拍视频" 等演示内容。傅盛春节期间 14 天养出 "龙虾军团" 的故事被广泛传播，成为 AI Agent 大众化的标志性事件。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>📧 Sarah 的邮件自动化 — 从地狱到天堂</h3>
+                <p>34 岁营销总监 Sarah，每天收到 200+ 邮件，其中 120 封是垃圾邮件，每天花 3.5 小时处理邮件。安装 Mail & Message Agent Skill 后：</p>
+                <ul>
+                    <li>自动删除 78 封垃圾邮件</li>
+                    <li>归档 34 封新闻订阅</li>
+                    <li>处理 12 封自动回复</li>
+                    <li>标记 3 封紧急邮件（CEO、大客户、HR）</li>
+                    <li><strong>处理时间从 3.5 小时降至 35 分钟</strong></li>
+                </ul>
+            </article>
+
+            <article class="news-item">
+                <h3>💰 Tom 的个人财务觉醒 — AI 发现他每年浪费 $4,334</h3>
+                <p>31 岁产品经理 Tom，收入不错但花钱没数。Data Analytics Engine Skill 帮他发现：</p>
+                <ul>
+                    <li>17 个订阅服务，每月 $206.47，一年 $2,477.64</li>
+                    <li>Disney+ 连续付费 13 个月，一次没打开过</li>
+                    <li>通勤花费 $6,500+/年（Uber 比公交卡贵太多）</li>
+                    <li>3 个云存储服务重叠 80%</li>
+                    <li><strong>AI 自动优化后，年省 $4,334.76</strong></li>
+                </ul>
+            </article>
+
+            <article class="news-item">
+                <h3>🌅 自动化每日简报 — 每天节省 15 分钟</h3>
+                <p>社区热门用例：配置 OpenClaw 每天早 6:30 连接 Google Calendar、Weather API、RSS，生成个性化简报，通过 Telegram/WhatsApp 推送。消除多 App 切换的认知疲劳，持久记忆确保简报优先高上下文任务。</p>
+            </article>
+        </section>
+
+        <!-- Skill 学习指南 -->
+        <section class="skills">
+            <h2>📚 精选 Skill 学习指南</h2>
+
+            <article class="news-item">
+                <h3>🏆 2026 十大免费 OpenClaw Skills</h3>
+                <table class="data-table">
+                    <tr><th>排名</th><th>Skill</th><th>功能</th><th>安装命令</th></tr>
+                    <tr><td>1</td><td>Skill Creator</td><td>教 Claude 构建新 Skill，元技能</td><td><code>npx claw install skill-creator</code></td></tr>
+                    <tr><td>2</td><td>Superpowers</td><td>20+ 工程技能合集（TDD、调试、代码审查）</td><td><code>npx claw install superpowers</code></td></tr>
+                    <tr><td>3</td><td>MCP Builder</td><td>快速将 API 包装为 MCP 服务器</td><td><code>npx claw install mcp-builder</code></td></tr>
+                    <tr><td>4</td><td>Test-Driven Development</td><td>强制执行红绿重构 TDD 流程</td><td><code>npx claw install test-driven-development</code></td></tr>
+                    <tr><td>5</td><td>Trail of Bits Security</td><td>顶级安全公司发布的审计级安全技能</td><td><code>npx claw install trail-of-bits-security-skills</code></td></tr>
+                    <tr><td>6</td><td>Last30Days</td><td>生成过去 30 天 Git 活动 polished 摘要</td><td><code>npx claw install last30days</code></td></tr>
+                    <tr><td>7</td><td>Composio</td><td>连接 860+ 外部工具（GitHub、Gmail）</td><td><code>ClawHub 安装</code></td></tr>
+                    <tr><td>8</td><td>Firecrawl</td><td>高级网页抓取和 DOM 提取</td><td><code>ClawHub 安装</code></td></tr>
+                    <tr><td>9</td><td>Cron-backup</td><td>定时自动本地目录备份</td><td><code>ClawHub 安装</code></td></tr>
+                    <tr><td>10</td><td>Gmail Automation</td><td>收件箱自动化分类、总结、回复</td><td><code>ClawHub 安装</code></td></tr>
+                </table>
+                <p class="source">数据来源：aiskill.market / skywork.ai 2026</p>
+            </article>
+
+            <article class="news-item">
+                <h3>📖 Skill 开发入门路径</h3>
+                <p>对于不想手动编写 SKILL.md 的用户，EasyClaw 和 KimiClaw 支持<strong>自然语言 Skill 创建</strong>：</p>
+                <ol>
+                    <li>用自然语言描述需求，如 "每周一早 8 点拉取 Shopify 上周销售数据，发 Telegram 摘要"</li>
+                    <li>Agent 自动生成 SKILL.md 草稿</li>
+                    <li>用户审核并批准后激活</li>
+                </ol>
+                <p>对于开发者，推荐路径：阅读 <code>skill-creator</code> Skill → 使用 <code>superpowers</code> 提升工程能力 → 通过 <code>mcp-builder</code> 扩展集成能力。</p>
+            </article>
+        </section>
+
+        <!-- 企业落地 -->
+        <section class="enterprise">
+            <h2>🏢 企业落地案例</h2>
+
+            <article class="news-item">
+                <h3>📊 行业数据：AI Agent 企业采用现状</h3>
+                <ul>
+                    <li><strong>部署率 79%</strong> — 全球企业 AI Agent 部署率持续攀升</li>
+                    <li><strong>成功率 38%</strong> — 从试点到规模化落地的转化率仍有提升空间</li>
+                    <li><strong>Gartner 预测</strong> — 2026 年底 40% 企业应用将集成任务特定 Agent</li>
+                    <li><strong>市场规模</strong> — 2026 年全球 AI Agent 市场突破 $115 亿</li>
+                </ul>
+            </article>
+
+            <article class="news-item">
+                <h3>☁️ 云厂商一键部署生态成熟</h3>
+                <p>阿里云百炼、腾讯云、火山引擎均已推出 OpenClaw 一键部署方案：</p>
+                <ul>
+                    <li><strong>阿里云百炼</strong> — 计算巢 + 轻量服务器预装镜像，全面上线</li>
+                    <li><strong>腾讯云</strong> — CloudBase + TKE 容器化部署，支持弹性扩缩容</li>
+                    <li><strong>火山引擎 ArkClaw</strong> — 纯 SaaS 化，打开浏览器即用</li>
+                </ul>
+            </article>
+
+            <article class="news-item">
+                <h3>⚠️ 安全治理：企业落地的核心底线</h3>
+                <p>随着 Agent 权限扩大，安全成为企业落地的首要考量：</p>
+                <ul>
+                    <li><strong>ClawHub 审计</strong> — 12-36% 第三方 Skill 存在漏洞或恶意载荷</li>
+                    <li><strong>Cisco 安全分析</strong> — 发现数据外泄和提示注入攻击风险</li>
+                    <li><strong>漏洞分布</strong> — 恶意 Skill（供应链）41%、提示注入 35%、权限配置错误 24%</li>
+                    <li><strong>中国政策</strong> — 2026 年 3 月限制 OpenClaw 在 state agencies 和银行使用</li>
+                </ul>
+                <p>建议企业用户启用 auto mode 执行防护、定期审计已安装 Skill、优先使用官方或可信来源的 Skills。</p>
+            </article>
+        </section>
+
+        <!-- 延伸阅读 -->
+        <section class="reading">
+            <h2>📎 延伸阅读链接</h2>
+            <ul class="link-list">
+                <li><a href="https://github.com/openclaw/openclaw">OpenClaw GitHub 主仓库</a></li>
+                <li><a href="https://docs.openclaw.ai">OpenClaw 官方文档</a></li>
+                <li><a href="https://clawhub.com">ClawHub Skill 市场</a></li>
+                <li><a href="https://openclaws.io/zh/blog/openclaw-fusheng-easyclaw/">傅盛 14 天养虾实验全记录</a></li>
+                <li><a href="https://www.woshipm.com/ai/6351146.html">OpenClaw 生态全景：QClaw/AutoClaw/EasyClaw/MaxClaw 选择指南</a></li>
+                <li><a href="https://skywork.ai/skypage/en/openclaw-kimiclaw-autonomous-ai-agents/2062367264973180928">OpenClaw & KimiClaw 完整对比指南</a></li>
+                <li><a href="https://aiskill.market/blog/10-best-free-openclaw-skills-2026">2026 十大免费 OpenClaw Skills</a></li>
+                <li><a href="https://www.cnblogs.com/claw001/p/22254623">2026 国产桌面 Agent 排行榜</a></li>
+                <li><a href="https://www.volcengine.com/article/36639">ArkClaw Coding Plan 订阅指南</a></li>
+                <li><a href="https://github.com/cenyi/openclawhub.uk">OpenClawHub — OpenClaw 变体大全（194K+ Stars）</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>🦞 OpenClaw Daily Report — 第121期 | 2026年9月1日</p>
+            <p>数据来源：GitHub、ClawHub、Skywork AI、火山引擎、CSDN、人人都是产品经理等</p>
+            <p><a href="../index.html">← 返回首页</a> | <a href="../archive.html">浏览归档 →</a></p>
+        </div>
+    </footer>
+</body>
+</html>
