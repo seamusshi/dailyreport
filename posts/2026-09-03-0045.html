@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026-09-03</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🦞 OpenClaw 每日情报</h1>
+            <p class="date">2026年9月3日 星期四</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 今日概览 -->
+        <section class="overview">
+            <h2>📋 今日概览</h2>
+            <div class="highlight-box">
+                <ul>
+                    <li><strong>🏠 OpenClaw v2026.8.2 正式发布</strong> — Home 智能体、Linux 桌面伴侣、后台会话、更安全的升级机制，以及更可靠的语音回复</li>
+                    <li><strong>🚀 OpenClaw 2.0 创纪录发布</strong> — v2026.8.1 汇聚 933 位贡献者、16,000+ PR，被称为项目历史上最大规模更新</li>
+                    <li><strong>🔮 v2026.9.1-beta.1 进入测试</strong> — 全面支持 GPT-5.6 Sol/Terra/Luna/Ultra 推理系列，Puppeteer CDP 中继上线</li>
+                    <li><strong>⚠️ 安全与稳定性仍是焦点</strong> — ClawStat.us 监测到 3 个可信阻塞性问题，建议备份后再升级</li>
+                    <li><strong>🏢 企业级替代方案评估升温</strong> — TrustClaw、Onyx 等安全优先平台成为受监管行业的新选择</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- OpenClaw 官方动态 -->
+        <section class="official">
+            <h2>🦞 OpenClaw 官方动态</h2>
+            
+            <article class="news-item">
+                <h3>🔖 最新稳定版：v2026.8.2（2026-08-02）</h3>
+                <div class="meta">发布时间：2026年8月2日 | 类型：稳定版本</div>
+                <p>本次版本被官方定位为<strong>"Home beside your work"</strong>，核心围绕用户体验、安全升级和语音可靠性展开：</p>
+                <ul>
+                    <li><strong>Home 智能体</strong> — Control UI 新增 Home 按钮，将个人智能体置于工作流旁，一键触达</li>
+                    <li><strong>Linux 桌面伴侣</strong> — 专为 Linux 桌面打造的 companion 应用，支持后台会话运行</li>
+                    <li><strong>后台会话（Background Sessions）</strong> — 无需切换页面即可启动后台工作流，提升多任务效率</li>
+                    <li><strong>更安全的升级机制</strong> — 保留更新的配置、阻止不完整的会话迁移、支持失败后安全回滚（#118244, #90551, #134206）</li>
+                    <li><strong>可靠的回复与语音</strong> — 工具执行后返回最终答案、修复语音输出中的内部推理泄漏、保持浏览器 Talk 通话稳定性</li>
+                    <li><strong>可选图像解码更新</strong> — Sharp 依赖升级至 0.35.4，修复 libheif 相关漏洞</li>
+                    <li><strong>工作区权限改进</strong> — 权限变更实时应用到活跃运行，云工作者的会话工具策略保持一致</li>
+                    <li><strong>私有诊断数据脱敏</strong> — macOS 应用日志中显式标记私有字段，Clawdock 诊断不再暴露凭证</li>
+                    <li><strong>四个新主题</strong> — 界面个性化选项进一步丰富</li>
+                </ul>
+                <p><span class="tag warning">升级建议</span> ClawStat.us 评估：值得升级，但请先备份。3 个可信阻塞性问题已确认（Linux WebKit 崩溃、内存重索引膨胀、主会话恢复延迟），均非广泛性问题。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🚀 OpenClaw 2.0（v2026.8.1）— 史上最大更新</h3>
+                <div class="meta">发布时间：2026年8月31日 | 代号：OpenClaw 2.0</div>
+                <p>时隔近两个月的稳定版空白期后，OpenClaw 推送了被团队称为<strong>"历史上最大规模更新"</strong>的版本：</p>
+                <ul>
+                    <li><strong>933 位贡献者</strong> 参与开发</li>
+                    <li><strong>16,000+ 个 PR</strong> 被合并，约占项目总合并 PR 数的一半</li>
+                    <li><strong>全新 Web UI</strong> — 从安装流程到消息传递、记忆、技能、模型、自动化、浏览器和原生应用全面重构</li>
+                    <li><strong>共享云会话</strong> — 团队可在同一聊天中协作，打破单用户边界</li>
+                    <li><strong>自学习技能</strong> — 更智能的记忆层，支持技能自主进化</li>
+                    <li><strong>安全架构 overhaul</strong> — 信任边界与最小权限原则全面落地</li>
+                    <li><strong>ClickClack 协作</strong> — 支持机器人间的入站分派与协作，带显式发件人授权和防循环保护</li>
+                    <li><strong>Skill Workshop 审批优化</strong> — 默认无需额外审批即可执行 apply/reject/quarantine 操作</li>
+                    <li><strong>macOS 配对节点终端</strong> — 嵌入式节点主机支持双工 Codex 和 Claude 终端恢复命令</li>
+                </ul>
+                <p class="source">来源：shattered.io / docs.openclaw.ai</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🔮 前瞻：v2026.9.1-beta.1（2026-08-28）</h3>
+                <div class="meta">已推送至 registry | 开发中版本</div>
+                <p>下一个大版本已进入 beta 测试：</p>
+                <ul>
+                    <li><strong>GPT-5.6 全系列支持</strong> — Sol、Terra、Luna、Ultra reasoning 模型全面接入 OpenClaw 与 Codex runtime</li>
+                    <li><strong>验证 SQLite 备份与恢复</strong> — 新增已验证的备份和定向恢复命令</li>
+                    <li><strong>Control UI 首次运行引导增强</strong> — 验证模型后自动延续至 Custodian 和可选渠道配置</li>
+                    <li><strong>Puppeteer-compatible CDP relay</strong> — 为配对 Chrome 会话提供 Puppeteer 兼容的 CDP 中继</li>
+                </ul>
+            </article>
+
+            <article class="news-item">
+                <h3>📈 仓库活跃度追踪（截至 2026-09-03）</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">395K+</div>
+                        <div class="stat-label">GitHub Stars</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">84K+</div>
+                        <div class="stat-label">Forks</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3,200</div>
+                        <div class="stat-label">Open Issues</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">24h 合并 PR</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">122</div>
+                        <div class="stat-label">总发布版本</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">44,000+</div>
+                        <div class="stat-label">ClawHub Skills</div>
+                    </div>
+                </div>
+                <p class="source">数据来源：OpenClaw GitHub / releases.sh / ClawHub</p>
+            </article>
+        </section>
+
+        <!-- 核心功能更新 -->
+        <section class="features">
+            <h2>📌 核心功能更新详情</h2>
+            
+            <article class="news-item">
+                <h3>🏠 Home 智能体 — 工作流旁的数字伙伴</h3>
+                <p>v2026.8.2 最重要的产品级更新是 Control UI 中的 <strong>Home</strong> 入口。它不是一个独立功能，而是一种新的交互范式：</p>
+                <ul>
+                    <li>Home 按钮常驻于 Control UI 侧边栏，随时触达个人智能体</li>
+                    <li>支持"Ask OpenClaw"助手 dock，布局兼容已保存配置</li>
+                    <li>与 Pages 编辑器并存，不干扰当前工作流</li>
+                </ul>
+                <p>这意味着 OpenClaw 正从"任务工具"向"常驻数字伙伴"进化。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🐧 Linux 桌面伴侣 + 后台会话</h3>
+                <p>Linux 用户获得原生级体验：</p>
+                <ul>
+                    <li><strong>Linux Desktop Companion</strong> — 专为 Linux 桌面环境设计的 companion 应用</li>
+                    <li><strong>后台会话</strong> — 可在不切换页面的情况下启动后台工作，适合长时间运行的任务</li>
+                    <li><strong>从 New Session 创建后台会话</strong> — 一键启动，无需额外配置</li>
+                </ul>
+                <p><span class="tag warning">已知问题</span> Linux AppImage 版存在 WebKitWebProcess SIGABRT 崩溃问题（#136148），建议关注修复进度。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🔒 更安全的升级机制</h3>
+                <p>v2026.8.2 花大力气解决了升级过程中的数据安全问题：</p>
+                <ul>
+                    <li><strong>保留更新配置</strong> — 升级时不再覆盖用户的新配置</li>
+                    <li><strong>阻止不完整迁移</strong> — 会话迁移未完成时不会声称成功</li>
+                    <li><strong>失败后自动恢复</strong> — 更新失败后可安全回滚到已验证的版本</li>
+                    <li><strong>迁移安全协调</strong> — 自动代理数据库维护与当前所有者协调</li>
+                    <li><strong>修复遗留 v17 代理数据库</strong> — 支持更老版本的会话恢复</li>
+                </ul>
+            </article>
+
+            <article class="news-item">
+                <h3>🎙️ 语音可靠性大幅提升</h3>
+                <p>语音交互是 Agent 产品"自然感"的核心，v2026.8.2 修复了多个关键问题：</p>
+                <ul>
+                    <li>内部推理内容不再泄漏到语音输出</li>
+                    <li>工具生成的音频在交付过程中不再丢失</li>
+                    <li>浏览器 Talk 通话建立后的后续回合正常工作</li>
+                    <li>实时语音 Agent 咨询支持 Talk/Meet/VoiceCall</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 竞品动态 -->
+        <section class="competitors">
+            <h2>🦐 竞品动态</h2>
+            
+            <article class="news-item">
+                <h3>🔐 TrustClaw：企业级安全 Agent 平台崛起</h3>
+                <div class="meta">定位：企业级 OpenClaw 替代方案 | 2026年热度攀升</div>
+                <p>随着 OpenClaw 安全争议持续（CVE 频发、ClawHub 供应链风险），<strong>TrustClaw</strong> 等企业级平台受到受监管行业关注：</p>
+                <ul>
+                    <li><strong>高安全沙箱</strong> — 为自动化工作流提供高度隔离和可审计的框架</li>
+                    <li><strong>细粒度治理与 RBAC</strong> — 完整审计追踪，满足合规要求</li>
+                    <li><strong>最小化网络攻击面</strong> — 受控执行环境，降低风险暴露</li>
+                    <li><strong>API-first 集成</strong> — 无缝连接复杂企业系统</li>
+                </ul>
+                <p><span class="tag">适用场景</span> 金融、医疗、政府等对合规要求极高的行业。代价是学习曲线陡峭、TCO 较高。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🦝 Onyx：唯一能空气隔离部署的 OpenClaw 替代</h3>
+                <div class="meta">Onyx.app | 2026年企业评估热门</div>
+                <p>Onyx（原 Danswer）被多家企业技术评估列为<strong>OpenClaw 替代首选</strong>：</p>
+                <ul>
+                    <li><strong>唯一支持完全空气隔离部署</strong> — 支持企业连接器、沙箱 Agent 和本地 LLM</li>
+                    <li><strong>MIT 开源</strong> — 真正自托管，非云锁定</li>
+                    <li><strong>权限感知企业搜索</strong> — 与现有权限体系集成</li>
+                    <li><strong>已获 SOC 2 Type II 认证</strong> — 生产环境就绪</li>
+                    <li><strong>价格远低于 ChatGPT Enterprise</strong> — 成本优势明显</li>
+                </ul>
+                <p>现有客户：Ramp、Thales、Astranis、UC San Diego（37,000+ 用户空气隔离部署）。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🐱 国产 "百虾" 阵营最新态势</h3>
+                <div class="meta">2026年3月为拐点，现进入稳定分化期</div>
+                <p>2026年3月的 "百虾大战" 后，国产 Agent 市场格局基本固化：</p>
+                <table class="competitor-table">
+                    <tr><th>产品</th><th>厂商</th><th>最新动态</th></tr>
+                    <tr><td>ArkClaw</td><td>字节跳动</td><td>云原生 SaaS，支持 Hermes Agent 模式，11+模型接入，飞书深度集成</td></tr>
+                    <tr><td>WorkBuddy</td><td>腾讯</td><td>VS Code 插件集成，云端+本地双模，120万+月活</td></tr>
+                    <tr><td>QClaw</td><td>腾讯</td><td>本地桌面版，微信/QQ 远程控制，85万+月活</td></tr>
+                    <tr><td>CoPaw</td><td>阿里云</td><td>三条命令本地跑通，钉钉/飞书/QQ 原生支持，Apache 2.0 开源</td></tr>
+                    <tr><td>Kimi Claw</td><td>月之暗面</td><td>长上下文处理优势，飞书适配，199元/月</td></tr>
+                    <tr><td>MaxClaw</td><td>MiniMax</td><td>16,000+ 技能库，M2.5 多模态模型，39元/月</td></tr>
+                    <tr><td>EasyClaw</td><td>猎豹移动</td><td>3分钟开箱即用，个人终身免费，零配置部署</td></tr>
+                    <tr><td>AutoClaw</td><td>智谱AI</td><td>一键安装，沉思模式，29元/月起</td></tr>
+                </table>
+                <p>核心趋势：大厂产品强调<strong>生态锁定</strong>（钉钉、飞书、企业微信），OpenClaw 的差异化优势仍是<strong>开源中立 + 模型自由切换</strong>。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🧠 Hermes Agent：自进化架构持续演进</h3>
+                <div class="meta">Nous Research | 开源竞品</div>
+                <p>Hermes Agent 作为 OpenClaw 的"架构级替代"持续获得关注：</p>
+                <ul>
+                    <li><strong>执行-反思-沉淀闭环</strong> — 完成任务后自动生成可复用技能</li>
+                    <li><strong>四层记忆架构</strong> — 热提示记忆 + 冷会话存档 + 程序性技能 + 外部提供者</li>
+                    <li><strong>安全记录优秀</strong> — 截至2026年5月仅3个 CVE，供应链风险远低于 ClawHub</li>
+                    <li><strong>被多平台集成</strong> — ArkClaw、JVS Claw 等已将其作为双引擎之一</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 社区趣味应用 -->
+        <section class="community">
+            <h2>🚀 社区趣味应用案例分享</h2>
+            
+            <article class="news-item">
+                <h3>💰 $10 种子资金 → $10,000 营收：ClawWork agent 的 7 小时</h3>
+                <p>OpenClaw 社区最著名的商业案例之一：一个 Agent 用 <strong>$10 种子资金</strong>在 <strong>7 小时内</strong>赚取超过 <strong>$10,000</strong>。该案例被广泛引用，证明了自主 Agent 在商业场景中的潜力。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🍴 餐厅客服：4小时 → 2分钟响应</h3>
+                <p>一家餐厅部署 OpenClaw 处理客户咨询：</p>
+                <ul>
+                    <li>部署前平均响应时间：<strong>4 小时以上</strong></li>
+                    <li>部署后平均响应时间：<strong>2 分钟以内</strong></li>
+                    <li>自主处理订单查询、预订咨询、FAQ 和投诉分流</li>
+                </ul>
+                <p>更广泛的企业部署数据显示：Agent 可自主处理 <strong>60%-80%</strong> 的常规咨询。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>🛡️ 16 次事故 + $1.50 计算成本 = 自动恢复系统</h3>
+                <p>开发者 Alex Rezvov 记录了一天内的生产部署经历：</p>
+                <ul>
+                    <li>心跳任务每 15 分钟泄漏内部推理 token 到 Telegram</li>
+                    <li>15 篇文章摘要生成成功但从未交付</li>
+                    <li>Cron 任务因 gateway token 不匹配静默失败</li>
+                </ul>
+                <p>他的解决方案：编写 watchdog 脚本每 5 分钟 ping Agent，无响应则自动 kill 并重启 Gateway。总计算成本：<strong>$1.50/天</strong>。这恰恰说明 OpenClaw 的价值不在于"永不崩溃"，而在于"让恢复变得便宜且自动化"。</p>
+            </article>
+        </section>
+
+        <!-- Skill 学习指南 -->
+        <section class="skills">
+            <h2>📚 精选 Skill 学习指南</h2>
+            
+            <article class="news-item">
+                <h3>🎯 本周推荐 Skill：Dashboard MCP Apps</h3>
+                <p>v2026.8.1 引入的 <strong>Dashboard MCP Apps</strong> 是近期最值得关注的技能类型：</p>
+                <ul>
+                    <li>可将发起会话的 MCP 应用视图固定为实时仪表板小部件</li>
+                    <li>支持沙箱化视图租约续期</li>
+                    <li>工具交互受限于修订版绑定授权</li>
+                    <li>支持优雅的状态过期恢复</li>
+                </ul>
+                <p><span class="tag">使用场景</span> 实时监控、数据看板、自动化运维面板。安装后可在 Control UI 中直接固定为 dashboard widget。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>📋 新手必装 Skill Top 5（更新版）</h3>
+                <table class="skill-table">
+                    <tr><th>Skill</th><th>功能</th><th>安装</th></tr>
+                    <tr><td>weather</td><td>天气查询（免API Key）</td><td><code>clawhub install weather</code></td></tr>
+                    <tr><td>healthcheck</td><td>主机安全审计</td><td><code>clawhub install healthcheck</code></td></tr>
+                    <tr><td>md-to-pdf</td><td>Markdown 转 PDF</td><td><code>clawhub install md-to-pdf</code></td></tr>
+                    <tr><td>multi-search-engine</td><td>17 引擎聚合搜索</td><td><code>clawhub install multi-search-engine</code></td></tr>
+                    <tr><td>feishu-doc</td><td>飞书文档读写</td><td><code>clawhub install feishu-doc</code></td></tr>
+                </table>
+            </article>
+
+            <article class="news-item">
+                <h3>⚠️ Skill 安全提醒（持续有效）</h3>
+                <p>据安全审计数据：</p>
+                <ul>
+                    <li><strong>12-36%</strong> 的第三方 Skill 存在不同程度漏洞</li>
+                    <li>2026 年 2 月 ClawHub 遭受有组织的网络攻击，<strong>341+ 恶意技能</strong>被植入</li>
+                    <li>ClawSecure 注册表审计工具可帮助检测已安装 Skill 的风险</li>
+                </ul>
+                <p><strong>安全建议：</strong>优先安装官方认证 Skill，安装前审查代码，生产环境使用容器隔离。</p>
+            </article>
+        </section>
+
+        <!-- 企业落地案例 -->
+        <section class="enterprise">
+            <h2>🏢 企业落地案例</h2>
+            
+            <article class="news-item">
+                <h3>📊 OpenClaw 企业部署效果基准数据</h3>
+                <p>综合多个公开案例的基准数据：</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">60-80%</div>
+                        <div class="stat-label">常规咨询自主处理率</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2h → 25min</div>
+                        <div class="stat-label">邮件分类工作时间</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3-4h → 15min</div>
+                        <div class="stat-label">多步入职流程耗时</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5-10h/周</div>
+                        <div class="stat-label">个人用户节省时长</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-item">
+                <h3>🏛️ OpenClaw Foundation：从玩具到基础设施</h3>
+                <p>2026 年 7 月宣布成立的 <strong>OpenClaw Foundation</strong> 正在推动项目从实验阶段向运营信任阶段过渡：</p>
+                <ul>
+                    <li>承诺<strong>扩展稳定发布渠道</strong>（extended-stable releases）</li>
+                    <li>推出<strong>成熟度评分卡</strong>（maturity scorecard）供企业评估</li>
+                    <li>定位：开放、中立、个人化的基础设施</li>
+                </ul>
+                <p>这意味着 OpenClaw 正从"周末玩具"演变为可挂载到邮件、文件、日历和客户通信的系统级基础设施。</p>
+            </article>
+
+            <article class="news-item">
+                <h3>⚡ 企业采用核心瓶颈</h3>
+                <p>Gartner 及行业调研显示，企业 Agent 部署面临三大挑战：</p>
+                <ul>
+                    <li><strong>安全合规</strong> — 数据不出域、权限最小化、审计追踪</li>
+                    <li><strong>系统集成复杂度</strong> — 与现有 IT 架构的对接成本</li>
+                    <li><strong>ROI 难以量化</strong> — 节省的时间难以直接换算为财务收益</li>
+                </ul>
+                <p>预测：Gartner 预计 2026 年底 <strong>40%</strong> 的企业应用将集成任务特定 Agent。</p>
+            </article>
+        </section>
+
+        <!-- 延伸阅读 -->
+        <section class="links">
+            <h2>🔗 延伸阅读</h2>
+            <ul class="link-list">
+                <li><a href="https://github.com/openclaw/openclaw/releases" target="_blank">OpenClaw GitHub Releases</a> — 官方版本发布页</li>
+                <li><a href="https://docs.openclaw.ai/releases/2026.8.2" target="_blank">v2026.8.2 官方发布说明</a> — 完整功能介绍</li>
+                <li><a href="https://clawstat.us/" target="_blank">ClawStat.us</a> — OpenClaw 版本健康度评估</li>
+                <li><a href="https://releases.sh/openclaw" target="_blank">releases.sh OpenClaw Changelog</a> — 完整更新日志追踪</li>
+                <li><a href="https://shattered.io/openclaw-2-0-ai-assistant-release-2026/" target="_blank">OpenClaw 2.0 深度解析</a> — 933 贡献者、16K PR 的背后</li>
+                <li><a href="https://www.larksuite.com/en_us/blog/openclaw-alternatives" target="_blank">Top 12 OpenClaw Alternatives 2026</a> — 企业级替代方案对比</li>
+                <li><a href="https://onyx.app/insights/best-enterprise-openclaw-options-2026" target="_blank">8 Best Enterprise OpenClaw Options</a> — 企业选型指南</li>
+                <li><a href="https://github.com/datawhalechina/hello-claw" target="_blank">Hello-Claw 中文教程</a> — DataWhale 中文入门教程</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>🦞 OpenClaw Daily Report | 第123期 | 2026-09-03</p>
+            <p>数据来源：GitHub、ClawHub、ClawStat.us、公开技术博客、行业报告</p>
+        </div>
+    </footer>
+</body>
+</html>
