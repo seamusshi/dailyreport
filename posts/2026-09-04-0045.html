@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily Report - 2026-09-04</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor-glow"></div>
+    <div class="grid-overlay"></div>
+    
+    <header class="site-header">
+        <div class="header-glow"></div>
+        <div class="header-inner">
+            <a href="../index.html" class="site-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="logo-text">OpenClaw</span>
+                <span class="logo-accent">Daily</span>
+            </a>
+            <nav class="main-nav">
+                <a href="../index.html" class="nav-link">今日</a>
+                <a href="../archive.html" class="nav-link">归档</a>
+                <a href="https://openclaw.ai" target="_blank" class="nav-link external">官网 ↗</a>
+                <a href="https://github.com/openclaw/openclaw" target="_blank" class="nav-link external">GitHub ↗</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="report-container">
+        <article class="report-article" data-date="2026-09-04">
+            <header class="report-header">
+                <div class="date-badge">
+                    <span class="date-day">04</span>
+                    <span class="date-month">SEP</span>
+                </div>
+                <div class="header-content">
+                    <h1 class="report-title">OpenClaw v2026.8.x 持续迭代：记忆系统进化与企业落地加速</h1>
+                    <div class="meta-bar">
+                        <span class="meta-item">📅 2026年9月4日 星期四</span>
+                        <span class="meta-item">🕐 00:45 CST</span>
+                        <span class="meta-item">📊 第19期</span>
+                    </div>
+                    <div class="tag-bar">
+                        <span class="tag">v2026.8.x</span>
+                        <span class="tag">Memory 2.0</span>
+                        <span class="tag">MCP Apps</span>
+                        <span class="tag">企业落地</span>
+                        <span class="tag">ClawHub</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 今日概览 -->
+            <section class="content-section" id="overview">
+                <div class="section-header">
+                    <div class="section-number">01</div>
+                    <h2 class="section-title">今日概览</h2>
+                </div>
+                <div class="overview-grid">
+                    <div class="overview-card featured">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">🚀</div>
+                        <h3>OpenClaw v2026.8.1 正式发布（AKA OpenClaw 2.0）</h3>
+                        <p>8月初发布的重大版本更新，涵盖 Web UI 全面重构、记忆系统增强、自动学习、原生应用扩展等数百项改进，标志着 OpenClaw 进入 2.0 时代。</p>
+                        <a href="https://docs.openclaw.ai/releases/2026.8.1" target="_blank" class="card-link">查看详情 →</a>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">🔧</div>
+                        <h3>v2026.8.2 维护版发布</h3>
+                        <p>针对安全性和可靠性的维护版本，包含扩展稳定加固（Extended-stable hardening），建议所有用户升级。</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">🧠</div>
+                        <h3>记忆系统 2.0：Grounded Dreaming + 自动学习</h3>
+                        <p>新增模型驱动的背景记忆整合（Grounded Dreaming）、跨会话回忆、自动技能学习，让 Agent 真正"记得"你。</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">🏢</div>
+                        <h3>企业落地案例爆发：从 DevOps 到销售自动化</h3>
+                        <p>多个行业报告证实 OpenClaw 正在从个人工具向企业级基础设施演进，覆盖医疗、销售、客服、财务等领域。</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">📦</div>
+                        <h3>ClawHub 技能市场突破 5700+ 技能</h3>
+                        <p>社区技能生态持续繁荣，openclawai.io 显示已有 5798+ 社区技能，覆盖自动化、通信、创意、开发等全领域。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 官方动态 -->
+            <section class="content-section" id="official">
+                <div class="section-header">
+                    <div class="section-number">02</div>
+                    <h2 class="section-title">OpenClaw 官方动态</h2>
+                </div>
+
+                <div class="update-block major">
+                    <div class="update-badge">重大更新</div>
+                    <h3>🎉 OpenClaw v2026.8.1（AKA OpenClaw 2.0）正式发布</h3>
+                    <p class="update-date">发布日期：2026年8月1日</p>
+                    <div class="update-content">
+                        <p>这是 OpenClaw 自诞生以来最重大的版本更新之一，被官方命名为 "OpenClaw 2.0"。本次更新触及 OpenClaw 的每一个部分，包括安装、消息传递、记忆、技能、模型、自动化、浏览器和原生应用、插件、调度、配置验证等。</p>
+                        
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">🧠</span>
+                                <div class="feature-text">
+                                    <strong>记忆系统全面升级</strong>
+                                    <p>新增 Active Memory 快速回忆、个人安装默认跨会话回忆、Claude Code/Codex/Hermes 导入引导、专属记忆设置页面。Grounded Dreaming 功能默认启用，通过模型驱动的背景记忆整合，将来源可靠的材料提升至长期记忆。</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🎓</span>
+                                <div class="feature-text">
+                                    <strong>自动自学习</strong>
+                                    <p>自动捕获可复用的强经验，并应用扫描器批准的新技能或 Workshop 拥有的技能。用户创作的技能变更保持待处理状态，保留显式的 off 或 propose 设置。</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🖥️</span>
+                                <div class="feature-text">
+                                    <strong>全新 Web UI（Control UI）</strong>
+                                    <p>全新设计的 Web 界面，支持会话回退/分支切换、会话看板和仪表板、归档/可见性/草稿/隐身会话状态、建议队列和输入指示器。聊天体验大幅提升。</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📱</span>
+                                <div class="feature-text">
+                                    <strong>原生应用扩展</strong>
+                                    <p>Quick Chat 登陆 macOS 和 Linux，支持流式传输、路由、上下文捕获、听写和模型控制。新增 Linux 桌面集成和签名更新、多网关应用和移动仪表板、Wear OS 伴侣/Talk 支持扩展。</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔒</span>
+                                <div class="feature-text">
+                                    <strong>安全与可靠性加固</strong>
+                                    <p>配置错误现在会停止并给出有用的提示，而不是静默使用其他配置启动。运行 <code>openclaw doctor --fix</code> 可在 2026年9月18日前修复退役键。支持 Fleet 单元隔离多租户托管。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="update-links">
+                        <a href="https://docs.openclaw.ai/releases/2026.8.1" target="_blank" class="link-btn">📄 完整发布说明</a>
+                        <a href="https://github.com/openclaw/openclaw/releases" target="_blank" class="link-btn">🏷️ GitHub Releases</a>
+                    </div>
+                </div>
+
+                <div class="update-block">
+                    <div class="update-badge">维护更新</div>
+                    <h3>🔧 OpenClaw v2026.8.2 维护版本</h3>
+                    <p class="update-date">发布日期：2026年8月下旬</p>
+                    <div class="update-content">
+                        <p>2026.8.2 是 v2026.8.1 的维护版本，主要聚焦扩展稳定加固（Extended-stable hardening）。针对安全性和可靠性进行靶向修复，建议所有生产环境用户尽快升级。</p>
+                        <p>此外，官方提醒用户：如果配置中仍包含已退役的键，请在 <strong>2026年9月18日前</strong> 运行 <code>openclaw doctor --fix</code> 进行修复。</p>
+                    </div>
+                </div>
+
+                <div class="github-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">380K+</div>
+                        <div class="stat-label">GitHub Stars</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5,798+</div>
+                        <div class="stat-label">ClawHub 技能</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">支持平台</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">MIT</div>
+                        <div class="stat-label">开源协议</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 核心功能更新详情 -->
+            <section class="content-section" id="core-updates">
+                <div class="section-header">
+                    <div class="section-number">03</div>
+                    <h2 class="section-title">📌 核心功能更新详情</h2>
+                </div>
+
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <span class="detail-icon">🧠</span>
+                            <h3>Grounded Dreaming：模型驱动的记忆整合</h3>
+                        </div>
+                        <div class="detail-body">
+                            <p>这是 v2026.8.1 中最令人兴奋的记忆功能。通过模型驱动的背景记忆整合，OpenClaw 能够将来源可靠的材料自动提升至长期记忆，同时生成 "Dream Diary" 供用户查看。该功能默认启用，但用户可随时关闭。</p>
+                            <p><strong>技术亮点：</strong>不仅存储聊天历史，还提取结构化实体（技术栈、偏好、更正），并将其注入未来的每次对话。告诉它一次，永远记住。</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <span class="detail-icon">🎓</span>
+                            <h3>自动自学习：Agent 的持续进化</h3>
+                        </div>
+                        <div class="detail-body">
+                            <p>OpenClaw 现在能够自动捕获强可复用经验，并应用扫描器批准的新技能或 Workshop 拥有的技能。这意味着 Agent 会随着使用不断"学习"和"进化"，变得越来越懂用户。</p>
+                            <p><strong>安全设计：</strong>用户创作的技能变更保持待处理状态，不会自动应用，确保用户对 Agent 行为有最终控制权。</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <span class="detail-icon">🔄</span>
+                            <h3>会话管理：rewind/fork/branch</h3>
+                        </div>
+                        <div class="detail-body">
+                            <p>全新的会话管理系统支持在 Web 和原生聊天中回退、分叉和分支切换。配合会话看板和仪表板、多种会话状态（归档/可见性/草稿/隐身），让复杂的 Agent 工作流变得可追溯、可管理。</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <span class="detail-icon">🔌</span>
+                            <h3>MCP Apps：安全浏览器副驾驶</h3>
+                        </div>
+                        <div class="detail-body">
+                            <p>新增安全的每标签页浏览器副驾驶、批量浏览器 CLI、有界页面问题提取、票证化的 MCP App 主机和控制 UI 桥接，以及用于原生插件的清单声明式 MCP Apps。这标志着 OpenClaw 与 MCP 生态的深度融合。</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <span class="detail-icon">🗣️</span>
+                            <h3>Fish Audio 语音：S2.1 合成流式传输</h3>
+                        </div>
+                        <div class="detail-body">
+                            <p>新增托管 S2.1 合成支持流式传输、语音笔记、语音发现和电话功能，以及本地 Fish S2 Pro 参考语音流式传输（原生 macOS Talk）。语音交互体验大幅提升。</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <span class="detail-icon">⏰</span>
+                            <h3>调度增强：/loop + 动态节奏</h3>
+                        </div>
+                        <div class="detail-body">
+                            <p>新增每任务动态节奏、门控脚本负载、持久调度源流、cron 支持的心跳监控器、心跳任务转换、当前会话默认值和 <code>/loop</code> 命令。自动化编排能力大幅增强。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 竞品动态 -->
+            <section class="content-section" id="competitors">
+                <div class="section-header">
+                    <div class="section-number">04</div>
+                    <h2 class="section-title">竞品动态</h2>
+                </div>
+
+                <div class="competitor-grid">
+                    <div class="competitor-card">
+                        <div class="competitor-header">
+                            <div class="competitor-name">LangChain</div>
+                            <div class="competitor-stars">⭐ 137K</div>
+                        </div>
+                        <div class="competitor-body">
+                            <p><strong>定位：</strong>最成熟的 LLM 应用开发框架</p>
+                            <p><strong>动态：</strong>通过 LangGraph 扩展 Agent 功能，支持复杂循环、分支和状态管理。生态系统最丰富，但学习曲线陡峭。被定位为企业深度定制的首选。</p>
+                            <p><strong>与 OpenClaw 关系：</strong>互补而非竞争。OpenClaw 官方建议：用 LangChain 构建逻辑服务，用 OpenClaw 作为执行层和聊天入口点。</p>
+                        </div>
+                    </div>
+
+                    <div class="competitor-card">
+                        <div class="competitor-header">
+                            <div class="competitor-name">CrewAI</div>
+                            <div class="competitor-stars">⭐ 25K</div>
+                        </div>
+                        <div class="competitor-body">
+                            <p><strong>定位：</strong>多 Agent 协作编排</p>
+                            <p><strong>动态：</strong>基于角色的 Agent 设计最直观，大多数用户可以在一小时内构建一个可用的多 Agent 工作流。被视为多 Agent 团队工作流的最快路径。</p>
+                            <p><strong>与 OpenClaw 关系：</strong>OpenClaw 侧重 Agent 运行时（零代码部署），CrewAI 侧重代码层多 Agent 编排。</p>
+                        </div>
+                    </div>
+
+                    <div class="competitor-card">
+                        <div class="competitor-header">
+                            <div class="competitor-name">Dify</div>
+                            <div class="competitor-stars">⭐ 142K</div>
+                        </div>
+                        <div class="competitor-body">
+                            <p><strong>定位：</strong>可视化 LLM 应用平台</p>
+                            <p><strong>动态：</strong>2026 年大幅强化 Agent 能力，支持工具调用、知识库检索和多步推理。非技术用户 30 分钟即可构建客服 Agent，无需写一行代码。</p>
+                            <p><strong>与 OpenClaw 关系：</strong>Dify 更偏向 SaaS 平台，OpenClaw 更偏向自托管 Agent 运行时。两者在可视化与自托管之间形成差异化。</p>
+                        </div>
+                    </div>
+
+                    <div class="competitor-card">
+                        <div class="competitor-header">
+                            <div class="competitor-name">Coze（字节跳动）</div>
+                            <div class="competitor-stars">🇨🇳 国内</div>
+                        </div>
+                        <div class="competitor-body">
+                            <p><strong>定位：</strong>零代码 AI Bot 创建平台</p>
+                            <p><strong>动态：</strong>在中文互联网环境中表现最佳，深度集成微信、飞书、抖音等平台。适合消费端 AI Bot 的快速搭建。</p>
+                            <p><strong>与 OpenClaw 关系：</strong>行业分析师建议中国用户采用 "Coze + Dify 双轨" 策略——Coze 处理消费端，Dify 处理企业内部。</p>
+                        </div>
+                    </div>
+
+                    <div class="competitor-card">
+                        <div class="competitor-header">
+                            <div class="competitor-name">Hermes Agent</div>
+                            <div class="competitor-stars">⭐ 15.8K</div>
+                        </div>
+                        <div class="competitor-body">
+                            <p><strong>定位：</strong>轻量级高效 Agent（Nous Research）</p>
+                            <p><strong>动态：</strong>以"最小 Agent 开销"为设计哲学，工具调用准确率排名前三。启动快、内存占用低，适合资源受限环境和需要快速响应的场景。</p>
+                            <p><strong>与 OpenClaw 关系：</strong>定位不同——Hermes 是轻量级工具调用 Agent，OpenClaw 是全功能个人 AI 助手。</p>
+                        </div>
+                    </div>
+
+                    <div class="competitor-card">
+                        <div class="competitor-header">
+                            <div class="competitor-name">ClawBrain</div>
+                            <div class="competitor-stars">🧠 后端</div>
+                        </div>
+                        <div class="competitor-body">
+                            <p><strong>定位：</strong>OpenClaw 增强型 LLM 后端</p>
+                            <p><strong>动态：</strong>提供持久跨会话记忆、数据实体锁定（防止 LLM 篡改数字）、自动错误恢复和策略切换。与 OpenClaw 配合可将错误恢复率提升至 100%，API 成本降低 50% 以上。</p>
+                            <p><strong>与 OpenClaw 关系：</strong>生态协同——ClawBrain 兼容 OpenAI 协议，可作为 OpenClaw、LangChain、CrewAI 等所有工具的后端替换。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="market-insight">
+                    <div class="insight-header">📊 市场洞察</div>
+                    <p>据 Gartner 2026 Q1 报告，AI Agent 市场已达 <strong>87 亿美元</strong>，同比增长超过 <strong>340%</strong>。GitHub 上 AI Agent 相关项目累计 Stars 超过 <strong>800 万</strong>。</p>
+                    <p>OpenClaw 以 <strong>380K+ Stars</strong> 稳居 GitHub 最热门 AI 项目，自 2026 年 1 月起 GitHub 增长速度已超过 Linux。在中国，数千人排队在腾讯深圳办公室安装 OpenClaw。</p>
+                </div>
+            </section>
+
+            <!-- 社区趣味应用 -->
+            <section class="content-section" id="community">
+                <div class="section-header">
+                    <div class="section-number">05</div>
+                    <h2 class="section-title">🚀 社区趣味应用案例分享</h2>
+                </div>
+
+                <div class="case-grid">
+                    <div class="case-card">
+                        <div class="case-tag">🦷 医疗行业</div>
+                        <h3>牙科集团 30 诊所自然语言查询</h3>
+                        <p>美国奥斯汀一家拥有 30 个诊所的牙科集团将 OpenClaw 连接到其数据仓库，领导层可以用自然语言询问任何诊所的财务业绩，无需等待人工准备报告。</p>
+                        <div class="case-meta">来源：ClawCon 分享 · 2026</div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-tag">💰 销售自动化</div>
+                        <h3>LinkedIn 外呼机器人替代 $20 万 SDR</h3>
+                        <p>一位 B2B 销售负责人用 OpenClaw 监控 LinkedIn 互动信号（评论竞品帖子、职位变动等），自动交叉引用公司技术栈数据，排队高度定向的上下文感知外呼序列，有效替代了 20 万美元的 SDR 人力成本。</p>
+                        <div class="case-meta">来源：The Interactive Studio · 2026-03</div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-tag">📧 运营提效</div>
+                        <h3>零收件箱机器：周末清理 4000 封邮件</h3>
+                        <p>运营高管用 OpenClaw 通宵处理数千封邮件，自动退订垃圾邮件、优先处理关键利益相关者消息、基于历史通信起草上下文回复。一个周末清理了 4000 封邮件的积压。</p>
+                        <div class="case-meta">来源：BayTech Consulting · 2026-05</div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-tag">🎥 内容创作</div>
+                        <h3>自媒体内容全流程自动化</h3>
+                        <p>技能组合：tavily-search + baoyu-skills + remotion-best-practices + cron。每日早上 8 点自动抓取行业热点、生成文章和封面图、批量生成短视频、同步发布到多平台，全程无需人工干预。</p>
+                        <div class="case-meta">来源：阿里云开发者社区 · 2026-02</div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-tag">🔍 客户成功</div>
+                        <h3>僵尸客户流失检测</h3>
+                        <p>客户成功团队常错过"僵尸客户"——偶尔登录但不使用核心功能的账户。通过 MCP 连接 Mixpanel 等分析平台，OpenClaw 持续后台检测行为模式，在续费前主动预警客户经理介入。</p>
+                        <div class="case-meta">来源：BayTech Consulting · 2026-05</div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-tag">🏠 个人助理</div>
+                        <h3>多平台个人助理编排</h3>
+                        <p>将家庭、工作和项目 Agent 隔离在不同平台（WhatsApp/Slack/GitHub），各自保持不同的性格和任务焦点。结果：认知负荷减少 60%，"不再有领域间的语气混淆"。</p>
+                        <div class="case-meta">来源：LumaDock 案例 · 2026-03</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 精选 Skill 学习指南 -->
+            <section class="content-section" id="skills">
+                <div class="section-header">
+                    <div class="section-number">06</div>
+                    <h2 class="section-title">📚 精选 Skill 学习指南</h2>
+                </div>
+
+                <div class="skill-highlight">
+                    <div class="skill-intro">
+                        <h3>🏪 ClawHub：OpenClaw 的 App Store</h3>
+                        <p>ClawHub 是 OpenClaw 官方技能市场，目前已有 <strong>5,798+</strong> 社区技能。开发者可以上传、版本管理、搜索和安装 Agent Skills 包。</p>
+                        <div class="skill-links">
+                            <a href="https://clawhub.ai" target="_blank" class="link-btn">🌐 国际站</a>
+                            <a href="https://skillhub.tencent.com" target="_blank" class="link-btn">🇨🇳 腾讯镜像</a>
+                            <a href="https://mirror-cn.clawhub.com" target="_blank" class="link-btn">🇨🇳 官方中国镜像</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <div class="skill-card">
+                        <div class="skill-rank">⭐ 必备</div>
+                        <h4>tavily-search</h4>
+                        <p>增强搜索能力，支持深度网络搜索和信息检索。是信息收集类任务的必备技能。</p>
+                        <code>clawhub install tavily-search</code>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-rank">⭐ 必备</div>
+                        <h4>proactive-agent-1-2-4</h4>
+                        <p>主动进化核心引擎，支持长期任务监控、个性化适配、心跳任务配置。让 Agent 从被动响应升级为主动服务。</p>
+                        <code>clawhub install proactive-agent-1-2-4</code>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-rank">🎨 创作</div>
+                        <h4>remotion-best-practices</h4>
+                        <p>基于 React 的视频制作框架，支持编程式视频创作、参数化动态内容。批量生成视频效率提升 80%，GitHub 星标 34.9k。</p>
+                        <code>npx skills add remotion-dev/skills/remotion-best-practices</code>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-rank">🔍 研究</div>
+                        <h4>agent-browser</h4>
+                        <p>浏览器自动化技能，支持网页抓取、截图、表单填写、UI 测试。所有操作都附带经过验证的选择器和分步说明。</p>
+                        <code>clawhub install agent-browser</code>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-rank">📄 文档</div>
+                        <h4>anthropics/skills@pdf</h4>
+                        <p>PDF 处理技能，支持解析、提取、分析 PDF 文档内容。企业文档处理自动化的基础技能。</p>
+                        <code>npx skills add anthropics/skills@pdf -g -y</code>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-rank">🛠️ 开发</div>
+                        <h4>planning-with-files</h4>
+                        <p>基于文件的项目规划技能，帮助制定调研计划、项目阶段和任务分解。适合项目管理和开发流程自动化。</p>
+                        <code>clawhub install planning-with-files</code>
+                    </div>
+                </div>
+
+                <div class="skill-guide">
+                    <h3>📖 技能安全评估框架</h3>
+                    <p>安装社区技能前，问自己 5 个问题：</p>
+                    <ol class="guide-list">
+                        <li><strong>作者可信吗？</strong>查看 GitHub 主页、其他高质量技能、社区声誉。</li>
+                        <li><strong>权限要求合理吗？</strong>检查 SKILL.md 中的 requires 字段，避免权限全开。</li>
+                        <li><strong>代码透明吗？</strong>是否有公开源码，代码是否简洁可读。</li>
+                        <li><strong>更新频繁吗？</strong>最后更新时间、持续维护、版本迭代记录。</li>
+                        <li><strong>有使用案例吗？</strong>文档示例、用户反馈、成功案例。</li>
+                    </ol>
+                    <div class="code-block">
+                        <div class="code-header">安全安装流程</div>
+                        <pre><code># 1. 先 inspect 不安装，查看技能详情
+clawhub inspect skill-name
+
+# 2. 检查 SKILL.md 权限声明
+cat skills/skill-name/SKILL.md
+
+# 3. 安装到测试目录
+clawhub install skill-name --dir skills-test
+
+# 4. 测试功能
+openclaw agent --message "测试 skill-name 功能"
+
+# 5. 确认无误后正式安装
+clawhub install skill-name</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 企业落地案例 -->
+            <section class="content-section" id="enterprise">
+                <div class="section-header">
+                    <div class="section-number">07</div>
+                    <h2 class="section-title">企业落地案例</h2>
+                </div>
+
+                <div class="enterprise-grid">
+                    <div class="enterprise-card">
+                        <div class="enterprise-icon">🏥</div>
+                        <h3>医疗健康：30 诊所集团数据民主化</h3>
+                        <p>美国牙科集团通过 OpenClaw 连接数据仓库，实现领导层对 30 个诊所财务业绩的自然语言查询，消除报告等待时间。</p>
+                        <div class="enterprise-tags">
+                            <span class="e-tag">数据查询</span>
+                            <span class="e-tag">自然语言</span>
+                            <span class="e-tag">多门店</span>
+                        </div>
+                    </div>
+
+                    <div class="enterprise-card">
+                        <div class="enterprise-icon">💼</div>
+                        <h3>销售团队：4 小时 → 15 分钟</h3>
+                        <p>销售团队原本每天花 4 小时审查市场数据，现在 OpenClaw 每天早上生成摘要，只需 15 分钟审查 15 个需要关注的要点。</p>
+                        <div class="enterprise-tags">
+                            <span class="e-tag">市场情报</span>
+                            <span class="e-tag">日报生成</span>
+                            <span class="e-tag">时间节省 94%</span>
+                        </div>
+                    </div>
+
+                    <div class="enterprise-card">
+                        <div class="enterprise-icon">🛠️</div>
+                        <h3>DevOps：监控时间减少 70%</h3>
+                        <p>通过子 Agent 并行检查数据库健康、服务器运行时间和日志分析，手动监控时间减少 70%。同时利用本地模型（Ollama）将 API 成本降低 40%。</p>
+                        <div class="enterprise-tags">
+                            <span class="e-tag">基础设施监控</span>
+                            <span class="e-tag">并行子 Agent</span>
+                            <span class="e-tag">成本优化</span>
+                        </div>
+                    </div>
+
+                    <div class="enterprise-card">
+                        <div class="enterprise-icon">📞</div>
+                        <h3>电信运营：主动客户关怀</h3>
+                        <p>中国电信和中国移动将 OpenClaw 深度集成到企业云平台，分析网络遥测数据识别服务降级，主动 SMS/WhatsApp 通知受影响客户，在工单提交前缓解不满。</p>
+                        <div class="enterprise-tags">
+                            <span class="e-tag">主动运维</span>
+                            <span class="e-tag">全渠道</span>
+                            <span class="e-tag">情感分析</span>
+                        </div>
+                    </div>
+
+                    <div class="enterprise-card">
+                        <div class="enterprise-icon">📊</div>
+                        <h3>金融服务：算法交易与回测</h3>
+                        <p>金融机构用 OpenClaw 从 TradingView 抓取复杂指标，自主将 Pine Script 代码翻译为 Python，构建本地交易算法，对加密货币进行 24/7 历史回测。</p>
+                        <div class="enterprise-tags">
+                            <span class="e-tag">量化交易</span>
+                            <span class="e-tag">代码转换</span>
+                            <span class="e-tag">自动化回测</span>
+                        </div>
+                    </div>
+
+                    <div class="enterprise-card">
+                        <div class="enterprise-icon">🎫</div>
+                        <h3>客服自动化：工单分类与响应</h3>
+                        <p>企业级客服场景：OpenClaw 监控支持收件箱、聊天组件和 WhatsApp Business，按产品、严重程度和语言自动分类和路由工单，从知识库回答 FAQ。</p>
+                        <div class="enterprise-tags">
+                            <span class="e-tag">工单分类</span>
+                            <span class="e-tag">知识库问答</span>
+                            <span class="e-tag">人机协作</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roi-summary">
+                    <h3>📈 量化收益汇总</h3>
+                    <div class="roi-grid">
+                        <div class="roi-item">
+                            <div class="roi-number">60%</div>
+                            <div class="roi-label">认知负荷减少</div>
+                        </div>
+                        <div class="roi-item">
+                            <div class="roi-number">70%</div>
+                            <div class="roi-label">监控时间减少</div>
+                        </div>
+                        <div class="roi-item">
+                            <div class="roi-number">94%</div>
+                            <div class="roi-label">销售数据审查时间减少</div>
+                        </div>
+                        <div class="roi-item">
+                            <div class="roi-number">40%</div>
+                            <div class="roi-label">API 成本降低（本地模型）</div>
+                        </div>
+                        <div class="roi-item">
+                            <div class="roi-number">$20万</div>
+                            <div class="roi-label">SDR 人力成本替代</div>
+                        </div>
+                        <div class="roi-item">
+                            <div class="roi-number">4,000</div>
+                            <div class="roi-label">单周末清理邮件数</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 延伸阅读 -->
+            <section class="content-section" id="reading">
+                <div class="section-header">
+                    <div class="section-number">08</div>
+                    <h2 class="section-title">延伸阅读链接</h2>
+                </div>
+                <div class="link-grid">
+                    <a href="https://docs.openclaw.ai/releases/2026.8.1" target="_blank" class="link-card official">
+                        <span class="link-type">官方</span>
+                        <h4>v2026.8.1 (OpenClaw 2.0) 完整发布说明</h4>
+                        <p>官方文档站点的完整更新日志，涵盖所有改进项。</p>
+                    </a>
+                    <a href="https://github.com/openclaw/openclaw/releases" target="_blank" class="link-card official">
+                        <span class="link-type">官方</span>
+                        <h4>OpenClaw GitHub Releases</h4>
+                        <p>所有版本发布记录和下载地址。</p>
+                    </a>
+                    <a href="https://clawhub.ai" target="_blank" class="link-card official">
+                        <span class="link-type">官方</span>
+                        <h4>ClawHub 技能市场</h4>
+                        <p>发现、安装和发布 OpenClaw 技能。</p>
+                    </a>
+                    <a href="https://developer.aliyun.com/article/1712528" target="_blank" class="link-card community">
+                        <span class="link-type">社区</span>
+                        <h4>2026年 OpenClaw 部署终极指南 + 9大必备 Skills</h4>
+                        <p>阿里云开发者社区的深度教程，含实战案例。</p>
+                    </a>
+                    <a href="https://juejin.cn/post/7619172260797825033" target="_blank" class="link-card community">
+                        <span class="link-type">社区</span>
+                        <h4>OpenClaw 技能配置全攻略：官方53个 Skills + ClawHub 精品推荐</h4>
+                        <p>稀土掘金上的技能配置深度指南。</p>
+                    </a>
+                    <a href="https://juejin.cn/post/7616297155912957988" target="_blank" class="link-card community">
+                        <span class="link-type">社区</span>
+                        <h4>OpenClaw Skills 开发指南：从零到上架 ClawHub</h4>
+                        <p>教你如何开发、测试、发布自己的 Skill 并上架赚钱。</p>
+                    </a>
+                    <a href="https://kanerika.com/blogs/openclaw-usecases/" target="_blank" class="link-card external">
+                        <span class="link-type">外部</span>
+                        <h4>15 OpenClaw Use Cases: What Actually Works in 2026</h4>
+                        <p>15 个经过验证的 OpenClaw 实际应用场景。</p>
+                    </a>
+                    <a href="https://insights.theinteractive.studio/openclaw-for-business-what-it-is-real-use-cases-and-how-to-implement-it" target="_blank" class="link-card external">
+                        <span class="link-type">外部</span>
+                        <h4>OpenClaw for Business: Real Use Cases and Implementation</h4>
+                        <p>企业级 OpenClaw 实施指南和真实案例。</p>
+                    </a>
+                    <a href="https://www.baytechconsulting.com/blog/openclaw-unleashed-autonomous-agents-enterprise-workflows" target="_blank" class="link-card external">
+                        <span class="link-type">外部</span>
+                        <h4>OpenClaw: How AI Agents Are Rewriting Enterprise Workflows</h4>
+                        <p>深度分析 OpenClaw 如何重塑企业工作流。</p>
+                    </a>
+                    <a href="https://goclaw.sh/blog/openclaw-vs-langchain" target="_blank" class="link-card external">
+                        <span class="link-type">外部</span>
+                        <h4>OpenClaw vs LangChain: Enterprise AI Agent Framework Comparison</h4>
+                        <p>OpenClaw 与 LangChain 的详细对比分析。</p>
+                    </a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="brand-name">OpenClaw Daily</span>
+                <span class="brand-desc">OpenClaw 社区每日资讯聚合</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://openclaw.ai" target="_blank">官网</a>
+                <a href="https://github.com/openclaw/openclaw" target="_blank">GitHub</a>
+                <a href="https://clawhub.ai" target="_blank">ClawHub</a>
+                <a href="https://discord.gg/openclaw" target="_blank">Discord</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>本站为社区自发维护，与 OpenClaw 官方无隶属关系 · 资讯来源于公开渠道</p>
+            <p class="copyright"> OpenClaw Daily Report · Made with curiosity</p>
+        </div>
+    </footer>
+
+    <script>
+        // Cursor glow effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const cursor = document.querySelector('.cursor-glow');
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+            
+            function animate() {
+                cursorX += (mouseX - cursorX) * 0.1;
+                cursorY += (mouseY - cursorY) * 0.1;
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+                requestAnimationFrame(animate);
+            }
+            animate();
+        });
+    </script>
+</body>
+</html>
