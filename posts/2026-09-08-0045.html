@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日情报 - 2026年9月8日</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-slate-900 bg-stone-50">
+    <div class="min-h-screen">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <a href="../index.html" class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg flex items-center justify-center text-white font-serif font-bold text-sm">OC</div>
+                        <span class="font-serif font-semibold text-slate-800 text-lg tracking-tight">OpenClaw Daily</span>
+                    </a>
+                    <div class="hidden md:flex items-center gap-8 text-sm text-slate-600">
+                        <a href="../index.html" class="hover:text-slate-900 transition-colors">首页</a>
+                        <a href="../archive.html" class="hover:text-slate-900 transition-colors">归档</a>
+                        <a href="https://github.com/openclaw/openclaw" target="_blank" class="hover:text-slate-900 transition-colors">GitHub</a>
+                        <a href="https://www.kimi.com/resources/kimi-claw-introduction" target="_blank" class="hover:text-slate-900 transition-colors">Kimi Claw</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-xs text-slate-500">更新于 00:45 CST</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="pt-24 pb-16 bg-gradient-to-b from-stone-100 to-stone-50">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8">
+                <div class="mb-6">
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-800 text-white text-xs font-medium rounded-full">
+                        <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+                        第 7 期 · 2026年9月8日
+                    </span>
+                </div>
+                <h1 class="font-serif text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6">
+                    OpenClaw 9月版本密集更新
+                    <span class="block mt-2 bg-gradient-to-r from-slate-700 to-slate-500 bg-clip-text text-transparent">Kimi K3 上线，云部署生态全面开花</span>
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-2xl">
+                    本周 OpenClaw 发布 9 月版本，涵盖凭证迁移、内存优化、多平台修复等数十项更新；
+                    Kimi Claw 正式支持 K3 模型切换；阿里云/腾讯云一键部署教程热度持续走高；
+                    Hermes Agent 与 OpenClaw 形成"进化派 vs 工程师派"鲜明对照。
+                </p>
+                <div class="flex flex-wrap gap-2 mt-6">
+                    <span class="tag">版本更新</span>
+                    <span class="tag">Kimi K3</span>
+                    <span class="tag">一键部署</span>
+                    <span class="tag">内存优化</span>
+                    <span class="tag">Browser Automation</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="max-w-4xl mx-auto px-6 lg:px-8 pb-24">
+
+            <!-- 今日概览 -->
+            <section class="mb-16" id="overview">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="font-serif text-2xl font-bold text-slate-300">01</span>
+                    <h2 class="font-serif text-2xl font-bold text-slate-900">今日概览</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="md:col-span-2 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                        <div class="relative">
+                            <div class="text-3xl mb-3">🚀</div>
+                            <h3 class="font-serif text-xl font-bold mb-2">OpenClaw 9月版本发布：数十项修复与优化</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                9月1日更新涵盖个人 GitHub 账户连接、模型设置改进、共享凭证迁移、会话稳定性修复、
+                                iMessage/Signal/Feishu 等多平台适配修复、语音/TTS 改进，以及显著的内存优化和启动加速。
+                                标志着项目从"快速迭代"进入"精细化打磨"阶段。
+                            </p>
+                            <a href="https://releasebot.io/updates/openclaw" target="_blank" class="inline-block mt-3 text-emerald-400 text-sm hover:underline">查看 Release Notes →</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-2xl mb-2">🧠</div>
+                        <h3 class="font-semibold text-slate-900 mb-2">Kimi Claw 支持 K3 模型切换</h3>
+                        <p class="text-sm text-slate-600">
+                            Kimi Claw 默认使用 Kimi K2.6，现已支持一键切换至 Kimi K3，适配更长上下文的知识工作。
+                            月之暗面持续在模型能力上与 OpenClaw 基础设施深度绑定。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-2xl mb-2">☁️</div>
+                        <h3 class="font-semibold text-slate-900 mb-2">云部署教程泛滥：一键上云成主流</h3>
+                        <p class="text-sm text-slate-600">
+                            阿里云百炼 + 腾讯云 Lighthouse 一键部署教程在社区爆发式增长，
+                            从"技术宅专属"走向"有手就行"，OpenClaw 部署门槛被压缩至 10 分钟以内。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-2xl mb-2">🌐</div>
+                        <h3 class="font-semibold text-slate-900 mb-2">Browser Automation 三路线成熟</h3>
+                        <p class="text-sm text-slate-600">
+                            browser-use（推荐）vs Playwright MCP（备用）vs Chrome DevTools MCP 三条路线各自就位，
+                            OpenClaw 的浏览器自动化能力从"可用"走向"生产就绪"。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-2xl mb-2">🤖</div>
+                        <h3 class="font-semibold text-slate-900 mb-2">Hermes Agent 178K+ Stars 持续追赶</h3>
+                        <p class="text-sm text-slate-600">
+                            Nous Research 的 Hermes Agent 凭借"自学习 + 持久记忆"架构，半年内 Stars 飙至 178K+，
+                            40+ 内置工具、27+ 消息平台，与 OpenClaw 形成有趣的生态对照。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 官方动态 -->
+            <section class="mb-16" id="official">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="font-serif text-2xl font-bold text-slate-300">02</span>
+                    <h2 class="font-serif text-2xl font-bold text-slate-900">OpenClaw 官方动态</h2>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden">
+                    <div class="p-6 border-b border-stone-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-slate-900 text-lg">OpenClaw September 2026 Release — 密集修复与精细化打磨</h3>
+                                <p class="text-sm text-slate-500 mt-1">2026-09-01 · ReleaseBot</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-700 leading-relaxed mb-4">
+                            9月版本是 OpenClaw 从"快速功能迭代"转向"稳定性与性能打磨"的重要标志。
+                            本次更新涵盖 <strong>12 个主要模块</strong>，修复和改进了数十项功能，社区贡献者超过 30 人。
+                        </p>
+
+                        <h4 class="font-semibold text-slate-900 mt-5 mb-3">📌 核心功能更新详情</h4>
+                        <div class="space-y-3">
+                            <div class="flex gap-3 p-3 bg-stone-50 rounded-lg">
+                                <span class="text-blue-600 font-mono text-sm flex-shrink-0 w-28">个人 GitHub</span>
+                                <p class="text-sm text-slate-700">支持在 profile 中连接 "My GitHub"，PR 可显式使用个人身份发布，切换 session 无需重复验证凭证。（#133799, #136223）</p>
+                            </div>
+                            <div class="flex gap-3 p-3 bg-stone-50 rounded-lg">
+                                <span class="text-blue-600 font-mono text-sm flex-shrink-0 w-28">模型设置</span>
+                                <p class="text-sm text-slate-700">Model Setup 清晰区分 account 与 API-key 访问方式，Codex 和 Claude 候选模型显示运行时邮箱，提供商默认页支持自动保存和更简化的模型选择器。（#136521 等）</p>
+                            </div>
+                            <div class="flex gap-3 p-3 bg-stone-50 rounded-lg">
+                                <span class="text-blue-600 font-mono text-sm flex-shrink-0 w-28">凭证迁移</span>
+                                <p class="text-sm text-slate-700">共享凭证迁移支持中断恢复、冲突诊断、强制重新登录修复、自定义 provider SecretRefs 持久化等完整生命周期管理。</p>
+                            </div>
+                            <div class="flex gap-3 p-3 bg-stone-50 rounded-lg">
+                                <span class="text-blue-600 font-mono text-sm flex-shrink-0 w-28">会话稳定性</span>
+                                <p class="text-sm text-slate-700">修复 reset 后消息丢失、跨 session 镜像投递静默失败、用户消息在重启后保留上下文、代码块重复折叠等关键稳定性问题。</p>
+                            </div>
+                            <div class="flex gap-3 p-3 bg-stone-50 rounded-lg">
+                                <span class="text-blue-600 font-mono text-sm flex-shrink-0 w-28">多平台修复</span>
+                                <p class="text-sm text-slate-700">iMessage 私有 API 桥接失败快速退出、Signal 终端状态持久化、Teams 线程上下文保持、Matrix 代码块 spoiler 碰撞修复、飞书文档 API 结果验证等。</p>
+                            </div>
+                            <div class="flex gap-3 p-3 bg-stone-50 rounded-lg">
+                                <span class="text-blue-600 font-mono text-sm flex-shrink-0 w-28">内存优化</span>
+                                <p class="text-sm text-slate-700">显著降低 catalog、reset、chat 中的内存峰值，释放 Gateway 和 Activity 保留内存，减少 HTTP 响应体内存占用——VPS 小内存用户受益明显。</p>
+                            </div>
+                            <div class="flex gap-3 p-3 bg-stone-50 rounded-lg">
+                                <span class="text-blue-600 font-mono text-sm flex-shrink-0 w-28">启动加速</span>
+                                <p class="text-sm text-slate-700">Doctor 冷启动更快，CLI-only 代码不再在启动时加载，plugin catalog 避免全量扫描，shell 命令冷启动缩短。</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+                            <p class="text-sm text-amber-800">
+                                <strong>💡 分析师观察：</strong>9月版本没有发布重磅新功能，但修复了大量" production 路上的绊脚石"。
+                                这种从"功能竞赛"转向"稳定性优先"的节奏，恰恰说明 OpenClaw 正在从"社区玩具"走向"企业基础设施"。
+                                凭证迁移、内存优化、启动加速——这三项改进直接降低了企业部署和运维门槛。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 竞品动态 -->
+            <section class="mb-16" id="competitors">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="font-serif text-2xl font-bold text-slate-300">03</span>
+                    <h2 class="font-serif text-2xl font-bold text-slate-900">竞品动态</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl p-5 border border-stone-200">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-700 font-bold text-sm flex-shrink-0">H</div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-slate-900">Hermes Agent — "进化派 Agent"的代表</h4>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Nous Research 2月发布的 Hermes Agent 以"自学习 + 持久记忆"架构快速崛起，
+                                    半年内 GitHub Stars 从 0 飙至 <strong>178K+</strong>，内置 40+ 工具，支持 27+ 消息平台，MIT 许可证完全免费。
+                                    与 OpenClaw 的"工程师配置驱动"不同，Hermes Agent 强调"让 Agent 自己进化"——
+                                    这种理念差异正在塑造 AI Agent 生态的两条路径。
+                                </p>
+                                <a href="https://github.com/NousResearch/hermes-agent" target="_blank" class="text-sm text-purple-600 hover:underline mt-1 inline-block">GitHub →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-5 border border-stone-200">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-700 font-bold text-sm flex-shrink-0">K</div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-slate-900">Kimi Claw — 浏览器原生 + 40GB 云存储</h4>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Moonshot AI 旗下的 Kimi Claw 本周新增 <strong>K3 模型支持</strong>，默认 K2.6 基础上可选切换至 K3 长上下文模型。
+                                    定位于"浏览器原生 Agent"，包含 40GB 云存储、5000+ ClawHub skills、Telegram 集成。
+                                    月费 Allegretto 计划约 $39，支持 BYOC（自带 OpenClaw 实例桥接）。
+                                    主要限制：共享 credits 池、每日 host 扣除约 0.6% 会员积分。
+                                </p>
+                                <a href="https://www.kimi.com/en/help/kimi-claw/overview" target="_blank" class="text-sm text-blue-600 hover:underline mt-1 inline-block">官方文档 →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-5 border border-stone-200">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-700 font-bold text-sm flex-shrink-0">M</div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-slate-900">MaxClaw — MiniMax 的消息优先 Agent</h4>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    MiniMax 的 MaxClaw 定位于"消息应用优先"，10 秒一键部署至 Telegram/Slack/WhatsApp。
+                                    基于 MiniMax M2.7 模型，50GB 工作空间，月费 $19 起。
+                                    强项是结构化办公任务（财务报告、代码审查）和原生消息集成。
+                                    与 Kimi Claw 相比，MaxClaw 更轻量、更便宜，但技能生态和存储空间较小。
+                                </p>
+                                <a href="https://myclaw.ai/blog/maxclaw-vs-kimi-claw" target="_blank" class="text-sm text-green-600 hover:underline mt-1 inline-block">对比评测 →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-5 border border-stone-200">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-orange-700 font-bold text-sm flex-shrink-0">云</div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-slate-900">阿里云百炼 & 腾讯云 — OpenClaw 云部署双雄</h4>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    阿里云轻量应用服务器与腾讯云 Lighthouse 均上架 OpenClaw 专属镜像，搭配百炼 Token Plan 按次计费。
+                                    阿里云优势：专属预置镜像、一键配置 API-Key、18789 端口一键放通；
+                                    腾讯云优势：云应用方案（零运维）、Lighthouse 方案（更灵活）、ADP X ClawPro 智能体开发平台。
+                                    社区教程爆发式增长，从"技术文档"走向"保姆级喂饭教程"。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 社区趣味应用 -->
+            <section class="mb-16" id="community">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="font-serif text-2xl font-bold text-slate-300">04</span>
+                    <h2 class="font-serif text-2xl font-bold text-slate-900">🚀 社区趣味应用案例分享</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white rounded-xl p-5 border border-stone-200">
+                        <div class="text-2xl mb-2">🖥️</div>
+                        <h4 class="font-semibold text-slate-900 mb-2">浏览器自动化三件套实测</h4>
+                        <p class="text-sm text-slate-600">
+                            社区用户对比测试了 OpenClaw 浏览器自动化的三条路线：
+                            <strong>browser-use</strong>（推荐，AI 理解页面后灵活操作）vs 
+                            <strong>Playwright MCP</strong>（备用，脚本化精确执行）vs 
+                            <strong>Chrome DevTools MCP</strong>（连接已有浏览器会话）。
+                            实测结论：browser-use 在 90% 场景下表现最佳，但 Playwright MCP 在需要绝对重复的任务中更可靠。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 border border-stone-200">
+                        <div class="text-2xl mb-2">📊</div>
+                        <h4 class="font-semibold text-slate-900 mb-2">GTM Skill 实战：从 5 行样本到 1000 实体</h4>
+                        <p class="text-sm text-slate-600">
+                            RevOps 团队使用 Explorium Vibe Prospecting MCP 构建 GTM 工作流：
+                            先以 5 行样本验证匹配精度，再扩展至 1000 实体批量运行，
+                            最后叠加 18 类购买信号和三层意图数据。
+                            相比 Apollo MCP 和 Clay，Vibe Prospecting 的统一 credit 池和 server-side 扩展能力更适合大规模场景。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 border border-stone-200">
+                        <div class="text-2xl mb-2">🔍</div>
+                        <h4 class="font-semibold text-slate-900 mb-2">多 Agent 协作架构：Redis 队列通信</h4>
+                        <p class="text-sm text-slate-600">
+                            有用户在腾讯云 Lighthouse 上搭建了三容器协作架构：
+                            "行情抓取 Agent" → "研报写作 Agent" → "推送 Agent"，通过 Redis 队列通信。
+                            实测 CPU 占用比单 Agent 模式更低，任务吞吐量提升 3 倍。
+                            成本：2核4G 轻量服务器 58 元/月即可跑全套。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 border border-stone-200">
+                        <div class="text-2xl mb-2">📱</div>
+                        <h4 class="font-semibold text-slate-900 mb-2">飞书 + OpenClaw：企业日报自动化</h4>
+                        <p class="text-sm text-slate-600">
+                            社区热门场景：用 OpenClaw 连接飞书机器人，每天自动抓取多个数据源，
+                            生成带格式的日报卡片推送到指定群组。
+                            结合飞书多维表格 API，实现"数据收集 → 自动分析 → 推送通知"完整闭环。
+                            关键是 OpenClaw 的 cron 功能可以精确调度，无需额外定时任务服务。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skill 学习指南 -->
+            <section class="mb-16" id="skills">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="font-serif text-2xl font-bold text-slate-300">05</span>
+                    <h2 class="font-serif text-2xl font-bold text-slate-900">📚 精选 Skill 学习指南</h2>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-stone-200 p-6">
+                    <h4 class="font-semibold text-slate-900 mb-4">本周推荐：browser-use Skill（浏览器自动化）</h4>
+                    <p class="text-sm text-slate-600 mb-4">
+                        browser-use 是 OpenClaw 社区目前评分最高的浏览器自动化 skill。
+                        它让 Agent 像人类一样理解网页、点击按钮、填写表单——不需要写 CSS 选择器。
+                    </p>
+
+                    <div class="bg-stone-50 rounded-lg p-4 mb-4">
+                        <h5 class="font-medium text-slate-900 text-sm mb-2">安装步骤</h5>
+                        <ol class="text-sm text-slate-700 space-y-1.5 list-decimal list-inside">
+                            <li>安装 skill：<code class="bg-white px-1.5 py-0.5 rounded text-xs border">npx skills add https://github.com/browser-use/browser-use --skill browser-use</code></li>
+                            <li>在 <code class="bg-white px-1.5 py-0.5 rounded text-xs border">openclaw.json</code> 中配置 MCP server</li>
+                            <li>设置环境变量：LLM 模型、API Key、headless 模式等</li>
+                            <li>对 Agent 说："去 Amazon 搜索人体工学椅，提取前 5 个结果的价格和评分，保存到 CSV"</li>
+                        </ol>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-3">
+                        <div class="p-3 bg-blue-50 rounded-lg">
+                            <h6 class="font-medium text-blue-900 text-sm">适用场景</h6>
+                            <p class="text-xs text-blue-700 mt-1">数据抓取、竞品监控、表单填写、网站巡检、价格追踪</p>
+                        </div>
+                        <div class="p-3 bg-green-50 rounded-lg">
+                            <h6 class="font-medium text-green-900 text-sm">模型要求</h6>
+                            <p class="text-xs text-green-700 mt-1">Gemini 3.1 Flash、Kimi K2.6、Claude Sonnet 等 vision-capable 模型</p>
+                        </div>
+                        <div class="p-3 bg-amber-50 rounded-lg">
+                            <h6 class="font-medium text-amber-900 text-sm">注意事项</h6>
+                            <p class="text-xs text-amber-700 mt-1">不解决 CAPTCHA、需尊重 robots.txt、headless 模式可能被反爬</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-4 border-t border-stone-100">
+                        <p class="text-xs text-slate-500">
+                            <strong>进阶阅读：</strong>
+                            <a href="https://openclaw-skillshub.com/articles/openclaw-skills-vs-plugins-vs-mcp" target="_blank" class="text-blue-600 hover:underline">Skills vs Plugins vs MCP Servers 辨析</a> ·
+                            <a href="https://www.explorium.ai/blog/building-ai-agents/best-gtm-skill-for-openclaw-2026-top-3-ranked-for-revops-teams/" target="_blank" class="text-blue-600 hover:underline">GTM Skill Top 3 排名</a> ·
+                            <a href="https://openclawdc.com/blog/openclaw-browser-automation/" target="_blank" class="text-blue-600 hover:underline">Browser Automation 完整指南</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 企业落地 -->
+            <section class="mb-16" id="enterprise">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="font-serif text-2xl font-bold text-slate-300">06</span>
+                    <h2 class="font-serif text-2xl font-bold text-slate-900">企业落地案例</h2>
+                </div>
+
+                <div class="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-6 text-white">
+                    <h4 class="font-serif text-xl font-bold mb-3">AI Agent 企业落地：从"试点"到"规模化"</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        2026年 AI Agent 企业落地正从"概念验证"进入"规模化部署"阶段。
+                        数据显示 <strong>82% 企业已使用 AI Agent</strong>，但大多数仍停留在"聊天问答"层面。
+                        真正具备系统操作、任务执行、自主进化能力的 Agent 代表下一代生产力。
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4 mt-4">
+                        <div class="bg-white/10 rounded-lg p-3">
+                            <h5 class="font-semibold text-sm">数据迁移自动化</h5>
+                            <p class="text-xs text-slate-300 mt-1">跨系统数据迁移，无需人工写 ETL 脚本</p>
+                        </div>
+                        <div class="bg-white/10 rounded-lg p-3">
+                            <h5 class="font-semibold text-sm">跨仪表盘日报</h5>
+                            <p class="text-xs text-slate-300 mt-1">自动登录多个 BI 系统，汇总关键指标</p>
+                        </div>
+                        <div class="bg-white/10 rounded-lg p-3">
+                            <h5 class="font-semibold text-sm">无 API 系统集成</h5>
+                            <p class="text-xs text-slate-300 mt-1">通过浏览器操作 legacy 系统，填补 API 空白</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-4">
+                        来源：Skywork AI Research · AI Infrastructure Trends 2026
+                    </p>
+                </div>
+            </section>
+
+            <!-- 延伸阅读 -->
+            <section class="mb-16" id="links">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="font-serif text-2xl font-bold text-slate-300">07</span>
+                    <h2 class="font-serif text-2xl font-bold text-slate-900">延伸阅读链接</h2>
+                </div>
+
+                <div class="bg-white rounded-xl border border-stone-200 divide-y divide-stone-100">
+                    <a href="https://releasebot.io/updates/openclaw" target="_blank" class="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
+                        <div>
+                            <h5 class="font-medium text-slate-900 text-sm">OpenClaw September 2026 Release Notes</h5>
+                            <p class="text-xs text-slate-500 mt-0.5">releasebot.io — 完整版本更新日志</p>
+                        </div>
+                        <span class="text-slate-400">→</span>
+                    </a>
+                    <a href="https://www.kimi.com/en/help/kimi-claw/overview" target="_blank" class="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
+                        <div>
+                            <h5 class="font-medium text-slate-900 text-sm">Kimi Claw 官方文档 — 云部署指南</h5>
+                            <p class="text-xs text-slate-500 mt-0.5">kimi.com — 支持 K2.6 / K3 模型切换</p>
+                        </div>
+                        <span class="text-slate-400">→</span>
+                    </a>
+                    <a href="https://myclaw.ai/blog/maxclaw-vs-kimi-claw" target="_blank" class="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
+                        <div>
+                            <h5 class="font-medium text-slate-900 text-sm">MaxClaw vs Kimi Claw: 2026 深度对比</h5>
+                            <p class="text-xs text-slate-500 mt-0.5">myclaw.ai — 定价、功能、适用场景全面分析</p>
+                        </div>
+                        <span class="text-slate-400">→</span>
+                    </a>
+                    <a href="https://developer.aliyun.com/article/1711529" target="_blank" class="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
+                        <div>
+                            <h5 class="font-medium text-slate-900 text-sm">阿里云 OpenClaw 官方部署教程</h5>
+                            <p class="text-xs text-slate-500 mt-0.5">阿里云开发者社区 — 一键部署 + 百炼 API 接入</p>
+                        </div>
+                        <span class="text-slate-400">→</span>
+                    </a>
+                    <a href="https://openclaw-skillshub.com/articles/openclaw-skills-vs-plugins-vs-mcp" target="_blank" class="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
+                        <div>
+                            <h5 class="font-medium text-slate-900 text-sm">Skills vs Plugins vs MCP Servers 辨析</h5>
+                            <p class="text-xs text-slate-500 mt-0.5">OpenClaw SkillsHub — 决策表 + 真实示例</p>
+                        </div>
+                        <span class="text-slate-400">→</span>
+                    </a>
+                    <a href="https://github.com/NousResearch/hermes-agent" target="_blank" class="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
+                        <div>
+                            <h5 class="font-medium text-slate-900 text-sm">Hermes Agent GitHub 仓库</h5>
+                            <p class="text-xs text-slate-500 mt-0.5">Nous Research — 178K+ Stars，自学习 Agent 架构</p>
+                        </div>
+                        <span class="text-slate-400">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 订阅 -->
+            <section class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 text-white text-center" id="subscribe">
+                <h3 class="font-serif text-2xl font-bold mb-3">订阅 OpenClaw 每日情报</h3>
+                <p class="text-slate-300 text-sm mb-6 max-w-md mx-auto">
+                    每天早上 8:00，自动推送最新 OpenClaw 动态、竞品情报、Skill 教程和企业落地案例。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+                    <input type="email" placeholder="your@email.com" class="flex-1 px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <button class="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 rounded-lg font-medium text-sm transition-colors">订阅</button>
+                </div>
+                <p class="text-xs text-slate-500 mt-4">基于 OpenClaw Agent 自动生成 · 仅供学习交流</p>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-stone-200 bg-white py-8">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+                <p class="text-sm text-slate-500">OpenClaw Daily Report · 由 Kimi Claw 自动生成</p>
+                <p class="text-xs text-slate-400 mt-1">数据截止 2026-09-08 00:45 CST · 仅供参考</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Back to top -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 right-6 w-10 h-10 bg-slate-800 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-slate-700 transition-colors z-50">
+        ↑
+    </button>
+</body>
+</html>
